@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from "react";
 
-import img2 from "../../assets/images/pv-challenge/character/character-1_c.png";
-import img5 from "../../assets/images/pv-challenge/character/character_1_1_c.png";
-import img3 from "../../assets/images/pv-challenge/character/character_1_c.png";
-import img4 from "../../assets/images/pv-challenge/character/character_c.png";
 
-import badge1 from "../../assets/images/pv-challenge/logo.png";
-import badge2 from "../../assets/images/pv-challenge/logo_ambassadeur_color.png";
+// import badge1 from "../../assets/images/pv-challenge/group_3875.svg";
+// import badge2 from "../../assets/images/pv-challenge/logo_ambassadeur_color.png";
+import badge1 from "../../assets/images/pv-challenge/Badges/Avatar.png";
+import badge2 from "../../assets/images/pv-challenge/Badges/Contrat.png";
+import badge3 from "../../assets/images/pv-challenge/Badges/Recon.png";
+import badge4 from "../../assets/images/pv-challenge/Badges/Intrusion.png";
+import badge5 from "../../assets/images/pv-challenge/Badges/Admin.png";
+import badge6 from "../../assets/images/pv-challenge/Badges/Hacked.png";
+import badge7 from "../../assets/images/pv-challenge/Badges/Arrested.png";
+import badge8 from "../../assets/images/pv-challenge/Badges/Cybercrime.png";
+
+
+
+
+
 
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -72,20 +81,6 @@ export default function Bradges() {
                 </p>
             </div>
             <div className={styles.bdg_row1}>
-                <div className={styles.bloc1}>
-                    {/*<img alt={""} src={img1} style={{*/}
-                    {/*    height:"430px",*/}
-                    {/*    marginLeft:"10px"*/}
-                    {/*}}   />*/}
-                    <img alt={""} src={img2} style={{
-                        height: "430px",
-                        marginLeft: "10px"
-                    }} />
-                    <img alt={""} src={img5} style={{
-                        height: "430px",
-                        marginLeft: "10px"
-                    }} />
-                </div>
                 <div className={styles.bloc2} >
                     <Badge
                         isActive={Badges.find(b => b?.badgeId === 1)?.status === 1}
@@ -99,15 +94,42 @@ export default function Bradges() {
                         title={t(`badges.badge2.title`)}
                         description={t(`badges.badge2.description`)}
                     />
-                </div>
-                <div className={styles.bloc3}>
-                    <img alt={""} src={img3} style={{
-                        height: "430px",
-                    }} />
-                    <img alt={""} src={img4} style={{
-                        height: "430px",
-                        marginLeft: "10px"
-                    }} />
+                     <Badge
+                        isActive={Badges.find(b => b?.badgeId === 3)?.status === 1}
+                        icon={badge3}
+                        title={t(`badges.badge3.title`)}
+                        description={t(`badges.badge3.description`)}
+                    />
+                     <Badge
+                        isActive={Badges.find(b => b?.badgeId === 4)?.status === 1}
+                        icon={badge4}
+                        title={t(`badges.badge4.title`)}
+                        description={t(`badges.badge4.description`)}
+                    />
+                     <Badge
+                        isActive={Badges.find(b => b?.badgeId === 5)?.status === 1}
+                        icon={badge5}
+                        title={t(`badges.badge5.title`)}
+                        description={t(`badges.badge5.description`)}
+                    />
+                    <Badge
+                        isActive={Badges.find(b => b?.badgeId === 6)?.status === 1}
+                        icon={badge6}
+                        title={t(`badges.badge6.title`)}
+                        description={t(`badges.badge6.description`)}
+                    />
+                     <Badge
+                        isActive={Badges.find(b => b?.badgeId === 7)?.status === 1}
+                        icon={badge7}
+                        title={t(`badges.badge7.title`)}
+                        description={t(`badges.badge7.description`)}
+                    /> 
+                     <Badge
+                        isActive={Badges.find(b => b?.badgeId === 8)?.status === 1}
+                        icon={badge8}
+                        title={t(`badges.badge8.title`)}
+                        description={t(`badges.badge8.description`)}
+                    /> 
                 </div>
             </div>
         </div>

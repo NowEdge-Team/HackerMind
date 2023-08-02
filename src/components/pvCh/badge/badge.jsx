@@ -5,7 +5,7 @@ export default function Badge ({title="",description = "",icon,isActive=false}) 
     return (<div className={styles.badge}>
                <div className={styles.image_wrapper} >
                    {/*{icon && React.createElement(icon, {})}*/}
-                   <img alt={""} src={icon}  style={{filter: `${ isActive ?  "" : 'grayscale(100%)'}`}}  />
+                   <img alt={""} src={icon}  />
                </div>
                <h4 className={styles.title}>
                    {title}

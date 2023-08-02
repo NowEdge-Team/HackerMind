@@ -4,7 +4,6 @@
 .main_badge {
   display: flex;
   flex-direction: column;
-  // background-color: #0760a5;
   height: 100vh;
   width: 100vw;
 
@@ -57,51 +56,14 @@
     align-content: center;
     padding: 10px  10px;
     z-index: 100;
-    .bloc1{
-      position: absolute;
-      left: 0;
-      z-index: -1;
-      @include tablet {
-        :nth-child(2){
-          display: none;
-        }
-        :nth-child(3){
-          display: none;
-        }
-
-      }
-    }
+  
     .bloc2{
-
        display: flex;
+       margin-top: 30px;
     }
-    .bloc3{
-      z-index: -1;
-      position: absolute;
-      right: 0;
-      :nth-child(1){
-        transform: scaleX(-1);
-      }
-      :nth-child(2){
-        transform: scaleX(1);
-      }
-      @include tablet {
-        :nth-child(1){
-          z-index: 2;
-          position: relative;
-
-        }
-        :nth-child(2){
-          z-index: 1;
-          margin-right: -50px !important;
-          display: none;
-        }
       }
     }
-  }
-}
-
-
+ 
 
 .mainBackground {
   width: 100vw;
@@ -109,7 +71,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 
 .badge_title{
   text-align: center;

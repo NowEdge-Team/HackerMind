@@ -10,12 +10,36 @@
     "title": "Badges",
     "description": "Selon le score obtenu dans des activités spécifiques, vous pouvez débloquer des badges de distinction\n\n",
     "badge1": {
-      "title": "EXPERT",
-      "description": "Badge de distinction en tant que champion de l'innovation numérique et de l'adoption de nouvelles technologies."
+      "title": "AVATAR",
+      "description": "badge obtenu à la fin de l'étape n°1"
     },
     "badge2": {
-      "title": "AMBASSADEUR",
-      "description": "Badge de distinction pour la bonne prise en compte des enjeux de l'analyse de donnees"
+      "title": "CONTRAT",
+      "description": "badge obtenu à la fin de l'étape n°2"
+    },
+    "badge3": {
+      "title": "Recon",
+      "description": "badge obtenu à la fin de l'étape n°3"
+    },
+    "badge4": {
+      "title": "Intrusion",
+      "description": "badge obtenu à la fin de l'étape n°4"
+    },
+    "badge5": {
+      "title": "Admin",
+      "description": "badge obtenu à la fin de l'étape n°5"
+    },
+    "badge6": {
+      "title": "Hacked",
+      "description": "badge obtenu à la fin de l'étape n°6"
+    },
+    "badge7": {
+      "title": "Arrested",
+      "description": "badge obtenu à la fin de l'étape n°7"
+    },
+    "badge8": {
+      "title": "Cybercrime",
+      "description": "badge obtenu à la fin de l'étape n°8"
     },
     "modal": {
       "badge1": {
