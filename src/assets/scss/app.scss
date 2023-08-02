@@ -1,0 +1,26 @@
+/*
+Template Name: Adminto - Responsive Bootstrap 4 Admin Dashboard
+Author: CoderThemes
+Version: 1.0.0
+Website: https://coderthemes.com/
+Contact: support@coderthemes.com
+File: Main Css File
+*/
+
+//Fonts
+@import 'custom/fonts/fonts';
+
+@import 'custom/pages/game';
+@import 'custom/pages/classement';
+@import 'custom/pages/rapport';
+@import 'custom/pages/dayone';
+@import 'custom/pages/pv-challenge';
+
+
+.highcharts-exporting-group {
+    display: none;
+}
+
+.highcharts-credits {
+    display: none;
+}

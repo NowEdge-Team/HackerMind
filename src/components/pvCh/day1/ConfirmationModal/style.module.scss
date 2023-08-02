@@ -1,0 +1,165 @@
+@import "../../../../pages/functions";
+
+%btn-base {
+  background: $color-1;
+  border: 0;
+  font-family: Karla, serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.dayOneModal {
+  position: relative;
+  width: 974px;
+  height: 529px;
+
+  background-color: white;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(12, 12, 12, 0.43)), url('../../../../assets/images/pv-challenge/bgModaldayone.png');
+  // background-image: url('../../../../assets/images/pv-challenge/bgModaldayone.png');
+  // filter: brightness(70%);
+  z-index: 5002;
+  overflow: hidden;
+  @include tablet{
+    width: 740px;
+    height: 529px;
+  }
+  .control{
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px;
+    >{
+      :nth-child(2){
+        margin-left: 10px;
+      }
+    }
+  }
+  .btn{
+    @extend %btn-base;
+    font-family: Karla;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 17px;
+    text-align: left;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    i{
+      margin-left: 10px;
+    }
+
+
+  }
+
+  .btn_close{
+    @extend %btn-base;
+    background: #f6f7fc;
+    font-family: Karla;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 17px;
+    text-align: left;
+    color: #343a40;
+
+
+
+  }
+  & .discussMessage {
+    width: 583px;
+    height: 140px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    bottom: 40%;
+    left: 25%;
+    position: absolute;
+
+    text-align: left;
+    font: normal normal normal 14px/17px Karla;
+    letter-spacing: 0.28px;
+    color: #343a40;
+    opacity: 1;
+    padding: 10px;
+    @include tablet{
+      width: 530px;
+    }
+    p{
+      overflow-y: scroll;
+      height: 90px;
+
+    }
+    span {
+      overflow-y: auto;
+      text-align: left;
+      font: normal normal bold 16px/17px Karla;
+      letter-spacing: 0.32px;
+      color: $color-1;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      background-color: white;
+      width: 60px;
+      height: 48px;
+      -webkit-clip-path: polygon(50% 10%, 50% 90%, 0% 50%);
+      clip-path: polygon(50% 10%, 50% 90%, 0% 50%);
+      position: absolute;
+      left: -5%;
+      top: 20%;
+    }
+  }
+
+  .audio{
+    background-color: white;
+    bottom: 30%;
+    left: 25%;
+    position: absolute;
+    width: 583px;
+    border-radius: 4px;
+    padding: 3px;
+    @include tablet{
+      width: 530px;
+    }
+  }
+
+  .img_user{
+    position: absolute;
+    top: 43%;
+    height: 90%;
+    left: 4%;
+    overflow: hidden;
+
+    .img_roœtate{
+        height: 550px;
+        //transform: scaleX(-1);
+    }
+
+  }
+}
+
+.img_rotate{
+  transform: scaleX(-1);
+}
+
+ :global(.fade){
+
+     z-index: 10000000 !important;
+
+ }
+

@@ -1,0 +1,752 @@
+{
+  "activityReport": {
+    "rapport_activite": "ACTIVITY REPORT",
+    "description": "Summary of your achievements and feedback from the president regarding your progress in the game",
+    "s_connaissance": "Knowledge score",
+    "points": "Points",
+    "s_action": "Action score"
+  },
+  "badges": {
+    "title": "Badges",
+    "description": "Based on the score achieved in specific activities, you can unlock distinguished badges\n\n",
+    "badge1": {
+      "title": "Expert",
+      "description": "Distinguished badge for general knowledge of analytics"
+    },
+    "badge2": {
+      "title": "Ambassador",
+      "description": "Badge de distinction pour la bonne prise en compte des enjeux de l'analyse de donnees"
+    },
+    "modal": {
+      "badge1": {
+        "title": "Expert badge",
+        "body": "Congratulations! Thanks to your actions, you have earned the EXPERT badge. Visit the badge view for more details."
+      },
+      "badge2": {
+        "title": "Ambassador badge",
+        "body": "Congratulations! Thanks to your actions, you have earned the Ambassador badge. Visit the badge view for more details."
+      },
+      "btnText": "Noted"
+    }
+  },
+  "parcours": {
+    "welcome": "Welcome to",
+    "Aventure": " the Adventure",
+    "description": "Your crucial mission will be to integrate analytics into our strategic decisions in order to improve the performance of our group. Get ready, because I am convinced that you are the ideal person to successfully carry out this mission. We trust you!",
+    "point": "Points",
+    "quitter": "Quit",
+    "day1title": "The Basics of Digital Transformation",
+    "day2title": "Challenges and Issues",
+    "day3title": "Exploring Opportunities",
+    "day4title": "Insight into Emerging Technologies",
+    "day5title": "Reskilling and Upskilling",
+    "niveau": "LEVEL",
+    "termine": "Completed",
+    "encour": "In progress",
+    "verouille": "Locked"
+  },
+  "classement": {
+    "title": "Congratulations on your ranking! ",
+    "subTitle": "You are now",
+    "first": "st",
+    "second": "nd",
+    "score": "Score"
+  },
+  "menu": {
+    "configure": "Configure",
+    "title": "Strategic Game",
+    "welcome1": "WELCOME TO",
+    "welcome2": "THE ADVENTURE",
+    "desc1": "You have been appointed by the company's president as the leader of the Analytics task force, whose mission is to improve the company's performance by integrating Analytics through data-driven decisions.",
+    "desc2": "It is up to you to choose the right strategies and make the best decisions to optimize your score.",
+    "parcour": "Journey",
+    "Ractivity": "Activity report",
+    "classement": "Ranking",
+    "badges": "Badges",
+    "descConfig": "Before starting the journey, please configure your character. The name you choose will appear in the rankings. Once the configuration is validated, you will not be able to modify it.",
+    "configCenterName": "Center name",
+    "configAvatar": "Avatar",
+    "configCountry": "Country",
+    "configRespo": "Function",
+    "back": "Back",
+    "register": "Validate",
+    "proffession1": "Doctor",
+    "proffession2": "Pharmacien",
+    "proffession3": "Analyste",
+    "proffession4": "Professeur",
+    "proffession5": "Epidémiologiste",
+    "proffession6": "Autre",
+    "country1": "Sénégal",
+    "country2": "Burkina Faso",
+    "country3": "Algérie",
+    "country4": "Liban",
+    "country5": "Cameroun",
+    "country6": "Burundi",
+    "country7": "Haiti",
+    "country8": "Côté d'Ivoire",
+    "country9": "Niger",
+    "country10": "Mali",
+    "country11": "Rep. Dém. Du Congo",
+    "country12": "Tunisie",
+    "country13": "Suisse",
+    "country14": "Maroc",
+    "regle": "Game rules",
+    "finalGameTitle": "Congratulations",
+    "finalGameBody": "You have completed the game!",
+    "listMission": {
+      "title": "THE PRESIDENT",
+      "text1": "Hello, I am proud to have you as one of the collaborators in our company. Get ready, because I have decided to call on you for a special mission!",
+      "text2": "I have just appointed you as the head of the Analytics Task Force, which is responsible for carrying out a crucial mission for our group...",
+      "text3": "The mission consists of improving the company's performance by integrating analytics through data-driven decisions. Are you ready?"
+    },
+    "enregistrer": "Save",
+    "retour": "Back",
+    "modal": {
+      "title_p1": "WELCOME TO",
+      "title_p2": "THE ADVENTURE",
+      "description": "You are the catalyst for our digital transformation, inspiring innovation at every step of our journey.",
+      "name_taskforce": "Give a name to your task force.",
+      "retour": "Back",
+      "enregistrer": "Save"
+    },
+    "t_certificat": "Download your certificate",
+    "d_mission": "Discover your mission",
+    "points": "Points",
+    "notee": "Noted"
+  },
+  "day1": {
+    "level": "NIVEAU 1 : General Analytics",
+    "title": "General Analytics",
+    "l_title": "PRODUCTION MANAGER ",
+    "part1": {
+      "g_title": "Among the following propositions, select those that seem most relevant to you.",
+      "description": "In the field of analytics, it is important to understand the key terms used in the process of data collection and analysis. As a member of our data analysis team, it is crucial to master this vocabulary in order to carry out our missions successfully and ensure the security of our clients.",
+      "decisions_title": "What is the main objective of data analysis?",
+      "decisions_s_title": "1 choice to select: ",
+      "decisions": {
+        "1": "To find hidden information in data",
+        "2": "To collect raw data",
+        "3": "To store data for later use",
+        "4": "To archive historical data of the company"
+      }
+    },
+    "part2": {
+      "g_title": "The production manager is calling to inquire about the characteristics of Analytics.",
+      "s_description": "Help him understand the advantages, disadvantages, challenges, and prospects of analytics.",
+      "decisions": {
+        "5": "Improved decision-making based on data rather than assumptions or hypotheses.",
+        "6": "Process optimization by identifying bottlenecks, inefficiencies, and opportunities for improvement in company processes.",
+        "7": "Better understanding of customers by improving understanding of customer needs, behaviors, and preferences, which can lead to higher satisfaction and increased loyalty.",
+        "8": "Trend prediction by identifying emerging market trends and anticipating future customer needs.",
+        "9": "Improved profitability by identifying unnecessary costs and optimizing investments.",
+        "10": "Implementing a data analytics system can be costly in terms of investment in equipment, software, and qualified personnel.",
+        "11": "Data analysis can be complex, requiring specialized skills in data collection, storage, processing, and analysis.",
+        "12": "Data analysis may involve sensitive company data, which can lead to security risks if not properly managed.",
+        "13": "Data analysis can generate massive amounts of data, which can make their management difficult and costly.",
+        "14": "Implementing data analytics may require a change in company culture to encourage data-based decision-making rather than intuition or assumptions.",
+        "15": "Company staff may require additional training to understand how to use data analytics tools and interpret results.",
+        "16": "Data analysis may require the integration of different existing systems within the company, which can be complex and expensive.",
+        "17": "Data analysis is still an emerging field with significant potential for application in many areas.",
+        "18": "Data analysis may require the development of new skills for company workers, which can lead to new career and professional development opportunities.",
+        "19": "Rapid technological advances can lead to rapid changes in the use and application fields of data analytics."
+      },
+      "categories": {
+        "1": "Advantages",
+        "2": "Disadvantages",
+        "3": "Challenges",
+        "4": "Perspectives"
+      }
+    },
+    "messages": {
+      "title": "THE PRESIDENT",
+      "text1": "Are you sure about your choices?",
+      "text2": "On entend souvent parler de la pharmacovigilance, et il existe beaucoup d’idées préconçues à son sujet. Maintenant que vous vous y connaissez un peu, saurez-vous distinguer le vrai du faux ?",
+      "text3": "Before starting your mission, I would like to make sure that you have understood the stakes of data analysis.  ",
+      "textBtnValid": "Validate my choices",
+      "text4": "Congratulations on successfully completing the first phase of our data analysis project. Your contribution and hard work have been greatly appreciated, and we are looking forward to seeing the results of your analysis.",
+      "textBtnValid2": "Noted"
+    },
+    "listMsg": {
+      "title": "DIRECTOR OF INFORMATION SYSTEMS:",
+      "text1": "Data analysis, also referred to as analytics, is the method of collecting, processing, and scrutinizing data to derive insights and make informed decisions. This involves utilizing statistical techniques and tools to identify patterns, trends, and connections within the data. For businesses, data analysis is vital as it allows them to comprehend their customers' behavior, streamline their operations, and improve their profitability. <br/>  <br/> \n Through data analysis, businesses can recognize the products and services that their customers crave, and they can adjust their marketing strategies accordingly. They can also optimize their inventory and cut costs, leading to increased profitability and competitiveness.",
+      "text2": "However, data analysis comes with its own set of challenges. One of the most significant challenges is the quality of the data. Inaccurate, incomplete, or inconsistent data can lead to faulty insights and decisions. <br/>  <br/> \n Another challenge is the complexity of the data. With the explosion of data sources and types, it can be challenging to integrate and analyze the data effectively. Additionally, the shortage of skilled data analysts and the high cost of analytical tools can act as entry barriers for many businesses.",
+      "text3": "As the world becomes increasingly digital, the significance of data analysis will only intensify. Emerging technologies such as machine learning and artificial intelligence are making it easier and quicker to analyze vast amounts of data. Nevertheless, businesses will need to continue investing in data quality and data analysis skills to fully capitalize on the benefits of data analysis.",
+      "text4": "Un évènement indésirable est jugé grave s’il : <br/> &nbsp; &nbsp; &nbsp; &nbsp; Est létal <br/> &nbsp; &nbsp; &nbsp; &nbsp; Met en jeu le pronostic vital <br/> &nbsp; &nbsp; &nbsp; &nbsp; Nécessite une hospitalisation ou une prolongation d’hospitalisation <br/> &nbsp; &nbsp; &nbsp; &nbsp; Est responsable d’un déficit ou d’une incapacité persistante et significative <br/> &nbsp; &nbsp; &nbsp; &nbsp; Constitue une anomalie congénitale <br/> &nbsp; &nbsp; &nbsp; &nbsp; Médicalement significatif (nécessite un traitement/intervention chirurgicale) <br/> <br/>  Une situation spéciale est un cas de PV pouvant être associé ou non à un EI médicamenteux (EIM) <br/> &nbsp; &nbsp; &nbsp; &nbsp; • Utilisation d’un médicament pendant la grossesse ou l’allaitement, lorsque non autorisée <br/> &nbsp; &nbsp; &nbsp; &nbsp;• Utilisation dans la population pédiatrique ou âgée, lorsque non autorisée <br/> &nbsp; &nbsp; &nbsp; &nbsp;• Surdosage, Abus <br/> &nbsp; &nbsp; &nbsp; &nbsp;• Utilisation hors AMM <br/> &nbsp; &nbsp; &nbsp; &nbsp;• Mésusage, Erreur médicamenteuse <br/> &nbsp; &nbsp; &nbsp; &nbsp;• Exposition professionnelle <br/> &nbsp; &nbsp; &nbsp; &nbsp;• Manque d’efficacité thérapeutique."
+    }
+  },
+  "day2": {
+    "niveau": "LEVEL 2: Data collection and valuation",
+    "title1": "",
+    "leftMsg": {
+      "title": "PRODUCTION MANAGER",
+      "message1": "Data-driven decisions rely on rigorous analysis of reliable data. This approach allows for informed decision-making, optimization of results, and maximizing added value for our clients.",
+      "message2": "Data-driven decisions rely on rigorous analysis of reliable data. This approach allows for informed decision-making, optimization of results, and maximizing added value for our clients.",
+      "message3": "Data-driven decisions rely on rigorous analysis of reliable data. This approach allows for informed decision-making, optimization of results, and maximizing added value for our clients.",
+      "message4": "Data-driven decisions rely on rigorous analysis of reliable data. This approach allows for informed decision-making, optimization of results, and maximizing added value for our clients.",
+      "message5": "Data-driven decisions rely on rigorous analysis of reliable data. This approach allows for informed decision-making, optimization of results, and maximizing added value for our clients."
+    },
+    "part1": {
+      "title": "The sales director asks you for the necessary steps to make a data-driven decision"
+    },
+    "part3": {
+      "title": "The president is asking you to give him some examples of practical cases for analytics",
+      "g_title": "The production manager is calling you to inquire about the characteristics of analytics",
+      "decisions": {
+        "27": "Segmentation and targeting of customers",
+        "28": "Analysis of marketing campaign performance",
+        "29": "Marketing action ROI analysis",
+        "30": "Fraud detection and prevention",
+        "31": "Risk management and analysis",
+        "32": "Financial forecasting and planning",
+        "33": "Portfolio optimization",
+        "34": "Credit scoring and analysis",
+        "35": "Analysis of patient outcomes",
+        "36": "Optimization of resource utilization",
+        "37": "Clinical trial data analysis",
+        "38": "Predictive modeling for patient diagnosis and treatment",
+        "39": "Quality control analysis",
+        "40": "Supply chain optimization",
+        "41": "Inventory management",
+        "42": "Predictive maintenance",
+        "43": "Production planning and scheduling",
+        "44": "Sales forecasting and analysis",
+        "45": "Prediction of customer behavior",
+        "46": "Price optimization",
+        "47": "Demand prediction",
+        "48": "Product recommendations",
+        "49": "Analysis of student performance",
+        "50": "Analysis of enrollment and retention",
+        "51": "Evaluation and analysis of teacher performance",
+        "52": "Analysis and optimization of curriculum"
+      },
+      "categories": {
+        "1": "Marketing",
+        "2": "Finance & Risque  ",
+        "3": "Santé",
+        "4": "Manufacturing",
+        "5": "Retail",
+        "6": "Education"
+      }
+    },
+    "part4": {
+      "title": "Among the following options, choose the one that seems most relevant to you",
+      "g_title": "Among the following options, choose the ones that seem most relevant to you",
+      "description": "An adverse event is an unwanted or unusual effect affecting health and related to the use of a product during a healthcare intervention",
+      "decisions_title": "Which of the following scenarios is an example of Garbage In, Garbage Out?",
+      "decisions_s_title": "1 choice to select",
+      "decisions": {
+        "53": "A data analyst uses clean and accurate data to create a predictive model that accurately predicts customer behavior",
+        "54": "A data analyst uses incomplete and inaccurate data to create a predictive model that makes incorrect predictions about customer behavior",
+        "55": "A data analyst builds a predictive model without any data, relying solely on intuition and conjecture",
+        "56": "A data analyst uses clean and accurate data to create a predictive model that erroneously predicts customer behavior"
+      }
+    },
+    "part5": {
+      "title": "Among the following proposals, choose the one that seems most relevant to you",
+      "g_title": "Among the following proposals, choose the one that seems most relevant to you",
+      "description": "An adverse event is an unwanted or unusual effect affecting health and related to the consumption of a product during a care act",
+      "decisions_title": "What is the objective behind the implementation of the General Data Protection Regulation (GDPR) law?",
+      "decisions_s_title": "1 choice to select",
+      "decisions": {
+        "57": "To protect individuals' privacy rights and ensure that their personal data is only used for legitimate purposes",
+        "58": "To promote the use of personal data for marketing and advertising purposes",
+        "59": "To reduce the amount of personal data that companies and organizations collect and use"
+      }
+    },
+    "part2": {
+      "title": "Adverse events must be reported to the CNPV:",
+      "options": [
+        {
+          "value": 20,
+          "label": "Problem definition"
+        },
+        {
+          "value": 21,
+          "label": "Data collection and preparation"
+        },
+        {
+          "value": 22,
+          "label": "Data analysis"
+        },
+        {
+          "value": 23,
+          "label": "Interpretation of results"
+        },
+        {
+          "value": 24,
+          "label": "Communication of results"
+        },
+        {
+          "value": 25,
+          "label": "Data-driven decision making"
+        },
+        {
+          "value": 26,
+          "label": "Monitoring and evaluation of impacts over time"
+        }
+      ],
+      "options_title": "The key steps of a data-driven approach.",
+      "options_desc": "Can you describe, in order, the main steps in a data-driven approach?",
+      "options_s_title": "THE STEPS ARE:",
+      "annuler": "Cancel",
+      "valider": "Validate"
+    },
+    "messages": {
+      "msg1": {
+        "title": "Lead data science:",
+        "text": "Before you start your mission, I want to make sure you understand the challenges and steps involved in data collection and utilization.",
+        "textBtnValid": "Noted"
+      },
+      "validation": {
+        "title": "Lead data science:",
+        "text": "Are you sure about your choices?",
+        "text1": "Congratulations on successfully collecting and leveraging data for our project. Your expertise in this field has been invaluable to the team, and we are confident that the information you have gathered will help us make informed decisions for the future. Thank you for your hard work and dedication to this project.",
+        "textBtnValid": "Validate my choices",
+        "textBtnValid2": "Noted"
+      }
+    },
+    "listMsg": {
+      "title": "DIRECTOR OF INFORMATION SYSTEMS",
+      "msg1": "When collecting and utilizing data in a business, there are several critical aspects to consider. Firstly, it is essential to define the objectives of the data collection clearly. Understanding the purpose of data collection and how it aligns with the overall strategy and goals of the company is crucial.  <br/>  <br/> \n Next, identifying pertinent data sources is necessary, as companies must collect data from various sources, such as customer data, market data, and relevant internal data sources. <br/>  <br/> \n Furthermore, it is vital to ensure that the collected data is accurate, relevant, and up-to-date. Therefore, companies need to establish quality control measures to maintain the integrity of the data. <br/>  <br/> \n Additionally, the collected data must be stored and processed in compliance with data protection regulations, such as GDPR or CCPA.",
+      "msg2": "Analytics have numerous use cases. For example, analytics can be utilized to identify customer segments and behavior patterns, personalize marketing campaigns, optimize pricing and promotions, and forecast demand. <br/>  <br/> \n In operations, analytics can be used to improve the supply chain and inventory management, enhance production processes, reduce costs, and identify areas for improvement. <br/>  <br/> \n Analytics can also improve the customer experience by identifying pain points, predicting customer needs, and providing personalized recommendations.<br/>  <br/> \n  In the field of risk management, analytics can be used to prevent and detect fraud, monitor compliance, and assess risks in financial transactions. In human resources, analytics can be used to boost employee engagement and retention, streamline recruitment and hiring processes, and identify training and development needs. ",
+      "msg3": "These are just a few examples of the many possible use cases for analytics. The possibilities are virtually limitless, and organizations in all industries leverage analytics to gain insights, make informed decisions, and achieve their goals. However, it is vital to remember that data collection and maintaining their quality are important prerequisites for the success of each use case."
+    }
+  },
+  "day3": {
+    "niveau": "LEVEL 3 : Understanding what the data is telling us (Descriptive approach)",
+    "leftMsg": {
+      "title": "PRODUCTION MANAGER",
+      "message1": "To perform effective descriptive analysis, it is essential to have a comprehensive and structured data collection, including relevant variables to answer the business questions posed.",
+      "message2": "To achieve high-quality predictive analysis, it is crucial to have quality historical data, use appropriate modeling techniques, and adopt a rigorous approach to continuously evaluate and improve forecasting accuracy.",
+      "message3": "To achieve high-quality predictive analysis, it is crucial to have quality historical data, use appropriate modeling techniques, and adopt a rigorous approach to continuously evaluate and improve forecasting accuracy.",
+      "message4": "To achieve high-quality predictive analysis, it is crucial to have quality historical data, use appropriate modeling techniques, and adopt a rigorous approach to continuously evaluate and improve forecasting accuracy.",
+      "message5": "Prescriptive analysis relies on a combination of historical data, predictive models, and business rules to recommend concrete and optimal actions to take in given situations, in order to improve performance and maximize value-added."
+    },
+    "part1": {
+      "title": "Some general information about descriptive analysis ?",
+      "g_title": "Among the following options, choose the ones that seem most relevant to you",
+      "description": "1",
+      "decisions": [
+        {
+          "title": "What is descriptive analysis?",
+          "options": [
+            {
+              "label": "It is a statistical analysis technique that describes the characteristics of a set of data.",
+              "value": 60
+            },
+            {
+              "label": "It is a predictive modeling technique that predicts future trends.",
+              "value": 61
+            },
+            {
+              "label": "It is a prescriptive modeling technique that recommends actions to be taken.",
+              "value": 62
+            }
+          ]
+        },
+        {
+          "title": "Which of the following measures of central tendency is not affected by outliers ?",
+          "options": [
+            {
+              "label": "The mean",
+              "value": 63
+            },
+            {
+              "label": "The median",
+              "value": 64
+            },
+            {
+              "label": "The mode",
+              "value": 65
+            }
+          ]
+        },
+        {
+          "title": "Which of the following measures of dispersion is affected by extreme values?",
+          "options": [
+            {
+              "label": "La portée",
+              "value": 66
+            },
+            {
+              "label": "La variance",
+              "value": 67
+            },
+            {
+              "label": "L'écart type",
+              "value": 68
+            }
+          ]
+        },
+        {
+          "title": "Which of the following charts is used to represent categorical data ?",
+          "options": [
+            {
+              "label": "Histogram",
+              "value": 69
+            },
+            {
+              "label": "Boxplot",
+              "value": 70
+            },
+            {
+              "label": "Bar chart",
+              "value": 71
+            }
+          ]
+        },
+        {
+          "title": "What is the purpose of a frequency distribution table ?",
+          "options": [
+            {
+              "label": "Summarize the distribution of a continuous variable.",
+              "value": 72
+            },
+            {
+              "label": "Count the number of observations in each category of a categorical variable.",
+              "value": 73
+            },
+            {
+              "label": "To calculate the mean, median, and mode of a set of data.",
+              "value": 74
+            }
+          ]
+        }
+      ]
+    },
+    "part2": {
+      "title": "Classify the following tools in the right category",
+      "s_title": "Select the most relevant ones and place them in the most suitable category of the notification form.",
+      "f_notification": "Notification form",
+      "patient": "Patient",
+      "eventinde": "Adverse event",
+      "produitsante": "Health product",
+      "notificateur": "Notifier",
+      "decisions": {
+        "75": "Mean",
+        "76": "Median",
+        "77": "Mode",
+        "78": "Standard deviation",
+        "79": "Variance",
+        "80": "Range",
+        "81": "Interquartile range",
+        "82": "Scatterplot",
+        "83": "Histogram",
+        "84": "Bar chart",
+        "85": "Boxplot",
+        "86": "Heat map",
+        "87": "Cross-tabulation",
+        "88": "Time series analysis",
+        "89": "Pivot tables"
+      },
+      "categories": {
+        "1": "Measures of central tendency",
+        "2": "Measures of variability",
+        "3": "Graphs",
+        "4": "Analyses"
+      }
+    },
+    "message_tuto": {
+      "title": "DIRECTOR OF INFORMATION SYSTEMS",
+      "message1": "Descriptive analysis is a method of data analysis that aims to summarize and present data in a way that helps people understand patterns, trends, and relationships. <br/>  <br/> \n This type of analysis is important because it provides a clear and concise summary of what has happened in the past or what is currently happening in a given set of data. <br/>  <br/> \n Understanding these patterns and trends can help organizations make better decisions and identify areas for improvement.",
+      "message2": "There are several commonly used tools in descriptive analysis that can help people understand their data. <br/>  <br/> \n Measures of central tendency such as mean, median, and mode are used to describe the typical or average value of a set of data, while measures of variability such as standard deviation, variance, range, and interquartile range describe the spread of data. ",
+      "message3": "Frequency distributions can be displayed using histograms or bar charts to show the number of times each value or range of values appears in a set of data. <br/>  <br/> \n Cross-tabulation involves comparing two or more variables to identify patterns or relationships, while scatterplots display the relationship between two variables as points on a graph.",
+      "message4": "Box plots show the distribution of data using quartiles, and time series analysis tracks and analyzes trends and patterns of data over a given period. <br/>  <br/> \n Heatmaps are used to visualize the relationship between two variables in a dataset using color-coding, while pivot tables are used to summarize and analyze large datasets quickly.",
+      "message5": "In summary, descriptive analysis tools help to provide information about the data, summarize the main characteristics, and reveal patterns and relationships, making them essential for gaining insights and making informed decisions in various fields.",
+      "messageDr": "Vous arrivez chez le médecin Dr. Hamidi et il vous parle d’un évènement indésirable survenu à son patient. Cliquez sur l’audio pour réécouter la conversation. <br/> <br/> Dans ce niveau, vous aurez à identifier les informations utiles dans son message pour remplir la fiche de notification.  ",
+      "textBtnValid": "Noted"
+    },
+    "messages": {
+      "title": "Lead data science:",
+      "message1": "Before you start your work, I want to make sure you understand the descriptive approach.",
+      "message2": "Now that you have a good understanding of what pharmacovigilance is, the next step is to collect adverse event cases from physicians.",
+      "message3": "You arrive at Dr. Hamidi's office and he tells you about an adverse event that occurred in his patient. Click on the audio to listen to the conversation again. <br/> <br/> In this level, you will need to identify useful information in his message to fill out the notification form.",
+      "message4": "In order to succeed in our collection mission, we need to rely on healthcare professionals to report any adverse events on our products.",
+      "validation": {
+        "title": "Lead data science:",
+        "text": "Are you sure of your choices?",
+        "text1": "Congratulations on demonstrating your mastery of the descriptive approach in our data analysis project. Your ability to understand the stories that the data tells and communicate them clearly to the team has been remarkable. We are excited to continue working with you to deepen our understanding of the data and make informed decisions. Bravo for your exceptional work!",
+        "textBtnValid": "Validate my choices",
+        "textBtnValid2": "Noted"
+      }
+    }
+  },
+  "day4": {
+    "niveau": "LEVEL 4 : Predicting the future with predictive analytics",
+    "title": "Lead data science:",
+    "text": "A complete notification contains the 4 sections, namely Patient, Reporter (notifier), Event, and Product.",
+    "previous": "Previous",
+    "valide": "Validate",
+    "supprimer": "Incomplete",
+    "suivant": "Next",
+    "subTitle": "Click successively on each of the red dots to discover the received cases. You will need to validate exhaustive notifications and delete incomplete ones.",
+    "validLevel": "Validate level",
+    "validChoice": "Validate my choices",
+    "c_note": "Noted",
+    "listMsg": {
+      "title": "INTERNAL PHARMACOVIGILANCE MANAGER:",
+      "message1": "Physicians are key contributors for reporting adverse events.",
+      "message2": "Frequently, they will have information about cases reported by their patients, and we need to listen and gather all this useful information for the benefit of our laboratory and for public health.",
+      "message3": "We will review notifications received by Dr. HAMIDI together and discuss how to handle them."
+    },
+    "messages": {
+      "title": " Lead data science :",
+      "message1": "Before you begin your mission, I want to make sure you understand the principles of predictive approach.",
+      "message2": "Now that you have a good understanding of what pharmacovigilance is, the next step is to collect adverse event cases from physicians.",
+      "message3": "You arrive at Dr. Hamidi's office, and he tells you about an adverse event that occurred in one of his patients. Click on the audio to listen to the conversation again. <br/> <br/> In this level, you will need to identify useful information from his message to fill out the notification form.",
+      "message4": "To succeed in our collection mission, we must rely on healthcare professionals to report any adverse events related to our products.",
+      "validation": {
+        "title": "Lead data science:",
+        "text": "Are you sure of your choices?",
+        "text1": "I would like to congratulate you on your exceptional work in understanding the predictive approach to forecasting the future in our data analysis project. Thank you for your hard work and dedication to our project. We are looking forward to seeing the impressive results of your work.",
+        "textBtnValid": "Validate my choices",
+        "textBtnValid2": "Noted"
+      }
+    },
+    "part1": {
+      "title": "Classify these tools into the correct category",
+      "s_title": "Select the most relevant ones and drop them into the appropriate category in the notification form.",
+      "f_notification": "Notification form",
+      "patient": "Patient",
+      "eventinde": "Adverse event",
+      "produitsante": "Health product",
+      "notificateur": "Notifier",
+      "decisions": {
+        "90": "R",
+        "91": "SAS",
+        "92": "SPSS",
+        "93": "KNIME",
+        "94": "Scikit-Learn",
+        "95": "TensorFlow",
+        "96": "Keras",
+        "97": "Tableau",
+        "98": "Power BI",
+        "99": "Qlick View",
+        "100": "Apache Hadoop",
+        "101": "Apache Spark",
+        "102": "Elasticsearch",
+        "103": "Amazon Big Data Services",
+        "104": "NLTK",
+        "105": "spaCy",
+        "106": "ChatGPT"
+      },
+      "categories": {
+        "1": "Statistical analysis software",
+        "2": "Machine learning libraries",
+        "3": "Data visualization tools",
+        "4": "Big data technologies",
+        "5": "Natural language processing (NLP) tools"
+      }
+    },
+    "part2": {
+      "title": "Among the following proposals, choose the one that seems most relevant to you",
+      "description": "An adverse event is an unwanted or unusual event affecting health and related to the consumption of a product during a medical procedure",
+      "decisions_title": "What is the purpose of regression analysis?",
+      "decisions_s_title": "1 choice to select",
+      "decisions": {
+        "107": "To make predictions about future outcomes based on historical data",
+        "108": "To summarize data into a single number or metric",
+        "109": "To test hypotheses about differences between groups"
+      }
+    },
+    "part3": {
+      "title": "Among the following options, choose the one that seems most relevant to you",
+      "description": "An adverse event is an unwanted or unusual effect affecting health and related to the consumption of a product during a healthcare act",
+      "decisions_title": "What is the purpose of the confusion matrix in classification?",
+      "decisions_s_title": "1 choice to select",
+      "decisions": {
+        "110": "To determine the statistical significance of the relationship between independent and dependent variables",
+        "111": "To evaluate the performance of a classification model by comparing predicted and actual class labels",
+        "112": "To summarize the data into a single number or metric"
+      }
+    },
+    "part4": {
+      "title": "Among the following options, choose the one that seems most relevant to you",
+      "description": "An adverse event is an unwanted event or unusual effect affecting health and related to the consumption of a product during a healthcare act",
+      "decisions_title": "What is clustering? :",
+      "decisions_s_title": "1 choice to select",
+      "decisions": {
+        "113": "The process of making predictions about future outcomes based on historical data",
+        "114": "The process of synthesizing data into a single number or metric",
+        "115": "The process of grouping data into similar categories or classes based on their characteristics"
+      }
+    },
+    "message_tuto": {
+      "title": "DIRECTOR OF INFORMATION SYSTEMS",
+      "message1": "Predictive analysis is a type of data analysis that utilizes statistical and machine learning methods to examine past and current data in order to forecast future trends and events. <br/>  <br/> \n It involves creating models based on patterns and relationships in the data to predict future outcomes.",
+      "message2": "Predictive analysis is used across various industries such as finance, healthcare, and business to help make better decisions. <br/>  <br/> \n For instance, it can be used to anticipate customer behavior or predict a patient's likelihood of developing a specific medical condition.",
+      "message3": "The predictive analysis process consists of several steps, including data collection, cleaning, feature engineering, model selection, and evaluation.<br/>  <br/> \n  Once a predictive model is created, it can be used to generate forecasts based on new data. This tool is essential for organizations to anticipate issues before they happen, recognize growth opportunities, and enhance their operational efficiency.",
+      "message4": "There are many tools and techniques used in predictive analysis, including :<br/>  <br/> \n  • Statistical analysis software such as R, SAS, and SPSS. <br/>  <br/> \n • Machine learning libraries such as scikit-learn, TensorFlow, and Keras. <br/>  <br/> \n • Data visualization tools like Tableau and Power BI. <br/>  <br/> \n • Big data technologies such as Apache Hadoop and Apache Spark.<br/>  <br/> \n  • Natural language processing (NLP) tools like NLTK and spaCy.",
+      "message5": "Regression, classification, and clustering are three fundamental techniques used in predictive analysis.<br/>  <br/> \n  Regression predicts a continuous numerical value based on input variables, classification predicts a categorical variable based on input variables, and clustering groups similar data points based on their characteristics. ",
+      "message6": " These techniques are used in different types of analysis and are suitable for various kinds of data.",
+      "message7": "Regression models are commonly used in financial analysis and marketing, classification models are commonly used in marketing and healthcare, and clustering models are commonly used in customer segmentation and fraud detection."
+    }
+  },
+  "day5": {
+    "niveau": "LEVEL 5 : Improving the future with prescriptive analytics",
+    "ModalexpertText": "You have completed your setup and the first level of the PV Strategic Game. Go to the 'Activity Report' section to see how you're doing!",
+    "title": "SELECT EACH FILE TO MAKE YOUR DECISIONS",
+    "BudgetR": "Remaining Actions",
+    "ValideNiveau": "Validate level",
+    "Quitter": "Quit",
+    "DiscussMessagemsg": "Click on the red notifications to handle pending files.",
+    "DiscussMessagemsgstep2": "Click on the red notifications to handle pending files.",
+    "DiscussMessagemsgstep3": "Click on the red notifications to handle pending files.",
+    "DiscussMessagemsgstep4": "Click on the red notifications to handle pending files.",
+    "DiscussMessagemsgstart": "I asked Professor Dira, an international expert in Pharmacovigilance, to assist you in setting up an appropriate regulation. His consultation will cost you PV COINS 50,000 for 150 hours of work. Choose from the proposed actions the ones that seem most relevant to you for creating a regulatory framework for Pharmacovigilance, without exceeding the 150 hours of work billed by Professor Dira.",
+    "DiscussMessagemsgstep5": "You have completed all the files, you can reopen them to check or modify your decisions before validating the level.",
+    "Annuler": "Cancel",
+    "Enregistrer": "Save",
+    "PVcoins": "PV COINS.",
+    "NotifyModalspan": "You have a message from the Director of the National Drug Regulatory Agency",
+    "NotifyModalp": "Hello and welcome! We must work together to ensure rational use of drugs in our country.",
+    "PhoneModalTitle": "The Minister",
+    "PhoneModalCommencer": "Start",
+    "PhoneModalP1": "So that you can successfully complete this first mission, despite the crisis and budgetary constraints, I have unlocked an amount of PV COINS 150,000.",
+    "PhoneModalP2": "I have already allocated PV COINS 40,000 for the acquisition of premises, a telephone line, and fixed computers for the members of your team. I remind you that except for the office where you are currently located, the rest of the premises are not furnished or equipped. You still have PV Coins 110,000 left. Use them strategically!",
+    "StepModalstep1": "Welcome to the Ministry of Health, we are delighted to finally have a Pharmacovigilance center for our country. In this first step, I would like you to set up the structure of your Pharmacovigilance center and the basis of your Pharmacovigilance system.",
+    "StepModalstep2": "We have already provided you with some basic equipment. Click to see: Workspace, computer, telephone line, internet subscription, furniture, printer. Everything else is at your expense.",
+    "StepModalNote": "Noted",
+    "initialState": {
+      "MedecinTitle": "Data Collection",
+      "MedecinSTitle": "Choose the right actions that will allow you to perform your analysis and choose the best scenario for our company",
+      "MedecinUnit": "minutes",
+      "127": "Define analysis objectives with the SMART methodology",
+      "128": "Identify different data sources",
+      "129": "Verify the quality of available data",
+      "130": "Verify compliance with current privacy regulations",
+      "131": "Use all available data within the company",
+      "132": "Launch a social media data collection project and store it",
+      "133": "Download a database with people's names and personal phone numbers",
+      "134": "Generate necessary fictitious data for the desired analysis",
+      "135": "Identify trends and patterns",
+      "136": "Create dashboards and descriptive reports",
+      "137": "Identify outliers and extreme values",
+      "138": "Measure activity performance based on KPIs",
+      "139": "Publish confidential measures on social media",
+      "140": "Ignore data quality",
+      "141": "Make decisions based on analysis while ignoring data context",
+      "142": "Make decisions based on analysis results without testing their relevance",
+      "143": "Create predictive models",
+      "144": "Identify driving factors from the predictive model results",
+      "145": "Forecast future trends",
+      "146": "Create a model that fits with input data by assuming that the future will resemble the past",
+      "147": "Make decisions based on models while ignoring external factors not accounted for in the study",
+      "148": "Ignore model evaluation with virgin data because the main thing is to have quick results",
+      "149": "Blindly believe in model results since mathematics are exact sciences",
+      "150": "Make decisions based on the results of the analysis without testing their relevance",
+      "151": "Optimize business outcomes by testing multiple scenarios",
+      "152": "Determine decisive variables that drive the performance of the analysis model",
+      "153": "Analyze results with other specialists to discuss the different impacts",
+      "154": "Integrate validated model as decision support tool",
+      "155": "Mask model results that do not coincide with human predictions",
+      "156": "Ignore ethical impacts",
+      "157": "Ignore data quality and predictive analysis results in choosing the prescriptive analysis optimization model",
+      "DelegueMedicalTitle": "DESCRIPTIVE ANALYSIS",
+      "DelegueMedicalSTitle": "Choose the right actions that will allow you to perform your analysis and choose the best scenario for our company",
+      "DelegueMedicaltUnit": "PV COINS",
+      "UnitePHVInterneTitle": "PREDICTIVE ANALYSIS",
+      "UnitePHVInterneSTitle": "Choose the right actions that will allow you to perform your analysis and choose the best scenario for our company",
+      "UnitePHVInterneUnit": "PV COINS",
+      "CNPVTitle": "PRESCRIPTIVE ANALYSIS",
+      "CNPVSTitle": "Choose the right actions that will allow you to perform your analysis and choose the best scenario for our company",
+      "CNPVUnit": "PV COINS"
+    },
+    "listMsg": {
+      "title": "DIRECTOR OF INFORMATION SYSTEMS",
+      "text1": "Prescriptive analysis is a branch of advanced analytics that uses predictive modeling, optimization techniques, and machine learning algorithms to recommend actions for optimizing outcomes. It is the highest level of data analysis, building on descriptive and predictive analysis. <br/>  <br/> \n  Prescriptive analysis uses information generated by descriptive and predictive analysis to suggest a course of action. It takes into account various constraints and trade-offs, such as resource availability, costs, and risks, to provide decision-makers with multiple options to achieve their goals.",
+      "text2": "Prescriptive analysis has a wide range of applications in different sectors, such as healthcare, finance, marketing, and operations management. For example, in healthcare, prescriptive analysis can help doctors determine the best treatment plans for their patients based on medical history, demographic data, and patient risk factors. <br/>  <br/> \n In finance, it can help financial advisors recommend investment portfolios that meet their clients' financial goals and risk preferences. In operations management, it can help optimize supply chain management, production planning, and inventory control.",
+      "text3": "Here is a concrete example of prescriptive analysis. Let's say a retailer wants to optimize its pricing strategy to increase revenue and profit. It has historical sales data, competitive pricing data, and customer demographic data. <br/>  <br/> \n First, it uses descriptive analysis to understand its current pricing strategy, identify trends and patterns, and gain insights into customer buying behavior. <br/>  <br/> \n Next, it uses predictive analysis to forecast sales and estimate the impact of different pricing scenarios on revenue and profit. ",
+      "text4": "For instance, it can simulate how different prices for a product category would affect demand and sales volume. Finally, it uses prescriptive analysis to recommend an optimal pricing strategy.<br/>  <br/> \n  It takes into account various constraints and trade-offs, such as inventory levels, price elasticity, and profit margins, to suggest a range of pricing options that would achieve its objectives.",
+      "text5": "For example, it may recommend increasing the price of high-margin products to increase profits while lowering the price of low-margin products to increase sales volume. It may also recommend dynamic pricing strategies that adjust prices in real-time based on demand, inventory levels, and competitive pricing.<br/>  <br/> \n  Overall, prescriptive analysis enables retailers to make data-driven pricing decisions that maximize revenue and profit while balancing various constraints and business objectives.",
+      "text6": "Advantages: <br/>  <br/> \n  • Results optimization: Prescriptive analysis can help businesses optimize results by recommending the best course of action based on multiple variables and constraints.<br/>  <br/> \n  • Flexibility: Prescriptive analysis models can be customized to meet the specific needs and objectives of the business. They can also be updated and refined as new data becomes available. <br/>  <br/> \n • Automation: Prescriptive analysis can automate decision-making processes, reducing the need for manual intervention and improving the speed and accuracy of decision-making. <br/>  <br/> \n   • Risk reduction: Prescriptive analysis can help businesses identify and mitigate potential risks by analyzing different scenarios and recommending strategies to minimize negative outcomes.",
+      "text7": "Disadvantages:<br/>  <br/> \n  • Complexity: Prescriptive analysis models can be complex and require specialized knowledge and skills to develop and implement. This can make it challenging for businesses without sufficient resources to leverage this technology. <br/>  <br/> \n  • Data quality: Prescriptive analysis models require high-quality and reliable data to generate accurate insights and recommendations. Poor data quality can lead to inaccurate results and faulty decision-making. <br/>  <br/> \n   • Cost: Prescriptive analysis can be expensive to implement and maintain, particularly for smaller businesses with limited resources."
+    },
+    "DiscussMessage": {
+      "title": "Sales Director",
+      "text1": "Let's see what you're going to do with the data. Go ahead and select the first folder.",
+      "text2": "To maximize the added value of analytics, it is essential to have complete and reliable data, use appropriate analytical techniques, and adopt a rigorous approach to continuously evaluate and improve the quality of the results obtained.",
+      "text3": "The role of analytical teams in data processing is crucial to ensure the quality and reliability of the analyses performed, as well as to ensure that the decisions made from the results are relevant and justified.",
+      "text4": "Analytics is a continuous and iterative process that involves collecting, cleaning, processing, analyzing, and interpreting data to generate relevant insights and actionable knowledge, in order to support decision-making and maximize added value.",
+      "text5": "If you are sure of your answers, you can validate the level using the button on the right. Otherwise, you can select each folder again to modify your answers.",
+      "text6": "We will review the key steps of a data-driven approach."
+    },
+    "notifyModal": {
+      "title": "THE PRESIDENT",
+      "text": "« Hello! I would like to remind you that we need to work collaboratively with all departments of the company to ensure the success of implementing the analytics integration strategy. »"
+    },
+    "messages": {
+      "title": "Lead Data Scientist:",
+      "message1": "Before embarking on your final mission, I want to make sure you understand the principles of the prescriptive approach.",
+      "message2": "Now that you understand what pharmacovigilance is for, the next step is to collect cases of adverse effects from doctors.",
+      "message3": "You arrive at Dr. Hamidi's office and he tells you about an adverse event that occurred in his patient. Click on the audio to listen to the conversation again. <br/> <br/> In this level, you will have to identify useful information in his message to fill out the notification form.",
+      "message4": "Congratulations! Your Task Force mission has come to an end. You have demonstrated commitment and involvement throughout the mission. I invite you to consult the activity report to get an idea of your performance in this game. Keep raising awareness about analytics among those around you!",
+      "validation": {
+        "title": "Lead Data Scientist:",
+        "text": "Are you sure of your choices?",
+        "textBtnValid": "Validate my choices",
+        "textBtnValid2": "Noted"
+      }
+    },
+    "directeur_general": {
+      "title": "THE GENERAL DIRECTOR",
+      "text": "Congratulations! Your Task Force mission has come to an end. You have demonstrated commitment and involvement throughout the mission. I invite you to consult the activity report to get an idea of your performance in this game. Keep raising awareness about analytics among those around you!"
+    },
+    "responsable_m": {
+      "title": "Lead data science",
+      "text": "Are you sure of your choices? "
+    },
+    "part1": {
+      "title": "For each of the following statements, indicate whether the statement is true or false by selecting the appropriate answer.",
+      "s_title": "Select the most relevant ones and place them in the most appropriate category of the notification form.",
+      "f_notification": "Notification form",
+      "patient": "Patient",
+      "eventinde": "Adverse event",
+      "produitsante": "Health product",
+      "notificateur": "Notifier",
+      "decisions": {
+        "116": "Optimization of results by recommending the best action",
+        "117": "Flexibility thanks to the possibility of being customized to meet the specific needs and objectives of the company",
+        "118": "Automation of the decision-making process",
+        "119": "Reduction of potential risks by analyzing the outcome of different scenarios",
+        "120": "Generation of complex results requiring specialized knowledge and skills",
+        "121": "Dependence on the quality of data used during analysis",
+        "122": "Implementation budget that can be high and inaccessible for small and medium-sized enterprises",
+        "123": "Obligation to comply with the ethical framework for data exploitation"
+      },
+      "categories": {
+        "1": "Advantages",
+        "2": "Disadvantages"
+      }
+    },
+    "part2": {
+      "title": "Among the following options, choose the most relevant one",
+      "description": "An adverse event is an unintended or unusual event affecting health that is related to the use of a product during a healthcare act.",
+      "decisions_title": "What is the difference between descriptive, predictive, and prescriptive analytics?",
+      "decisions_s_title": "Select 1 option",
+      "decisions": {
+        "124": "Descriptive analytics involves using optimization techniques to recommend the best course of action, predictive analytics involves analyzing historical data to obtain insights, and prescriptive analytics involves using data and statistical algorithms to predict future outcomes.",
+        "125": "Descriptive analytics involves analyzing historical data to obtain insights, predictive analytics involves using data and statistical algorithms to predict future outcomes, and prescriptive analytics involves using optimization techniques to recommend the best course of action.",
+        "126": "Descriptive analytics involves using optimization techniques to recommend the best course of action, predictive analytics involves analyzing historical data to obtain insights, and prescriptive analytics involves using data and statistical algorithms to predict future outcomes."
+      }
+    },
+    "folder": {
+      "1": "Data collection",
+      "2": "Descriptive analysis",
+      "3": "Predictive analysis",
+      "4": "Prescriptive analysis"
+    }
+  },
+  "textBtnValid": "Validate my choices",
+  "pasEncore": "Not yet",
+  "btnSuivant": "Next",
+  "btnBack": "Back",
+  "noted": "Noted",
+  "exit": "Exit",
+  "next_step": "Next Step",
+  "rappels": "Reminders",
+  "revoir": "Watch the video",
+  "msg_field_part_1": "Unfortunately, you were unable to achieve the minimum score to validate this level!",
+  "msg_field_part_2": "Try again, you're almost there!",
+  "rejouer": "Play again"
+}

@@ -1,0 +1,696 @@
+import React, { useEffect, useState } from "react";
+import { Dropdown, Modal } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { getLoggedInUser } from "../../helpers/authUtils.js";
+import MySvg from "../../assets/images/pv-challenge/group-3883.png"
+import mySvg1 from "../../assets/images/pv-challenge/logo.png";
+import badg7 from "../../assets/images/pv-challenge/contest.svg";
+import badg5 from "../../assets/images/pv-challenge/Layer_15.svg";
+import badg6 from "../../assets/images/pv-challenge/Layer_26.svg";
+import playIcon from "../../assets/images/pv-challenge/images/rectangle552131.png";
+import badg3 from "../../assets/images/pv-challenge/travel-itinerary.svg";
+import Loader from "../../components/Loader.jsx";
+import ModalFinalGame from "../../components/modal/modalFinalGame/index.jsx";
+import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
+import { closeDayPvChClear, getCenterInfoPvCh, updateCenterPvChInfo } from "../../redux/pvChallenge/actions.js";
+import Dock from "../../assets/images/pv-challenge/character/character-3.png"
+import ModalTutorial from "../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
+import backImgTuto from "../../assets/images/pv-challenge/images/mask_group_13.png";
+import persoImage from "../../assets/images/pv-challenge/character/character_1_c.png";
+import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.svg";
+import styles from "../style.module.scss"
+import ScoreModal from "../../components/pvCh/day1/ScoreModal/StepModal.jsx";
+import { httpClient_get } from "../../helpers/api.js";
+import FieldModal from "../../components/pvCh/FieldModal/FieldModal.jsx";
+import avatar1 from "../../assets/images/pv-challenge/avatars/character1.png"
+import avatar2 from "../../assets/images/pv-challenge/avatars/character2.png"
+import avatar3 from "../../assets/images/pv-challenge/avatars/character3.png"
+import avatar4 from "../../assets/images/pv-challenge/avatars/character4.png"
+import avatar5 from "../../assets/images/pv-challenge/avatars/character5.png"
+import { Cookies, useCookies } from "react-cookie";
+import * as PropTypes from "prop-types";
+import mstyles from "./style.module.scss"
+import PvChModalBadge from "../../components/modal/PvChModalBadge/index.jsx";
+import MissionAudio from "../../assets/audio/mission/index";
+
+function isFirstTime(gameSessionId) {
+
+    const cookies = new Cookies();
+    const discovery_mission = cookies.get(`discovery_mission_${gameSessionId}`);
+    return !!discovery_mission;
+
+}
+
+function setIsFirstTime(gameSessionId) {
+    const cookies = new Cookies();
+    cookies.set(`discovery_mission_${gameSessionId}`, true, { path: '/' });
+}
+
+
+const CustomToggle = React.forwardRef(({ children, onClick }, ref) => {
+    const [disableEdit, setDisableEdit] = useState(false);
+
+    const { center } = useSelector((state) => state.PvChallenge);
+
+    useEffect(() => {
+        if (center.days && center.days.find((d) => d.dayId === 1)?.status === 1)
+            setDisableEdit(true);
+    }, []);
+    return (
+        <div
+            className="sg-menu-mod-select-avatar"
+            ref={ref}
+            style={{
+                padding: "10px", userSelect: 'none',
+            }}
+            onClick={(e) => {
+                onClick(e);
+            }}
+        >
+            {children}
+            {!disableEdit && <div style={{ marginLeft: "auto" }}>&#x25bc;</div>}
+        </div>
+    );
+});
+
+const AvatarMenu = React.forwardRef(
+    ({ children, style, className, "aria-labelledby": labeledBy }, ref) => {
+        const [value, setValue] = useState("");
+
+        return (
+            <div
+                ref={ref}
+                style={{ ...style, minWidth: "auto" }}
+                className={className}
+                aria-labelledby={labeledBy}
+
+            >
+                <div className="list-unstyled">
+                    {React.Children.toArray(children).filter(
+                        (child) =>
+                            !value || child.props.children.toLowerCase().startsWith(value)
+                    )}
+                </div>
+            </div>
+        );
+    }
+);
+function ConfigModal(props) {
+    const { t } = props;
+    const { center } = useSelector((state) => state.PvChallenge);
+
+    const [errorName, setErrorName] = useState(false);
+    const [name, setName] = useState("");
+    const [avatarLogo, setAvatarLogo] = useState(avatars[0]);
+    const [fonction, setFonction] = useState("");
+    const [disableEdit, setDisableEdit] = useState(false);
+
+    useEffect(() => {
+        if (center.days && center.days.find((d) => d.dayId === 1)?.status === 1)
+            setDisableEdit(true);
+        else
+            setDisableEdit(false);
+
+        setName(center.name);
+        setAvatarLogo(getLogoById(center.avatarId));
+        setFonction(center?.fonction);
+    }, [center]);
+
+    return (
+        <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            backdrop={"static"}
+        >
+            <Modal.Body>
+                <div className="sg-menu-mod-contaiber">
+                    <div className="sg-menu-mod-lr">
+                        <img src={Dock} height={320} />
+                    </div>
+                    <div className="sg-menu-mod-c">
+                        <div className="d-flex align-content-center justify-content-center">
+                            <h3 className="d-flex   sg-menu-mod-title-p1">
+                                {t("menu.modal.title_p1")}
+                            </h3>
+                            <h3 className="d-flex   sg-menu-mod-title-p2 ml-2">
+                                {t("menu.modal.title_p2")}
+                            </h3>
+                        </div>
+                        <p className="d-flex  sg-menu-item-title-p3 text-center">
+                            {t("menu.modal.description")}
+                        </p>
+
+                        <form>
+                            <div className="form-row justify-content-center">
+                                <div className="form-group " style={{ flex: 3 }}>
+                                    <label htmlFor="inputCity" className="col-form-label">
+                                        {t("menu.modal.name_taskforce")}
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="inputCity"
+                                        maxLength={20}
+                                        placeholder="Nom du centre"
+                                        style={{
+                                            padding: "21px 18px",
+                                            borderColor: errorName ? "red" : "#ced4da",
+                                        }}
+                                        disabled={disableEdit}
+                                        value={name}
+                                        onChange={(e) => {
+                                            setName(e.target.value);
+                                            if (e.target.value !== "") {
+                                                setErrorName(false);
+                                            } else {
+                                                setErrorName(true);
+                                            }
+                                        }}
+                                    />
+                                </div>
+
+
+                            </div>
+                            <div className="form-row justify-content-center">
+
+                                <div className="form-group" style={{ flex: 5 }}>
+                                    <label htmlFor="inputZip" className="col-form-label">
+                                        {t(`menu.configRespo`)}
+                                    </label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="inputCity"
+                                        maxLength={20}
+                                        placeholder={t(`menu.configRespo`)}
+                                        style={{
+                                            padding: "21px 18px",
+                                            borderColor: "#ced4da",
+                                        }}
+                                        disabled={disableEdit}
+                                        value={fonction}
+                                        onChange={(e) => {
+                                            setFonction(e.target.value);
+                                        }}
+                                    />
+                                </div>
+                                <div style={{ flex: 1 }} />
+                                <div className={`form-group ${styles.menu_select_avatar}`} style={{ flex: 2 }}>
+                                    <label htmlFor="inputZip" className="col-form-label">
+                                        {t(`menu.configAvatar`)}
+                                    </label>
+                                    <Dropdown>
+                                        <Dropdown.Toggle
+                                            as={CustomToggle}
+                                        >
+                                            <div className={styles.list_item}>
+                                                <img src={avatarLogo?.logo} alt="#" />
+                                            </div>
+                                        </Dropdown.Toggle>
+
+                                        {!disableEdit && (
+                                            <Dropdown.Menu className={styles.dropdown_menu} as={AvatarMenu}
+                                                align="right sm">
+                                                <Dropdown.Item
+                                                    className={styles.list_item444}
+                                                    onClick={() => {
+                                                        setAvatarLogo(getLogoById(1));
+                                                    }}
+                                                >
+                                                    <div className={styles.list_item}>
+                                                        <img src={avatar1} alt="#" />
+                                                    </div>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item
+                                                    onClick={() => {
+                                                        setAvatarLogo(getLogoById(2));
+                                                    }}
+                                                >
+                                                    <div className={styles.list_item}>
+                                                        <img src={avatar2} alt="#" />
+                                                    </div>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item
+                                                    onClick={() => {
+                                                        setAvatarLogo(getLogoById(3));
+                                                    }}
+                                                >
+                                                    <div className={styles.list_item}>
+                                                        <img src={avatar3} alt="#" />
+                                                    </div>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item
+                                                    onClick={() => {
+                                                        setAvatarLogo(getLogoById(4));
+                                                    }}
+                                                >
+                                                    <div className={styles.list_item}>
+                                                        <img src={avatar4} alt="#" />
+                                                    </div>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item
+                                                    onClick={() => {
+                                                        setAvatarLogo(getLogoById(5));
+                                                    }}
+                                                >
+                                                    <div className={styles.list_item}>
+                                                        <img src={avatar5} alt="#" />
+                                                    </div>
+                                                </Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        )}
+                                    </Dropdown>
+                                </div>
+                            </div>
+
+                            <div className="form-row justify-content-center">
+                                <div className="form-group col-md-4">
+                                    <button
+                                        type="reset"
+                                        onClick={() => props.onClose()}
+                                        style={{
+                                            width: "100%",
+                                            height: "60px",
+                                        }}
+                                        className={`btn btn-secondary waves-effect waves-light mr-1 d-block ${mstyles.color_2}`}
+                                    >
+                                        {t(`menu.retour`)}
+                                    </button>
+                                </div>
+
+                                <div className={`form-group col-md-4`}>
+                                    <button
+                                        type="reset"
+                                        onClick={() => {
+                                            if (disableEdit) {
+                                                props.onClose();
+                                            } else {
+                                                if (name !== "") {
+                                                    setErrorName(false);
+                                                    props.dispatch(
+                                                        updateCenterPvChInfo(
+                                                            props.gameSessionId,
+                                                            name,
+                                                            avatarLogo.id,
+                                                            fonction
+                                                        )
+                                                    );
+                                                    props.onClose();
+                                                } else {
+                                                    setErrorName(true);
+                                                }
+                                            }
+                                        }}
+                                        style={{
+                                            width: "100%",
+                                            height: "60px",
+                                        }}
+                                        className={`btn btn-primary waves-effect waves-light mr-1 d-block ${mstyles.color_1}`}
+                                    >
+                                        {t(`menu.enregistrer`)}
+
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div className="sg-menu-mod-lr">
+
+                    </div>
+                </div>
+            </Modal.Body>
+        </Modal>
+    );
+}
+
+function MenuBtnComponent({ img, title, onClick }) {
+    return <div
+        className={`border-darken-1  ${mstyles.menu_item_box}`}
+        onClick={onClick}
+    >
+        <img
+            src={img}
+            alt="user-img"
+            className="mb-1 sg-menu-item-box-img"
+            width={88}
+            height={77}
+        />
+        {title}
+    </div>;
+}
+
+MenuBtnComponent.propTypes = {
+    onClick: PropTypes.func,
+    s: PropTypes.any
+};
+export default function Menu() {
+    const [cookies, setCookie, removeCookie] = useCookies();
+    const gameSessionId = cookies.gameSessionId;
+
+    const [regleJeu, setRegleJeu] = useState(false);
+    const [showConfig, setShowConfig] = useState(false);
+    const [showBadge, setShowBadge] = useState(false);
+    const [showScore, setShowScore] = useState(false);
+    const [showFailedScore, setShowFailedScore] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [showFinalGame, setShowFinalGame] = useState(false);
+    const [score, setScore] = useState({});
+    const [badges, setBadges] = useState([]);
+
+    const { closeDay } = useSelector((state) => state.PvChallenge);
+    const { loading, center } = useSelector((state) => state.PvChallenge);
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const { t } = useTranslation();
+    const { days, challengeId, missionId } = useSelector((state) => state.PvChallenge.center);
+
+
+    useEffect(() => {
+        console.log("----closeDay---",closeDay)
+        if (closeDay !== null) {
+            setScore({
+                stars: closeDay.stars,
+                score1: closeDay.score1,
+                score2: closeDay.score2,
+                // score3: closeDay.score3,
+            });
+            setBadges(closeDay.badges);
+            setTimeout(() => {
+                if (closeDay.success) {
+                    setShowScore(true);
+                } else {
+                    setShowFailedScore(true)
+                }
+
+                // dispatch(closeDayPvChClear());
+            }, 100);
+
+        }
+    }, [closeDay]);
+
+    useEffect(() => {
+        dispatch(getCenterInfoPvCh(gameSessionId));
+
+    }, []);
+
+    useEffect(() => {
+        if (gameSessionId) {
+            const res = !isFirstTime(gameSessionId);
+            setRegleJeu(res);
+        }
+    }, [gameSessionId]);
+
+
+
+    const listMission = [
+        {
+            title: t("menu.listMission.title"),
+            text: t("menu.listMission.text1"),
+            styleCharacter: mstyles.styleCharacter_1,
+            audio: MissionAudio.missionAudio1
+        },
+        {
+            title: t("menu.listMission.title"),
+            text: t("menu.listMission.text2"),
+            styleCharacter: mstyles.styleCharacter_2,
+            audio: MissionAudio.missionAudio2
+        },
+        {
+            title: t("menu.listMission.title"),
+            text: t("menu.listMission.text3"),
+            styleCharacter: mstyles.styleCharacter_3,
+            audio: MissionAudio.missionAudio3
+        }
+    ]
+    const to = (path) => {
+        history.push(path);
+    };
+
+    const downloadCertificate = () => {
+        setIsLoading(true)
+        httpClient_get(`/participant/digital_ambassadors/export_certificate?missionId=${missionId}`, {
+            responseType: "blob"
+        })
+            .then((response) => {
+
+                // Create blob link to download
+                const url = window.URL.createObjectURL(response.data);
+                const link = document.createElement('a');
+                const loggedInUser = getLoggedInUser();
+                const certificat_name = "certificat_" + loggedInUser?.firstName + "_" + loggedInUser?.lastName + ".pdf";
+                link.href = url;
+                link.setAttribute(
+                    'download',
+                    certificat_name,
+                );
+
+                // Append to html link element page
+                document.body.appendChild(link);
+
+                // Start download
+                link.click();
+
+                // Clean up and remove the link
+                link.parentNode.removeChild(link);
+                setIsLoading(false)
+            });
+    }
+
+    return (
+        <div className="sg-menu-contant">
+            {loading || isLoading && <Loader />}
+
+            <PvChModalBadge
+                badges={badges}
+                show={showBadge}
+                close={() => {
+                    setShowBadge(false);
+                    setTimeout(() => {
+                        dispatch(closeDayPvChClear());
+                    }, 1000);
+
+                }}
+            />
+            <ModalFinalGame
+                badges={badges}
+                show={showFinalGame}
+                close={() => {
+                    setShowFinalGame(false);
+                }}
+            />
+
+            <ScoreModal
+                scoreDay={score}
+                show={showScore}
+                close={() => {
+                    if (closeDay?.dayId === 5 && closeDay?.success) setShowFinalGame(true);
+
+                    if (badges.length > 0) setShowBadge(()=>true);
+
+                    setShowScore(()=>false);
+
+                }}
+            />
+            <FieldModal
+                show={showFailedScore}
+                close={() => {
+                    setShowFailedScore(false);
+                }}
+            />
+            <ConfigModal
+                t={t}
+                show={showConfig}
+                center={center}
+                gameSessionId={gameSessionId}
+                dispatch={dispatch}
+                onClose={() => {
+                    setShowConfig(false);
+                }}
+                onHide={() => {
+                    setShowConfig(false);
+                }}
+            />
+
+            <ModalTutorial
+                listMsg={listMission}
+                pictureClass={mstyles.menu_personnage_image}
+                personnageImage={persoImage}
+                backGrandImage={backImgTuto}
+                show={regleJeu}
+                onClose={() => {
+                    setIsFirstTime(gameSessionId);
+
+                    setRegleJeu(false);
+                }}
+                forceTemplate1={true}
+            />
+            <div className={mstyles.sg_menu_contant_left}>
+                <div className={mstyles.sg_menu_item_btn}>
+                    <div className={`d-flex flex-column sg-onHover ${mstyles.sg_onHover}`}>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <img
+                                src={getLogoById(center.avatarId, avatars)?.logo}
+                                alt="user-img"
+                                width={41}
+                                height={41}
+                                style={{
+                                    backgroundColor: "#fff",
+                                    borderRadius: "50px",
+                                }}
+                            />
+                            <span className="sg5-menu-item-title">
+                                {center.name}
+                            </span>
+                        </div>
+                        <div
+                            className="sg-menu-item-btn-config"
+                            onClick={() => setShowConfig(true)}
+                        >
+                            <div className="sg-menu-item-btn-config-s">
+                                {t(`menu.configure`)}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        className={` ${mstyles.border_darken_1} border-darken-1`}
+                        style={{
+                            cursor: "pointer",
+                            position: "absolute",
+                            left: "3.6rem",
+                            top: "1rem",
+                        }}
+                        onClick={() => {
+                            setRegleJeu(true);
+                        }}
+                    >
+                        <div className={`d-flex ${mstyles.border_darkenb_}`}>
+                            <h3
+                                style={{
+                                    marginLeft: "18px",
+                                    font: "normal normal normal 16px/23px Karla",
+                                    color: "#3F4351",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                }}
+                            >
+                                {t(`menu.d_mission`)}
+                            </h3>
+                            <img
+                                src={playIcon}
+                                alt="user-img"
+                                className="mb-1 sg-menu-item-box-img"
+                                width={30}
+                                height={30}
+                                style={{ bottom: "8px", left:"8px", position: "relative" }}
+                            />
+                        </div>
+                    </div>
+                    {days?.every((item) => item.status === 1) && <div
+                        className={`border-darken-1 ${mstyles.border_darken_2}`}
+                        style={{
+                            cursor: "pointer",
+                            position: "absolute",
+                            left: "20rem",
+                            top: "1.5rem",
+                        }}
+                        onClick={downloadCertificate}
+                    >
+                        <div className="d-flex">
+                            <img
+                                src={pdfSvgrepo}
+                                alt="user-img"
+                                className="mb-1 sg-menu-item-box-img"
+                                width={50}
+                                height={50}
+                            />
+                            <h3
+                                style={{
+                                    marginLeft: "5px",
+                                    font: "normal normal normal 16px/23px Karla",
+                                    color: "#3F4351",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                }}
+                            >
+                                {t(`menu.t_certificat`)}
+                            </h3>
+                        </div>
+                    </div>}
+                </div>
+                <div className={`d-flex align-items-baseline ml-5 ${mstyles.title_logo}`}>
+                    <img
+                        src={mySvg1}
+                        alt="user-img"
+                        width={150}
+                        height={54}
+                        // style={{ bottom: "7px", position: "relative" }}
+                    />
+                </div>
+                <div className={`d-flex  ml-5 ${mstyles.s_title}`}>
+                    <h3 className="d-flex  mr-1 sg-menu-item-title-p1">
+                        {t("menu.welcome1")}
+                    </h3>
+                    <h3 className="d-flex sg-menu-item-title-p2">
+                        {t("menu.welcome2")}
+                    </h3>
+                </div>
+                <p className={`d-flex ml-5 mr-5 sg-menu-item-title-p3 ${mstyles.description}`}>
+                    {t("menu.desc1")}
+                </p>
+                <div className={mstyles.sg_menu_item_box_container}>
+                    <div className={`d-flex ${mstyles.block1}`}  >
+                        <MenuBtnComponent
+                            img={badg3}
+                            onClick={() => to(`/parcours`)}
+                            title={t(`menu.parcour`)}
+                        />
+                        <MenuBtnComponent
+                            img={badg6}
+                            onClick={() => to(`/activity-report`)}
+                            title={t(`menu.Ractivity`)}
+                        />
+                    </div>
+                    <div className={`d-flex ${mstyles.block2}`} >
+                        <MenuBtnComponent
+                            img={badg5}
+                            onClick={() => to(`/badges`)}
+                            title={t(`menu.badges`)}
+                        />
+                        <MenuBtnComponent
+                            img={badg7}
+                            onClick={() => to(`/classement`)}
+                            title={t(`menu.classement`)}
+                        />
+                    </div>
+                </div>
+            </div>
+            <div
+                className={mstyles.content_left}
+            >
+                <img
+                    style={{
+                        position: "absolute",
+                        left:"0px",
+                        bottom:"0px",
+                        width: "100%",
+                        height: "68%",
+                        // marginRight: "10px",
+                        // objectFit: "contain",
+                        // objectPosition:"0% 100%"
+                        // "objectPosition": "bottom 0px right 70px",
+                        // "objectPosition": "right 76px top 120px", 
+                    }}
+                    alt={""}
+                    src={MySvg}
+                />
+            </div>
+        </div>
+    );
+}

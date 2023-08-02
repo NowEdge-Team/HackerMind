@@ -1,0 +1,168 @@
+@import "../functions";
+
+
+.parcour_step {
+  display: flex;
+  width: 116px;
+  height: 116px;
+  z-index: 100;
+  @include tablet{
+    width: 80px;
+    height: 80px;
+  }
+  .example_contene_s{
+      display: none;
+      background-color: #fff;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 375px;
+      border-radius: 8px;
+      z-index: 200;
+      opacity: 0;
+      transition: 1.5s opacity;
+      padding:  20px 0 ;
+     > :nth-child(2){
+
+       padding-left:14px;
+    }
+   }
+  &:hover {
+    z-index: 200;
+    .example_contene_s {
+      display: flex;
+      opacity: 1;
+      box-shadow: 0px 10px 40px #6baff399;
+    }
+    .example_contene , .show_starts{
+      opacity: 0;
+    }
+  }
+  .contene {
+    display: flex;
+    background-color: #fff;
+    width: 116px;
+    height: 116px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+
+
+    @include tablet{
+      width: 80px;
+      height: 80px;
+
+      .show_starts{
+        margin-top: -115px !important;
+      }
+
+    }
+    .parc_box_img {
+      width: 65px;
+      height: 65px;
+    }
+  }
+}
+
+
+
+.mainBackground {
+  background-image: url('../../assets/images/pv-challenge/Group 4068.png');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include tablet{
+    .par_row_tb{
+      padding-left: 20px;
+    }
+    :nth-child(4){
+      bottom: 10% !important;
+      height: 40% !important;
+
+    }
+    :nth-child(5){
+      left: 26% !important;
+      top: 78% !important;
+
+      width: 80px;
+      height: 80px;
+      .example-contene{
+        border: 1px solid green;
+      }
+    }
+    :nth-child(6){
+      left: 25% !important;
+      top: 39% !important;
+    }
+    :nth-child(7){
+      left: 47% !important;
+      top: 45% !important;
+    }
+    :nth-child(8){
+      left: 59%  !important;
+      top: 86%  !important;
+
+    }
+    :nth-child(9){
+      top: 45% !important;
+      left: 78% !important;
+    }
+
+    :nth-child(10){
+      bottom: 8% !important;
+      height: 40% !important;
+    }
+
+  }
+}
+
+
+.row2 {
+
+  position: relative;
+  top: -20px;
+  .title_x {
+    font-family: Karla, serif;
+    font-weight: normal;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+    line-height: 41px;
+    text-align: center;
+    color: #fff;
+
+  }
+
+  .title_x_2 {
+    font-family: Karla, serif;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+    line-height: 41px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+
+  }
+
+  .paragraph {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    span {
+      width: 638px;
+      height: 92px;
+      font-family: Karla, serif;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      line-height: 22px;
+      text-align: center;
+      color: #fff;
+      //background-color: #2D9CDB;
+    }
+
+  }
+}

@@ -1,0 +1,102 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ position: relative;
+
+  &:hover {
+    .sg_menu_item_btn_config {
+      display: inline-block;
+    }
+    .sg_menu_item_btn_config_p {
+      background-color: white;
+      display: flex;
+      margin-top: 25%;
+      padding: 10px;
+      width: max-content;
+      color: #0760A5;
+      :nth-child(1){
+        margin-bottom:5px;
+
+      }
+      .sg_menu_item{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+
+        :nth-child(1){
+          margin-right: 10px;
+
+        }
+      }
+    }
+  }
+
+  .picture_container{
+    width: 110px;
+    height:   110px;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+    border: 2px solid #A9A9A5;
+    position: relative;
+
+    .score_icon{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      image{
+        width: 29px;
+        height: 29px;
+      }
+    }
+
+    .crown{
+      position: absolute;
+      top: -50px;
+      right: 0;
+    }
+  }
+
+
+  .first_class{
+    border: 4px solid #E8B410;
+    width: 130px;
+    height: 130px;
+    margin: 0 22.5px ;
+    image{
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  .last_class{
+    border: 2px solid #C2570F;
+  }
+
+  .name{
+    font-family: Karla;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 10px;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: white;
+  }
+  .score{
+    font-family: Karla;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 10px;
+    text-align: left;
+    color: #2fa1f1;
+    margin-top: 5px;
+    margin-bottom: 4px;
+  }
+
+  .state{
+    padding: 0;
+    margin: 0;
+  }
+
+}

@@ -1,0 +1,44 @@
+.badge {
+   display: flex;
+  width: 280px;
+  //border: 1px   solid black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .image_wrapper {
+    border-radius: 50%;
+    width: 154px;
+    height: 154px;
+    background: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 110px;
+      height: 110px;
+    }
+  }
+
+  .title{
+    //font-family: "Proxima Nova";
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #3f4351;
+
+  }
+  .paragraph{
+    //width: 170px;
+    //height: 132px;
+    padding: 0;
+    margin: 0;
+    //font-family: "Proxima Nova";
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+    color: #5f6469;
+
+  }
+}

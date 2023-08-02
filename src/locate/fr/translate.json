@@ -1,0 +1,787 @@
+{
+  "activityReport": {
+    "rapport_activite": "RAPPORT D'ACTIVITÉ",
+    "description": "Synthèse de vos réalisations et feedback du président par rapport à votre avancée dans le jeu",
+    "s_connaissance": "Score de Connaissance",
+    "points": "Points",
+    "s_action": "Score d'Action"
+  },
+  "badges": {
+    "title": "Badges",
+    "description": "Selon le score obtenu dans des activités spécifiques, vous pouvez débloquer des badges de distinction\n\n",
+    "badge1": {
+      "title": "EXPERT",
+      "description": "Badge de distinction en tant que champion de l'innovation numérique et de l'adoption de nouvelles technologies."
+    },
+    "badge2": {
+      "title": "AMBASSADEUR",
+      "description": "Badge de distinction pour la bonne prise en compte des enjeux de l'analyse de donnees"
+    },
+    "modal": {
+      "badge1": {
+        "title": "badge EXPERT",
+        "body": "Félicitations ! Grâce à vos actions, vous avez remporté le badge EXPERT. Rendez-vous dans la vue des badges pour plus de détails"
+      },
+      "badge2": {
+        "title": "badge Ambassadeur",
+        "body": "Félicitations ! Grâce à vos actions, vous avez remporté le badge Ambassadeur. Rendez-vous dans la vue des badges pour plus de détails"
+      },
+
+        "btnText": "C'est noté"
+    }
+  },
+  "parcours": {
+    "welcome": "Bienvenue dans",
+    "Aventure": " l'Aventure",
+    "description": "Votre mission cruciale en tant qu'Ambassadeur Digital sera d'inspirer et de promouvoir l'adoption de la transformation numérique au sein de notre entreprise. Tenez-vous prêt, car nous avons toute confiance en vos capacités à mener à bien cette mission. Nous comptons sur vous !",
+    "point": "Points",
+    "quitter": "Quitter",
+    "day1title": "Les concepts de base de la transformation digitale",
+    "day2title": "Enjeux et défis",
+    "day3title": "Exploration des opportunités",
+    "day4title": "Vue sur les technologies émergentes",
+    "day5title": "Reskilling et Upskilling",
+    "niveau": "NIVEAU",
+    "termine": "Terminé",
+    "encour": "En cours",
+    "verouille": "Vérouillé"
+
+  },
+  "classement": {
+    "title": "Félicitations pour votre classement !",
+    "subTitle": "Vous êtes maintenant",
+    "first": "er",
+    "second": "ème",
+    "score": "Score"
+  },
+  "menu": {
+    "configure": "Configurer",
+    "title": "Strategic Game",
+    "welcome1": "BIENVENUE DANS",
+    "welcome2": "L'AVENTURE",
+    "desc1": " Prêt à devenir le Digital Ambassador de notre entreprise ? Votre mission consiste à promouvoir la transformation numérique et à susciter l'innovation. Nous vous souhaitons bonne chance dans cette passionnante aventure numérique !",
+    "desc2": "A vous de choisir les bonnes stratégies et de prendre les meilleures décisions afin d’optimiser votre score.",
+    "parcour": "Parcours",
+    "Ractivity": "Rapport d'activité",
+    "classement": "Classement",
+    "badges": "Badges",
+    "descConfig": "Avant de commencer le parcours, veuillez configurer votre personnage. Le nom que vous choisirez apparaitra ainsi dans les classements. Une fois la configuration validée, nous ne pourrez plus la modifier.",
+    "configCenterName": "Nom du centre",
+    "configAvatar": "Avatar",
+    "configCountry": "Pays",
+    "configRespo": "Fonction",
+    "back": "Retour",
+    "register": "Valider",
+    "proffession1": "Médecin",
+    "proffession2": "Pharmacien",
+    "proffession3": "Analyste",
+    "proffession4": "Professeur",
+    "proffession5": "Epidémiologiste",
+    "proffession6": "Autre",
+    "country1": "Sénégal",
+    "country2": "Burkina Faso",
+    "country3": "Algérie",
+    "country4": "Liban",
+    "country5": "Cameroun",
+    "country6": "Burundi",
+    "country7": "Haiti",
+    "country8": "Côté d'Ivoire",
+    "country9": "Niger",
+    "country10": "Mali",
+    "country11": "Rep. Dém. Du Congo",
+    "country12": "Tunisie",
+    "country13": "Suisse",
+    "country14": "Maroc",
+    "regle": "Règles du jeu",
+    "finalGameTitle": "Félicitations",
+    "finalGameBody": "Vous avez terminé le jeu!",
+    "listMission": {
+      "title": "LE PRESIDENT",
+      "text1": "Je suis ravi de vous accueillir en tant que Digital Ambassador au sein de notre entreprise. Vous avez été sélectionné pour une mission d'une importance cruciale qui vise à propulser notre entreprise vers de nouveaux horizons dans le monde numérique.",
+      "text2": "Votre objectif sera de comprendre les enjeux de la transformation digitale, d'explorer les opportunités qui se présentent à nous et de faire face aux défis liés à cette évolution. Grâce à votre participation active, nous pourrons identifier les compétences nécessaires pour faire face à ces changements et ainsi garantir notre succès futur.",
+      "text3": "Préparez-vous à plonger dans cette aventure immersive et à guider nos collaborateurs vers une meilleure compréhension de la transformation digitale. Je suis impatient de voir les résultats que nous pourrons accomplir ensemble !"
+    },
+    "enregistrer": "Enregistrer",
+    "retour": "Retour",
+    "modal": {
+      "title_p1": "BIENVENUE DANS",
+      "title_p2": "L'AVENTURE",
+      "description": "Vous êtes le catalyseur de notre transformation numérique, inspirant l'innovation à chaque étape de notre parcours.",
+      "name_taskforce": "Donnez un nom a votre taskforce",
+      "retour": "Retour",
+      "enregistrer": "Enregistrer"
+    },
+    "t_certificat": "Télécharger votre certificat",
+    "d_mission": "Découvrez votre mission",
+    "points": "Points",
+    "notee": "C'est noté"
+  },
+  "day1": {
+    "level": "NIVEAU 1 : Généralités sur l’Analytics",
+    "title": "Généralités sur l’Analytics",
+    "l_title": "RESPONSABLE DE PRODUCTION ",
+    "part1": {
+      "g_title": "Parmi les propositions suivantes, choisissez celles qui vous semblent les plus pertinentes",
+      "description": "Dans le domaine de la transformation digitale, il est essentiel de bien comprendre les concepts clés et les enjeux liés à cette évolution technologique. En tant que Digital Ambassador, votre rôle est de vous familiariser avec ces fondamentaux afin de guider notre entreprise vers une adaptation réussie et de promouvoir une culture numérique forte.",
+      "decisions_title": "Qu'est-ce que la transformation digitale ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "1": "La conversion de documents papier en fichiers numériques.",
+        "2": "L'utilisation de technologies numériques pour transformer les processus et les modèles d'affaires d'une entreprise.",
+        "3": "L'automatisation des tâches pour améliorer l'efficacité des opérations internes."
+      }
+    },
+    "part2": {
+      "g_title": "Le directeur de production vous appelle pour s'informer par rapport aux caractéristiques de l'Analytics.",
+      "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
+      "decisions": {
+        "4": "Convertit les documents physiques en fichiers numériques. ",
+        "5": "Permet de stocker et de gérer les informations de manière plus efficace.",
+        "6": "Facilite le partage de documents entre les employés.",
+        "7": "Utilise des outils numériques pour améliorer les processus existants.",
+        "8": "Automatise certaines tâches pour une meilleure efficacité.",
+        "9": "Permet le partage d'informations en temps réel et la collaboration.",
+        "10": "Repense les modèles d'affaires, les processus opérationnels et l'innovation.",
+        "11": "Investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. ",
+        "12": "Forme les employés aux compétences numériques nécessaires pour exploiter ces technologies.",
+        "13": "Repense l'offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique.",
+        "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
+     },
+      "categories": {
+        "1": "Numérisation",
+        "2": "Digitalisation",
+        "3": "Transformation digitale"
+      }
+    },
+    "messages": {
+      "title": "Le PRESIDENT",
+      "text1": "Êtes-vous sûr de vos choix ?",
+      "text2": "On entend souvent parler de la pharmacovigilance, et il existe beaucoup d’idées préconçues à son sujet. Maintenant que vous vous y connaissez un peu, saurez-vous distinguer le vrai du faux ?",
+      "text3": "Avant de commencer ta mission, j'aimerais m'assurer que tu as bien compris les principes fondamentaux de la transformation digitale",
+      "textBtnValid": "Valider mes choix",
+      "text4":"Félicitations ! Tu as réussi à comprendre les concepts clés de la transformation digitale. Tu es prêt à passer à l'étape suivante !",
+      "textBtnValid2": "C'est noté"
+    },
+    "listMsg": {
+      "title": "DIRECTEUR DES SYSTEMES D'INFORMATION:",
+      "text1": "La transformation digitale est un terme largement utilisé de nos jours, mais il est important de bien comprendre ce qu'il signifie réellement. Fondamentalement, la transformation digitale représente un changement radical dans la façon dont les entreprises utilisent les technologies numériques pour transformer leurs processus, leurs modèles d'affaires et leur relation avec les clients.",
+      "text2": "Imaginez une entreprise traditionnelle qui utilise principalement des méthodes et des processus papier. Les employés travaillent avec des dossiers physiques, prennent des notes manuscrites et communiquent principalement par courrier postal. <br/>  <br/> \n Un jour, l'entreprise décide de passer à l'ère numérique. Elle commence par la numérisation de ses documents papier, les transformant en fichiers numériques. Cela permet de stocker et de gérer les informations de manière plus efficace, et facilite le partage de documents entre les employés. Cependant, cette numérisation ne change pas fondamentalement les processus de l'entreprise.",
+      "text3": "Ensuite, l'entreprise décide de passer à la digitalisation. Elle investit dans des outils numériques tels que des logiciels de gestion de projets, des systèmes de communication en ligne et des plateformes de collaboration. Les employés commencent à utiliser ces outils pour automatiser certaines tâches, partager des informations en temps réel et collaborer de manière plus efficace. La digitalisation améliore les opérations internes et permet à l'entreprise de mieux servir ses clients, mais elle reste une évolution progressive plutôt qu'une transformation radicale. <br/>  <br/> \n ",
+      "text4": "Finalement, l'entreprise réalise qu'elle doit aller au-delà de la simple digitalisation pour rester compétitive sur le marché. Elle décide de se lancer dans une véritable transformation digitale. Cela implique de revoir en profondeur les modèles d'affaires existants, de repenser les processus opérationnels et de repousser les limites de l'innovation. L'entreprise investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. Les employés sont formés aux compétences numériques nécessaires pour exploiter ces technologies. L'entreprise repense son offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique. Elle développe également une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité.",
+      "text5": "La transformation digitale permet à l'entreprise de se différencier de ses concurrents, de créer de nouvelles sources de revenus et d'anticiper les évolutions du marché. Elle devient une organisation véritablement axée sur le numérique, capable d'exploiter pleinement les opportunités offertes par les technologies numériques. <br/>  <br/> \n Ainsi, la numérisation est le point de départ, la digitalisation est une étape intermédiaire pour optimiser les processus existants, tandis que la transformation digitale représente une transformation complète de l'entreprise, repensant ses modèles d'affaires et exploitant pleinement le potentiel des technologies numériques."
+    }
+  },
+  "day2": {
+    "niveau": "NIVEAU 2 : Collecte et valorisation des données",
+    "title1": "",
+    "leftMsg": {
+        "title": "RESPONSABLE DE PRODUCTION",
+        "message1": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
+        "message2": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
+        "message3": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance. ",
+        "message4": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
+        "message5": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance."
+    },
+    "part1": {
+      "title": "La directrice de vente vous demande les étapes nécessaires pour prendre une décision data-driven"
+    },
+    "part3": {
+      "title": "Le président vous demande de lui citer des exemples de cas pratiques pour l'analytics",
+      "g_title": "Le directeur de production vous appelle pour s'informer par rapport aux caractéristiques de l'Analytics",
+      "decisions": {
+        "25": "Intégration des nouveaux systèmes et processus",
+        "26": "Sécurité des données",
+        "27": "Gestion du changement",
+        "28": "Adaptation des compétences des employés",
+        "29": "Planification financière",
+        "30": "Gestion de la résistance au changement",
+        "31": "Alignement de la culture d'entreprise avec la transformation",
+        "32": "Collaboration interdépartementale",
+        "33": "Gestion des partenariats externes",
+        "34": "Optimisation des processus internes",
+        "35": "Gestion de la performance des nouveaux systèmes",
+        "36": "Suivi et évaluation de la transformation digitale"
+      },
+      "categories": {
+        "1": "Défis Critiques :",
+        "2": "Défis Importants :",
+        "3": "Défis Modérés :",
+        "4": "Défis Mineurs :"
+      }
+    },
+    "part4": {
+      "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "g_title": "Parmi les propositions suivantes, choisissez celles qui vous semblent les plus pertinentes",
+      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+      "decisions_title": "Quel défi majeur une entreprise peut-elle rencontrer lors de sa transformation digitale ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "37": "Gestion du changement",
+        "38": "Augmentation des revenus",
+        "39": "Expansion internationale",
+        "40": "Maintien des méthodes traditionnelles"
+      }
+    },
+    "part5": {
+      "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "g_title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+      "decisions_title": "Pourquoi la sécurité des données est-elle un enjeu critique lors de la transformation digitale ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "41": "Pour protéger les informations sensibles contre les cyberattaques",
+        "42": "Pour réduire les coûts opérationnels",
+        "43": "Pour améliorer l'efficacité des processus",
+        "44": "Pour faciliter la collaboration entre les employés"
+      }
+      },
+      "part6": {
+        "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+        "g_title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+        "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+        "decisions_title": "Qu'est-ce qui peut aider à surmonter la résistance au changement lors de la transformation digitale ?",
+        "decisions_s_title": "1 choix à sélectionner",
+        "decisions": {
+          "45": "Communication transparente et régulière",
+          "46": "Suppression des postes de travail",
+          "47": "Manque de formation des employés",
+          "48": "Maintien des processus traditionnels"
+        }
+        },
+      "part2": {
+      "title": "La notification des évènements indésirables au CNPV doit se faire :",
+      "options": [
+          {
+            "value": 15,
+            "label": "Intégration des nouveaux systèmes et processus"
+          },
+          {
+            "value": 16,
+            "label": "Gestion du changement"
+          },
+          {
+            "value": 17,
+            "label": "Sécurité des données"
+          },
+          {
+            "value": 18,
+            "label": "Adaptation des compétences des employés"
+          },
+          {
+            "value": 19,
+            "label": "Planification financière"
+          },
+
+          {
+            "value": 20,
+            "label": "Adoption culturelle"
+          },
+          {
+            "value": 21,
+            "label": "Gestion de la complexité"
+          },
+          {
+            "value": 22,
+            "label": "Collaboration interfonctionnelle"
+          },
+          {
+            "value": 23,
+            "label": "Transformation des modèles d'affaires"
+          },
+          {
+            "value": 24,
+            "label": "Responsabilité sociale et éthique"
+          }
+      ],
+      "options_title": "Les étapes clés d'une approche data-driven",
+      "options_desc": "Classez les défis de la transformation digitale par ordre d'importance, du plus critique au moins critique :",
+      "options_s_title": "LES ÉTAPS SONT:",
+      "annuler": "Annuler",
+      "valider": "Valider"
+    },
+    "messages": {
+      "msg1": {
+        "title": "Lead data science:",
+        "text": "Avant de commencer ta mission, j'aimerais m'assurer que tu as bien saisi les enjeux de la transformation digitale et les défis auxquels les entreprises sont confrontées.",
+        "textBtnValid": "C'est noté"
+      },
+      "validation": {
+        "title": "Lead data science :",
+        "text": "Êtes-vous sûr de vos choix ? ",
+        "text1":"Bravo pour avoir mené à bien la collecte et la valorisation des données pour notre projet. Votre expertise dans ce domaine a été précieuse pour l'équipe et nous sommes confiants que les informations que vous avez recueillies nous aideront à prendre des décisions éclairées pour l'avenir. Merci pour votre travail acharné et votre dévouement envers ce projet.",
+        "textBtnValid": "Valider mes choix",
+        "textBtnValid2": "C'est noté"
+      }
+    },
+    "listMsg": {
+      "title": "DIRECTEUR DES SYSTEMES D'INFORMATION",
+      "msg1": "Dans la première étape, nous avons évoqué l'histoire d'une entreprise traditionnelle qui a entrepris sa transformation digitale. Maintenant, nous allons voir les principaux enjeux et défis auxquels cette entreprise a été confrontée tout au long de ce processus.",
+      "msg2": "Intégration des nouveaux systèmes et processus : L'entreprise a dû faire face au défi de l'intégration des nouveaux systèmes et processus dans son architecture IT. Cela impliquait l'adoption de nouvelles technologies, la mise en place de nouveaux logiciels et la refonte des infrastructures existantes. L'entreprise a dû planifier soigneusement cette transition afin de garantir une intégration harmonieuse tout en minimisant les perturbations dans les opérations quotidiennes.",
+      "msg3": "Gestion du changement : La transformation digitale a entraîné un changement radical dans les processus de travail, les rôles et les responsabilités des employés. L'entreprise a dû relever le défi de la gestion du changement en aidant les employés à s'adapter à ces nouveaux changements. Des programmes de sensibilisation, de formation et de coaching ont été mis en place pour expliquer les objectifs de la transformation, informer les employés sur les avantages et les opportunités qu'elle offre, et renforcer leur confiance et leur engagement dans ce processus de changement.",
+      "msg4": "Sécurité des données : Avec la transition vers le numérique, l'entreprise a dû relever le défi de la sécurité des données. La protection des informations sensibles contre les cyberattaques et les violations de la confidentialité était une priorité absolue. L'entreprise a investi dans des solutions de sécurité avancées, telles que des pares-feux, des systèmes de détection des intrusions et des mécanismes de cryptage des données, afin de prévenir les risques liés à la sécurité des données.",
+      "msg5": "Collaboration interne : La transformation digitale a également posé le défi de favoriser une meilleure collaboration interne au sein de l'entreprise. L'adoption de nouveaux outils de collaboration et de communication en ligne était nécessaire pour faciliter l'échange d'informations et la coordination entre les différents départements et équipes. L'entreprise a encouragé l'utilisation de plateformes de collaboration, de messagerie instantanée et de vidéoconférence pour améliorer la communication en temps réel et la collaboration entre les employés.",
+      "msg6": "Adoption des nouvelles technologies : La transformation digitale impliquait l'adoption de nouvelles technologies et l'acquisition de compétences numériques. L'entreprise a dû relever le défi de la formation et de l'adaptation des employés aux nouvelles technologies et aux nouveaux outils numériques. Des programmes de formation et des sessions d'apprentissage ont été organisés pour permettre aux employés d'acquérir les compétences nécessaires pour utiliser efficacement les nouvelles technologies et maximiser les avantages de la transformation digitale.  ",
+      "msg7": "En surmontant ces différents défis, l'entreprise a réussi à réaliser une transformation numérique réussie. Cette évolution lui a permis d'améliorer son efficacité opérationnelle, de stimuler l'innovation, d'élargir les opportunités de collaboration et de mieux répondre aux attentes des clients dans l'ère numérique. Elle a également renforcé sa compétitivité sur le marché et ouvert de nouvelles perspectives de croissance."
+    }
+  },
+  "day3": {
+    "niveau": "NiVEAU 3 : Comprendre ce que les données nous racontent (Approche descriptive)",
+    "leftMsg": {
+      "title": "RESPONSABLE DE PRODUCTION",
+      "message1": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
+      "message2": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
+      "message3": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
+      "message4": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
+      "message5": "Dans un monde en constante évolution, le reskilling et l'upskilling sont essentiels pour s'adapter aux défis du numérique. En tant que Digital Ambassador, vous avez pour mission de promouvoir ces pratiques au sein de notre entreprise et d'encourager nos collaborateurs à développer leurs compétences. Votre rôle est de garantir que nous disposons des talents et des connaissances nécessaires pour prospérer dans cette ère numérique en perpétuelle transformation."
+    },
+    "part1": {
+      "title": "Quelques généralités sur l'analyse descriptive ?",
+      "g_title": "Parmi les propositions suivantes, choisissez celles qui vous semblent les plus pertinentes",
+      "description": "1",
+      "decisions": [
+        {
+          "title": "Quel avantage la transformation digitale offre-t-elle aux entreprises en termes de croissance ?",
+          "options": [
+            {
+              "label": "Expansion des opportunités de marché.",
+              "value": 49
+            },
+            {
+              "label": "Réduction des coûts de production.",
+              "value": 50
+            },
+            {
+              "label": "Amélioration de la sécurité des données.",
+              "value": 51
+            }
+          ]
+        },
+        {
+          "title": "Comment la transformation digitale peut-elle aider les entreprises à améliorer leur expérience client ?",
+          "options": [
+            {
+              "label": "Personnalisation des offres et services.",
+              "value": 52
+            },
+            {
+              "label": "Automatisation des tâches administratives.",
+              "value": 53
+            },
+            {
+              "label": "Réduction des délais de livraison.",
+              "value": 54
+            }
+          ]
+        },
+        {
+          "title": "Quel est l'impact de la transformation digitale sur l'innovation des entreprises ?",
+          "options": [
+            {
+              "label": "Stimule la créativité et l'exploration de nouveaux concepts.",
+              "value": 55
+            },
+            {
+              "label": "Restreint les possibilités d'expérimentation.",
+              "value": 56
+            },
+            {
+              "label": "N'a pas d'effet sur le processus d'innovation.",
+              "value": 57
+            }
+          ]
+        },
+        {
+          "title": "Comment la transformation digitale peut-elle aider les entreprises à se différencier de leurs concurrents ?",
+          "options": [
+            {
+              "label": "En offrant des canaux de vente en ligne.",
+              "value": 58
+            },
+            {
+              "label": "En améliorant la gestion des ressources humaines.",
+              "value": 59
+            },
+            {
+              "label": "En réduisant les investissements en recherche et développement.",
+              "value": 60
+            }
+          ]
+        },
+        {
+          "title": "Quels sont les bénéfices financiers potentiels de la transformation digitale pour les entreprises ?",
+          "options": [
+            {
+              "label": "Augmentation du chiffre d'affaires et des marges bénéficiaires.",
+              "value": 61
+            },
+            {
+              "label": "Diminution des coûts de main-d'œuvre.",
+              "value": 62
+            },
+            {
+              "label": "Absence d'impact sur les performances financières.",
+              "value": 63
+            }
+          ]
+        }
+      ]
+    },
+    "part2": {
+          "title": "Classez les outils suivant dans la bonne catégorie",
+          "s_title": " Sélectionnez les plus pertinentes et déposez les dans la catégorie la plus adaptée de la fiche de notification.",
+          "f_notification": "Fiche de notification",
+          "patient": "Patient",
+          "eventinde": "Evénement indésirable",
+          "produitsante": "Produit de santé",
+          "notificateur": "Notificateur",
+          "decisions": {
+              "64": "Automatisation des tâches administratives et répétitives.",
+              "65": "Mise en place d'un système de gestion des stocks en temps réel.",
+              "66": "Utilisation de l'intelligence artificielle pour améliorer la prévision de la demande.",
+              "67": "Adoption d'outils d'analyse de données pour optimiser l'efficacité opérationnelle.",
+              "68": "Développement de nouveaux produits complémentaires.",
+              "69": "Extension de la gamme de services proposés.",
+              "70": "Introduction de produits adaptés à de nouveaux segments de marché.",
+              "71": "Collaboration avec des partenaires pour offrir des solutions intégrées.",
+              "72": "Établissement de relations de co-innovation avec des startups technologiques.",
+              "73": "Partage des connaissances et des meilleures pratiques avec des partenaires.",
+              "74": "Organisation d'événements de networking pour favoriser les échanges.",
+              "75": "Création de plateformes de collaboration en ligne pour les clients et les fournisseurs.",
+              "76": "Ouverture de nouveaux bureaux à l'étranger.",
+              "77": "Adaptation des produits aux marchés locaux.",
+              "78": "Création de partenariats avec des distributeurs internationaux.",
+              "79": "Mise en place de stratégies de marketing multilingues."
+            },
+          "categories": {
+        "1": "Optimisation des processus",
+        "2": "Diversification des offres",
+        "3": "Collaboration renforcée",
+        "4": "Expansion géographique"
+      }
+    },
+    "message_tuto": {
+      "title": "DIRECTEUR DES SYSTEMES D'INFORMATION",
+      "message1": "Dans les étapes précédentes, nous avons exploré l'histoire d'une entreprise traditionnelle en pleine transformation digitale, ainsi que les défis auxquels elle a été confrontée. Maintenant, il est temps d'examiner les opportunités et les bénéfices que cette transformation peut offrir aux entreprises.",
+      "message2": "Amélioration de l'efficacité opérationnelle : La transformation numérique permet aux entreprises d'automatiser les tâches manuelles et les processus, réduisant ainsi les erreurs, accélérant les délais de traitement et améliorant l'efficacité globale. Des technologies telles que l'intelligence artificielle, la robotique et l'automatisation des processus permettent aux entreprises d'optimiser leurs opérations et de réaliser d'importantes économies de coûts. Par exemple, selon une étude de McKinsey, les entreprises ayant mis en place des processus d'automatisation ont augmenté leur productivité en moyenne de 20 %.",
+      "message3": "Expansion des opportunités de croissance : La numérisation ouvre de nouvelles perspectives de croissance pour les entreprises. En adoptant des modèles commerciaux basés sur la technologie, les entreprises peuvent étendre leur rayon d'action géographique, conquérir de nouveaux marchés et diversifier leurs offres de produits et de services. Selon une enquête menée par IDC, les entreprises ayant investi dans la transformation numérique ont connu une augmentation moyenne de 23 % de leurs ventes.",
+      "message4":"Amélioration de l'expérience client : La digitalisation permet aux entreprises de mieux comprendre les besoins et les préférences de leurs clients. Grâce à l'analyse des données, aux outils de gestion de la relation client et aux plateformes d'engagement en ligne, les entreprises peuvent personnaliser leurs offres, offrir des expériences client exceptionnelles et fidéliser leur clientèle. Une étude de Forrester a révélé que les entreprises axées sur l'expérience client surpassent leurs concurrents en termes de croissance des ventes, avec un écart moyen de 10 %.",
+      "message5":"Agilité et adaptabilité accrues : La numérisation permet aux entreprises de s'adapter rapidement aux changements du marché et aux évolutions de l'environnement concurrentiel. Les entreprises peuvent mettre en place des processus agiles, des structures organisationnelles flexibles et des équipes multidisciplinaires pour répondre aux besoins changeants. Selon une étude du Harvard Business Review, les entreprises qui investissent dans la transformation numérique ont 1,9 fois plus de chances de connaître une croissance rapide.",
+      "message6":"Optimisation des processus métier : La digitalisation facilite la gestion des processus internes tels que la gestion des ressources humaines, la gestion des stocks, la gestion financière et la gestion de la chaîne d'approvisionnement. Les entreprises peuvent utiliser des logiciels et des outils numériques pour simplifier les tâches administratives, automatiser les flux de travail et améliorer la prise de décision. Selon une enquête de Gartner, les entreprises ayant adopté des outils de gestion numérique ont réduit leurs coûts administratifs en moyenne de 15 %.",
+      "message7":"En adoptant la transformation numérique, les entreprises peuvent exploiter ces opportunités et avantages pour se positionner avantageusement sur le marché, accroître leur compétitivité et assurer leur succès à long terme. Les chiffres démontrent l'impact significatif de la transformation numérique sur les entreprises, en termes de ventes, de productivité, de satisfaction client et d'efficacité opérationnelle. Il est clair que la transformation numérique est devenue une nécessité si nous voulons rester compétitifs dans l'économie actuelle.",
+      "messageDr": "Vous arrivez chez le médecin Dr. Hamidi et il vous parle d’un évènement indésirable survenu à son patient. Cliquez sur l’audio pour réécouter la conversation. <br/> <br/> Dans ce niveau, vous aurez à identifier les informations utiles dans son message pour remplir la fiche de notification.  ",
+      "textBtnValid": "C'est noté"
+    },
+    "messages": {
+      "title": "Lead data science:",
+      "message1": "Avant de commencer ta mission, j'aimerais m'assurer que tu as bien compris les opportunités et les avantages offerts par la transformation digitale aux entreprises",
+      "message2": "Maintenant que vous avez bien compris à quoi sert la pharmacovigilance, la prochaine étape consiste à récolter les cas d’effets indésirables chez les médecins. ",
+      "message3": "Vous arrivez chez le médecin Dr. Hamidi et il vous parle d’un évènement indésirable survenu à son patient. Cliquez sur l’audio pour réécouter la conversation. <br/> <br/> Dans ce niveau, vous aurez à identifier les informations utiles dans son message pour remplir la fiche de notification.",
+      "message4": "Afin de réussir notre mission de collecte, nous devons nous appuyer sur les professionnels de la santé qui doivent nous signaler tout évènement indésirable sur nos produits.",
+      "validation": {
+        "title": "Lead data science :",
+        "text": "Êtes-vous sûr de vos choix ? ",
+        "text1": "Excellent travail ! Tu as une vision claire des opportunités qu'offre la transformation digitale. Continue sur cette lancée !",
+        "textBtnValid": "Valider mes choix",
+        "textBtnValid2": "C'est noté"
+      }
+    }
+  },
+  "day4": {
+    "niveau": "NIVEAU 4 : L’approche prédictive pour prédire l’avenir",
+    "title": "Lead data science:",
+    "text": "Une notification complète contient les 4 rubriques à savoir Patient, Rapporteur (notificateur), Evènement et Produit.",
+    "previous": "Précedent",
+    "valide": "Valider",
+    "supprimer": "Incomplète",
+    "suivant": "Suivant",
+    "subTitle": "Cliquez successivement sur chacune des pastilles rouges pour  découvrir les cas reçus. Il faudra valider les notifications exhaustives et supprimer celles qui sont incomplètes.",
+    "validLevel": "Valider le niveau",
+    "validChoice": "Valider mes choix",
+    "c_note": "C'est noté",
+    "listMsg": {
+      "title": "RESPONSABLE PHARMACOVIGILANCE INTERNE:",
+      "message1": "Les médecins sont des contributeurs clés pour la remontée des cas d'èvenements indésirables.",
+      "message2": "Fréquemment, ils vont disposer d'informations sur les cas déclarés par leurs patients et nous devons les écouter et récolter toutes ces informations utiles pour le bien de notre laboratoire et pour la santé public.",
+      "message3": "Nous allons voir ensemble des notifications reçues par Dr. HAMIDI et nous allons voir avec lui comment les traiter."
+    },
+    "messages": {
+      "title": " Lead data science :",
+      "message1": "Avant que vous ne commenciez votre mission, je souhaite m'assurer que vous comprenez les principes de l'approche prédictive.",
+      "message2": "Maintenant que vous avez bien compris à quoi sert la pharmacovigilance, la prochaine étape consiste à récolter les cas d’effets indésirables chez les médecins. ",
+      "message3": "Vous arrivez chez le médecin Dr. Hamidi et il vous parle d’un évènement indésirable survenu à son patient. Cliquez sur l’audio pour réécouter la conversation. <br/> <br/> Dans ce niveau, vous aurez à identifier les informations utiles dans son message pour remplir la fiche de notification.",
+      "message4": "Afin de réussir notre mission de collecte, nous devons nous appuyer sur les professionnels de la santé qui doivent nous signaler tout évènement indésirable sur nos produits.",
+      "validation": {
+        "title": "Lead data science:",
+        "text": "Êtes-vous sûr de vos choix ? ",
+        "text1":"Félicitations ! Tu es maintenant familier avec les technologies émergentes et leur potentiel pour transformer les entreprises. Tu es prêt pour la prochaine étape !",
+        "textBtnValid": "Valider mes choix",
+        "textBtnValid2": "C'est noté"
+      }
+    },
+    "part1": {
+      "title": "Classez ces outils dans la bonne catégorie",
+      "s_title": " Sélectionnez les plus pertinentes et déposez les dans la catégorie la plus adaptée de la fiche de notification.",
+      "f_notification": "Fiche de notification",
+      "patient": "Patient",
+      "eventinde": "Evénement indésirable",
+      "produitsante": "Produit de santé",
+      "notificateur": "Notificateur",
+      "decisions": {
+        "80": "Utilise des algorithmes d'apprentissage automatique pour analyser des données et prendre des décisions.",
+        "81": "Permet la reconnaissance vocale et la compréhension du langage naturel.",
+        "82": "Appliquée dans les chatbots et les assistants virtuels.",
+        "83": "Utilisée pour la détection de fraudes et la prévision des tendances du marché.",
+        "84": "Utilisée dans la conduite autonome des véhicules.",
+        "85": "Utilise des capteurs intelligents pour collecter des données en temps réel.",
+        "86": "Permet la communication entre les objets physiques via un réseau.",
+        "87": "Utilisé dans les systèmes de domotique pour le contrôle à distance des appareils.",
+        "88": "Appliqué dans les dispositifs de suivi de la santé et de remise en forme.",
+        "89": "Utilisé dans les villes intelligentes pour la gestion efficace des ressources.",
+        "90": "Utilise un registre distribué décentralisé pour enregistrer et vérifier les transactions.",
+        "91": "Assure la sécurité et l'immuabilité des données.",
+        "92": "Utilisé dans les transactions financières et les contrats intelligents.",
+        "93": "Favorise la transparence et la traçabilité des informations.",
+        "94": "Utilisé dans les domaines de la logistique, de la gestion de la chaîne d'approvisionnement et de la propriété intellectuelle.",
+        "95": "Crée des environnements virtuels immersifs et permet aux utilisateurs d'interagir avec des objets virtuels.",
+        "96": "Utilisé dans les jeux vidéo et les expériences de divertissement.",
+        "97": "Appliqué dans la formation et la simulation dans des domaines tels que la médecine et l'aviation.",
+        "98": "Intègre des informations numériques dans le monde réel pour améliorer l'expérience utilisateur.",
+        "99": "Utilisé dans les applications de conception et de visualisation architecturale.",
+        "100": "Effectue le traitement des données à proximité des appareils et des utilisateurs.",
+        "101": "Réduit la latence et améliore la vitesse de traitement.",
+        "102": "Utilisé dans les applications nécessitant une réponse en temps réel, comme les voitures autonomes.",
+        "103": "Permet de réduire la charge sur les réseaux et les serveurs centraux.",
+        "104": "Appliqué dans les systèmes de surveillance et de sécurité."
+      },
+      "categories": {
+        "1": "Intelligence artificielle (IA)",
+        "2": "Internet des objets (IoT)",
+        "3": "Blockchain",
+        "4": "Réalité virtuelle (RV) et réalité augmentée (RA)",
+        "5": "Edge computing"
+      }
+    },
+    "part2": {
+      "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+      "decisions_title": "Qu'est-ce que la réalité augmentée (RA) ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "105": "Une technologie qui crée des environnements virtuels immersifs.",
+        "106": "Une technologie qui intègre des informations numériques dans le monde réel.",
+        "107": "Une technologie qui utilise des capteurs intelligents pour collecter des données."
+      }
+    },
+    "part3": {
+      "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+      "decisions_title": " Quelle est l'utilisation principale de la blockchain ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "108": "Permettre la communication entre les objets physiques via un réseau.",
+        "109": "Enregistrer et vérifier les transactions de manière sécurisée.",
+        "110": "Analyser des données et prendre des décisions basées sur l'apprentissage automatique."
+      }
+    },
+    "part4": {
+      "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+      "decisions_title": "Qu'est-ce que l'intelligence artificielle (IA) ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "111": "Utiliser des capteurs intelligents pour collecter des données en temps réel.",
+        "112": "Créer des environnements virtuels immersifs et interactifs.",
+        "113": "Utiliser des algorithmes d'apprentissage automatique pour analyser des données et prendre des décisions."
+      }
+    },
+    "message_tuto": {
+      "title": "DIRECTEUR DES SYSTEMES D'INFORMATION",
+      "message1": "Dans ce stage, nous allons explorer en détail certaines des technologies émergentes qui jouent un rôle crucial dans la transformation digitale des entreprises. Ces technologies offrent des opportunités d'innovation, d'efficacité opérationnelle et de création de valeur. Voici un aperçu détaillé de quelques-unes de ces technologies ",
+      "message2": "• Intelligence artificielle (IA) : <br/>  <br/> \n Apprentissage automatique (Machine Learning) : L'IA utilise des algorithmes d'apprentissage automatique pour analyser des données volumineuses, identifier des modèles et prendre des décisions intelligentes. Cela permet aux entreprises d'automatiser des processus, de prédire des tendances, d'améliorer la personnalisation des expériences client et d'optimiser les opérations. <br/>  <br/> \n Traitement du langage naturel (Natural LanguageProcessing) : L'IA est capable de comprendre et de générer du langage humain, ce qui permet aux entreprises de développer des chatbots, des assistants virtuels et des systèmes de traduction automatique. Cela améliore l'engagement client, la résolution de problèmes et la communication interne.",
+      "message3": "Vision par ordinateur (Computer Vision) : L'IA peut interpréter et analyser des images et des vidéos, ce qui permet aux entreprises d'automatiser des tâches telles que la détection d'objets, la reconnaissance faciale et l'analyse d'images médicales. Cela ouvre de nouvelles opportunités dans des domaines tels que la sécurité, la santé et l'industrie.",
+      "message4": "• Internet des objets (IoT) : <br/>  <br/> \n Capteurs intelligents : L'IoT permet de connecter des capteurs intelligents à différents objets physiques, tels que des appareils ménagers, des véhicules et des infrastructures. Ces capteurs collectent des données en temps réel, ce qui permet aux entreprises de surveiller et de contrôler à distance des systèmes, d'optimiser les opérations et de prévoir les pannes. <br/>  <br/> \n Réseaux de communication : L'IoT utilise diverses technologies de communication, telles que le Wi-Fi, le Bluetooth et les réseaux cellulaires, pour permettre aux objets connectés de communiquer entre eux et avec les systèmes centraux. Cela facilite la collecte et le partage des données, ainsi que la coordination des actions. <br/>  <br/> \n",
+      "message5": " Analyse des données en périphérie (Edge Analytics) : L'IoT peut effectuer l'analyse des données à la périphérie du réseau, à proximité des appareils connectés. Cela permet un traitement rapide des données, réduit la latence et permet des décisions en temps réel. L'analyse en périphérie est particulièrement utile dans des domaines tels que les voitures autonomes, les systèmes de surveillance et les villes intelligentes.",
+      "message6": "• Blockchain : <br/>  <br/> \n Registre distribué : La blockchain utilise un registre distribué décentralisé pour enregistrer et vérifier les transactions de manière transparente et sécurisée. Cela permet d'éliminer les intermédiaires de confiance et de réduire les risques de fraude. Les applications de la blockchain vont au-delà des cryptomonnaies, touchant des domaines tels que la gestion des contrats, la traçabilité des produits et la gouvernance. <br/>  <br/> \n Contrats intelligents (Smart Contracts) : La blockchain permet l'exécution automatique de contrats intelligents, qui sont des programmes informatiques auto-exécutables basés sur des conditions prédéfinies. Les contrats intelligents offrent une automatisation sécurisée et transparente des transactions, éliminant le besoin de tiers de confiance.     ",
+      "message7": "• Réalité virtuelle (RV) et réalité augmentée (RA) : <br/>  <br/> \n Réalité virtuelle : La RV crée des environnements virtuels immersifs dans lesquels les utilisateurs peuvent interagir. Cela trouve des applications dans des domaines tels que la formation, la simulation, le divertissement et la conception de produits. <br/>  <br/> \n Réalité augmentée : La RA superpose des éléments virtuels sur le monde réel, permettant aux utilisateurs de visualiser des informations supplémentaires ou d'interagir avec des objets virtuels dans leur environnement réel. La RA est utilisée dans des domaines tels que la publicité, le commerce électronique et la maintenance industrielle.",
+      "message8": "• Edge computing : <br/>  <br/> \n Traitement local : Le edgecomputing permet d'effectuer le traitement des données à proximité des appareils et des utilisateurs, plutôt que de les envoyer vers des centres de données distants. Cela permet un traitement plus rapide des données, réduit la latence et offre une autonomie locale. Le edgecomputing est particulièrement utile dans des cas d'utilisation où une faible latence est essentielle, tels que les véhicules autonomes et les applications en temps réel. <br/>  <br/> \n En explorant ces technologies émergentes et en comprenant leur potentiel, les entreprises peuvent identifier les opportunités d'innovation et de croissance qui correspondent le mieux à leurs besoins. Il est essentiel de rester à l'affût des avancées technologiques et de les intégrer de manière stratégique dans la transformation digitale de l'entreprise."
+    }
+  },
+  "day5": {
+    "niveau": "NIVEAU 5 : Reskilling et Upskilling",
+    "ModalexpertText": "Vous avez fini votre mise en place et le premier niveau du PV Strategic Game. Rendez-vous dans l’espace “Rapport d’Activité” pour voir comment vous vous en sortez !",
+    "title": "SELECTIONNER CHAQUE DOSSIER POUR PRENDRE VOS DECISIONS",
+    "BudgetR": "Actions restantes",
+    "ValideNiveau": "Valider le niveau",
+    "Quitter": "Quitter",
+    "DiscussMessagemsg": "Cliquez sur les notifications rouges pour traiter les dossiers en suspens.",
+    "DiscussMessagemsgstep2": "Cliquez sur les notifications rouges pour traiter les dossiers en suspens.",
+    "DiscussMessagemsgstep3": "Cliquez sur les notifications rouges pour traiter les dossiers en suspens.",
+    "DiscussMessagemsgstep4": "Cliquez sur les notifications rouges pour traiter les dossiers en suspens.",
+    "DiscussMessagemsgstart": "J'ai demandé au Pr. Dira, expert international en Pharmacovigilance de vous accompagner pour la mise en place d'une réglementation adaptée, sa consultation vous coutera PV COINS 50 000 pour 150 heures de travail. Choisissez parmis les actions proposées, celles qui vous semblent les plus pertinentes pour la création d'un cadre réglementaire pour la Pharmacovigilance, sans dépasser les 150 heures de travail facturées par le Pr. Dira",
+    "DiscussMessagemsgstep5": "Vous avez complété tous les dossiers, vous pouvez les réouvrir afin de vérifier ou modifier vos décisions avant de valider le niveau.",
+    "Annuler": "Annuler",
+    "Enregistrer": "Enregistrer",
+    "PVcoins": "PV COINS.",
+    "NotifyModalspan": "Vous avez un message du Directeur de l'Agence Nationale de Réglementation du Médicament",
+    "NotifyModalp": "Bonjour et bienvenue! Nous devons travailler en collaboration afin de s'assurer de l'usage rationnel des médicaments dans notre pays.",
+    "PhoneModalTitle": "Le ministre",
+    "PhoneModalCommencer": "Commencer",
+    "PhoneModalP1": "Afin que vous puissiez mener à bien cette première mission, j'ai réussi, malgré la crise et les restrictions budgétaires, à débloquer un montant de PV COINS 150 000.",
+    "PhoneModalP2": "J'ai d'ores et déjà alloué PV COINS 40 000 pour l'aquisition de locaux, d'une ligne téléphonique ainsi que d'ordinateurs fixes pour les  membres de votre équipe. Je vous rappelle qu'à part le bureau dans lequel vous êtes installés actuellement, le reste des locaux n'est ni aménagé ni meublé. Il vous reste donc PV Coins 110 000. A vous de les dépenser stratégiquement!",
+    "StepModalstep1": "Bienvenue au Ministère de la Santé, nous sommes heureux de pouvoir enfin compter sur un centre de Pharmacovigilance pour notre pays. Lors de cette première étape, je souhaiterais que vous mettiez en place la structure de votre centre de Pharmacovigilance et les bases de votre système de Pharmacovigilance.",
+    "StepModalstep2": "Nous avons déjà prévu pour vous quelques équipements de bases Cliquez pour voir : Espace de travail, un ordinateur, une ligne telephone, un abonnement internet, mobilier, imprimante Tout le reste est à votre charge",
+    "StepModalNote": "C'est noté ",
+    "initialState": {
+      "MedecinTitle": "Collecte des données",
+      "MedecinSTitle": "Choisissez les bonnes actions  qui vous permettront de réaliser votre analyse et choisir le meilleur scénario pour notre entreprise",
+      "MedecinUnit": "minutes",
+      "127" : "Offrir une formation interne pour développer les compétences requises.",
+      "128" : "Mettre en place un programme de mentorat pour favoriser l'apprentissage entre pairs.",
+      "129" : "Organiser des ateliers et des formations pratiques pour faciliter l'apprentissage.",
+      "130" : "Recruter de nouveaux employés ayant déjà les compétences requises.",
+      "131" : "Embaucher des consultants externes pour gérer la transition.",
+      "132" : "Externaliser complètement la gestion des données à une entreprise spécialisée.",
+      "133" : "Collaborer avec des partenaires universitaires pour créer un programme de formation sur mesure.",
+      "134" : "Utiliser des cours en ligne et des ressources d'apprentissage à distance.",
+      "135" : "Former les employés actuels sur les bases de la robotique et de l'automatisation, ",
+      "136" : "Mettre en place des programmes de reconversion professionnelle pour les employés concernés",
+      "137" : "Utiliser des simulateurs et des outils de formation virtuels pour permettre aux employés de se familiariser avec les nouvelles technologies",
+      "138" : "Recruter de nouveaux employés ayant déjà des compétences en automatisation.",
+      "139" : "Embaucher des ingénieurs spécialisés dans l'automatisation pour superviser la transition.",
+      "140" : "Externaliser complètement la production à une entreprise spécialisée dans l'automatisation.",
+      "141" : "Collaborer avec des instituts de recherche pour développer des compétences internes en automatisation.",
+      "142" : "Former des équipes multidisciplinaires pour encourager l'échange de connaissances et la collaboration.",
+      "143" : "Former les employés actuels sur les dernières tendances et outils du marketing numérique",
+      "144" : "Mettre en place un programme de rotation des employés pour qu'ils acquièrent différentes compétences en marketing numérique, ",
+      "145" : "Collaborer avec des agences de formation spécialisées pour concevoir des programmes sur mesure, ",
+      "146" : "Utiliser des plateformes d'apprentissage en ligne pour permettre aux employés d'apprendre à leur propre rythme.",
+      "147" : "Prendre des décisions à partir des modèles en ignorant les facteurs externes non pris en comptes dans l'étude",
+      "148" : "Ignorer l'évaluation du modèle avec des données vierge puisque l'essentiel c'est d'avoir des résultats rapides",
+      "149" : "Croire sonolennement aux résultats du modèle puisque les mathématiques sont des sciences exactes",
+      "150" : "Prendre des décisions à base des résultats de l'analyse sans tester leur pertinence",
+      "151" : "Former les employés actuels sur les outils logiciels d'analyse de données populaires",
+      "152" : "Mettre en place un programme de mentorat pour développer les compétences en analyse de données",
+      "153" : "Collaborer avec des instituts académiques pour créer un programme de formation sur mesure,",
+      "154" : "Recruter de nouveaux employés ayant déjà des compétences avancées en analyse de données.",
+      "155" : "Embaucher des experts en analyse de données provenant d'autres entreprises.",
+      "156" : "Externaliser complètement l'analyse de données à une entreprise spécialisée.",
+      "157" : "Organiser des séminaires et des conférences sur les meilleures pratiques en analyse de données.",
+      "158" : "Utiliser des plateformes d'apprentissage en ligne pour permettre aux employés de se former à l'analyse de données.",
+      "DelegueMedicalTitle": "ANALYSE DESCRIPTIVE",
+      "DelegueMedicalSTitle": "Choisissez les bonnes actions  qui vous permettront de réaliser votre analyse et choisir le meilleur scénario pour notre entreprise",
+      "DelegueMedicaltUnit": "PV COINS",
+      "UnitePHVInterneTitle": "ANALYSE PRÉDICTIVE",
+      "UnitePHVInterneSTitle": "Choisissez les bonnes actions  qui vous permettront de réaliser votre analyse et choisir le meilleur scénario pour notre entreprise",
+      "UnitePHVInterneUnit": "PV COINS",
+      "CNPVTitle": "ANALYSE PRESCRIPTIVE",
+      "CNPVSTitle": "Choisissez les bonnes actions  qui vous permettront de réaliser votre analyse et choisir le meilleur scénario pour notre entreprise",
+      "CNPVUnit": "PV COINS"
+    },
+    "listMsg": {
+      "title": "DIRECTEUR DES SYSTEMES D'INFORMATION",
+      "text1": "Dans cette étape, nous allons plonger dans le monde du reskilling et de l'upskilling pour le digital. Il est essentiel pour les collaborateurs de développer leurs compétences afin de s'adapter aux défis de l'évolution technologique et du marché numérique en constante évolution. Voici quelques exemples concrets de reskilling et d'upskilling, adaptés à différents domaines d'entreprise :",
+      "text2": "Formation à la cybersécurité : Dans un monde de plus en plus numérique, il est essentiel pour les collaborateurs de maîtriser les compétences en cybersécurité. Les formations peuvent inclure la sensibilisation aux menaces, l'apprentissage des meilleures pratiques de sécurité des données, et la capacité à détecter et prévenir les attaques informatiques. Cela permet aux entreprises de renforcer leur posture de sécurité et de protéger leurs données et celles de leurs clients.",
+      "text3": "Apprentissage de la science des données : La science des données est un domaine en pleine expansion, et les entreprises ont besoin de collaborateurs compétents dans ce domaine pour tirer parti de l'analyse de données. Les formations peuvent inclure l'apprentissage des techniques d'analyse de données, de la modélisation statistique et de la visualisation des données. Cela permet aux collaborateurs de prendre des décisions éclairées basées sur des insights précis et de contribuer à la croissance de l'entreprise grâce à une utilisation stratégique des données.",
+      "text4": "Compétences en intelligence artificielle : L'intelligence artificielle (IA) est de plus en plus présente dans de nombreux secteurs d'activité. Les formations peuvent inclure l'apprentissage des concepts fondamentaux de l'IA, tels que l'apprentissage automatique, le traitement du langage naturel et la vision par ordinateur. Les collaborateurs peuvent ensuite appliquer ces compétences pour développer des solutions basées sur l'IA qui améliorent l'efficacité opérationnelle, la personnalisation des services ou encore l'automatisation des processus.",
+      "text5": "Formation à la transformation numérique : La transformation numérique est une réalité pour de nombreuses entreprises, et les collaborateurs doivent comprendre les enjeux et les opportunités qui y sont associés. Les formations peuvent inclure l'apprentissage des technologies émergentes, la compréhension des modèles commerciaux numériques et l'acquisition de compétences transversales pour faciliter la transition numérique au sein de l'entreprise. Cela permet aux collaborateurs de jouer un rôle clé dans le succès de la transformation digitale de leur organisation.",
+      "text6":"Compétences en gestion de projet agile :Dans un environnement numérique en constante évolution, les méthodes de gestion de projet traditionnelles peuvent ne pas suffire. Les formations peuvent inclure l'apprentissage des méthodologies de gestion de projet agile, telles que Scrum et Kanban, qui favorisent la collaboration, l'adaptabilité et la livraison itérative. Cela permet aux collaborateurs de gérer efficacement les projets digitaux, de s'adapter aux changements et d'assurer une livraison de valeur optimale.",
+      "text7":"Compétences en marketing digital : Avec la montée en puissance du marketing digital, les collaborateurs doivent maîtriser les compétences nécessaires pour promouvoir efficacement les produits et services de leur entreprise dans le monde numérique. Les formations peuvent inclure l'apprentissage de la publicité en ligne, du référencement, de la gestion des réseaux sociaux et de l'analyse des comportements des utilisateurs. Cela permet aux collaborateurs de contribuer à la visibilité de l'entreprise et à la génération de prospects et de ventes en ligne.",
+      "text8":"Formation à la gestion du changement :La transformation digitale implique souvent des changements importants au sein de l'entreprise. Les formations en gestion du changement aident les collaborateurs à comprendre les impacts de la transformation digitale, à adopter une attitude positive face au changement, et à développer des compétences pour faciliter la transition pour eux-mêmes et leurs collègues. Cela permet aux entreprises d'assurer une adoption réussie de la transformation digitale et de minimiser les résistances au changement.",
+      "text9":"Ces exemples illustrent comment les entreprises se sont adaptées aux exigences du monde numérique en investissant dans le reskilling et l'upskilling de leurs collaborateurs. En identifiant les compétences clés nécessaires pour réussir dans le digital, les entreprises peuvent offrir des formations ciblées pour préparer leurs équipes aux défis technologiques actuels et futurs. Les collaborateurs, quant à eux, peuvent développer des compétences précieuses qui les rendent compétitifs sur le marché du travail et leur permettent de contribuer activement à la réussite de leur entreprise dans l'ère digitale"
+      
+
+    },
+    "DiscussMessage": {
+      "title": "Directrice des ventes",
+      "text1": "Voyons ce que vous allez faire avec les données. Allez-y et sélectionnez le 1er dossier",
+      "text2": "Pour maximiser la valeur ajoutée de l'analytique, il est essentiel de disposer de données complètes et fiables, d'utiliser des techniques analytiques appropriées et d'adopter une approche rigoureuse pour évaluer et améliorer continuellement la qualité des résultats obtenus.",
+      "text3": "Le rôle des équipes analytiques dans le traitement des données est crucial pour garantir la qualité et la fiabilité des analyses effectuées, ainsi que pour s'assurer que les décisions prises à partir des résultats sont pertinentes et justifiées.",
+      "text4": "L'analytique est un processus continu et itératif qui consiste à collecter, nettoyer, traiter, analyser et interpréter des données pour générer des insights pertinents et des connaissances exploitables, afin de soutenir la prise de décision et de maximiser la valeur ajoutée.",
+      "text5": "Si vous êtes sûr de vos réponses, vous pouvez valider le niveau grâce au boutton à droite. Sinon, vous pouvez sélectionner à nouveau chaque dossier pour modifier vos réponses.",
+      "text6": "Nous passerons en revue les étapes clés d'une approche data driven                                                                                                                                                                                                                                                                                                                                                                                                 (axée sur les données)"
+    },
+    "notifyModal": {
+      "title": "LE PRESIDENT ",
+      "text": "« Bonjour ! Je vous rappelle que nous devons travailler en collaboration avec tous les services de l'entreprise pour garantir la réussite de la mise en œuvre de la stratégie d'intégration analytique. »"
+    },
+    "messages": {
+      "title": "Lead data science :",
+      "message1": "Avant de commencer ta mission, j'aimerais m'assurer que tu comprends l'importance du reskilling et de l'upskilling dans un environnement professionnel en constante évolution.",
+      "message2": "Maintenant que vous avez bien compris à quoi sert la pharmacovigilance, la prochaine étape consiste à récolter les cas d’effets indésirables chez les médecins. ",
+      "message3": "Vous arrivez chez le médecin Dr. Hamidi et il vous parle d’un évènement indésirable survenu à son patient. Cliquez sur l’audio pour réécouter la conversation. <br/> <br/> Dans ce niveau, vous aurez à identifier les informations utiles dans son message pour remplir la fiche de notification.",
+      "message4": "Bravo ! La mission de votre Task Force est arrivé à son terme.    Vous avez fait preuve d’engagement et d’implication tout au long de la mission. <br/> Je vous invite à consulter le rapport d’activité pour avoir une idée sur votre performance dans ce jeu. <br/> Continuez à sensibiliser votre entourage sur l'analytics!",
+      "validation": {
+        "title": "Lead data science :",
+        "text": "Êtes-vous sûr de vos choix ? ",
+        "textBtnValid": "Valider mes choix",
+        "textBtnValid2": "C'est noté"
+      }
+
+
+    },
+    "directeur_general": {
+      "title": "Le DIRECTEUR GENERAL",
+      "text": "Bravo ! La mission de votre Task Force est arrivé à son terme.    Vous avez fait preuve d’engagement et d’implication tout au long de la mission. <br/> Je vous invite à consulter le rapport d’activité pour avoir une idée sur votre performance dans ce jeu. <br/> Continuez à sensibiliser votre entourage sur l'analytics!"
+    },
+    "responsable_m": {
+      "title": "Lead data science",
+      "text": "Êtes-vous sûr de vos choix ? "
+    },
+    "part1": {
+      "title": "Pour chaque énoncé suivant, indiquez si la déclaration est vraie ou fausse en choisissant la réponse appropriée.",
+      "s_title": " Sélectionnez les plus pertinentes et déposez les dans la catégorie la plus adaptée de la fiche de notification.",
+      "f_notification": "Fiche de notification",
+      "patient": "Patient",
+      "eventinde": "Evénement indésirable",
+      "produitsante": "Produit de santé",
+      "notificateur": "Notificateur",
+      "decisions": {
+        "114":"Le reskilling consiste à acquérir de nouvelles compétences pour effectuer des tâches différentes de celles réalisées auparavant",
+        "115":"L'upskilling vise à améliorer les compétences existantes afin de rester à jour avec les dernières avancées technologiques",
+        "116":"Le reskilling et l'upskilling vous aident à rester pertinents et employables sur le marché du travail. ",
+        "117":"Le reskilling est une réponse aux changements technologiques et aux évolutions du marché. ",
+        "118":"L'upskilling peut se faire à travers des formations en ligne et des cours en présentiel. ",
+        "119":"Le reskilling et l'upskilling ne sont pas importants pour votre carrière dans un environnement professionnel en constante évolution. ",
+        "120":"Le reskilling et l'upskilling ne contribuent pas au développement professionnel et à la satisfaction au travail",
+        "121":"Le reskilling se concentre principalement sur l'acquisition de compétences techniques. ",
+        "122":"L'upskilling est uniquement nécessaire pour les employés débutants. ",
+        "123":"Le reskilling et l'upskilling sont des initiatives individuelles et ne sont pas soutenus par les entreprises. "
+      },
+      "categories": {
+        "1": "Vraie",
+        "2": "Fausse"
+      }
+    },
+    "part2": {
+      "title": "Dans un contexte de transformation numérique, une entreprise souhaite développer les compétences de ses employés pour les préparer aux nouvelles technologies émergentes",
+      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+      "decisions_title": "Parmi les options suivantes, quelle stratégie de formation serait la plus appropriée ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "124":"Fournir une formation généralisée sur divers sujets technologiques pour que les employés aient une connaissance de base sur l'ensemble des nouvelles technologies.",
+        "125":"Identifier les compétences spécifiques nécessaires à chaque employé en fonction de son rôle et de ses responsabilités, puis proposer des formations personnalisées pour combler ces lacunes.",
+        "126":"Proposer une formation unique axée sur une seule technologie émergente, car cela permettra aux employés de devenir rapidement experts dans ce domaine spécifique."
+      }
+    },
+    "folder": {
+      "1": "Gestion des données",
+      "2": "Processus de production",
+      "3": "Marketing",
+      "4": "Analytics"
+    }
+  },
+  "textBtnValid": "Validate my choices",
+  "pasEncore":"Pas encore",
+  "btnSuivant":"Suivant",
+  "btnBack":"Précedent",
+  "noted":"C'est noté",
+  "exit":"Quitter",
+  "next_step":"Etape suivante",
+  "revoir":"Revoir la vidéo",
+  "rappels":"Rappels",
+  "msg_field_part_1":"Malheureusement vous n'avez pas pu obtenir le <br /> score minimal pour valider ce niveau !",
+  "msg_field_part_2":"Essayez à nouveau, vous y êtes presque!",
+  "rejouer":"Rejouer"
+
+
+}

@@ -1,0 +1,25 @@
+.button{
+  //width: 149px;
+  height: 40px;
+  /* UI Properties */
+  background: #6C757D ;
+  border-radius: 4px;
+
+  text-align: left;
+  font: normal normal bold 14px/17px Karla;
+  letter-spacing: 0.28px;
+  color: #FFFFFF;
+  opacity: 1;
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-evenly;
+  cursor: pointer;
+
+  img{
+    margin-left: 5px;
+  }
+
+}

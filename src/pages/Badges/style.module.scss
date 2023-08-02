@@ -1,0 +1,128 @@
+@import "../functions";
+
+
+.main_badge {
+  display: flex;
+  flex-direction: column;
+  // background-color: #0760a5;
+  height: 100vh;
+  width: 100vw;
+
+  .par_row1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-right: 70px;
+    padding-left: 70px;
+    @include tablet {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+  .par_row2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h3 {
+      span:first-child {
+        text-align: center;
+        font: normal normal normal 28px/41px Karla;
+        letter-spacing: 0.56px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      .title-x {
+        text-align: center;
+        font: normal normal bold 28px/41px Karla;
+        letter-spacing: 0.56px;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+    }
+    p {
+      text-align: center;
+      font: normal normal normal 15px/17px Karla;
+      letter-spacing: 0.24px;
+      color: #ffffff;
+      opacity: 1;
+    }
+  }
+  .bdg_row1 {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    padding: 10px  10px;
+    z-index: 100;
+    .bloc1{
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      @include tablet {
+        :nth-child(2){
+          display: none;
+        }
+        :nth-child(3){
+          display: none;
+        }
+
+      }
+    }
+    .bloc2{
+
+       display: flex;
+    }
+    .bloc3{
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      :nth-child(1){
+        transform: scaleX(-1);
+      }
+      :nth-child(2){
+        transform: scaleX(1);
+      }
+      @include tablet {
+        :nth-child(1){
+          z-index: 2;
+          position: relative;
+
+        }
+        :nth-child(2){
+          z-index: 1;
+          margin-right: -50px !important;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+.mainBackground {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.badge_title{
+  text-align: center;
+  font: normal normal bold 38px/41px Karla;
+  letter-spacing: 0.76px;
+  color: #343A40;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.badge_title_s{
+  text-align: center;
+  font: normal normal normal 13px/17px Karla;
+  letter-spacing: 0.26px;
+  color: #343A40 !important;
+}

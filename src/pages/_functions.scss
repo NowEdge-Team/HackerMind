@@ -1,0 +1,16 @@
+$color-1: #5CB962;
+$color-2: #6C757D;
+$color-3: #323A46;
+$color-4: #343A40;
+$color-5: #3F4351;
+$color-6: #2874B3;
+$color-7: #27C13354;
+$color-8: #EBEFF2;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}

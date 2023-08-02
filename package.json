@@ -1,0 +1,62 @@
+{
+  "name": "digital-ambassadors",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=14.18",
+    "npm": ">=8.x.x",
+    "yarn": "use npm  >=8.x.x"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.4",
+    "@mui/styled-engine": "^5.11.11",
+    "@tanstack/react-query": "^4.7.1",
+    "@tanstack/react-query-devtools": "^4.7.1",
+    "axios": "^1.3.4",
+    "bifrost-cors": "^1.0.4",
+    "bootstrap": "^4.4.1",
+    "crypto-js": "^4.1.1",
+    "detect-browser-language": "^0.0.2",
+    "dotenv": "^16.0.3",
+    "i18next": "^22.4.11",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^18.2.0",
+    "react-h5-audio-player": "^3.8.6",
+    "react-i18next": "^12.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^5.0.0",
+    "reactstrap": "^9.1.6",
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.2.2",
+    "sweetalert": "^2.1.2",
+    "video-react": "^0.16.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "sass": "^1.58.3",
+    "vite": "^4.3.9"
+  }
+}

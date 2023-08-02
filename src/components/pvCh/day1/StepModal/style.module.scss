@@ -1,0 +1,58 @@
+.dayOneModal {
+  position: relative;
+  width: 974px;
+  height: 529px;
+  background-color: white;
+  margin: 0 auto;
+  background-image: url('../../../../assets/images/pv-challenge/bgModaldayone.png');
+
+  .btn{
+    background: #51B9CD;
+  }
+  & .discussMessage {
+    width: 583px;
+    height: 140px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    bottom: 40%;
+    left: 25%;
+    position: absolute;
+
+    text-align: left;
+    font: normal normal normal 14px/17px Karla;
+    letter-spacing: 0.28px;
+    color: #343a40;
+    opacity: 1;
+    padding: 10px;
+    span {
+      text-align: left;
+      font: normal normal bold 16px/17px Karla;
+      letter-spacing: 0.32px;
+      color: #51B9CD;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+    &::after {
+      content: '';
+      background-color: white;
+      width: 60px;
+      height: 48px;
+      -webkit-clip-path: polygon(50% 10%, 50% 90%, 0% 50%);
+      clip-path: polygon(50% 10%, 50% 90%, 0% 50%);
+      position: absolute;
+      left: -5%;
+      top: 20%;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url('../../../../assets/images/pv-challenge/images/group_7932.svg');
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 340px;
+  }
+}

@@ -1,0 +1,89 @@
+@import "../../../../pages/functions";
+
+
+%btn-base {
+  background: $color-1;
+  border: 0;
+  font-family: Karla, serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  padding: 12px;
+
+  width: 38.51px;
+  height: 38.51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+
+  .controls{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+}
+.player_button{
+  @extend %btn-base;
+}
+
+.bar{
+  flex: 1;
+
+  padding: 0 10px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .bar__progress{
+    flex: 1;
+    margin-top: 7px;
+
+    //background-color: #6b3e91;
+  }
+  .bar__time{
+    font-weight: bold;
+    color: black;
+  }
+}
+
+
+.audio_player{
+  :global(.rhap_main-controls-button) {
+   color: $color-1;
+  }
+  :global(.rhap_progress-indicator) {
+    background: $color-1;
+  }
+  :global(.rhap_progress-filled) {
+    background: $color-7;
+  }
+  :global(.rhap_controls-section) {
+    flex: 0;
+  }
+  :global(.rhap_volume-controls , .rhap_additional-controls) {
+    display: none;
+  }
+  :global(.rhap_container) {
+    //background-color: red;
+    padding: 0;
+    padding-right: 10px;
+    box-shadow: none;
+    border-radius: 4px;
+  }
+
+
+
+}
