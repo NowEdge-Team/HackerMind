@@ -52,7 +52,8 @@
         height: 665px;
         position: relative;
         right: 60px;
-        top: 56px;
+        top: 38px;
+        transform: scaleX(-1);
       }
       @include tablet{
         left: 2%;

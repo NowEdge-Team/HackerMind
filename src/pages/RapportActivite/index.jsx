@@ -14,25 +14,14 @@ import img14 from "../../assets/images/pv-challenge/avatars/president.png";
 import {getCenterInfoPvCh, getscorePVCh} from "../../redux/actions.js";
 import data_history from "./data.json";
 
-// import imagePers1 from "../../assets/images/pv-challenge/character/character-3.png";
-// import imagePers2 from "../../assets/images/pv-challenge/character/character-1.png";
-// import imagePers3 from "../../assets/images/pv-challenge/character/character_1.png";
-// import imagePers4 from "../../assets/images/pv-challenge/character/character.png";
-
 import styles from "./style.module.scss";
 import Header from "../Header/Header.jsx";
 import {getHistoricScoresPvCh} from "../../redux/daysPvCh/service.js";
 import {useCookies} from "react-cookie";
 
-// import imagePers1 from "../../assets/images/pv-challenge/character/character-1_c.png";
-// import imagePers2 from "../../assets/images/pv-challenge/character/character_1_1_c.png";
-// import imagePers4 from "../../assets/images/pv-challenge/character/character_1_c.png";
-// import imagePers3 from "../../assets/images/pv-challenge/character/character_c.png";
-
-import imagePers1 from "../../assets/images/pv-challenge/character/character-1_c.png";
-import imagePers2 from "../../assets/images/pv-challenge/character/character_1_1_c.png";
-import imagePers3 from "../../assets/images/pv-challenge/character/character_1_c.png";
-import imagePers4 from "../../assets/images/pv-challenge/character/character_c.png";
+import imagePers2 from "../../assets/images/pv-challenge/character/expert.png";
+import imagePers3 from "../../assets/images/pv-challenge/character/character_1_11.png";
+import imagePers4 from "../../assets/images/pv-challenge/character/leader.png";
 
 
 const loadImg = (key) => {
@@ -266,9 +255,8 @@ function RapportActivite(props) {
             <Header {...props} score={score} t={t}/>
             <Container t={t} days={days_} listDescriptions={listDescriptions} score={score}/>
             <div className={styles.img1_content}>
-                {/* <img src={imagePers2} className={styles.img2} alt=""/>
-                <img src={imagePers1} className={styles.img1} alt=""/> */}
                 <img src={imagePers4} className={styles.img2} alt=""/>
+                <img src={imagePers2} className={styles.img2} alt=""/>
             </div>
             <div className={styles.img2_content}>
                 <img src={imagePers3} className={styles.img1} alt=""/>

@@ -54,7 +54,8 @@
       margin: 0;
       bottom: 0;
       height: 100%;
-      margin-left: -10%;
+      // margin-left: -1%;
+      // transform: scaleX(-1);
     }
     .img2{
       height: 100%;
@@ -62,7 +63,7 @@
       margin: 0;
       bottom: 0;
       margin-left: -15%;
-      transform: scaleX(-1);
+      transform: scaleX(1);
     }
 
   }
@@ -84,8 +85,8 @@
       height: 100%;
       float: right;
       right: 0;
-      margin-right: -3%;
-      transform: scaleX(-1);
+      // margin-right: 3%;
+      // transform: scaleX(-1);
     }
     .img2{
       position: relative;
