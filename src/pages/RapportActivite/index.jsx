@@ -3,7 +3,7 @@ import _ from "lodash";
 import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
-import img12 from "../../assets/images/pv-challenge/cogs-solid (1).svg";
+import img12 from "../../assets/images/pv-challenge/cogs-solid.svg";
 import img11 from "../../assets/images/pv-challenge/cubes-solid.svg";
 import img2 from "../../assets/images/pv-challenge/images/days/Rectangle96.png";
 import img3 from "../../assets/images/pv-challenge/images/days/Rectangle 2097.png";

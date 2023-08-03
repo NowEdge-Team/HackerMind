@@ -338,7 +338,7 @@ export default function Parcours() {
                 img={days?.find((d) => d.dayId === 3)?.status === -1 ? img3Gris : img3}
                 title={t(`parcours.day3title`)}
                 left={36}
-                top={86}
+                top={84}
                 topBlock={-12}
                 dayObject={days?.find((d) => d.dayId === 3)}
             />
@@ -387,6 +387,7 @@ export default function Parcours() {
                 dayObject={days?.find((d) => d.dayId === 2)}
             />
               
+              
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 5)?.status !== -1 &&
@@ -397,7 +398,7 @@ export default function Parcours() {
                 }
                 title={t(`parcours.day5title`)}
                 left={90}
-                top={86}
+                top={85}
                 topBlock={-18}
                 dayObject={days?.find((d) => d.dayId === 5)}
             />
