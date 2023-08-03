@@ -1,5 +1,8 @@
 @import "../functions";
 
+body{
+  overflow: hidden;
+}
 
 .parcour_step {
   display: flex;
@@ -23,7 +26,6 @@
       transition: 1.5s opacity;
       padding:  20px 0 ;
      > :nth-child(2){
-
        padding-left:14px;
     }
    }
