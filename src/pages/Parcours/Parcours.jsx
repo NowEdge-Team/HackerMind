@@ -14,15 +14,20 @@ import img3 from "../../assets/images/pv-challenge/images/days/Rectangle 2097.pn
 import img3Gris from "../../assets/images/pv-challenge/images/days/Rectangle 2097.png";
 import img4 from "../../assets/images/pv-challenge/images/days/Rectangle 2098.png";
 import img4Gris from "../../assets/images/pv-challenge/images/days/Rectangle 2098.png";
-import img5 from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
-import img5Gris from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
+import img5 from "../../assets/images/pv-challenge/images/days/icon5.png";
+import img5Gris from "../../assets/images/pv-challenge/images/days/icon5.png";
+import img6 from "../../assets/images/pv-challenge/images/days/icon6.png";
+import img6Gris from "../../assets/images/pv-challenge/images/days/icon6.png";
+
+import img7 from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
+import img7Gris from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
 import startI from "../../assets/images/pv-challenge/Group 5180.svg";
 import startII from "../../assets/images/pv-challenge/Group 5181.svg";
 import startIII from "../../assets/images/pv-challenge/Group 5183.svg";
 import startIV from "../../assets/images/pv-challenge/Group 5184.svg";
 import runningSolid from "../../assets/images/pv-challenge/running-solid.svg";
-import  soundLoud from "../../assets/images/pv-challenge/sound-loud-filled-svgrepo-com.svg";
-import  soundOff from "../../assets/images/pv-challenge/sound-off-filled-svgrepo-com.svg";
+import soundLoud from "../../assets/images/pv-challenge/sound-loud-filled-svgrepo-com.svg";
+import soundOff from "../../assets/images/pv-challenge/sound-off-filled-svgrepo-com.svg";
 import music from "../../assets/audio/main-music.mp3";
 import {avatars, getLogoById} from "../../helpers/missionDataPvC.js";
 import {getCenterInfoPvCh, getscorePVCh} from "../../redux/actions.js";
@@ -354,22 +359,48 @@ export default function Parcours() {
                 dayObject={days?.find((d) => d.dayId === 4)}
             />
 
+
+            <ItemSercl
+                click={() => {
+                    days?.find((d) => d.dayId === 2)?.status !== -1 &&
+                    to(`${base_url}/day/2`);
+                }}
+                img={
+                    days?.find((d) => d.dayId === 2)?.status === -1 ? img5Gris : img5}
+                title={t(`parcours.day2title`)}
+                left={66}
+                top={82}
+                dayObject={days?.find((d) => d.dayId === 2)}
+            />
+
+
+            <ItemSercl
+                click={() => {
+                    days?.find((d) => d.dayId === 2)?.status !== -1 &&
+                    to(`${base_url}/day/2`);
+                }}
+                img={
+                    days?.find((d) => d.dayId === 2)?.status === -1 ? img6Gris : img6}
+                title={t(`parcours.day2title`)}
+                left={70}
+                top={30}
+                dayObject={days?.find((d) => d.dayId === 2)}
+            />
+              
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 5)?.status !== -1 &&
                     to(`${base_url}/day/5`);
                 }}
                 img={
-                    days?.find((d) => d.dayId === 5)?.status === -1 ? img5Gris : img5
+                    days?.find((d) => d.dayId === 5)?.status === -1 ? img7Gris : img7
                 }
                 title={t(`parcours.day5title`)}
-                left={70}
-                top={28}
+                left={90}
+                top={86}
                 topBlock={-18}
                 dayObject={days?.find((d) => d.dayId === 5)}
             />
-
-              
 
             
             
