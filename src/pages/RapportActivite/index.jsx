@@ -10,7 +10,7 @@ import img3 from "../../assets/images/pv-challenge/images/days/Rectangle 2097.pn
 import img4 from "../../assets/images/pv-challenge/images/days/Rectangle 2098.png";
 import img5 from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
 import img1 from "../../assets/images/pv-challenge/images/days/Rectangle 2095.svg";
-import img14 from "../../assets/images/pv-challenge/avatars/president.png";
+import img14 from "../../assets/images/pv-challenge/avatars/profile1.png";
 import {getCenterInfoPvCh, getscorePVCh} from "../../redux/actions.js";
 import data_history from "./data.json";
 
@@ -58,7 +58,7 @@ const Item = ({item, title, text, onClick, index, activeIndex}) => {
             }
         }}
 
-            style={{backgroundColor: `${activeIndex === index ? '#f1f5f7' : ''}`}}
+            style={{backgroundColor: `${activeIndex === index ? '#f1f5f7' :''}`}}
         >
             <div className={styles.li_img}>
                 <img src={img} alt="" style={item.status === 1 ? {} : {filter: "grayscale(100%)"}}/>

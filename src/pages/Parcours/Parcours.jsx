@@ -2,10 +2,6 @@ import React, {useEffect, useRef, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useDispatch, useSelector} from "react-redux";
 import {useHistory} from "react-router-dom";
-
-// import manPic from "../../assets/images/pv-challenge/character/character_1_c.png";
-// import womanPic from "../../assets/images/pv-challenge/character/character_c.png";
-
 import img1 from "../../assets/images/pv-challenge/images/days/Rectangle_2095.png";
 import img1Gris from "../../assets/images/pv-challenge/images/days/Rectangle 2095_gris.svg";
 import img2 from "../../assets/images/pv-challenge/images/days/Rectangle96.png";
@@ -36,9 +32,7 @@ import {useCookies} from "react-cookie";
 import {faCogs, faCubes} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-
 const base_url = ""
-
 
 const StartN = ({nbrS, position = true, hover = true, step = 0}) => {
     const [state, setState] = useState(startI);
@@ -56,7 +50,6 @@ const StartN = ({nbrS, position = true, hover = true, step = 0}) => {
             case 3:
                 setState(startII);
                 break;
-
             default:
                 break;
         }
@@ -387,7 +380,7 @@ export default function Parcours() {
                 dayObject={days?.find((d) => d.dayId === 2)}
             />
               
-              
+
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 5)?.status !== -1 &&

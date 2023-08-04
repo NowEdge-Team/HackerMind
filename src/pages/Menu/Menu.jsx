@@ -24,16 +24,19 @@ import styles from "../style.module.scss"
 import ScoreModal from "../../components/pvCh/day1/ScoreModal/StepModal.jsx";
 import { httpClient_get } from "../../helpers/api.js";
 import FieldModal from "../../components/pvCh/FieldModal/FieldModal.jsx";
-import avatar1 from "../../assets/images/pv-challenge/avatars/character1.png"
-import avatar2 from "../../assets/images/pv-challenge/avatars/character2.png"
-import avatar3 from "../../assets/images/pv-challenge/avatars/character3.png"
-import avatar4 from "../../assets/images/pv-challenge/avatars/character4.png"
-import avatar5 from "../../assets/images/pv-challenge/avatars/character5.png"
+import avatar1 from "../../assets/images/pv-challenge/avatars/profile1.png"
+import avatar2 from "../../assets/images/pv-challenge/avatars/profile2.png"
+import avatar3 from "../../assets/images/pv-challenge/avatars/profile3.png"
+import avatar4 from "../../assets/images/pv-challenge/avatars/profile4.png"
+import avatar5 from "../../assets/images/pv-challenge/avatars/profile5.png"
+import avatar6 from "../../assets/images/pv-challenge/avatars/profile6.png"
+import avatar7 from "../../assets/images/pv-challenge/avatars/profile7.png"
 import { Cookies, useCookies } from "react-cookie";
 import * as PropTypes from "prop-types";
 import mstyles from "./style.module.scss"
 import PvChModalBadge from "../../components/modal/PvChModalBadge/index.jsx";
 import MissionAudio from "../../assets/audio/mission/index";
+
 
 function isFirstTime(gameSessionId) {
 
@@ -259,6 +262,24 @@ function ConfigModal(props) {
                                                 >
                                                     <div className={styles.list_item}>
                                                         <img src={avatar5} alt="#" />
+                                                    </div>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item
+                                                    onClick={() => {
+                                                        setAvatarLogo(getLogoById(6));
+                                                    }}
+                                                >
+                                                    <div className={styles.list_item}>
+                                                        <img src={avatar6} alt="#" />
+                                                    </div>
+                                                </Dropdown.Item>
+                                                <Dropdown.Item
+                                                    onClick={() => {
+                                                        setAvatarLogo(getLogoById(7));
+                                                    }}
+                                                >
+                                                    <div className={styles.list_item}>
+                                                        <img src={avatar7} alt="#" />
                                                     </div>
                                                 </Dropdown.Item>
                                             </Dropdown.Menu>
