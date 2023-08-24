@@ -94,21 +94,7 @@ import {REHYDRATE} from "redux-persist";
 const INIT_STATE = {
     day1: {
         part1: {
-            decisions: [
-                {
-                    id: 1,
-                    isSelected: false,
-                },
-                {
-                    id: 2,
-                    isSelected: false,
-                },
-                {
-                    id: 3,
-                    isSelected: false,
-                }
-                
-            ],
+
         },
         part2: {
             categories: [
@@ -153,6 +139,79 @@ const INIT_STATE = {
                 },
                 {
                     id: 9,
+                    category: "block",
+                    v_category: 2
+                },
+                {
+                    id: 10,
+                    category: "block",
+                    v_category: 3
+                },
+                {
+                    id: 11,
+                    category: "block",
+                    v_category: 3
+                },
+                {
+                    id: 12,
+                    category: "block",
+                    v_category: 3
+                },
+                {
+                    id: 13,
+                    category: "block",
+                    v_category: 3
+                },
+                {
+                    id: 14,
+                    category: "block",
+                    v_category: 3
+                }
+            ],
+        },
+        part3: {
+            categories: [
+                {
+                    id: 1,
+                    block: 1,
+                },
+                {
+                    id: 2,
+                    block: 1,
+                },
+                {
+                    id: 3,
+                    block: 2,
+                }
+            ],
+            decisions: [
+                {
+                    id: 14,
+                    category: "block",
+                    v_category: 1
+                },
+                {
+                    id: 15,
+                    category: "block",
+                    v_category: 1
+                },
+                {
+                    id: 16,
+                    category: "block",
+                    v_category: 1
+                },
+                {
+                    id: 17,
+                    category: "block",
+                    v_category: 2
+                },
+                {
+                    id: 18,
+                    category: "block",
+                    v_category: 2
+                },
+                {
+                    id: 19,
                     category: "block",
                     v_category: 2
                 },
