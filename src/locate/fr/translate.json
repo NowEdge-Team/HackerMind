@@ -144,6 +144,8 @@
     "level": "NIVEAU 1 : Généralités sur l’Analytics",
     "title": "Généralités sur l’Analytics",
     "l_title": "RESPONSABLE DE PRODUCTION ",
+    "ValideNiveau": "Valider le niveau",
+    
     "part1": {},
     "part2": {
       "g_title": "Le directeur de production vous appelle pour s'informer par rapport aux caractéristiques de l'Analytics.",
@@ -645,7 +647,6 @@
   "day5": {
     "niveau": "NIVEAU 5 : Reskilling et Upskilling",
     "ModalexpertText": "Vous avez fini votre mise en place et le premier niveau du PV Strategic Game. Rendez-vous dans l’espace “Rapport d’Activité” pour voir comment vous vous en sortez !",
-    "title": "SELECTIONNER CHAQUE DOSSIER POUR PRENDRE VOS DECISIONS",
     "BudgetR": "Actions restantes",
     "ValideNiveau": "Valider le niveau",
     "Quitter": "Quitter",

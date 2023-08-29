@@ -1,0 +1,53 @@
+
+  
+      .container {
+
+          display: flex;
+          justify-content: flex-start;
+          width: 800px;
+          margin-top: 8px;
+        .box1{
+          flex: 1;
+          background-color:rgba(49, 165, 71, 1);
+          height: 70px;
+          background-image:url(../../../assets//Vector.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            p{
+              font-size: 15px;
+              font-weight: 700;
+              letter-spacing: 0em;
+              color: bisque;
+              line-height: 18.5px;
+              
+
+            }
+        }
+
+        .box2{
+          flex: 5;
+          margin-left: 12px;
+          background-color: white;
+          height: 70px;
+          p{
+            font-family: Inter;
+            font-size: 13px;
+            font-weight: 400;
+            padding: 12px;
+            text-align: left;
+            color: rgba(108, 117, 125, 1);
+            
+           
+
+      
+          }
+        }
+
+      }
+      
+  
+  
+  
