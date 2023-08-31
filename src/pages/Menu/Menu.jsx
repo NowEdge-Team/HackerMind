@@ -15,10 +15,10 @@ import Loader from "../../components/Loader.jsx";
 import ModalFinalGame from "../../components/modal/modalFinalGame/index.jsx";
 import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
 import { closeDayPvChClear, getCenterInfoPvCh, updateCenterPvChInfo } from "../../redux/pvChallenge/actions.js";
-import Dock from "../../assets/images/pv-challenge/character/character-3.png"
+import Dock from "../../assets/images/pv-challenge/character/Leader.png"
 import ModalTutorial from "../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
 import backImgTuto from "../../assets/images/pv-challenge/images/mask_group_13.png";
-import persoImage from "../../assets/images/pv-challenge/character/character_1_c.png";
+import persoImage from "../../assets/images/pv-challenge/character/Leader.png"; 
 import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.svg";
 import styles from "../style.module.scss"
 import ScoreModal from "../../components/pvCh/day1/ScoreModal/StepModal.jsx";
@@ -535,7 +535,7 @@ export default function Menu() {
                     setShowConfig(false);
                 }}
             />
-
+ 
             <ModalTutorial
                 listMsg={listMission}
                 pictureClass={mstyles.menu_personnage_image}
@@ -702,6 +702,7 @@ export default function Menu() {
                         bottom:"0px",
                         width: "100%",
                         height: "68%",
+                        
                         // marginRight: "10px",
                         // objectFit: "contain",
                         // objectPosition:"0% 100%"

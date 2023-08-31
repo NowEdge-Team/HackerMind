@@ -26,19 +26,22 @@ import Level1Audio from "../../../assets/audio/Niv1/index.js";
 import Dropzone from "../../../components/Dropzone/Dropzone.jsx";
 import _ from "lodash";
 import img1 from "../../../assets/images/pv-challenge/character/character_1_11.png"
-import img3 from "../../../assets/images/pv-challenge/character/character-3.png"
-import img4 from "../../../assets/images/pv-challenge/character/character_c.png"
+// import img3 from "../../../assets/images/pv-challenge/character/character-3.png"
+import img3 from "../../../assets/images/pv-challenge/character/Leader.png"; 
+// import img4 from "../../../assets/images/pv-challenge/character/character_c.png"
 // import dayOne from "../../../components/pvCh/dayOne/day.jsx";
 import Row from "../../../components/pvCh/row/Row.jsx"
 import Table from "../../../components/pvCh/table/Table.jsx"
+import TableSec from "../../../components/pvCh/table2/TableSec.jsx"
 import Listlink from "../../../components/pvCh/Listlink/Listlink.jsx"
+import Card from "../../../components/pvCh/card/Card.jsx"
 import DayOne from "./DayOne.jsx"
 import {useHistory} from "react-router-dom";
 
 
 const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center, history, setStp}) => {
 
-    const {decisions: decisions_2, categories: categories_2} = useSelector((state) => state.DaysPvCh.day1.part2);
+    // const {decisions: decisions_2, categories: categories_2} = useSelector((state) => state.DaysPvCh.day1.part2);
 
     const {decisions: decisions_3, categories: categories_3} = useSelector((state) => state.DaysPvCh.day1.part3);
 
@@ -58,7 +61,7 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
     const config = useRef({
         messages: [
             {
-                title: 1,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -71,19 +74,20 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
                 }
             },
             {
-                title: 2,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
+                showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
+                audio: Level1Audio.audio6,
                 textBtnNotValid:t("pasEncore"),
                 valid: () => {
-                    setShowBolck(true);
+                    setShowBolck(false);
                     config.current.currentIndex += 1;
                     incrementCurrentStep();
-                    setShowModal(false);
                 }
             },
             {
-                title: 3,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -95,22 +99,34 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
                     incrementCurrentStep();
                 }
             },
-            // {
-            //     title: 4,//t("day1.messages.title"),
-            //     text: t("day1.messages.text1"),
-            //     showCancelBtn: true,
-            //     textBtnValid: t("day1.messages.textBtnValid"),
-            //     audio: Level1Audio.audio5,
-            //     textBtnNotValid:t("pasEncore"),
-            //     valid: () => {
-            //         setShowBolck(true);
-            //         setShowM1(false);
-            //         config.current.currentIndex += 1;
-            //         incrementCurrentStep();
-            //     }
-            // },
             {
-                    title: 4,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
+                text: t("day1.messages.text1"),
+                showCancelBtn: true,
+                textBtnValid: t("day1.messages.textBtnValid"),
+                audio: Level1Audio.audio5,
+                textBtnNotValid:t("pasEncore"),
+                valid: () => {
+                    setShowBolck(false);
+                    config.current.currentIndex += 1;
+                    incrementCurrentStep();
+                }
+            },
+            {
+                title: t("day1.messages.title"),
+                text: t("day1.messages.text1"),
+                showCancelBtn: true,
+                textBtnValid: t("day1.messages.textBtnValid"),
+                audio: Level1Audio.audio5,
+                textBtnNotValid:t("pasEncore"),
+                valid: () => {
+                    setShowBolck(true);
+                    config.current.currentIndex += 1;
+                    incrementCurrentStep();
+                }
+            },
+            {
+                    title: t("day1.messages.title"),
                     text: t("day1.messages.text1"),
                     showCancelBtn: true,
                     textBtnValid: t("day1.messages.textBtnValid"),
@@ -122,7 +138,7 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
                     }
                 }
             ,{
-                title: 5,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text4"),
                 showCancelBtn: false,
                 textBtnValid: t("day1.messages.textBtnValid2"),
@@ -172,7 +188,6 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
             setShowConfirm(true);
         }
 
-
     }
 
     const [show, setShowConfirm] = useState(false);
@@ -189,9 +204,8 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
         setStp(currentStep)
     }, [currentStep]);
 
-    // const handleChange = (ListDecision) => {
-    //     dispatch(day1Part3Change(ListDecision))
-    // };
+    // {currentStep===3 && (<div className="box box-2" style={{backgroundColor:'greenyellow'}}></div>)}
+    
 
     return (
         <>
@@ -212,25 +226,10 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
                 <Stepper style={{flex: 1}}>
                     <Stepper.Steps>
                         <Stepper.Step id="1" name="Step 1">
-                            {/* <Row/>
-                            <Listlink/> */}
                                 <DayOne onNext={incrementCurrentStep}/>
-
+                                {/* <Listlink /> */}
                         </Stepper.Step>
                         <Stepper.Step id="2" name="Step 2">
-                            <div>
-                                <Dropzone
-                                    modeEdit={modeEdit}
-                                    day={1}
-                                    part={2}
-                                    callback={dragDropUpdateDecisions}
-                                    decisions={decisions_2}
-                                    categories={categories_2}
-                                />
-
-                            </div>
-                        </Stepper.Step>
-                        <Stepper.Step id="3" name="Step 3">
                         <Dropzone
                                     modeEdit={modeEdit}
                                     day={1}
@@ -240,16 +239,33 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
                                     categories={categories_3}
                                 />
                         </Stepper.Step>
-                        <Stepper.Step id="4" name="Step 4">
+                        <Stepper.Step id="3" name="Step 3">
                             <div>
                                 <Table />
                             </div>
                         </Stepper.Step>
+                        <Stepper.Step id="4" name="Step 4">
+                            <div>
+                                <TableSec/>  
+                            </div>
+                        </Stepper.Step> 
                         <Stepper.Step id="5" name="Step 5">
                             <div>
                                 <Row />
                             </div>
                         </Stepper.Step>
+                        <Stepper.Step id="6" name="Step 6">
+                            <div>
+                                <Card/>
+                            </div>
+                        </Stepper.Step>
+                        <Stepper.Step id="7" name="Step 7">
+                            <div>
+                                <Listlink/>
+                            </div>
+                        </Stepper.Step>
+
+
                     </Stepper.Steps>
                 </Stepper>
                 {currentStep !==0 && <div className={"step_quiz_btn"}>
@@ -261,6 +277,7 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
         </>
     )
 }
+
 
 const Day1PvPharma = (props) => {
     const {t} = useTranslation();
@@ -313,28 +330,30 @@ const Day1PvPharma = (props) => {
             title: t("day1.listMsg.title"),
             text: t("day1.listMsg.text1"),
             audio: Level1Audio.audio1,
-        },
-        {
-            title: t("day1.listMsg.title"),
-            text: t("day1.listMsg.text2"),
-            audio: Level1Audio.audio2,
-        },
-        {
-            title: t("day1.listMsg.title"),
-            text: t("day1.listMsg.text3"),
-            audio: Level1Audio.audio3,
-        },
-        {
-            title: t("day1.listMsg.title"),
-            text: t("day1.listMsg.text4"),
-            audio: Level1Audio.audio4,
-        },
-        {
-            title: t("day1.listMsg.title"),
-            text: t("day1.listMsg.text5"),
-            audio: Level1Audio.audio5,
         }
+        // ,
+        // {
+        //     title: t("day1.listMsg.title"),
+        //     text: t("day1.listMsg.text2"),
+        //     audio: Level1Audio.audio2,
+        // 
+        //
+        //     title: t("day1.listMsg.title"),
+        //     text: t("day1.listMsg.text3"),
+        //     audio: Level1Audio.audio3,
+        // },
+        // {
+        //     title: t("day1.listMsg.title"),
+        //     text: t("day1.listMsg.text4"),
+        //     audio: Level1Audio.audio4,
+        // },
+        // {
+        //     title: t("day1.listMsg.title"),
+        //     text: t("day1.listMsg.text5"),
+        //     audio: Level1Audio.audio5,
+        // }
     ]
+
 
     return (
             <div className="container-day-4-pv5">
@@ -387,7 +406,7 @@ const Day1PvPharma = (props) => {
                         </div>
                         <div className="perso_image">
                             <img src={img3} className="imgPrs3"/>
-                            <img src={img4} className="imgPrs4"/>
+                            {/* <img src={img4} className="imgPrs4"/> */}
                         </div>
                         
                     </div>
@@ -416,11 +435,11 @@ const Day1PvPharma = (props) => {
                         }
                     </div>
                     </>
-
              }
-                
-                    <div className="box-2-3">
-                        <DaySteper
+
+
+                    <div className={`box-2-3 ${currentStep===0 && "bg-block"}`}>
+                        <DaySteper 
                             t={t}
                             modeEdit={modeEdit}
                             ValidTask={ValidTask}

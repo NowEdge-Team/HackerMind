@@ -181,6 +181,14 @@ const INIT_STATE = {
                 },
                 {
                     id: 3,
+                    block: 1,
+                },
+                {
+                    id: 4,
+                    block: 2,
+                },
+                {
+                    id: 5,
                     block: 2,
                 }
             ],

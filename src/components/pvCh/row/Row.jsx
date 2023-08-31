@@ -18,6 +18,8 @@ function Row(){
             <ItemRow Title="Ransomware Petya : une cyberattaque déguisée contre l’Ukraine ?" show={true}/>
             <ItemRow Title="L’incroyable cyber-braquage de la banque centrale du Bangladesh" show={false}/>
             <ItemRow Title="OPERA1ER: Ceux qui jouent à Dieu sans y avoir été autorisés"  show={false}/>
+            <ItemRow Title="Ransomware Petya : une cyberattaque déguisée contre l’Ukraine ?" show={true}/>
+
         </div>
 
   )
