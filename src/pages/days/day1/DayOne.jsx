@@ -153,7 +153,7 @@ function App({onNext}) {
             <Audio/>
           </div>
 
-          <buttom className={`${currentIndex === 6  ? styles.btnNextEnble :styles.btnNextDesable }`} onClick={ currentIndex === 6 ? onNext : null}  >
+          <buttom className={`${currentIndex === 6  ? styles.btnNextEnble :styles.btnNextDesable }`} onClick={ currentIndex === 6 ? onNext : onNext}  >
           Etape suivante <img src={arrow} />
           </buttom>
     </div>

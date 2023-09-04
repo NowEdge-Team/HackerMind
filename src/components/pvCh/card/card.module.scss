@@ -1,0 +1,97 @@
+.container{
+    width: 763px;
+    height: 469px;
+    // background-color: aqua;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    overflow-y: scroll;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    margin: 15px auto;
+    
+
+    .row1{
+        width: 199px;
+        height: 195px;
+        border-radius: 12px;
+        // background-color: green;
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-image: url(../../../assets/vector1.png);
+        cursor: pointer;
+    }
+    
+    .row2{
+        width: 199px;
+        height: 195px;
+        border-radius: 12px;
+        // background-color: green;
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-image: url(../../../assets/vector2.png);
+        cursor: pointer;
+
+    }
+    
+    .row3{
+        width: 199px;
+        height: 195px;
+        border-radius: 12px;
+        // background-color: green;
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-image: url(../../../assets/vector3.png);
+        cursor: pointer;
+
+    }
+    
+    .row4{
+        width: 199px;
+        height: 195px;
+        border-radius: 12px;
+        // background-color: green;
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-image: url(../../../assets/vector2.png);
+        cursor: pointer;
+
+    }
+    
+    .row5{
+        width: 199px;
+        height: 195px;
+        border-radius: 12px;
+        // background-color: green;
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-image: url(../../../assets/vector1.png);
+        cursor: pointer;
+
+    }
+    
+    .row6{
+        width: 199px;
+        height: 195px;
+        border-radius: 12px;
+        // background-color: green;
+        // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-image: url(../../../assets/vector3.png);
+        cursor: pointer;
+
+    }
+}
+
+
+::-webkit-scrollbar{
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgba(214, 221, 229, 1);
+    
+}

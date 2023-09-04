@@ -39,11 +39,13 @@ import DayOne from "./DayOne.jsx"
 import {useHistory} from "react-router-dom";
 
 
-const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center, history, setStp}) => {
+const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, setStp}) => {
 
     // const {decisions: decisions_2, categories: categories_2} = useSelector((state) => state.DaysPvCh.day1.part2);
 
     const {decisions: decisions_3, categories: categories_3} = useSelector((state) => state.DaysPvCh.day1.part3);
+    // const {decisions: decisions_7} = useSelector((state) => state.DaysPvCh.day1.part7);
+
 
     const [showScoreModal, setShowScoreModal] = useState(false);
 
@@ -58,87 +60,34 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
 
     }, [modeEdit]);
 
+    // -> 2,6
     const config = useRef({
         messages: [
             {
-                title: t("day1.messages.title"),
+                title: 1,//t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
                 audio: Level1Audio.audio6,
                 textBtnNotValid:t("pasEncore"),
                 valid: () => {
-                    setShowBolck(false);
                     config.current.currentIndex += 1;
                     incrementCurrentStep();
-                }
+                }    
             },
             {
-                title: t("day1.messages.title"),
-                text: t("day1.messages.text1"),
-                showCancelBtn: true,
-                textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio6,
-                textBtnNotValid:t("pasEncore"),
-                valid: () => {
-                    setShowBolck(false);
-                    config.current.currentIndex += 1;
-                    incrementCurrentStep();
-                }
-            },
-            {
-                title: t("day1.messages.title"),
-                text: t("day1.messages.text1"),
-                showCancelBtn: true,
-                textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio5,
-                textBtnNotValid:t("pasEncore"),
-                valid: () => {
-                    setShowBolck(true);
-                    config.current.currentIndex += 1;
-                    incrementCurrentStep();
-                }
-            },
-            {
-                title: t("day1.messages.title"),
-                text: t("day1.messages.text1"),
-                showCancelBtn: true,
-                textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio5,
-                textBtnNotValid:t("pasEncore"),
-                valid: () => {
-                    setShowBolck(false);
-                    config.current.currentIndex += 1;
-                    incrementCurrentStep();
-                }
-            },
-            {
-                title: t("day1.messages.title"),
-                text: t("day1.messages.text1"),
-                showCancelBtn: true,
-                textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio5,
-                textBtnNotValid:t("pasEncore"),
-                valid: () => {
-                    setShowBolck(true);
-                    config.current.currentIndex += 1;
-                    incrementCurrentStep();
-                }
-            },
-            {
-                    title: t("day1.messages.title"),
+                    title: 6,//tt("day1.messages.title"),
                     text: t("day1.messages.text1"),
                     showCancelBtn: true,
                     textBtnValid: t("day1.messages.textBtnValid"),
                     textBtnNotValid:t("pasEncore"),
                     audio: Level1Audio.audio6,
                     valid() {
-                        setShowBolck(true);
-                        setTimeout(sendData, 500)
+                        setTimeout(sendData, 2000)
                     }
                 }
             ,{
-                title: t("day1.messages.title"),
+                title: 7,//tt("day1.messages.title"),
                 text: t("day1.messages.text4"),
                 showCancelBtn: false,
                 textBtnValid: t("day1.messages.textBtnValid2"),
@@ -156,37 +105,40 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
 
     const sendData = () => {
 
-        config.current.currentIndex += 1;
-        if (config.current.modeEdit) {
+         config.current.currentIndex += 1;
+         setShowConfirm(true);
 
-            const option = {
-                day_index: 1,
-                parts: {
-                    1: {
-                        type: "select"
-                    },
-                    2: {
-                        type: "dgd"
-                    },
-                    3: {
-                        type: "dgd"
-                    }
-                },
-                // correctResponse: [2]
-            }
-            dispatch(validDay(center.missionId, 1, option, (success) => {
+        // config.current.currentIndex += 1;
+        // if (config.current.modeEdit) {
 
-                    if (!success) return history.push("/");
+        //     const option = {
+        //         day_index: 1,
+        //         parts: {
+        //             1: {
+        //                 type: "select"
+        //             },
+        //             2: {
+        //                 type: "dgd"
+        //             },
+        //             3: {
+        //                 type: "dgd"
+        //             }
+        //         },
+        //         // correctResponse: [2]
+        //     }
+        //     dispatch(validDay(center.missionId, 1, option, (success) => {
+
+        //             if (!success) return history.push("/");
 
 
-                     setShowConfirm(true);
+        //              setShowConfirm(true);
 
 
-            }));
+        //     }));
 
-        } else {
-            setShowConfirm(true);
-        }
+        // } else {
+        //     setShowConfirm(true);
+        // }
 
     }
 
@@ -194,9 +146,10 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
 
     const {incrementCurrentStep, decrementCurrentStep, currentStep} = useStepper();
 
-      ( currentStep === 0 && setShowBolck(false) )
 
     const nextStep = () => {
+        if ([0,2,3,4,5].includes(currentStep)) return incrementCurrentStep();
+
         setShowConfirm(true);
     }
 
@@ -227,7 +180,8 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
                     <Stepper.Steps>
                         <Stepper.Step id="1" name="Step 1">
                                 <DayOne onNext={incrementCurrentStep}/>
-                                {/* <Listlink /> */}
+                               {/*   <Listlink /> */}
+                                 
                         </Stepper.Step>
                         <Stepper.Step id="2" name="Step 2">
                         <Dropzone
@@ -261,7 +215,11 @@ const DaySteper = ({t, modeEdit, ValidTask, setShowBolck, dispatch, day1, center
                         </Stepper.Step>
                         <Stepper.Step id="7" name="Step 7">
                             <div>
-                                <Listlink/>
+                                <Listlink
+                                    data={t("day1.part7.decisions", {returnObjects: true})}
+                                    modeEdit={modeEdit}
+                                    handleChange={()=>alert("1010101")}
+                                />
                             </div>
                         </Stepper.Step>
 
@@ -308,6 +266,13 @@ const Day1PvPharma = (props) => {
     let [stp_, setStp] = useState(1);
     const [ValidTask, setValidTask] = useState(false);
     const {currentStep} = useStepper();
+
+
+    useEffect(()=>{
+        if ([0,1,2,3,5].includes(currentStep)) return setShowBolck(false);
+        else if(!showBolck) return setShowBolck(true);
+
+    },[currentStep])
 
     useEffect(() => {
         const currentDay = center.days?.find((d) => d.dayId === 1);
@@ -443,7 +408,6 @@ const Day1PvPharma = (props) => {
                             t={t}
                             modeEdit={modeEdit}
                             ValidTask={ValidTask}
-                            setShowBolck={setShowBolck}
                             dispatch={dispatch}
                             center={center}
                             day1={day1}

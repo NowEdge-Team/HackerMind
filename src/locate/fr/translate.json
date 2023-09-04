@@ -10,35 +10,35 @@
     "title": "Badges",
     "description": "Selon le score obtenu dans des activités spécifiques, vous pouvez débloquer des badges de distinction\n\n",
     "badge1": {
-      "title": "AVATAR",
+      "title": "avatar",
       "description": "badge obtenu à la fin de l'étape n°1"
     },
     "badge2": {
-      "title": "CONTRAT",
+      "title": "contrat",
       "description": "badge obtenu à la fin de l'étape n°2"
     },
     "badge3": {
-      "title": "Recon",
+      "title": "recon",
       "description": "badge obtenu à la fin de l'étape n°3"
     },
     "badge4": {
-      "title": "Intrusion",
+      "title": "intrusion",
       "description": "badge obtenu à la fin de l'étape n°4"
     },
     "badge5": {
-      "title": "Admin",
+      "title": "admin",
       "description": "badge obtenu à la fin de l'étape n°5"
     },
     "badge6": {
-      "title": "Hacked",
+      "title": "hacked",
       "description": "badge obtenu à la fin de l'étape n°6"
     },
     "badge7": {
-      "title": "Arrested",
+      "title": "arrested",
       "description": "badge obtenu à la fin de l'étape n°7"
     },
     "badge8": {
-      "title": "Cybercrime",
+      "title": "cybercrime",
       "description": "badge obtenu à la fin de l'étape n°8"
     },
     "modal": {
@@ -65,7 +65,7 @@
     "day3title": "Exploration des opportunités",
     "day4title": "Vue sur les technologies émergentes",
     "day5title": "Reskilling et Upskilling",
-    "niveau": "NIVEAU",
+    "niveau": "NIVEAU ",
     "termine": "Terminé",
     "encour": "En cours",
     "verouille": "Vérouillé"
@@ -189,8 +189,8 @@
         "1": "Numérisation",
         "2": "Digitalisation",
         "3": "Transformation digitale",
-        "2": "Digitalisation",
-        "3": "Transformation digitale"
+        "4": "Digitalisation",
+        "5": "Transformation digitale"
       }
     },
     "part4": {
@@ -263,27 +263,146 @@
       }
     },
     "part7": {
-      "g_title": "Dans cette activité, vous allez sélectionner les profils des attaquantes appropriées ainsi que leurs motivations pour chacun des exemples de cyberattaques",
-      "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
-      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
-      "decisions": {
-        "4": "Convertit les documents physiques en fichiers numériques. ",
-        "5": "Permet de stocker et de gérer les informations de manière plus efficace.",
-        "6": "Facilite le partage de documents entre les employés.",
-        "7": "Utilise des outils numériques pour améliorer les processus existants.",
-        "8": "Automatise certaines tâches pour une meilleure efficacité.",
-        "9": "Permet le partage d'informations en temps réel et la collaboration.",
-        "10": "Repense les modèles d'affaires, les processus opérationnels et l'innovation.",
-        "11": "Investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. ",
-        "12": "Forme les employés aux compétences numériques nécessaires pour exploiter ces technologies.",
-        "13": "Repense l'offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique.",
-        "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
-     },
-      "categories": {
-        "1": "Numérisation",
-        "2": "Digitalisation",
-        "3": "Transformation digitale"
-      }
+      "title": "Quelques généralités sur l'analyse descriptive ?",
+      "g_title": "Parmi les propositions suivantes, choisissez celles qui vous semblent les plus pertinentes",
+      "description": "1",
+      "decisions": [
+        {
+          "title": "Quel avantage la transformation digitale offre-t-elle aux entreprises en termes de croissance ?",
+          "options": [
+            {
+              "label": "Expansion des opportunités de marché.",
+              "value": 449
+            },
+            {
+              "label": "Réduction des coûts de production.",
+              "value": 450
+            },
+             {
+              "label": "99 Réduction des coûts de production.",
+              "value": 499
+            }
+          ]
+        },
+        {
+          "title": "Comment la transformation digitale peut-elle aider les entreprises à améliorer leur expérience client ?",
+          "options": [
+            {
+              "label": "Personnalisation des offres et services.",
+              "value": 451
+            },
+            {
+              "label": "Automatisation des tâches administratives.",
+              "value": 452
+            }
+          ]
+        },
+        {
+          "title": "Quel est l'impact de la transformation digitale sur l'innovation des entreprises ?",
+          "options": [
+            {
+              "label": "Stimule la créativité et l'exploration de nouveaux concepts.",
+              "value": 453
+            },
+            {
+              "label": "Restreint les possibilités d'expérimentation.",
+              "value": 454
+            }
+          ]
+        },
+        {
+          "title": "Comment la transformation digitale peut-elle aider les entreprises à se différencier de leurs concurrents ?",
+          "options": [
+            {
+              "label": "En offrant des canaux de vente en ligne.",
+              "value": 455
+            },
+            {
+              "label": "En améliorant la gestion des ressources humaines.",
+              "value": 456
+            }
+          ]
+        },
+        {
+          "title": "Quels sont les bénéfices financiers potentiels de la transformation digitale pour les entreprises ?",
+          "options": [
+            {
+              "label": "Augmentation du chiffre d'affaires et des marges bénéficiaires.",
+              "value": 457
+            },
+            {
+              "label": "Diminution des coûts de main-d'œuvre.",
+              "value": 458
+            }
+          ]
+        },
+
+         {
+          "title": "Quel avantage la transformation digitale offre-t-elle aux entreprises en termes de croissance ?",
+          "options": [
+            {
+              "label": "Expansion des opportunités de marché.",
+              "value": 459
+            },
+            {
+              "label": "Réduction des coûts de production.",
+              "value": 460
+            }
+          ]
+        },
+        {
+          "title": "Comment la transformation digitale peut-elle aider les entreprises à améliorer leur expérience client ?",
+          "options": [
+            {
+              "label": "Personnalisation des offres et services.",
+              "value": 461
+            },
+            {
+              "label": "Automatisation des tâches administratives.",
+              "value": 462
+            }
+          ]
+        },
+        {
+          "title": "Quel est l'impact de la transformation digitale sur l'innovation des entreprises ?",
+          "options": [
+            {
+              "label": "Stimule la créativité et l'exploration de nouveaux concepts.",
+              "value": 463
+            },
+            {
+              "label": "Restreint les possibilités d'expérimentation.",
+              "value": 464
+            }
+          ]
+        },
+        {
+          "title": "Comment la transformation digitale peut-elle aider les entreprises à se différencier de leurs concurrents ?",
+          "options": [
+            {
+              "label": "En offrant des canaux de vente en ligne.",
+              "value": 465
+            },
+            {
+              "label": "En améliorant la gestion des ressources humaines.",
+              "value": 466
+            }
+          ]
+        },
+        {
+          "title": "Quels sont les bénéfices financiers potentiels de la transformation digitale pour les entreprises ?",
+          "options": [
+            {
+              "label": "Augmentation du chiffre d'affaires et des marges bénéficiaires.",
+              "value": 467
+            },
+            {
+              "label": "Diminution des coûts de main-d'œuvre.",
+              "value": 468
+            }
+          ]
+        }
+      ]
     },
     "messages": {
       "title": "Le PRESIDENT",

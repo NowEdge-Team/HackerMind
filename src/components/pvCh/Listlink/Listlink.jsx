@@ -4,7 +4,8 @@ import arrow from "../../../assets/arrow2.png"
 import styles from "./list.module.scss"
 
 
-function Listlink() {
+function Listlink({data}) {
+
   return (
     <div className={styles.container}>
         <div className={styles.row1}>
@@ -21,26 +22,24 @@ function Listlink() {
         </div>
         <div className={styles.row2}>
           <h3>Profil</h3>
-          <ItemSelect/>
-          <ItemSelect/>
-          <ItemSelect/>
-          <ItemSelect/>
-          <ItemSelect/>
+          <ItemSelect options={data[0].options} />
+          <ItemSelect options={data[1].options}/>
+          <ItemSelect options={data[2].options}/>
+          <ItemSelect options={data[3].options}/>
+          <ItemSelect options={data[4].options}/>
 
 
           
 
 
-
         </div>
         <div className={styles.row3}>
           <h3>Motivation</h3>
-          <ItemSelect/>
-          <ItemSelect/>
-          <ItemSelect/>
-          <ItemSelect/>
-          <ItemSelect/>
-
+          <ItemSelect options={data[5].options} />
+          <ItemSelect options={data[6].options}/>
+          <ItemSelect options={data[7].options}/>
+          <ItemSelect options={data[8].options}/>
+          <ItemSelect options={data[9].options}/>
 
         </div>
       
@@ -50,6 +49,7 @@ function Listlink() {
 
 
 function Itemlink() {
+
     
   return (
         <div className={styles.row4}>
@@ -75,12 +75,21 @@ function Itemlink() {
 
 
 
-function ItemSelect() {
-    
+function ItemSelect({options}) {
+  const [option, setOption] = React.useState("");
+
+  const handleChange_ = (e) => {
+     setOption(e.target.value);
+  }
+
+
   return (
         <div className={styles.row5}>
-          <select>
-            <option value="0"><p>choisir</p></option>
+          <select      value={option}           onChange={handleChange_}
+          >
+             <option value={""}><p>Select Option</p></option>
+           { options.map(item=> <option key={item.value} value={item.value}><p>{item.label}</p></option>)
+           }
             
           </select>
 

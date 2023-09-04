@@ -199,31 +199,6 @@ const INIT_STATE = {
                     v_category: 1
                 },
                 {
-                    id: 15,
-                    category: "block",
-                    v_category: 1
-                },
-                {
-                    id: 16,
-                    category: "block",
-                    v_category: 1
-                },
-                {
-                    id: 17,
-                    category: "block",
-                    v_category: 2
-                },
-                {
-                    id: 18,
-                    category: "block",
-                    v_category: 2
-                },
-                {
-                    id: 19,
-                    category: "block",
-                    v_category: 2
-                },
-                {
                     id: 10,
                     category: "block",
                     v_category: 3
@@ -242,13 +217,92 @@ const INIT_STATE = {
                     id: 13,
                     category: "block",
                     v_category: 3
+                }   
+            ],
+        },
+        part7: {
+            decisions: [
+                {
+                    id: 449,
+                    isSelected: false,
                 },
                 {
-                    id: 14,
-                    category: "block",
-                    v_category: 3
+                    id: 450,
+                    isSelected: false,
+                },
+                {
+                    id: 451,
+                    isSelected: false,
+                },
+                {
+                    id: 452,
+                    isSelected: false,
+                },
+                {
+                    id: 453,
+                    isSelected: false,
+                },
+                {
+                    id: 454,
+                    isSelected: false,
+                },
+                {
+                    id: 455,
+                    isSelected: false,
+                },
+                {
+                    id: 456,
+                    isSelected: false,
+                },
+                {
+                    id: 457,
+                    isSelected: false,
+                },
+                {
+                    id: 458,
+                    isSelected: false,
+                },
+                {
+                    id: 459,
+                    isSelected: false,
+                },
+                {
+                    id: 460,
+                    isSelected: false,
+                },
+                {
+                    id: 461,
+                    isSelected: false,
+                },
+                {
+                    id: 462,
+                    isSelected: false,
+                },
+                {
+                    id: 463,
+                    isSelected: false,
+                },
+                {
+                    id: 464,
+                    isSelected: false,
+                },
+                {
+                    id: 465,
+                    isSelected: false,
+                },
+                {
+                    id: 466,
+                    isSelected: false,
+                },
+                {
+                    id: 467,
+                    isSelected: false,
+                },
+                {
+                    id: 468,
+                    isSelected: false,
                 }
-            ],
+            ]
         },
     },
     day2: {

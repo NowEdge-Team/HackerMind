@@ -13,12 +13,13 @@ function Row(){
   return (
 
         <div className={styles.container}>
-            <ItemRow Title="L’incroyable cyber-braquage de la banque centrale du Bangladesh" show={true} />
-            <ItemRow Title="OPERA1ER: Ceux qui jouent à Dieu sans y avoir été autorisés" show={false}/>
-            <ItemRow Title="Ransomware Petya : une cyberattaque déguisée contre l’Ukraine ?" show={true}/>
-            <ItemRow Title="L’incroyable cyber-braquage de la banque centrale du Bangladesh" show={false}/>
-            <ItemRow Title="OPERA1ER: Ceux qui jouent à Dieu sans y avoir été autorisés"  show={false}/>
-            <ItemRow Title="Ransomware Petya : une cyberattaque déguisée contre l’Ukraine ?" show={true}/>
+          
+            <ItemRow title="L’incroyable cyber-braquage de la banque centrale du Bangladesh" link="http://google.com" show={true} />
+            <ItemRow title="OPERA1ER: Ceux qui jouent à Dieu sans y avoir été autorisés" link="http://google.com" show={false}/>
+            <ItemRow title="Ransomware Petya : une cyberattaque déguisée contre l’Ukraine ?" link="http://google.com" show={true}/>
+            <ItemRow title="L’incroyable cyber-braquage de la banque centrale du Bangladesh" link="http://google.com" show={false}/>
+            <ItemRow title="OPERA1ER: Ceux qui jouent à Dieu sans y avoir été autorisés" link="http://google.com"  show={false}/>
+            <ItemRow title="Ransomware Petya : une cyberattaque déguisée contre l’Ukraine ?" link="http://google.com" show={true}/>
 
         </div>
 
