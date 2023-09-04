@@ -6,7 +6,7 @@ import styles from './item.module.scss';
 
   
 
-function ItemRow({title,show,link}) {
+function ItemRow({data,onclick}) {
     
   return (
         <div className={styles.row}>
@@ -17,9 +17,9 @@ function ItemRow({title,show,link}) {
                 marginLeft: "12px" ,
             }}
             />
-            <h6>{title}</h6>
+            <h6>{data.title}</h6>
             <div className={styles.arrow}>
-                <a href={link} target="_blank" rel="noopener noreferrer">
+                <a href={data.link} target="_blank" rel="noopener noreferrer" onClick={()=>onclick(data)}>
                     <img  
                        src={arrow} 
                        alt="" 
@@ -29,7 +29,7 @@ function ItemRow({title,show,link}) {
                 </a>
             </div>
             <div className={styles.boolean}>
-            {show && (
+            {data.show && (
                 <img src={boolean} 
                 alt=""
                 width={29}

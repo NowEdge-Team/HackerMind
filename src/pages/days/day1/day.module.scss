@@ -226,7 +226,6 @@ body.active-modal {
     left: -20px;
   }
   
-  
 }
 
 .audio{
@@ -236,6 +235,13 @@ body.active-modal {
   bottom: 3.5rem;
 }
 
+.ModalAudio{
+  width: 520px;
+  position: absolute;
+  bottom: 5rem;
+  left:1.5rem;
+
+}
 
 
 .btnNextEnble{
@@ -244,7 +250,7 @@ body.active-modal {
     // height: 42px;
     // border-radius: 3px;
       position: absolute;
-      right: 11rem;
+      right: 8rem;
       bottom: 4rem;
     
       height: 40px;
@@ -268,7 +274,7 @@ body.active-modal {
 .btnNextDesable{
     width: 150px;
     position: absolute;
-    right: 11rem;
+    right: 8rem;
     bottom: 4rem;
     height: 40px;
     background: #6C757D 0% 0% no-repeat padding-box;
@@ -288,7 +294,33 @@ body.active-modal {
 
 }
 
-
 .msg_text{
   color:black;
+}
+
+
+
+.backBtn button{
+
+    width: 100px;
+    height: 15px;
+    position: absolute;
+    right: 8rem;
+    top: 3rem;
+    height: 40px;
+    background: #6C757D 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    text-align: left;
+    font: normal normal bold 14px/17px Karla;
+    letter-spacing: 0.28px;
+    color: #FFFFFF;
+    opacity: 1;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    gap: 0.5em;
+  
+
 }

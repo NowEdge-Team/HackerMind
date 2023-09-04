@@ -17,7 +17,7 @@ import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
 import { closeDayPvChClear, getCenterInfoPvCh, updateCenterPvChInfo } from "../../redux/pvChallenge/actions.js";
 import Dock from "../../assets/images/pv-challenge/character/Leader.png"
 import ModalTutorial from "../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
-import backImgTuto from "../../assets/images/pv-challenge/images/mask_group_13.png";
+import backImgTuto from "../../assets/images/pv-challenge/images/background_1_m22.png";
 import persoImage from "../../assets/images/pv-challenge/character/Leader.png"; 
 import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.svg";
 import styles from "../style.module.scss"

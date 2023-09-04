@@ -158,6 +158,8 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
     }, [currentStep]);
 
     // {currentStep===3 && (<div className="box box-2" style={{backgroundColor:'greenyellow'}}></div>)}
+
+    const [showNextBtn,setShowNextBtn] = useState(true)
     
 
     return (
@@ -180,7 +182,6 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                     <Stepper.Steps>
                         <Stepper.Step id="1" name="Step 1">
                                 <DayOne onNext={incrementCurrentStep}/>
-                               {/*   <Listlink /> */}
                                  
                         </Stepper.Step>
                         <Stepper.Step id="2" name="Step 2">
@@ -205,31 +206,32 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                         </Stepper.Step> 
                         <Stepper.Step id="5" name="Step 5">
                             <div>
-                                <Row />
+                                <Row 
+                                showNextBtn={setShowNextBtn}/>
                             </div>
                         </Stepper.Step>
                         <Stepper.Step id="6" name="Step 6">
-                            <div>
-                                <Card/>
-                            </div>
-                        </Stepper.Step>
-                        <Stepper.Step id="7" name="Step 7">
                             <div>
                                 <Listlink
                                     data={t("day1.part7.decisions", {returnObjects: true})}
                                     modeEdit={modeEdit}
                                     handleChange={()=>alert("1010101")}
-                                />
+                                    />
                             </div>
                         </Stepper.Step>
-
+                        <Stepper.Step id="7" name="Step 7">
+                            <div>
+                                    <Card/>
+                            </div>
+                        </Stepper.Step>
 
                     </Stepper.Steps>
                 </Stepper>
                 {currentStep !==0 && <div className={"step_quiz_btn"}>
-                    <CancelButton onClick={() => history.push("/")}/>
-                    <NextButton className={"step_quiz_btn_next2"}
-                                onClick={nextStep}/>
+                    <CancelButton onClick={() => history.push("/")} className={"step_btn_cancel"}/>
+                    {showNextBtn && <NextButton className={"step_quiz_btn_next2"}
+                                onClick={nextStep}
+                                />}
                 </div>}
             </div>
         </>
@@ -269,7 +271,7 @@ const Day1PvPharma = (props) => {
 
 
     useEffect(()=>{
-        if ([0,1,2,3,5].includes(currentStep)) return setShowBolck(false);
+        if ([0,1,2,3,6].includes(currentStep)) return setShowBolck(false);
         else if(!showBolck) return setShowBolck(true);
 
     },[currentStep])

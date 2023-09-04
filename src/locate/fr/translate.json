@@ -121,9 +121,9 @@
     "finalGameBody": "Vous avez terminé le jeu!",
     "listMission": {
       "title": "LE PRESIDENT",
-      "text1": "Je suis ravi de vous accueillir en tant que Digital Ambassador au sein de notre entreprise. Vous avez été sélectionné pour une mission d'une importance cruciale qui vise à propulser notre entreprise vers de nouveaux horizons dans le monde numérique.",
-      "text2": "Votre objectif sera de comprendre les enjeux de la transformation digitale, d'explorer les opportunités qui se présentent à nous et de faire face aux défis liés à cette évolution. Grâce à votre participation active, nous pourrons identifier les compétences nécessaires pour faire face à ces changements et ainsi garantir notre succès futur.",
-      "text3": "Préparez-vous à plonger dans cette aventure immersive et à guider nos collaborateurs vers une meilleure compréhension de la transformation digitale. Je suis impatient de voir les résultats que nous pourrons accomplir ensemble !"
+      "text1": "Bienvenue dans le monde du cybercrime ! Vous êtes désormais un membre de notre groupe après avoir accepté notre offre. Votre première mission vous attend. Vous devrez affronter de nombreux défis,mais ne vous inquiétez pas, nous serons là pour vous accompagner.",
+      "text2": "Nous comptons sur vous pour nous aider à conduire nos attaques en toute discrétion et récupérer le pactole. ",
+      "text3": "Soyez malin et utilisez vos compétences de hacker pour éviter de vous faire attraper. Mais attention, les conséquences peuvent être graves si vous êtes pris en flagrant délit.Êtes-vous prêt à relever le défi et devenir le meilleur d'entre nous ?"
     },
     "enregistrer": "Enregistrer",
     "retour": "Retour",
@@ -186,11 +186,11 @@
         "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
      },
       "categories": {
-        "1": "Numérisation",
-        "2": "Digitalisation",
-        "3": "Transformation digitale",
-        "4": "Digitalisation",
-        "5": "Transformation digitale"
+        "1": "TOR",
+        "2": "Haystack/The hidden Wiki",
+        "3": "Proton Mail",
+        "4": "Telegram",
+        "5": "Nulled"
       }
     },
     "part4": {
@@ -271,29 +271,50 @@
           "title": "Quel avantage la transformation digitale offre-t-elle aux entreprises en termes de croissance ?",
           "options": [
             {
-              "label": "Expansion des opportunités de marché.",
+              "label": "Etatique.",
               "value": 449
             },
             {
-              "label": "Réduction des coûts de production.",
+              "label": "Crime organisé.",
               "value": 450
             },
              {
-              "label": "99 Réduction des coûts de production.",
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
               "value": 499
             }
+
           ]
         },
         {
           "title": "Comment la transformation digitale peut-elle aider les entreprises à améliorer leur expérience client ?",
           "options": [
             {
-              "label": "Personnalisation des offres et services.",
-              "value": 451
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "Automatisation des tâches administratives.",
-              "value": 452
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -301,12 +322,24 @@
           "title": "Quel est l'impact de la transformation digitale sur l'innovation des entreprises ?",
           "options": [
             {
-              "label": "Stimule la créativité et l'exploration de nouveaux concepts.",
-              "value": 453
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "Restreint les possibilités d'expérimentation.",
-              "value": 454
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -314,12 +347,24 @@
           "title": "Comment la transformation digitale peut-elle aider les entreprises à se différencier de leurs concurrents ?",
           "options": [
             {
-              "label": "En offrant des canaux de vente en ligne.",
-              "value": 455
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "En améliorant la gestion des ressources humaines.",
-              "value": 456
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -327,12 +372,24 @@
           "title": "Quels sont les bénéfices financiers potentiels de la transformation digitale pour les entreprises ?",
           "options": [
             {
-              "label": "Augmentation du chiffre d'affaires et des marges bénéficiaires.",
-              "value": 457
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "Diminution des coûts de main-d'œuvre.",
-              "value": 458
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -341,12 +398,24 @@
           "title": "Quel avantage la transformation digitale offre-t-elle aux entreprises en termes de croissance ?",
           "options": [
             {
-              "label": "Expansion des opportunités de marché.",
-              "value": 459
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "Réduction des coûts de production.",
-              "value": 460
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -354,12 +423,24 @@
           "title": "Comment la transformation digitale peut-elle aider les entreprises à améliorer leur expérience client ?",
           "options": [
             {
-              "label": "Personnalisation des offres et services.",
-              "value": 461
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "Automatisation des tâches administratives.",
-              "value": 462
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -367,12 +448,24 @@
           "title": "Quel est l'impact de la transformation digitale sur l'innovation des entreprises ?",
           "options": [
             {
-              "label": "Stimule la créativité et l'exploration de nouveaux concepts.",
-              "value": 463
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "Restreint les possibilités d'expérimentation.",
-              "value": 464
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -380,12 +473,24 @@
           "title": "Comment la transformation digitale peut-elle aider les entreprises à se différencier de leurs concurrents ?",
           "options": [
             {
-              "label": "En offrant des canaux de vente en ligne.",
-              "value": 465
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "En améliorant la gestion des ressources humaines.",
-              "value": 466
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         },
@@ -393,12 +498,24 @@
           "title": "Quels sont les bénéfices financiers potentiels de la transformation digitale pour les entreprises ?",
           "options": [
             {
-              "label": "Augmentation du chiffre d'affaires et des marges bénéficiaires.",
-              "value": 467
+              "label": "Etatique.",
+              "value": 449
             },
             {
-              "label": "Diminution des coûts de main-d'œuvre.",
-              "value": 468
+              "label": "Crime organisé.",
+              "value": 450
+            },
+             {
+              "label": "Officine spécialisée.",
+              "value": 499
+            },
+            {
+              "label": "Malveillant pathologique.",
+              "value": 450
+            },
+             {
+              "label": "Vengeur",
+              "value": 499
             }
           ]
         }

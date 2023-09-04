@@ -18,6 +18,10 @@ import poly from "../../../assets/Polygone 7.svg"
 import arrow from "../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg"
 import Profile from "../../../components/pvCh/profile/profile.jsx";
 import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx"
+import runningSolid from "../../../assets/images/pv-challenge/running-solid2.svg";
+import {useHistory} from "react-router-dom";
+
+
 
 
 
@@ -27,7 +31,7 @@ import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx"
       backgroundColor:"#602F80",
       backgroundIcon:"rgba(96, 47, 128, 0.49)",
       icon:tor,
-      text:"TOR est comme un tunnel secret sur Internet. Imaginez que lorsque vous surfez sur le Web, vous laissez derrière vous des empreintes de pas. TOR vous aide à cacher ces empreintes en vous permettant de naviguer anonymement. Lorsque vous utilisez TOR, votre trafic Internet rebondit à travers différents ordinateurs dans le monde, masquant ainsi votre adresse IP. Cela signifie que personne ne peut facilement savoir qui vous êtes ou ce que vous faites en ligne. C'est utile pour protéger votre vie privée, mais cela peut également être utilisé par des personnes malveillantes, il faut donc l'utiliser avec précaution.",
+      text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore...",
       msg:"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium, Sed ut perspiciatis, unde omnis iste natus error sit "
     },{
       backgroundColor:"#FF001C",
@@ -90,6 +94,7 @@ function App({onNext}) {
         setModal(!modal);
       };
 
+      let history = useHistory();
 
       let currentIndex_ = currentIndex <= 5 ? currentIndex : 5;
 
@@ -102,7 +107,15 @@ function App({onNext}) {
         <div className={styles.profile}>
           <Profile/>
         </div>
-        
+        <div className={styles.backBtn}>
+          <button onClick={() => history.push("/")}>quitter
+            <img src={runningSolid}  />
+          </button>
+
+        </div>
+           
+
+      
 
             {/* <img src={violet} alt="" style={{position: "absolute", top: "13rem", left: "20rem"}}/>
             <img src={red} alt="" style={{position: "absolute", top: "24rem",left: "25rem"}} />
@@ -149,9 +162,9 @@ function App({onNext}) {
                 <p className={styles.msg_text} >  {dataList[currentIndex_].msg}</p>
                 <img src={poly} alt="" />
           </div>
-          <div className={styles.audio}>
+          {/* <div className={styles.audio}>
             <Audio/>
-          </div>
+          </div> */}
 
           <buttom className={`${currentIndex === 6  ? styles.btnNextEnble :styles.btnNextDesable }`} onClick={ currentIndex === 6 ? onNext : onNext}  >
           Etape suivante <img src={arrow} />
@@ -192,6 +205,9 @@ function App({onNext}) {
             <div className={styles.desc}>
               <p>{data.text}</p>
               <span style={{backgroundColor:data.backgroundColor}}></span>
+              <div className={styles.ModalAudio}>
+                  <Audio/>
+              </div>
               <div className={styles.close}>
                 <button onClick={close}>Terminé<img src={arrow} /></button>
               </div>

@@ -8,7 +8,7 @@ const CancelButton = (props) => {
     const {t} = useTranslation();
     const {title = t("exit")} = props;
     return (
-        <button className={styles.button} onClick={props.onClick}>
+        <button className={`${styles.button} ${props.className}`} onClick={props.onClick} >
             {title}
             {props.withIcon && <img src={running} alt={""}/>}
         </button>
