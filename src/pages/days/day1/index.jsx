@@ -410,7 +410,7 @@ const Day1PvPharma = (props) => {
                     </div>
                     <div className="box-2-2_ew pt-0 pb-0">
                         <h3>
-                            {t("day1.level")}-{currentStep}
+                            {t("day1.level")}
                         </h3>
                         <p>
                             {t(`day1.part${stp_ + 1}.g_title`)}
