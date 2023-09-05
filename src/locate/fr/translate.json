@@ -147,43 +147,17 @@
     "ValideNiveau": "Valider le niveau",
     
     "part1": {},
-    "part2": {
-      "g_title": "Le directeur de production vous appelle pour s'informer par rapport aux caractéristiques de l'Analytics.",
-      "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
-      "decisions": {
-        "4": "Convertit les documents physiques en fichiers numériques. ",
-        "5": "Permet de stocker et de gérer les informations de manière plus efficace.",
-        "6": "Facilite le partage de documents entre les employés.",
-        "7": "Utilise des outils numériques pour améliorer les processus existants.",
-        "8": "Automatise certaines tâches pour une meilleure efficacité.",
-        "9": "Permet le partage d'informations en temps réel et la collaboration.",
-        "10": "Repense les modèles d'affaires, les processus opérationnels et l'innovation.",
-        "11": "Investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. ",
-        "12": "Forme les employés aux compétences numériques nécessaires pour exploiter ces technologies.",
-        "13": "Repense l'offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique.",
-        "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
-     },
-      "categories": {
-        "1": "Numérisation",
-        "2": "Digitalisation",
-        "3": "Transformation digitale"
-      }
-    },
+    "part2": {},
     "part3": {
       "g_title": "Le directeur de production vous appelle pour s'informer par rapport aux caractéristiques de l'Analytics.",
       "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
       "decisions": {
-        "4": "Convertit les documents physiques en fichiers numériques. ",
-        "5": "Permet de stocker et de gérer les informations de manière plus efficace.",
-        "6": "Facilite le partage de documents entre les employés.",
-        "7": "Utilise des outils numériques pour améliorer les processus existants.",
-        "8": "Automatise certaines tâches pour une meilleure efficacité.",
         "9": "Permet le partage d'informations en temps réel et la collaboration.",
-        "10": "Repense les modèles d'affaires, les processus opérationnels et l'innovation.",
-        "11": "Investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. ",
-        "12": "Forme les employés aux compétences numériques nécessaires pour exploiter ces technologies.",
-        "13": "Repense l'offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique.",
-        "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
+        "10": "Navigateur spécialisé permettant notamment de trouver des sites",
+        "11": "moteur de recherches accessibles depuis un navigateur spécialisé",
+        "12": "Solution de messagerie électronique chifrée de bout en ",
+        "13": "Solution de messagerie instantanné chifrée de bout en",
+        "14": "forum du darknet spécialise dans des discusions autour d'accès"
      },
       "categories": {
         "1": "TOR",
@@ -193,75 +167,9 @@
         "5": "Nulled"
       }
     },
-    "part4": {
-      "g_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Ut enim ad minim veniam",
-      "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
-      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
-      "decisions": {
-        "4": "Convertit les documents physiques en fichiers numériques. ",
-        "5": "Permet de stocker et de gérer les informations de manière plus efficace.",
-        "6": "Facilite le partage de documents entre les employés.",
-        "7": "Utilise des outils numériques pour améliorer les processus existants.",
-        "8": "Automatise certaines tâches pour une meilleure efficacité.",
-        "9": "Permet le partage d'informations en temps réel et la collaboration.",
-        "10": "Repense les modèles d'affaires, les processus opérationnels et l'innovation.",
-        "11": "Investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. ",
-        "12": "Forme les employés aux compétences numériques nécessaires pour exploiter ces technologies.",
-        "13": "Repense l'offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique.",
-        "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
-     },
-      "categories": {
-        "1": "Numérisation",
-        "2": "Digitalisation",
-        "3": "Transformation digitale"
-      }
-    },
-    "part5": {
-      "g_title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Ut enim ad minim veniam",
-      "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
-      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
-      "decisions": {
-        "4": "Convertit les documents physiques en fichiers numériques. ",
-        "5": "Permet de stocker et de gérer les informations de manière plus efficace.",
-        "6": "Facilite le partage de documents entre les employés.",
-        "7": "Utilise des outils numériques pour améliorer les processus existants.",
-        "8": "Automatise certaines tâches pour une meilleure efficacité.",
-        "9": "Permet le partage d'informations en temps réel et la collaboration.",
-        "10": "Repense les modèles d'affaires, les processus opérationnels et l'innovation.",
-        "11": "Investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. ",
-        "12": "Forme les employés aux compétences numériques nécessaires pour exploiter ces technologies.",
-        "13": "Repense l'offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique.",
-        "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
-     },
-      "categories": {
-        "1": "Numérisation",
-        "2": "Digitalisation",
-        "3": "Transformation digitale"
-      }
-    },
-    "part6": {
-      "g_title": "Toutes les missions ne se valent pas, et pour réussir dans votre quête, vous devrez être capable de choisir les attaques logiques les plus adaptées à chaque hacker :",
-      "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
-      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
-      "decisions": {
-        "4": "Convertit les documents physiques en fichiers numériques. ",
-        "5": "Permet de stocker et de gérer les informations de manière plus efficace.",
-        "6": "Facilite le partage de documents entre les employés.",
-        "7": "Utilise des outils numériques pour améliorer les processus existants.",
-        "8": "Automatise certaines tâches pour une meilleure efficacité.",
-        "9": "Permet le partage d'informations en temps réel et la collaboration.",
-        "10": "Repense les modèles d'affaires, les processus opérationnels et l'innovation.",
-        "11": "Investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. ",
-        "12": "Forme les employés aux compétences numériques nécessaires pour exploiter ces technologies.",
-        "13": "Repense l'offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique.",
-        "14": "Développe une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité."
-     },
-      "categories": {
-        "1": "Numérisation",
-        "2": "Digitalisation",
-        "3": "Transformation digitale"
-      }
-    },
+    "part4": {},
+    "part5": {},
+    "part6": {},
     "part7": {
       "title": "Quelques généralités sur l'analyse descriptive ?",
       "g_title": "Parmi les propositions suivantes, choisissez celles qui vous semblent les plus pertinentes",
@@ -285,10 +193,6 @@
             {
               "label": "Malveillant pathologique.",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
 
           ]
@@ -311,10 +215,6 @@
             {
               "label": "Malveillant pathologique.",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
           ]
         },
@@ -336,10 +236,6 @@
             {
               "label": "Malveillant pathologique.",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
           ]
         },
@@ -361,10 +257,6 @@
             {
               "label": "Malveillant pathologique.",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
           ]
         },
@@ -372,24 +264,20 @@
           "title": "Quels sont les bénéfices financiers potentiels de la transformation digitale pour les entreprises ?",
           "options": [
             {
-              "label": "Etatique.",
+              "label": "Entrave au fonctionnement",
               "value": 449
             },
             {
-              "label": "Crime organisé.",
+              "label": "Financier",
               "value": 450
             },
              {
-              "label": "Officine spécialisée.",
+              "label": "Espionnage",
               "value": 499
             },
             {
-              "label": "Malveillant pathologique.",
+              "label": "Entrave au fonctionnement",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
           ]
         },
@@ -398,24 +286,20 @@
           "title": "Quel avantage la transformation digitale offre-t-elle aux entreprises en termes de croissance ?",
           "options": [
             {
-              "label": "Etatique.",
+              "label": "Entrave au fonctionnement",
               "value": 449
             },
             {
-              "label": "Crime organisé.",
+              "label": "Financier",
               "value": 450
             },
              {
-              "label": "Officine spécialisée.",
+              "label": "Espionnage",
               "value": 499
             },
             {
-              "label": "Malveillant pathologique.",
+              "label": "Entrave au fonctionnement",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
           ]
         },
@@ -423,24 +307,20 @@
           "title": "Comment la transformation digitale peut-elle aider les entreprises à améliorer leur expérience client ?",
           "options": [
             {
-              "label": "Etatique.",
+              "label": "Entrave au fonctionnement",
               "value": 449
             },
             {
-              "label": "Crime organisé.",
+              "label": "Financier",
               "value": 450
             },
              {
-              "label": "Officine spécialisée.",
+              "label": "Espionnage",
               "value": 499
             },
             {
-              "label": "Malveillant pathologique.",
+              "label": "Entrave au fonctionnement",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
           ]
         },
@@ -448,77 +328,24 @@
           "title": "Quel est l'impact de la transformation digitale sur l'innovation des entreprises ?",
           "options": [
             {
-              "label": "Etatique.",
+              "label": "Entrave au fonctionnement",
               "value": 449
             },
             {
-              "label": "Crime organisé.",
+              "label": "Financier",
               "value": 450
             },
              {
-              "label": "Officine spécialisée.",
+              "label": "Espionnage",
               "value": 499
             },
             {
-              "label": "Malveillant pathologique.",
+              "label": "Entrave au fonctionnement",
               "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
-            }
-          ]
-        },
-        {
-          "title": "Comment la transformation digitale peut-elle aider les entreprises à se différencier de leurs concurrents ?",
-          "options": [
-            {
-              "label": "Etatique.",
-              "value": 449
-            },
-            {
-              "label": "Crime organisé.",
-              "value": 450
-            },
-             {
-              "label": "Officine spécialisée.",
-              "value": 499
-            },
-            {
-              "label": "Malveillant pathologique.",
-              "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
-            }
-          ]
-        },
-        {
-          "title": "Quels sont les bénéfices financiers potentiels de la transformation digitale pour les entreprises ?",
-          "options": [
-            {
-              "label": "Etatique.",
-              "value": 449
-            },
-            {
-              "label": "Crime organisé.",
-              "value": 450
-            },
-             {
-              "label": "Officine spécialisée.",
-              "value": 499
-            },
-            {
-              "label": "Malveillant pathologique.",
-              "value": 450
-            },
-             {
-              "label": "Vengeur",
-              "value": 499
             }
           ]
         }
+        
       ]
     },
     "messages": {
