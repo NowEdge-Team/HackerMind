@@ -32,37 +32,37 @@ import {useHistory} from "react-router-dom";
       backgroundIcon:"rgba(96, 47, 128, 0.49)",
       icon:tor,
       text:"TOR est comme un tunnel secret sur Internet. Imaginez que lorsque vous surfez sur le Web, vous laissez derrière vous des empreintes de pas. TOR vous aide à cacher ces empreintes en vous permettant de naviguer anonymement. Lorsque vous utilisez TOR, votre trafic Internet rebondit à travers différents ordinateurs dans le monde, masquant ainsi votre adresse IP. Cela signifie que personne ne peut facilement savoir qui vous êtes ou ce que vous faites en ligne. C'est utile pour protéger votre vie privée, mais cela peut également être utilisé par des personnes malveillantes, il faut donc l'utiliser avec précaution.",
-      msg:"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium, Sed ut perspiciatis, unde omnis iste natus error sit "
+      msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons "
     },{
       backgroundColor:"#FF001C",
       backgroundIcon:"rgba(255, 0, 28, 0.47)",
       icon:hidden,
       text:"The Hidden Wiki est un peu comme un catalogue secret d'Internet. Il contient des liens vers des sites Web qui ne sont pas visibles sur Internet ordinaire. Certains de ces sites peuvent être utiles, mais beaucoup d'entre eux sont illégaux ou dangereux. Il est essentiel d'être très prudent lorsque vous explorez le contenu du darknet, car vous pourriez vous retrouver sur des sites malveillants ou illégaux sans le vouloir.",
-      msg:"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium, Sed ut perspiciatis, unde omnis iste natus error sit "
+      msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons  "
     },{
       backgroundColor:"#F7941E",
       backgroundIcon:"rgba(247, 148, 30, 0.49)",
       icon:project,
       text:"Project Haystack se concentre sur l'organisation des données provenant d'appareils connectés, tels que des thermostats intelligents ou des capteurs de température. L'idée est de rendre ces données plus faciles à gérer et à utiliser. Cependant, il est important de noter que la collecte de données provenant d'appareils IoT peut poser des problèmes de sécurité si ces données ne sont pas correctement protégées. C'est comme si vous aviez une boîte à secrets, mais vous devez vous assurer que personne d'autre ne puisse l'ouvrir.",
-      msg:"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium, Sed ut perspiciatis, unde omnis iste natus error sit "  
+      msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons "  
     },{
       backgroundColor:"#CBBAFF",
       backgroundIcon:"rgba(203, 186, 255, 0.49)",
       icon:proton,
       text:"ProtonMail est une boîte aux lettres électronique super sécurisée. Lorsque vous envoyez un e-mail via ProtonMail, il est verrouillé dans une boîte à secrets virtuelle, et seul le destinataire peut l'ouvrir. Cela signifie que même si quelqu'un d'autre intercepte votre e-mail en cours de route, il ne pourra pas le lire. C'est un peu comme envoyer une lettre dans un coffre-fort. C'est une excellente façon de protéger vos messages personnels.",
-      msg:"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium, Sed ut perspiciatis, unde omnis iste natus error sit "  
+      msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons "  
     },{
       backgroundColor:"#00AAE2",
       backgroundIcon:"rgba(0, 170, 226, 0.49)",
       icon:telegram,
       text:"Telegram est une application de messagerie qui garde vos conversations privées. Lorsque vous envoyez un message, il est enveloppé dans un coffre-fort virtuel, de sorte que seuls vous et votre ami pouvez le voir. Vous pouvez même programmer vos messages pour qu'ils disparaissent après un certain temps. C'est comme avoir une conversation dans une pièce secrète qui s'efface automatiquement après un certain temps.",
-      msg:"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium, Sed ut perspiciatis, unde omnis iste natus error sit " 
+      msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons " 
     },{
       backgroundColor:"#527D9A",
       backgroundIcon:"rgba(82, 125, 154, 0.49)",
       icon:nulled,
       text:"Nulled est un endroit dangereux sur Internet. C'est comme une rue sombre où des personnes malveillantes vendent des choses illégales, comme des copies piratées de logiciels et des virus informatiques. Si vous visitez Nulled, vous pourriez être infecté par des logiciels malveillants ou vous mettre en danger juridiquement. Il est important de rester loin de ces endroits sombres en ligne.",
-      msg:"Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium, Sed ut perspiciatis, unde omnis iste natus error sit " 
+      msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons " 
     }
   ]
 
