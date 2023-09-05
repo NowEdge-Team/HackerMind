@@ -257,19 +257,19 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
 const Day1PvPharma = (props) => {
     const {t} = useTranslation();
 
-    const config = useRef({
-        messages: [
-            {
-                title: t("day1.messages.title"),
-                text: t("day1.messages.text3"),
-                showCancelBtn: false,
-                textBtnValid: t("day1.messages.textBtnValid2"),
-                audio: Level1Audio.audio7
-            },
-        ],
-        is_first_time: false,
-        currentIndex: 0
-    });
+    // const config = useRef({
+    //     messages: [
+    //         {
+    //             title: t("day1.messages.title"),
+    //             text: t("day1.messages.text3"),
+    //             showCancelBtn: false,
+    //             textBtnValid: t("day1.messages.textBtnValid2"),
+    //             audio: Level1Audio.audio7
+    //         },
+    //     ],
+    //     is_first_time: false,
+    //     currentIndex: 0
+    // });
     
     let history = useHistory();
     const [showM, setShowM] = useState(false);
@@ -361,13 +361,13 @@ const Day1PvPharma = (props) => {
                         }
                     }}
                 />
-                <ConfirmationModal
+                {/* <ConfirmationModal
                     show={showM}
                     close={() => setShowM(false)}
                     valid={() => setShowM(false)}
                     rotateImage={true}
                     {...config.current.messages[config.current.currentIndex]}
-                />
+                /> */}
 
                 <Modal1
                     show={showM3}
