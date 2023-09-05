@@ -17,7 +17,8 @@ function ItemRow({data,onclick}) {
                 marginLeft: "12px" ,
             }}
             />
-            <h6>{data.title}</h6>
+            <h4>{data.title}</h4>
+            <p></p>
             <div className={styles.arrow}>
                 <a href={data.link} target="_blank" rel="noopener noreferrer" onClick={()=>onclick(data)}>
                     <img  

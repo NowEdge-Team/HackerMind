@@ -5,18 +5,20 @@
     justify-content: start;
     align-items: center;
     width: 790px;
-    height: 50px;
+    // height: 180px;
     border-radius: 25px;
     border: solid 2px black;
     margin-top: 13px;
     position: relative;
     
-    h6{
+    p{
       margin-top: 24px;
       margin-left: 20px;
       font-size: 15px;
       font-weight: 400;
-      color:#2792E4 !important;
+      color:grey;
+      text-align: left;
+      padding-top: 20px;
     }
     .arrow img{
       position: absolute;
