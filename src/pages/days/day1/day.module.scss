@@ -324,3 +324,67 @@ body.active-modal {
   
 
 }
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  .bell1 {
+    top: 11rem !important;
+    left: 16rem !important;
+  }
+  .bell2 {
+    top: 19rem !important;
+    left: 19rem !important;
+  }
+  .bell3 {
+    top: 20rem !important;
+    left: 28rem !important;
+  }
+  .bell4 {
+    top: 20rem !important;
+    left: 37rem !important;
+  }
+  .bell5 {
+    top: 19rem !important;
+    left: 47rem !important;
+  }
+  .bell6 {
+    top: 11rem !important;
+    left: 50rem !important;
+  }
+}
+
+
+
+@media only screen and (max-width: 1440px) {
+  
+  .bell1 {
+    top: 9rem !important;
+    left: 24rem !important;
+  }
+  .bell2 {
+    top: 19rem !important;
+    left: 29rem !important;
+  }
+  .bell3 {
+    top: 21rem !important;
+    left: 41rem !important;
+  }
+  .bell4 {
+    top: 21rem !important;
+    left: 52rem !important;
+  }
+  .bell5 {
+    top: 19rem !important;
+    left: 66rem !important;
+  }
+  .bell6 {
+    top: 9rem !important;
+    left: 70rem !important;
+  }
+
+
+
+}
