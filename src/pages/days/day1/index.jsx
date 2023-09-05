@@ -67,7 +67,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
     const config = useRef({
         messages: [
             {
-                title: t("day1.messages.title"),//1,
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -78,31 +78,31 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                     incrementCurrentStep();
                 }    
             },
+            // {
+            //     title: 2,//t("day1.messages.title"),
+            //     text: t("day1.messages.text1"),
+            //     showCancelBtn: true,
+            //     textBtnValid: t("day1.messages.textBtnValid"),
+            //     audio: Level1Audio.audio6,
+            //     textBtnNotValid:t("pasEncore"),
+            //     valid: () => {
+            //         config.current.currentIndex += 1;
+            //         incrementCurrentStep();
+            //     }    
+            // },
             {
-                title: t("day1.messages.title"),//2,
-                text: t("day1.messages.text1"),
-                showCancelBtn: true,
-                textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio6,
-                textBtnNotValid:t("pasEncore"),
-                valid: () => {
-                    config.current.currentIndex += 1;
-                    incrementCurrentStep();
-                }    
-            },
-            {
-                    title: t("day1.messages.title"),//6,//
+                    title: t("day1.messages.title"),
                     text: t("day1.messages.text1"),
                     showCancelBtn: true,
                     textBtnValid: t("day1.messages.textBtnValid"),
                     textBtnNotValid:t("pasEncore"),
                     audio: Level1Audio.audio6,
                     valid() {
-                        setTimeout(sendData, 2000)
+                        setTimeout(sendData, 1000)
                     }
                 }
             ,{
-                title: 7,//tt("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text4"),
                 showCancelBtn: false,
                 textBtnValid: t("day1.messages.textBtnValid2"),
