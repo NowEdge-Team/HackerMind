@@ -360,7 +360,7 @@ export default function Parcours() {
                 }}
                 img={
                     days?.find((d) => d.dayId === 2)?.status === -1 ? img5Gris : img5}
-                title={t(`parcours.day2title`)}
+                title={t(`parcours.day5title`)}
                 left={66}
                 top={82}
                 dayObject={days?.find((d) => d.dayId === 2)}
@@ -374,7 +374,7 @@ export default function Parcours() {
                 }}
                 img={
                     days?.find((d) => d.dayId === 2)?.status === -1 ? img6Gris : img6}
-                title={t(`parcours.day2title`)}
+                title={t(`parcours.day6title`)}
                 left={70}
                 top={30}
                 dayObject={days?.find((d) => d.dayId === 2)}
@@ -389,7 +389,7 @@ export default function Parcours() {
                 img={
                     days?.find((d) => d.dayId === 5)?.status === -1 ? img7Gris : img7
                 }
-                title={t(`parcours.day5title`)}
+                title={t(`parcours.day7title`)}
                 left={90}
                 top={85}
                 topBlock={-18}
