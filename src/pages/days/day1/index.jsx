@@ -395,11 +395,7 @@ const Day1PvPharma = (props) => {
                         <p>
                             {t(`day1.part${stp_ + 1}.g_title`)}
                         </p>
-                        {stp_ === 1 &&
-                            <p className={"desc"}>
-                                {t(`day1.part${stp_ + 1}.s_description`)}
-                            </p>
-                        }
+                        
                     </div>
                     </>
              }

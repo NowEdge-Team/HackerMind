@@ -141,15 +141,17 @@
     "notee": "C'est noté"
   },
   "day1": {
-    "level": "NIVEAU 1 : Généralités sur l’Analytics",
+    "level": "NIVEAU 1 : Quel hacker je suis ?",
     "title": "Généralités sur l’Analytics",
     "l_title": "RESPONSABLE DE PRODUCTION ",
     "ValideNiveau": "Valider le niveau",
     
     "part1": {},
-    "part2": {},
+    "part2": {
+      "g_title": "Je te mets au défi de relier les différents outils de cybersécurité à leur usage principal"
+    },
     "part3": {
-      "g_title": "Le directeur de production vous appelle pour s'informer par rapport aux caractéristiques de l'Analytics.",
+      "g_title": "Plongez dans l'univers des hackers en découvrant leurs différents profils et leurs méthodes d'opération",
       "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
       "decisions": {
         "9": "Permet le partage d'informations en temps réel et la collaboration.",
@@ -167,7 +169,9 @@
         "5": "Nulled"
       }
     },
-    "part4": {},
+    "part4": {
+      "g_title": "Comprenez les motivations qui alimentent les hackers et explorez des exemples illustratifs de leurs motivations variées"
+    },
     "part5": {},
     "part6": {},
     "part7": {
