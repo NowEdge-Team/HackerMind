@@ -27,7 +27,10 @@ import Dropzone from "../../../components/Dropzone/Dropzone.jsx";
 import _ from "lodash";
 import img1 from "../../../assets/images/pv-challenge/character/character_1_11.png"
 // import img3 from "../../../assets/images/pv-challenge/character/character-3.png"
-import img3 from "../../../assets/images/pv-challenge/character/Leader.png"; 
+// import img3 from "../../../assets/images/pv-challenge/character/Ingénieur social.png"; 
+
+import img3 from "../../../assets/Ingénieur social.png"
+
 // import img4 from "../../../assets/images/pv-challenge/character/character_c.png"
 // import dayOne from "../../../components/pvCh/dayOne/day.jsx";
 import Row from "../../../components/pvCh/row/Row.jsx"
@@ -255,6 +258,7 @@ const Day1PvPharma = (props) => {
         is_first_time: false,
         currentIndex: 0
     });
+    
     let history = useHistory();
     const [showM, setShowM] = useState(false);
     const [showM3, setShowM3] = useState(false);

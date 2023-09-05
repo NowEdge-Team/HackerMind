@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
 import {Modal} from "react-bootstrap";
 import style from "./style.module.scss";
-import img1 from "../../../../assets/images/pv-challenge/character/Leader.png"
+import img1 from "../../../../assets/images/pv-challenge/character/character_1_11.png"
 import Audio from "../../day2/AudioPlayer/Audio";
 const ConfirmationModal = ({
                                show,

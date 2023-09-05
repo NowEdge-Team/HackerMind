@@ -140,14 +140,15 @@
 
   .img_user{
     position: absolute;
-    top: 43%;
+    top: 44%;
     height: 90%;
-    left: 4%;
+    left: 0%;
     overflow: hidden;
 
     .img_roœtate{
-        height: 550px;
-        //transform: scaleX(-1);
+      height: 595px;
+      width: 277px;
+        transform: scaleX(-1);
     }
 
   }
