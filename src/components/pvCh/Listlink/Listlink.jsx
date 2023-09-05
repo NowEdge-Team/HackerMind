@@ -14,7 +14,6 @@ function Listlink({data}) {
           <Itemlink />
           <Itemlink />
           <Itemlink />
-          <Itemlink />
           
 
 
@@ -26,7 +25,6 @@ function Listlink({data}) {
           <ItemSelect options={data[1].options}/>
           <ItemSelect options={data[2].options}/>
           <ItemSelect options={data[3].options}/>
-          <ItemSelect options={data[4].options}/>
 
 
           
@@ -35,11 +33,13 @@ function Listlink({data}) {
         </div>
         <div className={styles.row3}>
           <h3>Motivation</h3>
+          <ItemSelect options={data[4].options}/>
           <ItemSelect options={data[5].options} />
           <ItemSelect options={data[6].options}/>
           <ItemSelect options={data[7].options}/>
-          <ItemSelect options={data[8].options}/>
-          <ItemSelect options={data[9].options}/>
+
+          {/* <ItemSelect options={data[8].options}/>
+          <ItemSelect options={data[9].options}/> */}
 
         </div>
       
