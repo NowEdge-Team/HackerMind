@@ -60,7 +60,7 @@
     "description": "Votre mission cruciale en tant que Maître des Intrusions sera de mener nos attaques de manière stratégique et discrète. Tenez-vous prêt, car nous avons toute confiance en vos capacités pour accomplir cette mission avec succès. Nous comptons sur vous !",
     "point": "Points",
     "quitter": "Quitter",
-    "day1title": "Les concepts de base de la transformation digitale",
+    "day1title": "Quel hacker je suis ?",
     "day2title": "Enjeux et défis",
     "day3title": "Exploration des opportunités",
     "day4title": "Vue sur les technologies émergentes",
@@ -176,7 +176,10 @@
       "g_title": "Plongez dans le monde de la cybersécurité en explorant nos articles détaillant des histoires réelles d'attaques informatiques. ",
       "description": "Découvrez comment les hackers ont réussi à contourner les défenses et à accéder à des informations sensibles."
     },
-    "part6": {},
+    "part6": {
+      "g_title":"Associez chaque profil de hacker à sa motivation correspondante. Réfléchissez aux caractéristiques de chaque hacker et à ce qui les motive à agir dans le monde de la cybercriminalité",
+      "description": "Utilisez les liens vers les articles pour en apprendre davantage sur les hackers et leurs motivations. Les articles fournissent des informations complémentaires qui vous aideront à comprendre leur comportement dans le monde de la cybercriminalité"
+    },
     "part7": {
       "title": "Quelques généralités sur l'analyse descriptive ?",
       "g_title": "Parmi les propositions suivantes, choisissez celles qui vous semblent les plus pertinentes",
