@@ -1,5 +1,5 @@
 import React from 'react'
-import link from "../../../assets/link.png"
+import linkimg from "../../../assets/link.png"
 import arrow from "../../../assets/arrow2.png"
 import styles from "./list.module.scss"
 
@@ -10,10 +10,10 @@ function Listlink({data}) {
     <div className={styles.container}>
         <div className={styles.row1}>
           <h3>Exemples des cyberattaques</h3>
-          <Itemlink />
-          <Itemlink />
-          <Itemlink />
-          <Itemlink />
+          <Itemlink link="https://www.cyberuniversity.com/post/stuxnet-zoom-sur-la-cyber-arme-et-comment-sen-proteger	"/>
+          <Itemlink link="https://www.kaspersky.fr/blog/wannacry-for-b2b/6999/" />
+          <Itemlink link="https://www.kaspersky.fr/blog/darkhotel-apt/3884/	" />
+          <Itemlink link="https://www.kaspersky.fr/blog/attack-on-dyn-explained/6240/" />
           
 
 
@@ -48,26 +48,28 @@ function Listlink({data}) {
 }
 
 
-function Itemlink() {
+function Itemlink({link}) {
 
     
   return (
         <div className={styles.row4}>
-            <img src={link} alt=""
+            <img src={linkimg} alt=""
             width={20}
             height={20}
             style={{
                 marginLeft: "10px" ,
             }}
             />
-            <a href="#">Link</a>
+            <a href="">Link</a>
             
             <div className={styles.arrow}>
-                <img src={arrow} 
-                alt="" 
-                width={17}
-                height={15}
-                />
+            <a href={link} target="_blank" rel="noopener noreferrer">
+                  <img src={arrow} 
+                  alt="" 
+                  width={17}
+                  height={15}
+                  />
+              </a>
             </div>
         </div>
   )
