@@ -67,7 +67,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
     const config = useRef({
         messages: [
             {
-                title: 1,//t("day1.messages.title"),
+                title: t("day1.messages.title"),//1,
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -79,7 +79,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                 }    
             },
             {
-                title: 2,//t("day1.messages.title"),
+                title: t("day1.messages.title"),//2,
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -91,7 +91,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                 }    
             },
             {
-                    title: 6,//tt("day1.messages.title"),
+                    title: t("day1.messages.title"),//6,//
                     text: t("day1.messages.text1"),
                     showCancelBtn: true,
                     textBtnValid: t("day1.messages.textBtnValid"),

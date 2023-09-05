@@ -61,10 +61,12 @@
     "point": "Points",
     "quitter": "Quitter",
     "day1title": "Quel hacker je suis ?",
-    "day2title": "Enjeux et défis",
-    "day3title": "Exploration des opportunités",
-    "day4title": "Vue sur les technologies émergentes",
-    "day5title": "Reskilling et Upskilling",
+    "day2title": "Trouver ma mission",
+    "day3title": "Reconnaître ma cible ",
+    "day4title": "S’introduire en douceur ",
+    "day5title": "Élever mes privilèges",
+    "day6title": "Déployer l’attaque",
+    "day7title": "Busted !",
     "niveau": "NIVEAU ",
     "termine": "Terminé",
     "encour": "En cours",
@@ -130,7 +132,7 @@
     "modal": {
       "title_p1": "BIENVENUE DANS",
       "title_p2": "L'AVENTURE",
-      "description": "Vous êtes le catalyseur de notre transformation numérique, inspirant l'innovation à chaque étape de notre parcours.",
+      "description": "",
       "name_taskforce": "Donnez un nom a votre taskforce",
       "retour": "Retour",
       "enregistrer": "Enregistrer"
@@ -143,7 +145,7 @@
   "day1": {
     "level": "NIVEAU 1 : Quel hacker je suis ?",
     "title": "Généralités sur l’Analytics",
-    "l_title": "RESPONSABLE DE PRODUCTION ",
+    "l_title": "Ingénieur social",
     "ValideNiveau": "Valider le niveau",
     
     "part1": {},
@@ -381,7 +383,7 @@
     "niveau": "NIVEAU 2 : Collecte et valorisation des données",
     "title1": "",
     "leftMsg": {
-        "title": "RESPONSABLE DE PRODUCTION",
+        "title": "Ingénieur social",
         "message1": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
         "message2": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
         "message3": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance. ",
@@ -533,7 +535,7 @@
   "day3": {
     "niveau": "NiVEAU 3 : Comprendre ce que les données nous racontent (Approche descriptive)",
     "leftMsg": {
-      "title": "RESPONSABLE DE PRODUCTION",
+      "title": "Ingénieur social",
       "message1": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
       "message2": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
       "message3": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
