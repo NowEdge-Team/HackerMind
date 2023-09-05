@@ -57,7 +57,7 @@
   "parcours": {
     "welcome": "Bienvenue dans",
     "Aventure": " l'Aventure",
-    "description": "Votre mission cruciale en tant qu'Ambassadeur Digital sera d'inspirer et de promouvoir l'adoption de la transformation numérique au sein de notre entreprise. Tenez-vous prêt, car nous avons toute confiance en vos capacités à mener à bien cette mission. Nous comptons sur vous !",
+    "description": "Votre mission cruciale en tant que Maître des Intrusions sera de mener nos attaques de manière stratégique et discrète. Tenez-vous prêt, car nous avons toute confiance en vos capacités pour accomplir cette mission avec succès. Nous comptons sur vous !",
     "point": "Points",
     "quitter": "Quitter",
     "day1title": "Les concepts de base de la transformation digitale",
@@ -83,7 +83,7 @@
     "title": "Strategic Game",
     "welcome1": "BIENVENUE DANS",
     "welcome2": "L'AVENTURE",
-    "desc1": " Prêt à devenir le Digital Ambassador de notre entreprise ? Votre mission consiste à promouvoir la transformation numérique et à susciter l'innovation. Nous vous souhaitons bonne chance dans cette passionnante aventure numérique !",
+    "desc1": " Prêt à relever votre première mission en cybersécurité ? Vous allez être confronté à de nombreux défis, mais n'ayez crainte, nous serons là pour vous guider. Votre mission consiste à mener nos attaques de manière discrète et à récupérer des informations cruciales !",
     "desc2": "A vous de choisir les bonnes stratégies et de prendre les meilleures décisions afin d’optimiser votre score.",
     "parcour": "Parcours",
     "Ractivity": "Rapport d'activité",
@@ -120,10 +120,10 @@
     "finalGameTitle": "Félicitations",
     "finalGameBody": "Vous avez terminé le jeu!",
     "listMission": {
-      "title": "LE PRESIDENT",
-      "text1": "Bienvenue dans le monde du cybercrime ! Vous êtes désormais un membre de notre groupe après avoir accepté notre offre. Votre première mission vous attend. Vous devrez affronter de nombreux défis,mais ne vous inquiétez pas, nous serons là pour vous accompagner.",
-      "text2": "Nous comptons sur vous pour nous aider à conduire nos attaques en toute discrétion et récupérer le pactole. ",
-      "text3": "Soyez malin et utilisez vos compétences de hacker pour éviter de vous faire attraper. Mais attention, les conséquences peuvent être graves si vous êtes pris en flagrant délit.Êtes-vous prêt à relever le défi et devenir le meilleur d'entre nous ?"
+      "title": "LE LEADER",
+      "text1": "Bienvenue dans le monde du cybercrime ! Vous êtes désormais un membre de notre groupe après avoir accepté notre offre. Votre première mission vous attend.",
+      "text2": " Vous devrez affronter de nombreux défis, mais ne vous inquiétez pas, nous serons là pour vous accompagner. Nous comptons sur vous pour nous aider à conduire nos attaques en toute discrétion et récupérer le pactole. ",
+      "text3": "Soyez malin et utilisez vos compétences de hacker pour éviter de vous faire attraper. Mais attention, les conséquences peuvent être graves si vous êtes pris en flagrant délit.  Êtes-vous prêt à relever le défi et devenir le meilleur d'entre nous ?"
     },
     "enregistrer": "Enregistrer",
     "retour": "Retour",
