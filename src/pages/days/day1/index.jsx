@@ -244,9 +244,11 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                 </Stepper>
                 {currentStep !==0 && <div className={"step_quiz_btn"}>
                     <CancelButton onClick={() => history.push("/")} className={"step_btn_cancel"}/>
-                    {showNextBtn && <NextButton className={"step_quiz_btn_next2"}
+                    {/* {showNextBtn &&  */}
+                    <NextButton className={"step_quiz_btn_next2"}
                                 onClick={nextStep}
-                                />}
+                                />
+                                {/* } */}
                 </div>}
             </div>
         </>

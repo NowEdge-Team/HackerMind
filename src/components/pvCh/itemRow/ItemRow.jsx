@@ -17,8 +17,10 @@ function ItemRow({data,onclick}) {
                 marginLeft: "12px" ,
             }}
             />
-            <h4>{data.title}</h4>
-            <p></p>
+            <div className={styles.desc}>
+                <h4>{data.title}</h4>
+                <p>{data.para}</p>
+            </div>
             <div className={styles.arrow}>
                 <a href={data.link} target="_blank" rel="noopener noreferrer" onClick={()=>onclick(data)}>
                     <img  

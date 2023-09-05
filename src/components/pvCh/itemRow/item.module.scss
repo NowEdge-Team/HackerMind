@@ -11,14 +11,24 @@
     margin-top: 13px;
     position: relative;
     
-    p{
-      margin-top: 24px;
+    h4{
+      margin-top: 8px;
       margin-left: 20px;
       font-size: 15px;
       font-weight: 400;
-      color:grey;
+      color:black;
       text-align: left;
       padding-top: 20px;
+    }
+    p{
+      color:grey;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 400;
+      margin-left:20px;
+      margin-right: 35px;
+      padding-bottom: 14px;
+
     }
     .arrow img{
       position: absolute;
@@ -28,8 +38,7 @@
     }
     .boolean img{
       position: absolute;
-      right: 110px;
-      top: 10px;
-
+      right: 72px;
+      top: 7px;
     }
   }
