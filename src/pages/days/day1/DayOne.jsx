@@ -132,27 +132,27 @@ function App({onNext}) {
           <div className={styles.bell}>
 
               {currentIndex===0 && 
-              <img src={bell} alt="" className={styles.bell1} style={{position: "absolute", top: "16rem", left: "26rem",}} onClick={()=>{
+              <img src={bell} alt="" className={styles.bell1} style={{position: "absolute", top: "30%", left: "27%",}} onClick={()=>{
                 toggleModal();
                 }} />}
               {currentIndex===1 && 
-              <img src={bell} alt="" className={styles.bell2} style={{position: "absolute", top: "27rem", left: "31rem",}} onClick={()=>{
+              <img src={bell} alt="" className={styles.bell2} style={{position: "absolute", top: "50%", left: "32%",}} onClick={()=>{
                 toggleModal();
                 }} />}
               {currentIndex===2 && 
-              <img src={bell} alt="" className={styles.bell3} style={{position: "absolute", top: "29rem", left: "43rem",}} onClick={()=>{
+              <img src={bell} alt="" className={styles.bell3} style={{position: "absolute", top: "54%", left: "45%",}} onClick={()=>{
                 toggleModal();
                 }} />}
               {currentIndex===3 && 
-              <img src={bell} alt="" className={styles.bell4} style={{position: "absolute", top: "29rem", left: "56rem",}} onClick={()=>{
+              <img src={bell} alt="" className={styles.bell4} style={{position: "absolute", top: "54%", left: "58%",}} onClick={()=>{
                 toggleModal();
                 }} />}
               {currentIndex===4 && 
-              <img src={bell} alt="" className={styles.bell5} style={{position: "absolute", top: "27rem", left: "70rem",}} onClick={()=>{
+              <img src={bell} alt="" className={styles.bell5} style={{position: "absolute", top: "50%", left: "73%",}} onClick={()=>{
                 toggleModal();
                 }} />}
               {currentIndex===5 && 
-              <img src={bell} alt="" className={styles.bell6} style={{position: "absolute", top: "16rem", left: "74rem",}} onClick={()=>{
+              <img src={bell} alt="" className={styles.bell6} style={{position: "absolute", top: "30%", left: "78%",}} onClick={()=>{
                 toggleModal();
                 }} />}
           </div>
