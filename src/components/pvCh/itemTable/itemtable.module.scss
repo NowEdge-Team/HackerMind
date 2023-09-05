@@ -9,6 +9,7 @@
         .box1{
           flex: 1;
           background-color:rgba(49, 165, 71, 1);
+          // width: 500px;
           height: 70px;
           background-image:url(../../../assets//Vector.png);
           background-repeat: no-repeat;
@@ -17,7 +18,7 @@
           justify-content: center;
           align-items: center;
             p{
-              font-size: 15px;
+              font-size: 12px;
               font-weight: 700;
               letter-spacing: 0em;
               color: bisque;
