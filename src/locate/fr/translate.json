@@ -172,7 +172,10 @@
     "part4": {
       "g_title": "Comprenez les motivations qui alimentent les hackers et explorez des exemples illustratifs de leurs motivations variées"
     },
-    "part5": {},
+    "part5": {
+      "g_title": "Plongez dans le monde de la cybersécurité en explorant nos articles détaillant des histoires réelles d'attaques informatiques. ",
+      "description": "Découvrez comment les hackers ont réussi à contourner les défenses et à accéder à des informations sensibles."
+    },
     "part6": {},
     "part7": {
       "title": "Quelques généralités sur l'analyse descriptive ?",
