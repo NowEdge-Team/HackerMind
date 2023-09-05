@@ -358,11 +358,13 @@ body.active-modal {
 
 
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
   
   .bell1 {
+    position: absolute;
     top: 9rem !important;
     left: 24rem !important;
+    border: 5px solid red;
   }
   .bell2 {
     top: 19rem !important;
@@ -384,7 +386,4 @@ body.active-modal {
     top: 9rem !important;
     left: 70rem !important;
   }
-
-
-
 }
