@@ -68,14 +68,9 @@ import { Scale } from "@mui/icons-material"
       backgroundColor:"#527D9A",
       backgroundIcon:"rgba(82, 125, 154, 0.49)",
       icon:nulled,
-<<<<<<< HEAD
       text:"Nulled est un endroit dangereux sur Internet. C'est comme une rue sombre où des personnes malveillantes vendent des choses illégales, comme des copies piratées de logiciels et des virus informatiques. Si vous visitez Nulled, vous pourriez être infecté par des logiciels malveillants ou vous mettre en danger juridiquement. Il est important de rester loin de ces endroits sombres en ligne.",
       msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons " ,
       audio:audio6
-=======
-      text:"Nulled est un site où les hackers peuvent obtenir des versions piratées de logiciels, des exploits et des logiciels malveillants. Ils peuvent l'utiliser pour obtenir des outils de piratage ou pour diffuser des logiciels malveillants à des fins malveillantes. L'utilisation de Nulled est illégale et expose les hackers à des risques juridiques importants.",
-      msg:"Cliquez sur la notification pour découvrir les applications que nous utilisons " 
->>>>>>> c0256b6940ef7d4b04ac6a4ba40f34c79ba369c6
     }
   ]
 

@@ -79,6 +79,18 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                 }    
             },
             {
+                title: 2,//t("day1.messages.title"),
+                text: t("day1.messages.text1"),
+                showCancelBtn: true,
+                textBtnValid: t("day1.messages.textBtnValid"),
+                audio: Level1Audio.audio6,
+                textBtnNotValid:t("pasEncore"),
+                valid: () => {
+                    config.current.currentIndex += 1;
+                    incrementCurrentStep();
+                }    
+            },
+            {
                     title: 6,//tt("day1.messages.title"),
                     text: t("day1.messages.text1"),
                     showCancelBtn: true,
@@ -151,7 +163,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
 
 
     const nextStep = () => {
-        if ([0,2,3,4,5].includes(currentStep)) return incrementCurrentStep();
+        if ([2,3,4,5].includes(currentStep)) return incrementCurrentStep();
 
         setShowConfirm(true);
     }
@@ -274,11 +286,13 @@ const Day1PvPharma = (props) => {
     const {currentStep} = useStepper();
 
 
+    
     useEffect(()=>{
         if ([0,1,2,3,6].includes(currentStep)) return setShowBolck(false);
         else if(!showBolck) return setShowBolck(true);
 
     },[currentStep])
+
 
     useEffect(() => {
         const currentDay = center.days?.find((d) => d.dayId === 1);
