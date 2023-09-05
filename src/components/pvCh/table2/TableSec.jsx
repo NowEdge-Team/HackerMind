@@ -9,39 +9,33 @@ function TableSec() {
     <div className={styles.container}>
 
       <div className={styles.row1}>
-        <div className={styles.col1}>Profils d’attaquants</div>
-        <div className={styles.col2}>Exemples et mode opératoirs</div>
+        <div className={styles.col1}>Motivations</div>
+        <div className={styles.col2}>Exemples de motivations</div>
         </div>
 
           <ItemTable 
-          Title="Etatique"
-          Description="États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser 
-          une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils
-          et méthodes à la topologie de la cible"
+          Title="ESPIONNAGE"
+          Description="Opération de renseignement (étatique, économique)"
           />
           <ItemTable 
-          Title="CRIME ORGANISE"
-          Description="Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,
-           exploitation de réseaux de « machines robots » (botnet), etc."
+          Title="PRÉPOSITIONNEMENT STRATÉGIQUE"
+          Description="Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho)."
           />
           <ItemTable 
-          Title="TERRORISTE"
-          Description="Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration"
+          Title="INFLUENCE"
+          Description="Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État."
           />
           <ItemTable 
-          Title="ACTIVISTE IDIOLOGIQUE" 
-          Description="Cyber-hacktivistes, groupements d’intérêt, sectes."
+          Title="ENTRAVE AU FONCTIONNEMENT" 
+          Description="Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique"
           />
            <ItemTable 
-          Title="Etatique"
-          Description="États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser 
-          une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils
-          et méthodes à la topologie de la cible"
+          Title="LUCRATIF"
+          Description="Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc."
           />
           <ItemTable 
-          Title="CRIME ORGANISE"
-          Description="Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,
-           exploitation de réseaux de « machines robots » (botnet), etc."
+          Title="DÉFI, AMUSEMENT"
+          Description="Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement"
           />
          
       </div>
