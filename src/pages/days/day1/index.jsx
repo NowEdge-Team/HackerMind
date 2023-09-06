@@ -102,11 +102,11 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                     }
                 }
             ,{
-<<<<<<< HEAD
+
                 title: t("day1.messages.title"),//t
-=======
+
                 title: t("day1.messages.title"),
->>>>>>> e7a3546bd4ad69442c828b1fd4d57688bbaa8cd3
+
                 text: t("day1.messages.text4"),
                 showCancelBtn: false,
                 textBtnValid: t("day1.messages.textBtnValid2"),
