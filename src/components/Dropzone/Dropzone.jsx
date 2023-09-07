@@ -6,7 +6,6 @@ import {useTranslation} from "react-i18next";
 import icon from "../../assets/images/pv-challenge/images/equals-solid.svg"
 // import {day1Step2UpdateDecisions} from "../../../redux/daysPvCh/actions.js";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import logo from "../../assets/Tor_logo.png"
 
 const Drag = ({
                   listP,
@@ -20,7 +19,8 @@ const Drag = ({
                   hasTowBlock=true,
                   icons =[],
                   index,
-                  flex_siz=0
+                  flex_siz=0,
+                  logoBlock
               }) => {
     const onDragStart = (ev, id) => {
         ev.dataTransfer.setData("id", id);
@@ -34,7 +34,7 @@ const Drag = ({
             onDragOver={onDragOver}
         >
            <div className={Style.title_block} style={{flex:flex_siz}}>
-                <img src={logo} alt="" width={36}/>
+                <img src={logoBlock} alt="" width={36}/>
                <h3 className={`${Style.title} m-0`}> {t(`day${day}.part${part}.categories.${item.id}`)} </h3>
                {icons.length > 0 && <FontAwesomeIcon width={25} icon={icons[index].icon} color={icons[index].color}/>}
            </div>
@@ -62,7 +62,7 @@ const Drag = ({
     );
 };
 
-const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,part=2,icons,flex_siz=0}) => {
+const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,part=2,icons,flex_siz=0,imgBib}) => {
     // const {decisions, categories} = useSelector((state) => state.DaysPvCh.day2.part1);
 
     const {t} = useTranslation();
@@ -162,6 +162,7 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
                                         index={index}
                                         icons={icons}
                                         flex_siz={flex_siz}
+                                        logoBlock={imgBib[index]}
                                     />
                                 );
                         })}
@@ -184,6 +185,9 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
                                             part={part}
                                             index={index}
                                             flex_siz={flex_siz}
+                                            logoBlock={imgBib[index]}
+
+
                                         />
                                     );
                             })}

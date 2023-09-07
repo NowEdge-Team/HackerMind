@@ -40,6 +40,8 @@ import Listlink from "../../../components/pvCh/Listlink/Listlink.jsx"
 import Card from "../../../components/pvCh/card/Card.jsx"
 import DayOne from "./DayOne.jsx"
 import {useHistory} from "react-router-dom";
+import logo from "../../../assets/Tor_logo.png"
+
 
 
 const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, setStp}) => {
@@ -179,6 +181,14 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
     // {currentStep===3 && (<div className="box box-2" style={{backgroundColor:'greenyellow'}}></div>)}
 
     const [showNextBtn,setShowNextBtn] = useState(true)
+
+     const imgBib = [
+        logo,
+        logo,
+        logo,
+        logo,
+        img3
+     ]
     
 
     return (
@@ -211,6 +221,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                                     callback={dragDropUpdateDecisions}
                                     decisions={decisions_3}
                                     categories={categories_3}
+                                    imgBib={imgBib}
                                 />
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
