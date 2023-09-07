@@ -59,14 +59,12 @@
     "Aventure": " l'Aventure",
     "description": "Votre mission cruciale en tant que Maître des Intrusions sera de mener nos attaques de manière stratégique et discrète. Tenez-vous prêt, car nous avons toute confiance en vos capacités pour accomplir cette mission avec succès. Nous comptons sur vous !",
     "point": "Points",
-    "quitter": "Quitter",
+    "quitter": "Accueil",
     "day1title": "Quel hacker je suis ?",
     "day2title": "Trouver ma mission",
-    "day3title": "Reconnaître ma cible ",
-    "day4title": "S’introduire en douceur ",
-    "day5title": "Élever mes privilèges",
-    "day6title": "Déployer l’attaque",
-    "day7title": "Busted !",
+    "day3title": "Reconnaître ma cible",
+    "day4title": "Vue sur les technologies émergentes",
+    "day5title": "Reskilling et Upskilling",
     "niveau": "NIVEAU ",
     "termine": "Terminé",
     "encour": "En cours",
@@ -132,7 +130,7 @@
     "modal": {
       "title_p1": "BIENVENUE DANS",
       "title_p2": "L'AVENTURE",
-      "description": "",
+      "description": "Vous êtes le catalyseur de notre transformation numérique, inspirant l'innovation à chaque étape de notre parcours.",
       "name_taskforce": "Donnez un nom a votre taskforce",
       "retour": "Retour",
       "enregistrer": "Enregistrer"
@@ -145,7 +143,7 @@
   "day1": {
     "level": "NIVEAU 1 : Quel hacker je suis ?",
     "title": "Généralités sur l’Analytics",
-    "l_title": "Ingénieur social",
+    "l_title": "RESPONSABLE DE PRODUCTION ",
     "ValideNiveau": "Valider le niveau",
     
     "part1": {},
@@ -178,10 +176,7 @@
       "g_title": "Plongez dans le monde de la cybersécurité en explorant nos articles détaillant des histoires réelles d'attaques informatiques. ",
       "description": "Découvrez comment les hackers ont réussi à contourner les défenses et à accéder à des informations sensibles."
     },
-    "part6": {
-      "g_title":"Associez chaque profil de hacker à sa motivation correspondante. Réfléchissez aux caractéristiques de chaque hacker et à ce qui les motive à agir dans le monde de la cybercriminalité",
-      "description": "Utilisez les liens vers les articles pour en apprendre davantage sur les hackers et leurs motivations. Les articles fournissent des informations complémentaires qui vous aideront à comprendre leur comportement dans le monde de la cybercriminalité"
-    },
+    "part6": {},
     "part7": {
       "title": "Quelques généralités sur l'analyse descriptive ?",
       "g_title": "Parmi les propositions suivantes, choisissez celles qui vous semblent les plus pertinentes",
@@ -365,8 +360,8 @@
       "text1": "Êtes-vous sûr de vos choix ?",
       "text2": "On entend souvent parler de la pharmacovigilance, et il existe beaucoup d’idées préconçues à son sujet. Maintenant que vous vous y connaissez un peu, saurez-vous distinguer le vrai du faux ?",
       "text3": "Avant de commencer ta mission, j'aimerais m'assurer que tu as bien compris les principes fondamentaux de la transformation digitale",
-      "textBtnValid": "Valider mes choix",
-      "text4":"Félicitations ! Tu as réussi à comprendre les concepts clés de la transformation digitale. Tu es prêt à passer à l'étape suivante !",
+      "textBtnValid": "Oui",
+      "text4":"Félicitations pour avoir terminé ce niveau ! Continuez à développer vos compétences et à explorer ce domaine fascinant. Bonne chance pour la suite de votre aventure !",
       "textBtnValid2": "C'est noté"
     },
     "listMsg": {
@@ -383,7 +378,7 @@
     "niveau": "NIVEAU 2 : Collecte et valorisation des données",
     "title1": "",
     "leftMsg": {
-        "title": "Ingénieur social",
+        "title": "RESPONSABLE DE PRODUCTION",
         "message1": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
         "message2": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
         "message3": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance. ",
@@ -535,7 +530,7 @@
   "day3": {
     "niveau": "NiVEAU 3 : Comprendre ce que les données nous racontent (Approche descriptive)",
     "leftMsg": {
-      "title": "Ingénieur social",
+      "title": "RESPONSABLE DE PRODUCTION",
       "message1": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
       "message2": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
       "message3": "Les technologies émergentes sont les moteurs de l'innovation et de la croissance dans le monde numérique. En tant que Digital Ambassador, vous devez rester à jour avec ces technologies et comprendre comment elles peuvent impacter notre entreprise. Votre mission consiste à explorer ces avancées technologiques et à les intégrer de manière pertinente pour rester compétitifs sur le marché.",
@@ -975,17 +970,16 @@
     }
   },
   "textBtnValid": "Validate my choices",
-  "pasEncore":"Pas encore",
+  "pasEncore":"non",
   "btnSuivant":"Suivant",
   "btnBack":"Précedent",
   "noted":"C'est noté",
-  "exit":"Quitter",
+  "exit":"Accueil",
   "next_step":"Etape suivante",
   "revoir":"Revoir la vidéo",
   "rappels":"Rappels",
   "msg_field_part_1":"Malheureusement vous n'avez pas pu obtenir le <br /> score minimal pour valider ce niveau !",
   "msg_field_part_2":"Essayez à nouveau, vous y êtes presque!",
   "rejouer":"Rejouer"
-
 
 }

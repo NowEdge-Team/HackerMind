@@ -116,7 +116,7 @@ function App({onNext}) {
           <Profile/>
         </div>
         <div className={styles.backBtn}>
-          <button onClick={() => history.push("/")}>quitter
+          <button onClick={() => history.push("/")}>Accueil
             <img src={runningSolid}  />
           </button>
 

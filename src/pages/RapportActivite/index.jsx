@@ -80,7 +80,7 @@ const List = ({days = [], clickDay, t}) => {
         <div className={styles.block_1_rep}>
             <header>
                 <h3>
-                    Liste des journées
+                    Etapes du jeu
                 </h3>
             </header>
             <div className={styles.list_days}>

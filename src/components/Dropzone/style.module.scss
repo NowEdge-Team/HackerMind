@@ -142,26 +142,29 @@
         width: 40px;
         height: 40px;
       }
-      // background-color: rgb(0, 47, 255);
+      
     }
     .block_2_2 {
       display: flex;
       flex: 1;
-      // background-color: rgb(208, 255, 0);
+    
       flex-direction: column;
       padding-top: 15px;
+      
 
       .block_2_2_row {
         display: flex;
         flex: 1;
+      
+        flex-direction: column;
       }
       .drag_block {
         // flex: 1;
         margin: 0px;
         margin-right: 5px;
         display: flex;
-        flex-direction: column;
-        width: 50%;
+        flex-direction: row;
+        width: 100%;
         height: 80px;
         //  border: 1px solid  red;
 
@@ -194,14 +197,16 @@
         }
 
         .title_block{
-          //h3{
-          // flex: 0;
-          //}
+          h3{
+          width: 120px;
+          text-align: center;
+          }
           display: flex;
           flex-direction: row;
           //justify-content: center;
           align-items: center;
-          flex: 0;
+          flex: 1;
+
           background-color: transparent;
         }
       }

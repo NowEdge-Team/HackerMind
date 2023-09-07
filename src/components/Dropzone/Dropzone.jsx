@@ -6,6 +6,7 @@ import {useTranslation} from "react-i18next";
 import icon from "../../assets/images/pv-challenge/images/equals-solid.svg"
 // import {day1Step2UpdateDecisions} from "../../../redux/daysPvCh/actions.js";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import logo from "../../assets/Tor_logo.png"
 
 const Drag = ({
                   listP,
@@ -33,6 +34,7 @@ const Drag = ({
             onDragOver={onDragOver}
         >
            <div className={Style.title_block} style={{flex:flex_siz}}>
+                <img src={logo} alt="" width={36}/>
                <h3 className={`${Style.title} m-0`}> {t(`day${day}.part${part}.categories.${item.id}`)} </h3>
                {icons.length > 0 && <FontAwesomeIcon width={25} icon={icons[index].icon} color={icons[index].color}/>}
            </div>
