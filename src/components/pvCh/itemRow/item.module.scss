@@ -1,44 +1,45 @@
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 790px;
+  // height: 180px;
+  border-radius: 25px;
+  border: solid 2px black;
+  margin-top: 13px;
+  position: relative;
 
-
-.row{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 790px;
-    // height: 180px;
-    border-radius: 25px;
-    border: solid 2px black;
-    margin-top: 13px;
-    position: relative;
-    
-    h4{
-      margin-top: 8px;
-      margin-left: 20px;
-      font-size: 15px;
-      font-weight: 400;
-      color:black;
-      text-align: left;
-      padding-top: 20px;
-    }
-    p{
-      color:grey;
-      text-align: left;
-      font-size: 12px;
-      font-weight: 400;
-      margin-left:20px;
-      margin-right: 35px;
-      padding-bottom: 14px;
-
-    }
-    .arrow img{
-      position: absolute;
-      right: 26px;
-      top: 11px;
-      cursor: pointer;
-    }
-    .boolean img{
-      position: absolute;
-      right: 72px;
-      top: 7px;
-    }
+  h4 {
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+    text-align: left;
+    padding-top: 20px;
   }
+
+  p {
+    color: grey;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-right: 35px;
+    padding-bottom: 14px;
+
+  }
+
+  .arrow img {
+    position: absolute;
+    right: 26px;
+    top: 11px;
+    cursor: pointer;
+  }
+
+  .boolean img {
+    position: absolute;
+    right: 72px;
+    top: 7px;
+  }
+}

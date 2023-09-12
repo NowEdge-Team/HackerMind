@@ -1,0 +1,131 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+
+
+    .mtx_container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+        margin-bottom: 20px;
+        justify-content: center;
+
+
+
+        @for $i from 1 through 8 {
+            .hed_row_#{$i} {
+                grid-column: 1;
+                grid-row: $i + 1;
+                background-color: darkcyan;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                padding: 5px;
+                background-image: url('../../assets/Vector.png');
+                background-repeat: no-repeat;
+                // height: 40px;
+                background-position: center;
+                background-color: rgba(49, 165, 71, 1);
+
+                .text {
+
+                    margin: 0;
+                    padding: 0;
+                    font-size: 14px;
+                    text-align: left;
+                    color: bisque;
+
+                }
+            }
+        }
+
+        @for $i from 1 through 8 {
+            .hed_col_#{$i} {
+                grid-column: $i + 1;
+                grid-row: 1;
+                background-color: darkcyan;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background-image: url('../../assets/Vector.png');
+                background-repeat: no-repeat;
+                // height: 60px;
+                background-position: center;
+                background-color: rgba(49, 165, 71, 1);
+
+                .text {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 12px;
+                    color: bisque;
+
+                }
+            }
+        }
+
+        .active {
+            background-color: #EF6C00
+        }
+
+        .block_icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .d_icon {
+                color: red;
+            }
+
+            i {
+                color: darkcyan;
+                font-size: 20px;
+            }
+        }
+
+        .active_icon {
+            background-color: #EF6C00;
+            // padding: 5px 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+
+        }
+    }
+
+    .backBtn button {
+
+        width: 100px;
+        height: 15px;
+        // position: absolute;
+        right: 8rem;
+        top: 3rem;
+        height: 40px;
+        background: #6C757D 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        text-align: left;
+        font: normal normal bold 14px/17px Karla;
+        letter-spacing: 0.28px;
+        color: #FFFFFF;
+        opacity: 1;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        cursor: pointer;
+        gap: 0.5em;
+
+
+    }
+
+
+}
