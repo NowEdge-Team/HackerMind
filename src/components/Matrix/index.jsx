@@ -11,6 +11,8 @@ import CancelButton from "../pvCh/CancelButton";
 import NextButton from "../pvCh/NextButton";
 import runningSolid from "../../assets/images/pv-challenge/running-solid2.svg";
 import Profile from "../pvCh/profile/profile";
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 
 
 const data = [
@@ -95,6 +97,8 @@ const data = [
 
 
 function Matrix({ nextStep }) {
+    const { t } = useTranslation();
+    let history = useHistory();
 
     const [showTuto, setShowTuto] = useState(false);
     const [step, setStep] = useState(0);
@@ -399,6 +403,12 @@ function Matrix({ nextStep }) {
                     </button>
                 </div>
             </div>
+
+            <div className="mb-4">
+                <h3 className="font-Karla text-[17px] text-left text-[#9f9f9f] uppercase" >
+                    {t("day1.level")}
+                </h3>
+            </div>
             <ModalTutorial
                 personnageImage={img1}
                 listMsg={[currentMessage]}
@@ -424,7 +434,7 @@ function Matrix({ nextStep }) {
                     <>
                         <div></div>
                         {[...Array(48).keys()].map((item, index) => <div className={style.block_icon} >
-                            {listMsg.findIndex((item) => item.index === index) !== -1 ? <i className={`fas fa-check ${listMsg[activeItem - 1]?.index === index && style.active_icon}`} onClick={listMsg[activeItem - 1]?.index === index ? nextItem : null} ></i> : <i class={`fas fa-times ${style.d_icon} text-[30px]`}></i>}
+                            {listMsg.findIndex((item) => item.index === index) !== -1 ? <i className={`fas fa-check cursor-pointer ${listMsg[activeItem - 1]?.index === index && style.active_icon}`} onClick={listMsg[activeItem - 1]?.index === index ? nextItem : null} ></i> : null}
                         </div>)}
                     </>
                 }
