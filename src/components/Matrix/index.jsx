@@ -13,6 +13,8 @@ import runningSolid from "../../assets/images/pv-challenge/running-solid2.svg";
 import Profile from "../pvCh/profile/profile";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import ChartRadar from "../pvCh/card/ChartRd";
+import ChartRd2 from "../ChartRd2";
 
 
 const data = [
@@ -99,15 +101,17 @@ const data = [
 function Matrix({ nextStep }) {
     const { t } = useTranslation();
     let history = useHistory();
-
+    const [radar, setRadar] = useState()
     const [showTuto, setShowTuto] = useState(false);
     const [step, setStep] = useState(0);
     const [activeItem, setActiveItem] = useState(1);
     const [currentMessage, setCurrentMessage] = useState({});
 
     const nextItem = () => {
+        if (step === 0)
+            setRadarData(activeItem);
         setCurrentMessage(() => listMsg[activeItem - 1])
-        setShowTuto(true)
+        setShowTuto(true);
     }
 
     useEffect(() => {
@@ -387,6 +391,77 @@ function Matrix({ nextStep }) {
     const closeModale = () => {
         setActiveItem(index => index + 1);
         setShowTuto(item => false);
+        setRadar(null)
+    }
+
+    const setRadarData = (id) => {
+
+        let dataRadar = null;
+        switch (id) {
+            case 1:
+                dataRadar = {
+                    color: 'green',
+                    bgColor: '#82E0AA',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break;
+            case 2:
+                dataRadar = {
+                    color: 'blue',
+                    bgColor: '#AED6F1',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break
+
+            case 3:
+                dataRadar = {
+                    color: 'red',
+                    bgColor: '#F5B7B1',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break
+
+            case 4:
+                dataRadar = {
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break
+
+            case 5:
+                dataRadar = {
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break
+
+            case 6:
+                dataRadar = {
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break
+            case 7:
+                dataRadar = {
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break
+            case 8:
+                dataRadar = {
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
+                }
+                break
+
+        }
+        setRadar({ ...dataRadar })
+
     }
 
 
@@ -415,7 +490,11 @@ function Matrix({ nextStep }) {
                 title="My Modal"
                 show={showTuto}
                 onClose={closeModale}
-            />
+            >
+                {radar ? <div className="absolute flex justify-center rounded-[4px] items-center bottom-[55px] left-[26%] h-[200px] bg-white w-[71%]">
+                    <ChartRd2 color={radar.color} bgColor={radar.bgColor} dimension={radar.dimension} />
+                </div> : null}
+            </ModalTutorial>
             <div className={step === 0 ? style.mtx_container_1 : style.mtx_container_2}>
                 {data.filter(item => item.type === "profil").map((item, index) => <div onClick={activeItem === item.id && nextItem} key={item.id} className={`${style[`hed_row_${index + 1}`]} ${activeItem === item.id && style.active}`}>
                     <p className={style.text}>
