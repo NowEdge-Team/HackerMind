@@ -11,6 +11,12 @@ import CancelButton from "../pvCh/CancelButton";
 import NextButton from "../pvCh/NextButton";
 import runningSolid from "../../assets/images/pv-challenge/running-solid2.svg";
 import Profile from "../pvCh/profile/profile";
+import { DndProvider, useDrag, useDrop } from 'react-dnd'
+import { HTML5Backend } from "react-dnd-html5-backend";
+import Dustbin from "./Dustbin";
+import CardDrd from "./Card";
+import ListArticle from "./ListArticle";
+import { useRef } from "react";
 
 
 const data = [
@@ -91,20 +97,83 @@ const data = [
 ]
 
 
+const articleData = [
+    {
+        id: 1,
+        title: "Le phishing",
+        description: "Le phishing, ou hameçonnage, consiste à usurper l’identité d’un tiers par le biais d’un email (ou Smishing dans le cas d’un SMS) afin d’inciter le destinataire à réaliser une action : divulguer des informations sensibles et/ou confidentielles, cliquer sur un lien renvoyant vers une page non sécurisée, ou bien ouvrir une pièce jointe infectée.",
+        idCell: -1,
+        correctCellId: 1
+    },
+    {
+        id: 2,
+        title: "Le ransomware",
+        description: "Le ransomware (ou rançongiciel)vise à bloquer l’accès à l’appareil de l’utilisateur et/ou à crypter ses données, dans le but d’obtenir le paiement d’une rançon. C’est le type de cybermalveillance qui a connu la plus importante augmentation ces dernières années – + 95 % en 2021 (source gouvernementale) – avec une prédilection pour les entreprises privées, plus enclines à débourser les sommes demandées.",
+        idCell: -1,
+        correctCellId: 25
+    },
+    {
+        id: 3,
+        title: "L'ingénierie sociale : comment les pirates manipulent les victimes",
+        description: "Apprenez comment les cybercriminels utilisent l'ingénierie sociale pour tromper les gens.",
+        idCell: -1,
+        correctCellId: 30
+    },
+    {
+        id: 4,
+        title: "Les vulnérabilités Zero-Day : un défi pour la sécurité",
+        description: "Décryptez ce que sont les vulnérabilités Zero-Day et comment les chercheurs en sécurité travaillent à les détecter et à les corriger.",
+        idCell: -1,
+        correctCellId: 43
+    },
+    {
+        id: 5,
+        title: "Les attaques par hameçonnage",
+        description: "Comprenez comment fonctionnent les attaques par hameçonnage et comment éviter de devenir une victime.",
+        idCell: -1,
+        correctCellId: 16
+    },
+    {
+        id: 6,
+        title: "Sécurité des réseaux : les bonnes pratiques",
+        description: "Découvrez les bonnes pratiques pour renforcer la sécurité de votre réseau informatique.",
+        idCell: -1,
+        correctCellId: 38
+    },
+    {
+        id: 7,
+        title: "La menace des logiciels malveillants",
+        description: "Explorez la menace des logiciels malveillants et comment les prévenir efficacement.",
+        idCell: -1,
+        correctCellId: 18
+    },
+    {
+        id: 8,
+        title: "La cybersécurité dans le monde connecté d'aujourd'hui",
+        description: "Découvrez l'importance de la cybersécurité dans notre monde de plus en plus connecté.",
+        idCell: -1,
+        correctCellId: 8
+    }
+]
+
+
+
 
 
 
 function MatrixDrd({ nextStep }) {
 
+    const config = useRef({
+        isValid: false
+    });
+
     const [showTuto, setShowTuto] = useState(false);
     const [step, setStep] = useState(0);
     const [activeItem, setActiveItem] = useState(1);
     const [currentMessage, setCurrentMessage] = useState({});
+    let [dustbins, setDustbins] = useState([...Array(48).keys()].map((item) => ({ id: item + 1, droppedItem: null }))) // id : 1 -> 48
+    let [listArticle, setListArticle] = useState(articleData);
 
-    const nextItem = () => {
-        setCurrentMessage(() => listMsg[activeItem - 1])
-        setShowTuto(true)
-    }
 
     useEffect(() => {
         setCurrentMessage(() => ({
@@ -385,20 +454,67 @@ function MatrixDrd({ nextStep }) {
         setShowTuto(item => false);
     }
 
+    const onDrop = (item, rowItem) => {
+        console.log("🚀 ~ file: index.jsx:458 ~ onDrop ~ item:", item)
+
+        dustbins = dustbins.map(elm => {
+            if (elm.id !== rowItem.id && elm?.droppedItem?.id === item?.id) {
+                return { ...elm, droppedItem: null }
+            }
+            if (elm.id === rowItem.id) return { ...elm, droppedItem: item }
+
+            return elm;
+        }).slice();
+
+        listArticle = listArticle.map(elm => {
+            if (elm.id === item.id) return { ...elm, idCell: rowItem.id }
+            return elm;
+        }).slice();
+
+        setListArticle(_ => listArticle)
+        setDustbins(_ => dustbins)
+    }
+
+    const onDropListArticle = (item) => {
+
+        dustbins = dustbins.map(elm => {
+            if (elm.droppedItem?.id === item.id) return { ...elm, droppedItem: null };
+            return elm;
+        }).slice();
+
+
+
+        setListArticle(list => {
+            const index = list.findIndex(elm => elm.id === item.id);
+            list[index].idCell = -1;
+            return [...list]
+        })
+
+        setDustbins(_ => dustbins)
+
+
+
+    }
+
+    const onValidate = () => {
+        setListArticle(listArticle.map(elem => {
+            if (elem.idCell !== elem.correctCellId) return { ...elem, className: "bg-red-500" }
+            else return { ...elem, className: "bg-[#31a547]" }
+        }))
+
+        setDustbins([...dustbins.map(elem => {
+            if (elem.droppedItem === null) return elem;
+            else if (elem?.id !== elem.droppedItem?.correctCellId) return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-red-500" } }
+            else return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-[#31a547]" } }
+        })]);
+
+        config.current.isValid = true;
+    }
+
 
 
     return (
-        <div className={style.container} >
-            <div className="flex flex-row justify-between py-2" >
-                <div className={""}>
-                    <Profile />
-                </div>
-                <div className={style.backBtn}>
-                    <button onClick={() => history.push("/")}>Accueil
-                        <img src={runningSolid} />
-                    </button>
-                </div>
-            </div>
+        <DndProvider backend={HTML5Backend}>
             <ModalTutorial
                 personnageImage={img1}
                 listMsg={[currentMessage]}
@@ -406,50 +522,63 @@ function MatrixDrd({ nextStep }) {
                 show={showTuto}
                 onClose={closeModale}
             />
-            <div className="flex flex-row" >
-
-                <div>
-                    <h1>1001001</h1>
+            <div className={style.container} >
+                <div className="flex flex-row justify-between py-2 " >
+                    <div className={""}>
+                        <Profile />
+                    </div>
+                    <div className={style.backBtn}>
+                        <button onClick={() => history.push("/")}>Accueil
+                            <img src={runningSolid} />
+                        </button>
+                    </div>
                 </div>
 
-                <div className={style.mtx_container}>
-                    {data.filter(item => item.type === "profil").map((item, index) => <div onClick={activeItem === item.id && nextItem} key={item.id} className={`${style[`hed_row_${index + 1}`]} ${activeItem === item.id && style.active}`}>
-                        <p className={style.text}>
-                            {item.text}
-                        </p>
-                    </div>)
-                    }
-                    {
-                        data.filter(item => item.type === "motivation").map((item, index) => <div onClick={activeItem === item.id && nextItem} key={item.id} className={`${style[`hed_col_${index + 1}`]} ${activeItem === item.id && style.active}`}>
+                <div className="flex flex-row h-3/4" >
+
+
+                    <ListArticle onDrop={onDropListArticle} listArticle={listArticle} />
+
+
+                    <div className={style.mtx_container}>
+                        {data.filter(item => item.type === "profil").map((item, index) => <div key={item.id} className={`${style[`hed_row_${index + 1}`]}`}>
                             <p className={style.text}>
                                 {item.text}
                             </p>
                         </div>)
-                    }
-                    <>
-                        <div></div>
-                        {[...Array(48).keys()].map((item, index) => <div className={style.block_icon} >
-                            {listMsg.findIndex((item) => item.index === index) !== -1 ? <i className={`fas fa-check ${listMsg[activeItem - 1]?.index === index && style.active_icon}`} onClick={listMsg[activeItem - 1]?.index === index ? nextItem : null} ></i> : <i class={`fas fa-times ${style.d_icon} text-[30px]`}></i>}
-                        </div>)}
-                    </>
+                        }
+                        {
+                            data.filter(item => item.type === "motivation").map((item, index) => <div className={`${style[`hed_col_${index + 1}`]}`}>
+                                <p className={style.text}>
+                                    {item.text}
+                                </p>
+                            </div>)
+                        }
+                        <>
+                            <div></div>
+                            {dustbins.map((item, index) => <div className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
+                                <Dustbin key={item.id} item={item} onDrop={onDrop} />
+                            </div>)}
+                        </>
 
+                    </div>
                 </div>
-            </div>
 
-            {listMsgPop[activeItem - 1] && <div className="flex mt-auto " >
-                <CharacterMessage
-                    imgCharacter={imgCharacter}
-                    {...listMsgPop[activeItem - 1]}
-                />
-
-                <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 " >
-                    <NextButton className={"step_quiz_btn_next2"}
-                        onClick={nextStep}
+                {listMsgPop[activeItem - 1] && <div className="flex mt-auto " >
+                    <CharacterMessage
+                        imgCharacter={imgCharacter}
+                        {...listMsgPop[activeItem - 1]}
                     />
-                </div>
-            </div>}
 
-        </div>
+                    <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 " >
+                        <NextButton title={config.current.isValid ? undefined : "Validate"} className={"step_quiz_btn_next2"}
+                            onClick={config.current.isValid ? nextStep : onValidate}
+                        />
+                    </div>
+                </div>}
+
+            </div>
+        </DndProvider>
     );
 }
 
