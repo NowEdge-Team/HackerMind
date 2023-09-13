@@ -23,7 +23,7 @@ function Card(){
 
     const [radar,setRadar] = useState({
             color:'green',
-            bgColor:'LightGrey',
+            bgColor:'#82E0AA',
             dimension:[1,2,2,2,2]
     })
 
@@ -39,14 +39,14 @@ function Card(){
                 case 1:
                 dataRadar = {
                     color:'green',
-                    bgColor:'LightGrey',
+                    bgColor:'#82E0AA',
                     dimension:[1,2,2,2,2]
                 }
                 break;
                 case 2:
                 dataRadar = {
                     color:'blue',
-                    bgColor:'blue',
+                    bgColor:'#AED6F1',
                     dimension:[1,2,2,2,2]
                 }
                 break
@@ -54,7 +54,7 @@ function Card(){
                 case 3:
                 dataRadar = {
                     color:'red',
-                    bgColor:'red',
+                    bgColor:'#F5B7B1',
                     dimension:[1,2,2,2,2]
                 }
                 break

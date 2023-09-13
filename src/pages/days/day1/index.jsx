@@ -41,6 +41,10 @@ import Card from "../../../components/pvCh/card/Card.jsx"
 import DayOne from "./DayOne.jsx"
 import {useHistory} from "react-router-dom";
 import logo from "../../../assets/Tor_logo.png"
+import telegram from "../../../assets/telegram-logo.png"
+import proton from "../../../assets/protonmail-logo.png"
+import wiki from "../../../assets/wiki-logo.png"
+import nulled from "../../../assets/nulled.png"
 // import Box from '../../../components/pvCh/box/Box.jsx'
 
 
@@ -185,10 +189,10 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
 
      const imgBib = [
         logo,
-        logo,
-        logo,
-        logo,
-        img3
+        wiki,
+        proton,
+        telegram,
+        nulled
      ]
     
 
@@ -227,12 +231,12 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
                             <div>
-                                <Table />
+                                {/* <Table /> */}
                             </div>
                         </Stepper.Step>
                         <Stepper.Step id="4" name="Step 4">
                             <div>
-                                <TableSec/>  
+                                {/* <TableSec/>   */}
                             </div>
                         </Stepper.Step> 
                         <Stepper.Step id="5" name="Step 5">
@@ -244,11 +248,11 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                         </Stepper.Step>
                         <Stepper.Step id="6" name="Step 6">
                             <div>
-                                <Listlink
+                                {/* <Listlink
                                     data={t("day1.part7.decisions", {returnObjects: true})}
                                     modeEdit={modeEdit}
                                     handleChange={()=>alert("1010101")}
-                                    />
+                                    /> */}
                             </div>
                         </Stepper.Step>
                         <Stepper.Step id="7" name="Step 7">

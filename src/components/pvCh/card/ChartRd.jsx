@@ -29,7 +29,7 @@ function ChartRadar({bgColor,color,dimension}) {
         data:dimension,
         backgroundColor:bgColor,
         borderColor:color,
-        borderWidth: 1,
+        borderWidth: 2,
       },
     ],
   };
