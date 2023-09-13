@@ -41,6 +41,7 @@ import Card from "../../../components/pvCh/card/Card.jsx"
 import DayOne from "./DayOne.jsx"
 import {useHistory} from "react-router-dom";
 import logo from "../../../assets/Tor_logo.png"
+// import Box from '../../../components/pvCh/box/Box.jsx'
 
 
 
@@ -48,7 +49,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
 
     // const {decisions: decisions_2, categories: categories_2} = useSelector((state) => state.DaysPvCh.day1.part2);
 
-    const {decisions: decisions_3, categories: categories_3} = useSelector((state) => state.DaysPvCh.day1.part3);
+    const {decisions: decisions_3, categories: categories_3} = useSelector((state) => state.DaysPvCh.day1.part2);
     // const {decisions: decisions_7} = useSelector((state) => state.DaysPvCh.day1.part7);
 
 
@@ -105,7 +106,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                 }
             ,{
 
-                title: t("day1.messages.title"),//t
+              
 
                 title: t("day1.messages.title"),
 
@@ -217,7 +218,7 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                         <Dropzone
                                     modeEdit={modeEdit}
                                     day={1}
-                                    part={3}
+                                    part={2}
                                     callback={dragDropUpdateDecisions}
                                     decisions={decisions_3}
                                     categories={categories_3}
@@ -236,8 +237,9 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                         </Stepper.Step> 
                         <Stepper.Step id="5" name="Step 5">
                             <div>
-                                <Row 
-                                showNextBtn={setShowNextBtn}/>
+                                {/* <Row 
+                                showNextBtn={setShowNextBtn}/> */}
+                                    <Card/>
                             </div>
                         </Stepper.Step>
                         <Stepper.Step id="6" name="Step 6">
@@ -251,7 +253,6 @@ const DaySteper = ({t, modeEdit, ValidTask, dispatch, day1, center, history, set
                         </Stepper.Step>
                         <Stepper.Step id="7" name="Step 7">
                             <div>
-                                    <Card/>
                             </div>
                         </Stepper.Step>
 
