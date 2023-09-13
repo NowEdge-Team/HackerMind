@@ -310,7 +310,7 @@ const Day1PvPharma = (props) => {
 
     
     useEffect(()=>{
-        if ([0,1,2,3,6].includes(currentStep)) return setShowBolck(false);
+        if ([0,1,2,6].includes(currentStep)) return setShowBolck(false);
         else if(!showBolck) return setShowBolck(true);
 
     },[currentStep])
