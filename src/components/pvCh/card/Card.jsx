@@ -16,7 +16,7 @@ import styles from "./card.module.scss";
 function Card(){
 
     const [title,setTitle] = useState("avatar 1")
-    const [text,setText] = useState("")
+    const [text,setText] = useState('Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores doloribus voluptatem.')
     const [color,setColor] = useState('')
     const [activeitem,setActiveItem] = useState()
 
