@@ -1,7 +1,7 @@
-import React, {useEffect, useRef, useState} from "react";
-import {useTranslation} from "react-i18next";
-import {useDispatch, useSelector} from "react-redux";
-import {useHistory} from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import img1 from "../../assets/images/pv-challenge/images/days/Rectangle_2095.png";
 import img1Gris from "../../assets/images/pv-challenge/images/days/Rectangle 2095_gris.svg";
 import img2 from "../../assets/images/pv-challenge/images/days/Rectangle96.png";
@@ -25,16 +25,16 @@ import runningSolid from "../../assets/images/pv-challenge/running-solid.svg";
 import soundLoud from "../../assets/images/pv-challenge/sound-loud-filled-svgrepo-com.svg";
 import soundOff from "../../assets/images/pv-challenge/sound-off-filled-svgrepo-com.svg";
 import music from "../../assets/audio/main-music.mp3";
-import {avatars, getLogoById} from "../../helpers/missionDataPvC.js";
-import {getCenterInfoPvCh, getscorePVCh} from "../../redux/actions.js";
+import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
+import { getCenterInfoPvCh, getscorePVCh } from "../../redux/actions.js";
 import styles from "./style.module.scss"
-import {useCookies} from "react-cookie";
-import {faCogs, faCubes} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { useCookies } from "react-cookie";
+import { faCogs, faCubes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const base_url = ""
 
-const StartN = ({nbrS, position = true, hover = true, step = 0}) => {
+const StartN = ({ nbrS, position = true, hover = true, step = 0 }) => {
     const [state, setState] = useState(startI);
     useEffect(() => {
         switch (nbrS) {
@@ -65,7 +65,7 @@ const StartN = ({nbrS, position = true, hover = true, step = 0}) => {
     if (nbrS !== -1)
         return (
             <div style={style} className={`${hover ? styles.show_starts : ""}`}>
-                <img src={state}/>
+                <img src={state} />
             </div>
         );
 
@@ -80,23 +80,24 @@ const StartN = ({nbrS, position = true, hover = true, step = 0}) => {
 };
 
 const ItemSercl = ({
-                       img = img1,
-                       title = "",
-                       top,
-                       left,
-                       click = () => null,
-                       style = {},
-                       topBlock = null,
-                       leftBlock = null,
-                       dayObject,
-                   }) => {
+    img = img1,
+    title = "",
+    top,
+    left,
+    click = () => null,
+    style = {},
+    topBlock = null,
+    leftBlock = null,
+    dayObject,
+    dayIndex
+}) => {
     const day = dayObject?.dayId;
-    const step = dayObject?.status;
+    const step = dayIndex === 1 ? 0 : dayObject?.status;
     const nbrS = step !== -1 ? dayObject?.stars : -1;
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
-    const customStyle = dayObject?.status === -1 ?
+    const customStyle = dayIndex !== 1 ?
         {
             filter: "grayscale(100%)"
         } : {}
@@ -112,8 +113,8 @@ const ItemSercl = ({
             }}
         >
             <div className={styles.contene}>
-                <StartN nbrS={nbrS}/>
-                <img src={img} className="parc-box-img" style={{...style, ...customStyle}}/>
+                <StartN nbrS={nbrS} />
+                <img src={img} className="parc-box-img" style={{ ...style, ...customStyle }} />
             </div>
             <div
                 className={styles.example_contene_s}
@@ -124,10 +125,10 @@ const ItemSercl = ({
                     justifyContent: "flex-start",
                 }}
             >
-                <img src={img} className="parc-box-img-2" style={{...style, ...customStyle}}/>
+                <img src={img} className="parc-box-img-2" style={{ ...style, ...customStyle }} />
                 <div className="d-flex flex-column ">
                     <div>
-                        {t(`parcours.niveau`)} {day}
+                        {t(`parcours.niveau`)} {dayIndex}
                     </div>
                     <div
                         style={{
@@ -159,7 +160,7 @@ const ItemSercl = ({
                                 ? t(`parcours.encour`)
                                 : t(`parcours.verouille`)}
                     </div>
-                    <StartN nbrS={nbrS} position={false} hover={false}/>
+                    <StartN nbrS={nbrS} position={false} hover={false} />
                 </div>
             </div>
         </div>
@@ -197,7 +198,7 @@ const PlayButton = () => {
             }}
             onClick={click_}
         >
-            <img src={paused ?soundOff : soundLoud} width={40} height={40} alt={""} />
+            <img src={paused ? soundOff : soundLoud} width={40} height={40} alt={""} />
             <audio autoPlay className="audio-element" onEnded={onEnded_}>
                 <source src={music}></source>
             </audio>
@@ -208,15 +209,15 @@ const PlayButton = () => {
 export default function Parcours() {
 
     const [cookies, setCookie, removeCookie] = useCookies();
-    const  gameSessionId = cookies.gameSessionId ;
+    const gameSessionId = cookies.gameSessionId;
 
     const history = useHistory();
 
-    const {days = []} = useSelector((state) => state.PvChallenge.center);
+    const { days = [] } = useSelector((state) => state.PvChallenge.center);
 
     const center = useSelector((state) => state.PvChallenge.center);
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const challengeId = useSelector((state) => state.PvChallenge.center.challengeId);
 
@@ -240,7 +241,7 @@ export default function Parcours() {
 
     return (
         <div className={styles.mainBackground}>
-            <PlayButton/>
+            <PlayButton />
             <div className={`par-row1 ${styles.par_row_tb}`}>
                 <div className="d-flex flex-column sg-onHover">
                     <div className="d-flex justify-content-center align-items-center">
@@ -254,13 +255,13 @@ export default function Parcours() {
                                 borderRadius: "50px",
                             }}
                         />
-                        <span className="sg-menu-item-title" style={{color: "#fff"}}>
+                        <span className="sg-menu-item-title" style={{ color: "#fff" }}>
                             {center.name}
                         </span>
                     </div>
                     <div className="sg-menu-item-btn-config-p" onClick={() => null}>
                         <div className="sg-menu-item-btn-config-sp">
-                            <FontAwesomeIcon icon={faCubes} />{ score.score1}{" "}
+                            <FontAwesomeIcon icon={faCubes} />{score.score1}{" "}
                             {t(`parcours.point`)}
                         </div>
                         <div className="sg-menu-item-btn-config-sp">
@@ -271,7 +272,7 @@ export default function Parcours() {
                 </div>
                 <div className="parc-btnQ" onClick={() => history.push("/")}>
                     {t(`parcours.quitter`)}
-                    <img src={runningSolid} style={{marginLeft: "5px"}}/>
+                    <img src={runningSolid} style={{ marginLeft: "5px" }} />
                 </div>
             </div>
             <div className={`par-row2 ${styles.row2}`}>
@@ -285,7 +286,7 @@ export default function Parcours() {
                     <span>{t(`parcours.description`)}</span>
                 </div>
             </div>
-{/* 
+            {/* 
             <img src={manPic} style={{
                 position: "absolute",
                 left: `0%`,
@@ -298,7 +299,7 @@ export default function Parcours() {
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 1)?.status !== -1 &&
-                    to(`${base_url}/day/1`);
+                        to(`${base_url}/day/1`);
                 }}
                 img={
                     days?.find((d) => d.dayId === 1)?.status === -1 ? img1Gris : img1}
@@ -306,13 +307,14 @@ export default function Parcours() {
                 left={12}
                 top={82}
                 dayObject={days?.find((d) => d.dayId === 1)}
+                dayIndex={1}
             />
 
 
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 2)?.status !== -1 &&
-                    to(`${base_url}/day/2`);
+                        to(`${base_url}/day/2`);
                 }}
                 img={
                     days?.find((d) => d.dayId === 2)?.status === -1 ? img2Gris : img2}
@@ -320,13 +322,14 @@ export default function Parcours() {
                 left={22}
                 top={32}
                 dayObject={days?.find((d) => d.dayId === 2)}
+                dayIndex={2}
             />
 
 
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 3)?.status !== -1 &&
-                    to(`${base_url}/day/3`);
+                        to(`${base_url}/day/3`);
                 }}
                 img={days?.find((d) => d.dayId === 3)?.status === -1 ? img3Gris : img3}
                 title={t(`parcours.day3title`)}
@@ -334,12 +337,13 @@ export default function Parcours() {
                 top={84}
                 topBlock={-12}
                 dayObject={days?.find((d) => d.dayId === 3)}
+                dayIndex={3}
             />
-            
+
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 4)?.status !== -1 &&
-                    to(`${base_url}/day/4`);
+                        to(`${base_url}/day/4`);
                 }}
                 img={
                     days?.find((d) => d.dayId === 4)?.status === -1 ? img4Gris : img4
@@ -350,13 +354,14 @@ export default function Parcours() {
                 // left={66}
                 // top={82}
                 dayObject={days?.find((d) => d.dayId === 4)}
+                dayIndex={4}
             />
 
 
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 2)?.status !== -1 &&
-                    to(`${base_url}/day/2`);
+                        to(`${base_url}/day/2`);
                 }}
                 img={
                     days?.find((d) => d.dayId === 2)?.status === -1 ? img5Gris : img5}
@@ -364,13 +369,14 @@ export default function Parcours() {
                 left={66}
                 top={82}
                 dayObject={days?.find((d) => d.dayId === 2)}
+                dayIndex={5}
             />
 
 
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 2)?.status !== -1 &&
-                    to(`${base_url}/day/2`);
+                        to(`${base_url}/day/2`);
                 }}
                 img={
                     days?.find((d) => d.dayId === 2)?.status === -1 ? img6Gris : img6}
@@ -378,13 +384,14 @@ export default function Parcours() {
                 left={70}
                 top={30}
                 dayObject={days?.find((d) => d.dayId === 2)}
+                dayIndex={6}
             />
-              
+
 
             <ItemSercl
                 click={() => {
                     days?.find((d) => d.dayId === 5)?.status !== -1 &&
-                    to(`${base_url}/day/5`);
+                        to(`${base_url}/day/5`);
                 }}
                 img={
                     days?.find((d) => d.dayId === 5)?.status === -1 ? img7Gris : img7
@@ -394,11 +401,12 @@ export default function Parcours() {
                 top={85}
                 topBlock={-18}
                 dayObject={days?.find((d) => d.dayId === 5)}
+                dayIndex={7}
             />
 
-            
-            
-           
+
+
+
 
         </div>
     );

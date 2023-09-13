@@ -18,7 +18,7 @@ import { closeDayPvChClear, getCenterInfoPvCh, updateCenterPvChInfo } from "../.
 import Dock from "../../assets/images/pv-challenge/character/Leader.png"
 import ModalTutorial from "../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
 import backImgTuto from "../../assets/images/pv-challenge/images/background_1_m22.png";
-import persoImage from "../../assets/images/pv-challenge/character/Leader.png"; 
+import persoImage from "../../assets/images/pv-challenge/character/Leader.png";
 import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.svg";
 import styles from "../style.module.scss"
 import ScoreModal from "../../components/pvCh/day1/ScoreModal/StepModal.jsx";
@@ -356,7 +356,7 @@ function MenuBtnComponent({ img, title, onClick }) {
         <img
             src={img}
             alt="user-img"
-            className="mb-1 sg-menu-item-box-img"
+            className="mb-1 sg-menu-item-box-img w-[88px] h-[77px]"
             width={88}
             height={77}
         />
@@ -391,7 +391,7 @@ export default function Menu() {
 
 
     useEffect(() => {
-        console.log("----closeDay---",closeDay)
+        console.log("----closeDay---", closeDay)
         if (closeDay !== null) {
             setScore({
                 stars: closeDay.stars,
@@ -510,9 +510,9 @@ export default function Menu() {
                 close={() => {
                     if (closeDay?.dayId === 5 && closeDay?.success) setShowFinalGame(true);
 
-                    if (badges.length > 0) setShowBadge(()=>true);
+                    if (badges.length > 0) setShowBadge(() => true);
 
-                    setShowScore(()=>false);
+                    setShowScore(() => false);
 
                 }}
             />
@@ -535,7 +535,7 @@ export default function Menu() {
                     setShowConfig(false);
                 }}
             />
- 
+
             <ModalTutorial
                 listMsg={listMission}
                 pictureClass={mstyles.menu_personnage_image}
@@ -608,7 +608,7 @@ export default function Menu() {
                                 className="mb-1 sg-menu-item-box-img"
                                 width={30}
                                 height={30}
-                                style={{ bottom: "8px", left:"8px", position: "relative" }}
+                                style={{ bottom: "8px", left: "8px", position: "relative" }}
                             />
                         </div>
                     </div>
@@ -651,7 +651,7 @@ export default function Menu() {
                         alt="user-img"
                         width={150}
                         height={54}
-                        // style={{ bottom: "7px", position: "relative" }}
+                    // style={{ bottom: "7px", position: "relative" }}
                     />
                 </div>
                 <div className={`d-flex  ml-5 ${mstyles.s_title}`}>
@@ -698,11 +698,11 @@ export default function Menu() {
                 <img
                     style={{
                         position: "absolute",
-                        left:"0px",
-                        bottom:"0px",
+                        left: "0px",
+                        bottom: "0px",
                         width: "100%",
                         height: "68%",
-                        
+
                         // marginRight: "10px",
                         // objectFit: "contain",
                         // objectPosition:"0% 100%"
