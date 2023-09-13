@@ -83,18 +83,18 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                     incrementCurrentStep();
                 }
             },
-            // {
-            //     title: 2,//t("day1.messages.title"),
-            //     text: t("day1.messages.text1"),
-            //     showCancelBtn: true,
-            //     textBtnValid: t("day1.messages.textBtnValid"),
-            //     audio: Level1Audio.audio6,
-            //     textBtnNotValid:t("pasEncore"),
-            //     valid: () => {
-            //         config.current.currentIndex += 1;
-            //         incrementCurrentStep();
-            //     }    
-            // },
+            {
+                title: t("day1.messages.title"),
+                text: t("day1.messages.text1"),
+                showCancelBtn: true,
+                textBtnValid: t("day1.messages.textBtnValid"),
+                audio: Level1Audio.audio6,
+                textBtnNotValid: t("pasEncore"),
+                valid: () => {
+                    config.current.currentIndex += 1;
+                    incrementCurrentStep();
+                }
+            },
             {
                 title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
@@ -172,7 +172,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 
 
     const nextStep = () => {
-        if ([2, 3, 4, 5].includes(currentStep)) return incrementCurrentStep();
+        if ([2].includes(currentStep)) return incrementCurrentStep();
 
         setShowConfirm(true);
     }
@@ -181,7 +181,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
         setStp(currentStep)
     }, [currentStep]);
 
-    // {currentStep===3 && (<div className="box box-2" style={{backgroundColor:'greenyellow'}}></div>)}
 
     const [showNextBtn, setShowNextBtn] = useState(true);
 
@@ -237,21 +236,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                                 <Card />
                             </div>
                         </Stepper.Step>
-                        <Stepper.Step id="6" name="Step 6">
-                            <div>
-                                {/* <Listlink
-                                    data={t("day1.part7.decisions", { returnObjects: true })}
-                                    modeEdit={modeEdit}
-                                    handleChange={() => alert("1010101")}
-                                /> */}
-                            </div>
-                        </Stepper.Step>
-                        <Stepper.Step id="7" name="Step 7">
-                            <div>
-
-                            </div>
-                        </Stepper.Step>
-
                     </Stepper.Steps>
                 </Stepper>
                 {![0, 2, 3].includes(currentStep) && <div className={"step_quiz_btn"}>

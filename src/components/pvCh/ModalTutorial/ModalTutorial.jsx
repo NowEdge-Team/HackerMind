@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Children, useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import styles from "./style.module.scss";
 import PropTypes from "prop-types";
@@ -10,7 +10,7 @@ import { Player } from 'video-react';
 import 'video-react/dist/video-react.css';
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personnageImage, index, next, prv }) => {
+const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personnageImage, index, next, prv, children }) => {
 
     const { t } = useTranslation();
     return (
@@ -41,6 +41,11 @@ const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personna
                 </div>
 
             </div>
+            {Children.map(children, child =>
+                <>
+                    {child}
+                </>
+            )}
             <div className={styles.modal_footer}>
                 {index > 0 && <button className={styles.prv_btn} onClick={prv}>
                     {t("btnBack")}

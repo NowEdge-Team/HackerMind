@@ -17,6 +17,8 @@ import Dustbin from "./Dustbin";
 import CardDrd from "./Card";
 import ListArticle from "./ListArticle";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 
 
 const data = [
@@ -162,6 +164,8 @@ const articleData = [
 
 
 function MatrixDrd({ nextStep }) {
+    const { t } = useTranslation();
+    let history = useHistory();
 
     const config = useRef({
         isValid: false
@@ -533,14 +537,19 @@ function MatrixDrd({ nextStep }) {
                         </button>
                     </div>
                 </div>
+                <div className="mb-4">
+                    <h3 className="font-Karla text-[17px] text-left text-[#9f9f9f] uppercase" >
+                        {t("day1.level")}
+                    </h3>
+                </div>
 
-                <div className="flex flex-row h-3/4" >
+                <div className="flex flex-row h-3/4 mb-3" >
 
 
                     <ListArticle onDrop={onDropListArticle} listArticle={listArticle} />
 
 
-                    <div className={style.mtx_container}>
+                    <div className={`${style.mtx_container} border p-2 h-full`}>
                         {data.filter(item => item.type === "profil").map((item, index) => <div key={item.id} className={`${style[`hed_row_${index + 1}`]}`}>
                             <p className={style.text}>
                                 {item.text}
