@@ -57,7 +57,7 @@ const Item = ({ item, title, text, onClick, index, activeIndex }) => {
 
     const { img } = loadImg(index)
     return (
-        <li onClick={() => {
+        <li className="py-2" onClick={() => {
             if (item.status === 1) {
                 onClick(index)
             }
@@ -68,7 +68,7 @@ const Item = ({ item, title, text, onClick, index, activeIndex }) => {
             <div className={styles.li_img}>
                 <img src={img} alt="" style={item.status === 1 ? {} : { filter: "grayscale(100%)" }} />
             </div>
-            <div className={styles.li_content}>
+            <div className={`${styles.li_content}`}>
                 <h5>{title}</h5>
                 <h3> {item.text}</h3>
             </div>
@@ -90,7 +90,7 @@ const List = ({ days = [], clickDay, t }) => {
                 </h3>
             </header>
             <div className={styles.list_days}>
-                <ul>
+                <ul className="flex flex-col">
                     {
                         days.map((elem, index) => {
                             return (<Item
