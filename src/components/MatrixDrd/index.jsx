@@ -24,7 +24,7 @@ import { useHistory } from "react-router-dom";
 const data = [
     {
         id: 1,
-        text: "Etatique",
+        text: "ETATIQUE",
         type: "profil"
     },
     {
@@ -217,7 +217,7 @@ function MatrixDrd({ nextStep }) {
 
     const listMsg = [
         {
-            title: "Etatique",
+            title: "ETATIQUE",
             text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
             audio: Level1Audio.audio1,
         },
@@ -333,7 +333,7 @@ function MatrixDrd({ nextStep }) {
 
     const listMsgPop = [
         {
-            title: "Etatique",
+            title: "ETATIQUE",
             text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
             audio: Level1Audio.audio1,
         },

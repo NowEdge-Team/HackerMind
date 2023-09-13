@@ -10,36 +10,36 @@
     "title": "Badges",
     "description": "Selon le score obtenu dans des activités spécifiques, vous pouvez débloquer des badges de distinction\n\n",
     "badge1": {
-      "title": "avatar",
-      "description": "badge obtenu à la fin de l'étape n°1"
+      "title": "Avatar",
+      "description": "Badge obtenu à la fin de l'étape n°1"
     },
     "badge2": {
-      "title": "contrat",
-      "description": "badge obtenu à la fin de l'étape n°2"
+      "title": "Contrat",
+      "description": "Badge obtenu à la fin de l'étape n°2"
     },
     "badge3": {
-      "title": "recon",
-      "description": "badge obtenu à la fin de l'étape n°3"
+      "title": "Recon",
+      "description": "Badge obtenu à la fin de l'étape n°3"
     },
     "badge4": {
-      "title": "intrusion",
-      "description": "badge obtenu à la fin de l'étape n°4"
+      "title": "Intrusion",
+      "description": "Badge obtenu à la fin de l'étape n°4"
     },
     "badge5": {
-      "title": "admin",
-      "description": "badge obtenu à la fin de l'étape n°5"
+      "title": "Admin",
+      "description": "Badge obtenu à la fin de l'étape n°5"
     },
     "badge6": {
-      "title": "hacked",
-      "description": "badge obtenu à la fin de l'étape n°6"
+      "title": "Hacked",
+      "description": "Badge obtenu à la fin de l'étape n°6"
     },
     "badge7": {
-      "title": "arrested",
-      "description": "badge obtenu à la fin de l'étape n°7"
+      "title": "Arrested",
+      "description": "Badge obtenu à la fin de l'étape n°7"
     },
     "badge8": {
-      "title": "cybercrime",
-      "description": "badge obtenu à la fin de l'étape n°8"
+      "title": "Cybercrime",
+      "description": "Badge obtenu à la fin de l'étape n°8"
     },
     "modal": {
       "badge1": {
@@ -148,7 +148,7 @@
     
     "part1": {},
     "part2": {
-      "g_title": "Plongez dans l'univers des hackers en découvrant leurs différents profils et leurs méthodes d'opération",
+      "g_title": "J'aimerais être sur que tu as bien compris à quoi servent les différents outils que nous utilisons. Associe chaque action principale à son outil de référence.",
       "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
       "decisions": {
         "9": "Permet le partage d'informations en temps réel et la collaboration.",
@@ -175,7 +175,7 @@
       "g_title": "Comprenez les motivations qui alimentent les hackers et explorez des exemples illustratifs de leurs motivations variées"
     },
     "part5": {
-      "g_title": "Plongez dans le monde de la cybersécurité en explorant nos articles détaillant des histoires réelles d'attaques informatiques. ",
+      "g_title": "",
       "description": "Découvrez comment les hackers ont réussi à contourner les défenses et à accéder à des informations sensibles."
     },
     "part6": {},
@@ -359,7 +359,7 @@
     },
     "messages": {
       "title": "Le Hacker en Chef",
-      "text1": "Êtes-vous sûr de vos choix ?",
+      "text1": "Es-tu sûr de ton choix ?",
       "text2": "On entend souvent parler de la pharmacovigilance, et il existe beaucoup d’idées préconçues à son sujet. Maintenant que vous vous y connaissez un peu, saurez-vous distinguer le vrai du faux ?",
       "text3": "Avant de commencer ta mission, j'aimerais m'assurer que tu as bien compris les principes fondamentaux de la transformation digitale",
       "textBtnValid": "Oui",
@@ -512,7 +512,7 @@
       },
       "validation": {
         "title": "Lead data science :",
-        "text": "Êtes-vous sûr de vos choix ? ",
+        "text": "Es-tu sûr de ton choix ? ",
         "text1":"Bravo pour avoir mené à bien la collecte et la valorisation des données pour notre projet. Votre expertise dans ce domaine a été précieuse pour l'équipe et nous sommes confiants que les informations que vous avez recueillies nous aideront à prendre des décisions éclairées pour l'avenir. Merci pour votre travail acharné et votre dévouement envers ce projet.",
         "textBtnValid": "Valider mes choix",
         "textBtnValid2": "C'est noté"
@@ -684,7 +684,7 @@
       "message4": "Afin de réussir notre mission de collecte, nous devons nous appuyer sur les professionnels de la santé qui doivent nous signaler tout évènement indésirable sur nos produits.",
       "validation": {
         "title": "Lead data science :",
-        "text": "Êtes-vous sûr de vos choix ? ",
+        "text": "Es-tu sûr de ton choix ? ",
         "text1": "Excellent travail ! Tu as une vision claire des opportunités qu'offre la transformation digitale. Continue sur cette lancée !",
         "textBtnValid": "Valider mes choix",
         "textBtnValid2": "C'est noté"
@@ -717,7 +717,7 @@
       "message4": "Afin de réussir notre mission de collecte, nous devons nous appuyer sur les professionnels de la santé qui doivent nous signaler tout évènement indésirable sur nos produits.",
       "validation": {
         "title": "Lead data science:",
-        "text": "Êtes-vous sûr de vos choix ? ",
+        "text": "Es-tu sûr de ton choix ? ",
         "text1":"Félicitations ! Tu es maintenant familier avec les technologies émergentes et leur potentiel pour transformer les entreprises. Tu es prêt pour la prochaine étape !",
         "textBtnValid": "Valider mes choix",
         "textBtnValid2": "C'est noté"
@@ -916,7 +916,7 @@
       "message4": "Bravo ! La mission de votre Task Force est arrivé à son terme.    Vous avez fait preuve d’engagement et d’implication tout au long de la mission. <br/> Je vous invite à consulter le rapport d’activité pour avoir une idée sur votre performance dans ce jeu. <br/> Continuez à sensibiliser votre entourage sur l'analytics!",
       "validation": {
         "title": "Lead data science :",
-        "text": "Êtes-vous sûr de vos choix ? ",
+        "text": "Es-tu sûr de ton choix ? ",
         "textBtnValid": "Valider mes choix",
         "textBtnValid2": "C'est noté"
       }
@@ -929,7 +929,7 @@
     },
     "responsable_m": {
       "title": "Lead data science",
-      "text": "Êtes-vous sûr de vos choix ? "
+      "text": "Es-tu sûr de ton choix ? "
     },
     "part1": {
       "title": "Pour chaque énoncé suivant, indiquez si la déclaration est vraie ou fausse en choisissant la réponse appropriée.",
