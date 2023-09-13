@@ -96,7 +96,7 @@ const INIT_STATE = {
         part1: {
 
         },
-        part2: {
+        part3: {
             categories: [
                 {
                     id: 1,
@@ -169,7 +169,7 @@ const INIT_STATE = {
                 }
             ],
         },
-        part3: {
+        part2: {
             categories: [
                 {
                     id: 1,
@@ -185,11 +185,11 @@ const INIT_STATE = {
                 },
                 {
                     id: 4,
-                    block: 2,
+                    block: 1,
                 },
                 {
                     id: 5,
-                    block: 2,
+                    block: 1,
                 }
             ],
             decisions: [

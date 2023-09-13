@@ -148,9 +148,6 @@
     
     "part1": {},
     "part2": {
-      "g_title": "Je te mets au défi de relier les différents outils de cybersécurité à leur usage principal"
-    },
-    "part3": {
       "g_title": "Plongez dans l'univers des hackers en découvrant leurs différents profils et leurs méthodes d'opération",
       "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
       "decisions": {
@@ -168,6 +165,11 @@
         "4": "Telegram",
         "5": "Nulled"
       }
+    },
+    "part3": {
+      "g_title": "Je te mets au défi de relier les différents outils de cybersécurité à leur usage principal"
+
+      
     },
     "part4": {
       "g_title": "Comprenez les motivations qui alimentent les hackers et explorez des exemples illustratifs de leurs motivations variées"

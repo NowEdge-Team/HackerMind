@@ -41,13 +41,20 @@ import TableSec from "../../../components/pvCh/table2/TableSec.jsx";
 import DayOne from "./DayOne.jsx";
 import Matrix from "../../../components/Matrix/index.jsx";
 import MatrixDrd from "../../../components/MatrixDrd/index.jsx";
+import logo from "../../../assets/Tor_logo.png"
+import telegram from "../../../assets/telegram-logo.png"
+import proton from "../../../assets/protonmail-logo.png"
+import wiki from "../../../assets/wiki-logo.png"
+import nulled from "../../../assets/nulled.png"
+// import Box from '../../../components/pvCh/box/Box.jsx'
+
 
 
 const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, setStp }) => {
 
     // const {decisions: decisions_2, categories: categories_2} = useSelector((state) => state.DaysPvCh.day1.part2);
 
-    const { decisions: decisions_3, categories: categories_3 } = useSelector((state) => state.DaysPvCh.day1.part3);
+    const { decisions: decisions_3, categories: categories_3 } = useSelector((state) => state.DaysPvCh.day1.part2);
     // const {decisions: decisions_7} = useSelector((state) => state.DaysPvCh.day1.part7);
 
 
@@ -104,7 +111,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
             }
             , {
 
-                title: t("day1.messages.title"),//t
+
 
                 title: t("day1.messages.title"),
 
@@ -181,6 +188,15 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 
     const [showNextBtn, setShowNextBtn] = useState(true);
 
+    const imgBib = [
+        logo,
+        wiki,
+        proton,
+        telegram,
+        nulled
+    ]
+
+
     return (
         <>
             <ConfirmationModal
@@ -207,10 +223,11 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                             <Dropzone
                                 modeEdit={modeEdit}
                                 day={1}
-                                part={3}
+                                part={2}
                                 callback={dragDropUpdateDecisions}
                                 decisions={decisions_3}
                                 categories={categories_3}
+                                imgBib={imgBib}
                             />
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
@@ -221,22 +238,21 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                         </Stepper.Step>
                         <Stepper.Step id="5" name="Step 5">
                             <div>
-                                <Row
-                                    showNextBtn={setShowNextBtn} />
+                                <Card />
                             </div>
                         </Stepper.Step>
                         <Stepper.Step id="6" name="Step 6">
                             <div>
-                                <Listlink
+                                {/* <Listlink
                                     data={t("day1.part7.decisions", { returnObjects: true })}
                                     modeEdit={modeEdit}
                                     handleChange={() => alert("1010101")}
-                                />
+                                /> */}
                             </div>
                         </Stepper.Step>
                         <Stepper.Step id="7" name="Step 7">
                             <div>
-                                <Card />
+
                             </div>
                         </Stepper.Step>
 

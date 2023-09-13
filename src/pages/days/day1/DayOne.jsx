@@ -20,8 +20,12 @@ import audio3 from "../../../assets/audio/Niv1/fr/Project_Haystack.m4a"
 import audio4 from "../../../assets/audio/Niv1/fr/ProtonMail.m4a"
 import audio5 from "../../../assets/audio/Niv1/fr/Telegram.m4a"
 import audio6 from "../../../assets/audio/Niv1/fr/Nulled.m4a"
-import { Scale } from "@mui/icons-material"
-
+import violet from "../../../assets/Book/Violet.png"
+import red from "../../../assets/Book/Red.png"
+import orange from "../../../assets/Book/Orange.png"
+import azure from "../../../assets/Book/Azure.png"
+import bleu from "../../../assets/Book/Bleu.png"
+import indigo from "../../../assets/Book/Indigo.png"
 
 
 
@@ -123,14 +127,12 @@ function App({ onNext }) {
         </div>
 
 
-
-
-        {/* <img src={violet} alt="" style={{position: "absolute", top: "13rem", left: "20rem"}}/>
-            <img src={red} alt="" style={{position: "absolute", top: "24rem",left: "25rem"}} />
-            <img src={orange} alt="" style={{position: "absolute", top: "25rem",left: "38rem"}}  />
-            <img src={azure} alt="" style={{position: "absolute", top: "25rem",right: "38rem"}} />
-            <img src={bleu} alt="" style={{position: "absolute", top: "24rem",right: "24rem"}} />
-            <img src={indigo} alt="" style={{position: "absolute", top: "13rem", right: "20rem",}}/> */}
+        <img src={violet} alt="" width={56} style={{ position: "absolute", top: "20%", left: "6%" }} />
+        <img src={red} alt="" width={56} style={{ position: "absolute", top: "30%", left: "6%" }} />
+        <img src={orange} alt="" width={56} style={{ position: "absolute", top: "40%", left: "6%" }} />
+        <img src={azure} alt="" width={56} style={{ position: "absolute", top: "50%", left: "6%" }} />
+        <img src={bleu} alt="" width={56} style={{ position: "absolute", top: "30%", left: "16%" }} />
+        <img src={indigo} alt="" width={56} style={{ position: "absolute", top: "40%", left: "16%", }} />
 
 
         <div className={styles.Msg}>
@@ -140,27 +142,27 @@ function App({ onNext }) {
         <div className={styles.bell}>
 
           {currentIndex === 0 &&
-            <img src={bell} alt="" className={styles.bell1} style={{ position: "absolute", top: "30%", left: "27%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell1} style={{ position: "absolute", top: "24%", left: "9%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 1 &&
-            <img src={bell} alt="" className={styles.bell2} style={{ position: "absolute", top: "50%", left: "32%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell2} style={{ position: "absolute", top: "34%", left: "9%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 2 &&
-            <img src={bell} alt="" className={styles.bell3} style={{ position: "absolute", top: "54%", left: "45%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell3} style={{ position: "absolute", top: "44%", left: "8%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 3 &&
-            <img src={bell} alt="" className={styles.bell4} style={{ position: "absolute", top: "54%", left: "58%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell4} style={{ position: "absolute", top: "54%", left: "8%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 4 &&
-            <img src={bell} alt="" className={styles.bell5} style={{ position: "absolute", top: "50%", left: "73%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell5} style={{ position: "absolute", top: "34%", left: "19%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 5 &&
-            <img src={bell} alt="" className={styles.bell6} style={{ position: "absolute", top: "30%", left: "78%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell6} style={{ position: "absolute", top: "44%", left: "19%", }} onClick={() => {
               toggleModal();
             }} />}
         </div>
