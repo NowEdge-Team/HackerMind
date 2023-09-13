@@ -40,14 +40,14 @@ function Card(){
                 dataRadar = {
                     color:'green',
                     bgColor:'#82E0AA',
-                    dimension:[1,2,2,2,2]
+                    dimension:[9,0,0,9,10]
                 }
                 break;
                 case 2:
                 dataRadar = {
                     color:'blue',
                     bgColor:'#AED6F1',
-                    dimension:[1,2,2,2,2]
+                    dimension:[9,0,9,10,10]
                 }
                 break
 
@@ -55,7 +55,7 @@ function Card(){
                 dataRadar = {
                     color:'red',
                     bgColor:'#F5B7B1',
-                    dimension:[1,2,2,2,2]
+                    dimension:[0,0,9,10,9]
                 }
                 break
 
@@ -63,7 +63,7 @@ function Card(){
                 dataRadar = {
                     color:'green',
                     bgColor:'LightGrey',
-                    dimension:[1,2,2,2,2]
+                    dimension:[10,10,10,0,0]
                 }
                 break
 

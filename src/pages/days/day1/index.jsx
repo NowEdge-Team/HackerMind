@@ -35,9 +35,6 @@ import img3 from "../../../assets/Ingénieur social.png";
 import { useHistory } from "react-router-dom";
 import Listlink from "../../../components/pvCh/Listlink/Listlink.jsx";
 import Card from "../../../components/pvCh/card/Card.jsx";
-import Row from "../../../components/pvCh/row/Row.jsx";
-import Table from "../../../components/pvCh/table/Table.jsx";
-import TableSec from "../../../components/pvCh/table2/TableSec.jsx";
 import DayOne from "./DayOne.jsx";
 import Matrix from "../../../components/Matrix/index.jsx";
 import MatrixDrd from "../../../components/MatrixDrd/index.jsx";
@@ -217,7 +214,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                     <Stepper.Steps>
                         <Stepper.Step id="1" name="Step 1">
                             <DayOne onNext={incrementCurrentStep} />
-                            {/* <Matrix /> */}
                         </Stepper.Step>
                         <Stepper.Step id="2" name="Step 2">
                             <Dropzone
@@ -303,10 +299,7 @@ const Day1PvPharma = (props) => {
     const [ValidTask, setValidTask] = useState(false);
     const { currentStep } = useStepper();
 
-    
-    useEffect(()=>{
-        if ([0,1,2,6].includes(currentStep)) return setShowBolck(false);
-        else if(!showBolck) return setShowBolck(true);
+
 
     useEffect(() => {
         if ([0, 1, 2, 3, 6].includes(currentStep)) return setShowBolck(false);

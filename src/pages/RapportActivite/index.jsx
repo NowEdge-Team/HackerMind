@@ -13,7 +13,6 @@ import img1 from "../../assets/images/pv-challenge/images/days/Rectangle 2095.sv
 import img14 from "../../assets/images/pv-challenge/avatars/profile1.png";
 import {getCenterInfoPvCh, getscorePVCh} from "../../redux/actions.js";
 import data_history from "./data.json";
-
 import styles from "./style.module.scss";
 import Header from "../Header/Header.jsx";
 import {getHistoricScoresPvCh} from "../../redux/daysPvCh/service.js";
@@ -157,6 +156,7 @@ const Container = ({days, listDescriptions, score, t}) => {
     }
 
     return (
+        
         <>
             <h4 style={{zIndex: 10000}}> {t(`activityReport.rapport_activite`)} </h4>
             <p className={styles.description}> {t(`activityReport.description`)} </p>
