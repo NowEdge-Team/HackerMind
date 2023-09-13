@@ -20,7 +20,7 @@ import ChartRd2 from "../ChartRd2";
 const data = [
     {
         id: 1,
-        text: "Etatique",
+        text: "ETATIQUE",
         type: "profil"
     },
     {
@@ -116,8 +116,8 @@ function Matrix({ nextStep }) {
 
     useEffect(() => {
         setCurrentMessage(() => ({
-            title: "presontation",
-            text: "presontation Profil",
+            title: "LE HACKER EN CHEF",
+            text: "Nous allons voir ensemble les différents profils et leurs motivations et ton objectif sera de selectionner le profil qui te correspond le mieux !",
             audio: Level1Audio.audio1,
             onClose: () => {
                 setShowTuto(item => false);
@@ -152,83 +152,83 @@ function Matrix({ nextStep }) {
 
     const listMsg = [
         {
-            title: "Etatique",
+            title: "LE HACKER EN CHEF",
             text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
             audio: Level1Audio.audio1,
         },
         {
-            title: "CRIME ORGANISE",
+            title: "LE HACKER EN CHEF",
             text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
             audio: Level1Audio.audio1,
         },
         {
-            title: "TERRORISTE",
+            title: "LE HACKER EN CHEF",
             text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",
             audio: Level1Audio.audio1,
 
         },
         {
-            title: "ACTIVISTE IDIOLOGIQUE",
+            title: "LE HACKER EN CHEF",
             text: "Cyber-hacktivistes, groupements d’intérêt, sectes.",
             audio: Level1Audio.audio1,
 
         },
         {
-            title: "OFFICINE SPÉCIALISÉE",
+            title: "LE HACKER EN CHEF",
             text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques 3 accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
             audio: Level1Audio.audio1,
 
         },
         {
-            title: "AMATEUR",
+            title: "LE HACKER EN CHEF",
             text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
             audio: Level1Audio.audio1,
 
         },
         {
-            title: "VENGEUR",
+            title: "LE HACKER EN CHEF",
             text: "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",
             audio: Level1Audio.audio1,
 
         },
         {
-            title: "MALVEILLANT PATHOLOGIQUE",
+            title: "LE HACKER EN CHEF",
             text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",
             audio: Level1Audio.audio1,
         },
         {
-            title: "ESPIONNAGE",
+            title: "LE HACKER EN CHEF",
             text: "Opération de renseignement (étatique, économique)",
             audio: Level1Audio.audio1
         },
 
         {
-            title: "PRÉPOSITIONNEMENT STRATÉGIQUE",
+            title: "LE HACKER EN CHEF",
             text: "Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho).",
             audio: Level1Audio.audio1
         },
 
         {
-            title: "INFLUENCE",
+            title: "LE HACKER EN CHEF",
             text: "Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État.",
             audio: Level1Audio.audio1
 
         },
         {
-            title: "ENTRAVE AU FONCTIONNEMENT",
+            title: "LE HACKER EN CHEF",
             text: "Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique",
             audio: Level1Audio.audio1
         },
 
 
         {
-            title: "LUCRATIF",
+            title: "LE HACKER EN CHEF",
             text: "Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc.",
             audio: Level1Audio.audio1
         },
 
         {
-            title: "DÉFI, AMUSEMENT",
+            title: "LE HACKER EN CHEF",
             text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
             audio: Level1Audio.audio1
         },
@@ -268,7 +268,7 @@ function Matrix({ nextStep }) {
 
     const listMsgPop = [
         {
-            title: "Etatique",
+            title: "ETATIQUE",
             text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
             audio: Level1Audio.audio1,
         },

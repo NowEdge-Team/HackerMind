@@ -11,7 +11,7 @@ const ConfirmationModalDay2 = ({
                                    close = () => null ,
                                    valid= ()=> null,
                                    title = "RESPONSABLE PHARMACOVIGILANCE INTERNE :",
-                                   text = "Êtes-vous sûr de vos choix ?",
+                                   text = "Es-tu sûr de ton choix ?",
                                    showCancel = false,
                                    textBtnValid = "Valider mes choix",
                                    textBtnCancel = "Pas encore",
