@@ -25,7 +25,7 @@ function ChartRadar({bgColor,color,dimension}) {
     labels: ['Compétences', 'moyens techniques', 'ressources financière', 'Accès au SI', 'Temps'],
     datasets: [
       {
-        label: '# of Votes',
+        label: 'score par axe',
         data:dimension,
         backgroundColor:bgColor,
         borderColor:color,
