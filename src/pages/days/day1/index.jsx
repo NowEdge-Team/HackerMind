@@ -38,11 +38,12 @@ import Card from "../../../components/pvCh/card/Card.jsx";
 import DayOne from "./DayOne.jsx";
 import Matrix from "../../../components/Matrix/index.jsx";
 import MatrixDrd from "../../../components/MatrixDrd/index.jsx";
-import logo from "../../../assets/Tor_logo.png"
+import tor from "../../../assets/Tor_logo.png"
 import telegram from "../../../assets/telegram-logo.png"
 import proton from "../../../assets/protonmail-logo.png"
 import wiki from "../../../assets/wiki-logo.png"
 import nulled from "../../../assets/nulled.png"
+
 // import Box from '../../../components/pvCh/box/Box.jsx'
 
 
@@ -185,13 +186,13 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const [showNextBtn, setShowNextBtn] = useState(true);
 
     const imgBib = [
-        logo,
+        tor,
         wiki,
         proton,
         telegram,
         nulled
     ]
-
+       
 
     return (
         <>
@@ -241,9 +242,8 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 {![0, 2, 3].includes(currentStep) && <div className={"step_quiz_btn"}>
                     <CancelButton onClick={() => history.push("/")} className={"step_btn_cancel"} />
                     {/* {showNextBtn &&  */}
-                    <NextButton className={"step_quiz_btn_next2"}
-                        onClick={nextStep}
-                    />
+                    {/* <BackButton className={"step_quiz_btn_back"}  onClick={goback} /> */}
+                    <NextButton className={"step_quiz_btn_next2"} onClick={nextStep} />
                     {/* } */}
                 </div>}
             </div>

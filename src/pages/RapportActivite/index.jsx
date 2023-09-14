@@ -15,7 +15,6 @@ import { useCookies } from "react-cookie";
 // import imagePers2 from "../../assets/images/pv-challenge/character/expert.png";
 import imagePers3 from "../../assets/images/pv-challenge/character/character_1_11.png";
 import imagePers4 from "../../assets/images/pv-challenge/character/leader.png";
-
 import img1 from "../../assets/images/pv-challenge/images/days/Rectangle_2095.png";
 import img2 from "../../assets/images/pv-challenge/images/days/Rectangle96.png";
 import img3 from "../../assets/images/pv-challenge/images/days/Rectangle 2097.png";

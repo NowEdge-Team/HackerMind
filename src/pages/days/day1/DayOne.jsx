@@ -20,12 +20,19 @@ import audio3 from "../../../assets/audio/Niv1/fr/Project_Haystack.m4a"
 import audio4 from "../../../assets/audio/Niv1/fr/ProtonMail.m4a"
 import audio5 from "../../../assets/audio/Niv1/fr/Telegram.m4a"
 import audio6 from "../../../assets/audio/Niv1/fr/Nulled.m4a"
-import violet from "../../../assets/Book/Violet.png"
-import red from "../../../assets/Book/Red.png"
-import orange from "../../../assets/Book/Orange.png"
-import azure from "../../../assets/Book/Azure.png"
-import bleu from "../../../assets/Book/Bleu.png"
-import indigo from "../../../assets/Book/Indigo.png"
+// import violet from "../../../assets/Book/Violet.png"
+// import red from "../../../assets/Book/Red.png"
+// import orange from "../../../assets/Book/Orange.png"
+// import azure from "../../../assets/Book/Azure.png"
+// import bleu from "../../../assets/Book/Bleu.png"
+// import indigo from "../../../assets/Book/Indigo.png"
+
+import torlogo from "../../../assets/Tor_logo.png"
+import telegramlogo from "../../../assets/telegram-logo.png"
+import protonlogo from "../../../assets/protonmail-logo.png"
+import wikilogo from "../../../assets/wiki-logo.png"
+import nulledlogo from "../../../assets/nulled.png"
+import haystacklogo from "../../../assets/haystack.png"
 
 
 
@@ -40,42 +47,48 @@ const dataList = [{
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio1
 
-}, {
+  },
+  {
   backgroundColor: "#FF001C",
   backgroundIcon: "rgba(255, 0, 28, 0.47)",
   icon: hidden,
   text: "The Hidden Wiki est un peu comme un catalogue secret d'Internet. Il contient des liens vers des sites Web qui ne sont pas visibles sur Internet ordinaire. Certains de ces sites peuvent être utiles, mais beaucoup d'entre eux sont illégaux ou dangereux. Il est essentiel d'être très prudent lorsque vous explorez le contenu du darknet, car vous pourriez vous retrouver sur des sites malveillants ou illégaux sans le vouloir.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons  ",
   audio: audio2
-}, {
+  
+  },
+  {
   backgroundColor: "#F7941E",
   backgroundIcon: "rgba(247, 148, 30, 0.49)",
   icon: project,
   text: "Project Haystack se concentre sur l'organisation des données provenant d'appareils connectés, tels que des thermostats intelligents ou des capteurs de température. L'idée est de rendre ces données plus faciles à gérer et à utiliser. Cependant, il est important de noter que la collecte de données provenant d'appareils IoT peut poser des problèmes de sécurité si ces données ne sont pas correctement protégées. C'est comme si vous aviez une boîte à secrets, mais vous devez vous assurer que personne d'autre ne puisse l'ouvrir.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio3
-}, {
+  },
+  {
   backgroundColor: "#CBBAFF",
   backgroundIcon: "rgba(203, 186, 255, 0.49)",
   icon: proton,
   text: "ProtonMail est une boîte aux lettres électronique super sécurisée. Lorsque vous envoyez un e-mail via ProtonMail, il est verrouillé dans une boîte à secrets virtuelle, et seul le destinataire peut l'ouvrir. Cela signifie que même si quelqu'un d'autre intercepte votre e-mail en cours de route, il ne pourra pas le lire. C'est un peu comme envoyer une lettre dans un coffre-fort. C'est une excellente façon de protéger vos messages personnels.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio4
-}, {
+  },
+  {
   backgroundColor: "#00AAE2",
   backgroundIcon: "rgba(0, 170, 226, 0.49)",
   icon: telegram,
   text: "Telegram est une application de messagerie qui garde vos conversations privées. Lorsque vous envoyez un message, il est enveloppé dans un coffre-fort virtuel, de sorte que seuls vous et votre ami pouvez le voir. Vous pouvez même programmer vos messages pour qu'ils disparaissent après un certain temps. C'est comme avoir une conversation dans une pièce secrète qui s'efface automatiquement après un certain temps.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio5
-}, {
+  },
+  {
   backgroundColor: "#527D9A",
   backgroundIcon: "rgba(82, 125, 154, 0.49)",
   icon: nulled,
   text: "Nulled est un endroit dangereux sur Internet. C'est comme une rue sombre où des personnes malveillantes vendent des choses illégales, comme des copies piratées de logiciels et des virus informatiques. Si vous visitez Nulled, vous pourriez être infecté par des logiciels malveillants ou vous mettre en danger juridiquement. Il est important de rester loin de ces endroits sombres en ligne.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio6
-}
+  }
 ]
 
 function App({ onNext }) {
@@ -123,46 +136,64 @@ function App({ onNext }) {
           <button onClick={() => history.push("/")}>Accueil
             <img src={runningSolid} />
           </button>
-
+        </div>
+        <div className={styles.block} style={{ position: "absolute", top: "16%", left: "6%" }}>
+            <img src={torlogo} alt="" width={56}  />
+            <p>TOR</p>
+        </div>
+        <div className={styles.block} style={{ position: "absolute", top: "36%", left: "6%" }}>
+            <img src={wikilogo} alt="" width={56}  />
+            <p style={{width:"70px"}}>The hidden Wiki</p>
         </div>
 
-
-        <img src={violet} alt="" width={56} style={{ position: "absolute", top: "20%", left: "6%" }} />
-        <img src={red} alt="" width={56} style={{ position: "absolute", top: "30%", left: "6%" }} />
-        <img src={orange} alt="" width={56} style={{ position: "absolute", top: "40%", left: "6%" }} />
-        <img src={azure} alt="" width={56} style={{ position: "absolute", top: "50%", left: "6%" }} />
-        <img src={bleu} alt="" width={56} style={{ position: "absolute", top: "30%", left: "16%" }} />
-        <img src={indigo} alt="" width={56} style={{ position: "absolute", top: "40%", left: "16%", }} />
-
-
-        <div className={styles.Msg}>
-          <img src={ing} alt="" style={{ position: "absolute", top: "65%", left: "0%" }} />
+        <div className={styles.block} style={{ position: "absolute", top: "46%", left: "6%" }}>
+            <img src={haystacklogo} alt="" width={56}  />
+            <p style={{width:"70px"}}>Project Haystack</p>
         </div>
+
+        <div className={styles.block}  style={{ position: "absolute", top: "20%", left: "16%" }}>
+            <img src={protonlogo} alt="" width={56} />
+            <p>Proton-Mail</p>
+        </div>
+
+        <div className={styles.block} style={{ position: "absolute", top: "34%", left: "16%" }}>
+            <img src={telegramlogo} alt="" width={56}  />
+            <p>Telegram</p>
+        </div>
+
+        <div className={styles.block} style={{ position: "absolute", top: "47%", left: "16%", }}>
+            <img src={nulledlogo} alt="" width={56}  />
+            <p>Nulled</p>
+        </div>
+
+        {/* <div className={styles.Msg}> */}
+          {/* <img src={ing} alt="" style={{ position: "absolute", top: "65%", left: "0%" }} /> */}
+        {/* </div> */}
 
         <div className={styles.bell}>
 
           {currentIndex === 0 &&
-            <img src={bell} alt="" width={25} className={styles.bell1} style={{ position: "absolute", top: "24%", left: "9%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell1} style={{ position: "absolute", top: "24%", left: "8%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 1 &&
-            <img src={bell} alt="" width={25} className={styles.bell2} style={{ position: "absolute", top: "34%", left: "9%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell2} style={{ position: "absolute", top: "37%", left: "8%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 2 &&
-            <img src={bell} alt="" width={25} className={styles.bell3} style={{ position: "absolute", top: "44%", left: "8%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell3} style={{ position: "absolute", top: "52%", left: "8%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 3 &&
-            <img src={bell} alt="" width={25} className={styles.bell4} style={{ position: "absolute", top: "54%", left: "8%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell4} style={{ position: "absolute", top: "25%", left: "18%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 4 &&
-            <img src={bell} alt="" width={25} className={styles.bell5} style={{ position: "absolute", top: "34%", left: "19%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell5} style={{ position: "absolute", top: "39%", left: "18%", }} onClick={() => {
               toggleModal();
             }} />}
           {currentIndex === 5 &&
-            <img src={bell} alt="" width={25} className={styles.bell6} style={{ position: "absolute", top: "44%", left: "19%", }} onClick={() => {
+            <img src={bell} alt="" width={25} className={styles.bell6} style={{ position: "absolute", top: "53%", left: "18%", }} onClick={() => {
               toggleModal();
             }} />}
         </div>
