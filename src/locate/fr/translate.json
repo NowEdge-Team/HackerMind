@@ -51,7 +51,7 @@
         "body": "Félicitations ! Grâce à vos actions, vous avez remporté le badge Ambassadeur. Rendez-vous dans la vue des badges pour plus de détails"
       },
 
-        "btnText": "C'est noté"
+      "btnText": "C'est noté"
     }
   },
   "parcours": {
@@ -69,7 +69,6 @@
     "termine": "Terminé",
     "encour": "En cours",
     "verouille": "Vérouillé"
-
   },
   "classement": {
     "title": "Félicitations pour votre classement !",
@@ -145,7 +144,7 @@
     "title": "Généralités sur l’Analytics",
     "l_title": "L'INGENIEUR SOCIAL",
     "ValideNiveau": "Valider le niveau",
-    
+
     "part1": {},
     "part2": {
       "g_title": "J'aimerais être sur que tu as bien compris à quoi servent les différents outils que nous utilisons. Associe chaque action principale à son outil de référence.",
@@ -157,7 +156,7 @@
         "12": "Solution de messagerie électronique chifrée de bout en ",
         "13": "Solution de messagerie instantanné chifrée de bout en",
         "14": "forum du darknet spécialise dans des discusions autour d'accès"
-     },
+      },
       "categories": {
         "1": "TOR",
         "2": "Haystack/The hidden Wiki",
@@ -168,8 +167,6 @@
     },
     "part3": {
       "g_title": "Je te mets au défi de relier les différents outils de cybersécurité à leur usage principal"
-
-      
     },
     "part4": {
       "g_title": "Comprenez les motivations qui alimentent les hackers et explorez des exemples illustratifs de leurs motivations variées"
@@ -195,7 +192,7 @@
               "label": "Crime organisé.",
               "value": 450
             },
-             {
+            {
               "label": "Officine spécialisée.",
               "value": 499
             },
@@ -203,7 +200,6 @@
               "label": "Malveillant pathologique.",
               "value": 450
             }
-
           ]
         },
         {
@@ -217,7 +213,7 @@
               "label": "Crime organisé.",
               "value": 450
             },
-             {
+            {
               "label": "Officine spécialisée.",
               "value": 499
             },
@@ -238,7 +234,7 @@
               "label": "Crime organisé.",
               "value": 450
             },
-             {
+            {
               "label": "Officine spécialisée.",
               "value": 499
             },
@@ -259,7 +255,7 @@
               "label": "Crime organisé.",
               "value": 450
             },
-             {
+            {
               "label": "Officine spécialisée.",
               "value": 499
             },
@@ -280,7 +276,7 @@
               "label": "Financier",
               "value": 450
             },
-             {
+            {
               "label": "Espionnage",
               "value": 499
             },
@@ -291,7 +287,7 @@
           ]
         },
 
-         {
+        {
           "title": "Quel avantage la transformation digitale offre-t-elle aux entreprises en termes de croissance ?",
           "options": [
             {
@@ -302,7 +298,7 @@
               "label": "Financier",
               "value": 450
             },
-             {
+            {
               "label": "Espionnage",
               "value": 499
             },
@@ -323,7 +319,7 @@
               "label": "Financier",
               "value": 450
             },
-             {
+            {
               "label": "Espionnage",
               "value": 499
             },
@@ -344,7 +340,7 @@
               "label": "Financier",
               "value": 450
             },
-             {
+            {
               "label": "Espionnage",
               "value": 499
             },
@@ -354,7 +350,6 @@
             }
           ]
         }
-        
       ]
     },
     "messages": {
@@ -363,7 +358,7 @@
       "text2": "On entend souvent parler de la pharmacovigilance, et il existe beaucoup d’idées préconçues à son sujet. Maintenant que vous vous y connaissez un peu, saurez-vous distinguer le vrai du faux ?",
       "text3": "Avant de commencer ta mission, j'aimerais m'assurer que tu as bien compris les principes fondamentaux de la transformation digitale",
       "textBtnValid": "Oui",
-      "text4":"Félicitations pour avoir terminé ce niveau ! Continuez à développer vos compétences et à explorer ce domaine fascinant. Bonne chance pour la suite de votre aventure !",
+      "text4": "Félicitations pour avoir terminé ce niveau ! Continuez à développer vos compétences et à explorer ce domaine fascinant. Bonne chance pour la suite de votre aventure !",
       "textBtnValid2": "C'est noté"
     },
     "listMsg": {
@@ -373,19 +368,18 @@
       "text3": "Ensuite, l'entreprise décide de passer à la digitalisation. Elle investit dans des outils numériques tels que des logiciels de gestion de projets, des systèmes de communication en ligne et des plateformes de collaboration. Les employés commencent à utiliser ces outils pour automatiser certaines tâches, partager des informations en temps réel et collaborer de manière plus efficace. La digitalisation améliore les opérations internes et permet à l'entreprise de mieux servir ses clients, mais elle reste une évolution progressive plutôt qu'une transformation radicale. <br/>  <br/> \n ",
       "text4": "Finalement, l'entreprise réalise qu'elle doit aller au-delà de la simple digitalisation pour rester compétitive sur le marché. Elle décide de se lancer dans une véritable transformation digitale. Cela implique de revoir en profondeur les modèles d'affaires existants, de repenser les processus opérationnels et de repousser les limites de l'innovation. L'entreprise investit dans des technologies émergentes telles que l'intelligence artificielle, l'Internet des objets et l'analyse de données avancée. Les employés sont formés aux compétences numériques nécessaires pour exploiter ces technologies. L'entreprise repense son offre de produits et services pour répondre aux attentes changeantes des clients dans le monde numérique. Elle développe également une culture d'entreprise axée sur l'innovation, l'agilité et l'adaptabilité.",
       "text5": "La transformation digitale permet à l'entreprise de se différencier de ses concurrents, de créer de nouvelles sources de revenus et d'anticiper les évolutions du marché. Elle devient une organisation véritablement axée sur le numérique, capable d'exploiter pleinement les opportunités offertes par les technologies numériques. <br/>  <br/> \n Ainsi, la numérisation est le point de départ, la digitalisation est une étape intermédiaire pour optimiser les processus existants, tandis que la transformation digitale représente une transformation complète de l'entreprise, repensant ses modèles d'affaires et exploitant pleinement le potentiel des technologies numériques."
-    
     }
   },
   "day2": {
     "niveau": "NIVEAU 2 : Collecte et valorisation des données",
     "title1": "",
     "leftMsg": {
-        "title": "RESPONSABLE DE PRODUCTION",
-        "message1": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
-        "message2": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
-        "message3": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance. ",
-        "message4": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
-        "message5": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance."
+      "title": "RESPONSABLE DE PRODUCTION",
+      "message1": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
+      "message2": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
+      "message3": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance. ",
+      "message4": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance.",
+      "message5": "Au cœur de la transformation digitale se trouvent les technologies émergentes qui façonnent notre monde. En tant que Digital Ambassador, il est important de maîtriser ces technologies et de comprendre leur impact sur notre entreprise. Votre mission consiste à explorer ces outils et à en saisir les opportunités pour optimiser nos processus et stimuler notre croissance."
     },
     "part1": {
       "title": "La directrice de vente vous demande les étapes nécessaires pour prendre une décision data-driven"
@@ -439,64 +433,64 @@
         "43": "Pour améliorer l'efficacité des processus",
         "44": "Pour faciliter la collaboration entre les employés"
       }
-      },
-      "part6": {
-        "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
-        "g_title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
-        "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
-        "decisions_title": "Qu'est-ce qui peut aider à surmonter la résistance au changement lors de la transformation digitale ?",
-        "decisions_s_title": "1 choix à sélectionner",
-        "decisions": {
-          "45": "Communication transparente et régulière",
-          "46": "Suppression des postes de travail",
-          "47": "Manque de formation des employés",
-          "48": "Maintien des processus traditionnels"
-        }
-        },
-      "part2": {
+    },
+    "part6": {
+      "title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "g_title": "Parmi les propositions suivantes, choisissez celle qui vous semble la plus pertinente",
+      "description": "Un évènement indésirable est un évènement non souhaité ou effet inhabituel affectant la santé et lié à la consommation d'un produit lors d'un acte de soin",
+      "decisions_title": "Qu'est-ce qui peut aider à surmonter la résistance au changement lors de la transformation digitale ?",
+      "decisions_s_title": "1 choix à sélectionner",
+      "decisions": {
+        "45": "Communication transparente et régulière",
+        "46": "Suppression des postes de travail",
+        "47": "Manque de formation des employés",
+        "48": "Maintien des processus traditionnels"
+      }
+    },
+    "part2": {
       "title": "La notification des évènements indésirables au CNPV doit se faire :",
       "options": [
-          {
-            "value": 15,
-            "label": "Intégration des nouveaux systèmes et processus"
-          },
-          {
-            "value": 16,
-            "label": "Gestion du changement"
-          },
-          {
-            "value": 17,
-            "label": "Sécurité des données"
-          },
-          {
-            "value": 18,
-            "label": "Adaptation des compétences des employés"
-          },
-          {
-            "value": 19,
-            "label": "Planification financière"
-          },
+        {
+          "value": 15,
+          "label": "Intégration des nouveaux systèmes et processus"
+        },
+        {
+          "value": 16,
+          "label": "Gestion du changement"
+        },
+        {
+          "value": 17,
+          "label": "Sécurité des données"
+        },
+        {
+          "value": 18,
+          "label": "Adaptation des compétences des employés"
+        },
+        {
+          "value": 19,
+          "label": "Planification financière"
+        },
 
-          {
-            "value": 20,
-            "label": "Adoption culturelle"
-          },
-          {
-            "value": 21,
-            "label": "Gestion de la complexité"
-          },
-          {
-            "value": 22,
-            "label": "Collaboration interfonctionnelle"
-          },
-          {
-            "value": 23,
-            "label": "Transformation des modèles d'affaires"
-          },
-          {
-            "value": 24,
-            "label": "Responsabilité sociale et éthique"
-          }
+        {
+          "value": 20,
+          "label": "Adoption culturelle"
+        },
+        {
+          "value": 21,
+          "label": "Gestion de la complexité"
+        },
+        {
+          "value": 22,
+          "label": "Collaboration interfonctionnelle"
+        },
+        {
+          "value": 23,
+          "label": "Transformation des modèles d'affaires"
+        },
+        {
+          "value": 24,
+          "label": "Responsabilité sociale et éthique"
+        }
       ],
       "options_title": "Les étapes clés d'une approche data-driven",
       "options_desc": "Classez les défis de la transformation digitale par ordre d'importance, du plus critique au moins critique :",
@@ -513,7 +507,7 @@
       "validation": {
         "title": "Lead data science :",
         "text": "Es-tu sûr de ton choix ? ",
-        "text1":"Bravo pour avoir mené à bien la collecte et la valorisation des données pour notre projet. Votre expertise dans ce domaine a été précieuse pour l'équipe et nous sommes confiants que les informations que vous avez recueillies nous aideront à prendre des décisions éclairées pour l'avenir. Merci pour votre travail acharné et votre dévouement envers ce projet.",
+        "text1": "Bravo pour avoir mené à bien la collecte et la valorisation des données pour notre projet. Votre expertise dans ce domaine a été précieuse pour l'équipe et nous sommes confiants que les informations que vous avez recueillies nous aideront à prendre des décisions éclairées pour l'avenir. Merci pour votre travail acharné et votre dévouement envers ce projet.",
         "textBtnValid": "Valider mes choix",
         "textBtnValid2": "C'est noté"
       }
@@ -632,32 +626,32 @@
       ]
     },
     "part2": {
-          "title": "Classez les outils suivant dans la bonne catégorie",
-          "s_title": " Sélectionnez les plus pertinentes et déposez les dans la catégorie la plus adaptée de la fiche de notification.",
-          "f_notification": "Fiche de notification",
-          "patient": "Patient",
-          "eventinde": "Evénement indésirable",
-          "produitsante": "Produit de santé",
-          "notificateur": "Notificateur",
-          "decisions": {
-              "64": "Automatisation des tâches administratives et répétitives.",
-              "65": "Mise en place d'un système de gestion des stocks en temps réel.",
-              "66": "Utilisation de l'intelligence artificielle pour améliorer la prévision de la demande.",
-              "67": "Adoption d'outils d'analyse de données pour optimiser l'efficacité opérationnelle.",
-              "68": "Développement de nouveaux produits complémentaires.",
-              "69": "Extension de la gamme de services proposés.",
-              "70": "Introduction de produits adaptés à de nouveaux segments de marché.",
-              "71": "Collaboration avec des partenaires pour offrir des solutions intégrées.",
-              "72": "Établissement de relations de co-innovation avec des startups technologiques.",
-              "73": "Partage des connaissances et des meilleures pratiques avec des partenaires.",
-              "74": "Organisation d'événements de networking pour favoriser les échanges.",
-              "75": "Création de plateformes de collaboration en ligne pour les clients et les fournisseurs.",
-              "76": "Ouverture de nouveaux bureaux à l'étranger.",
-              "77": "Adaptation des produits aux marchés locaux.",
-              "78": "Création de partenariats avec des distributeurs internationaux.",
-              "79": "Mise en place de stratégies de marketing multilingues."
-            },
-          "categories": {
+      "title": "Classez les outils suivant dans la bonne catégorie",
+      "s_title": " Sélectionnez les plus pertinentes et déposez les dans la catégorie la plus adaptée de la fiche de notification.",
+      "f_notification": "Fiche de notification",
+      "patient": "Patient",
+      "eventinde": "Evénement indésirable",
+      "produitsante": "Produit de santé",
+      "notificateur": "Notificateur",
+      "decisions": {
+        "64": "Automatisation des tâches administratives et répétitives.",
+        "65": "Mise en place d'un système de gestion des stocks en temps réel.",
+        "66": "Utilisation de l'intelligence artificielle pour améliorer la prévision de la demande.",
+        "67": "Adoption d'outils d'analyse de données pour optimiser l'efficacité opérationnelle.",
+        "68": "Développement de nouveaux produits complémentaires.",
+        "69": "Extension de la gamme de services proposés.",
+        "70": "Introduction de produits adaptés à de nouveaux segments de marché.",
+        "71": "Collaboration avec des partenaires pour offrir des solutions intégrées.",
+        "72": "Établissement de relations de co-innovation avec des startups technologiques.",
+        "73": "Partage des connaissances et des meilleures pratiques avec des partenaires.",
+        "74": "Organisation d'événements de networking pour favoriser les échanges.",
+        "75": "Création de plateformes de collaboration en ligne pour les clients et les fournisseurs.",
+        "76": "Ouverture de nouveaux bureaux à l'étranger.",
+        "77": "Adaptation des produits aux marchés locaux.",
+        "78": "Création de partenariats avec des distributeurs internationaux.",
+        "79": "Mise en place de stratégies de marketing multilingues."
+      },
+      "categories": {
         "1": "Optimisation des processus",
         "2": "Diversification des offres",
         "3": "Collaboration renforcée",
@@ -669,10 +663,10 @@
       "message1": "Dans les étapes précédentes, nous avons exploré l'histoire d'une entreprise traditionnelle en pleine transformation digitale, ainsi que les défis auxquels elle a été confrontée. Maintenant, il est temps d'examiner les opportunités et les bénéfices que cette transformation peut offrir aux entreprises.",
       "message2": "Amélioration de l'efficacité opérationnelle : La transformation numérique permet aux entreprises d'automatiser les tâches manuelles et les processus, réduisant ainsi les erreurs, accélérant les délais de traitement et améliorant l'efficacité globale. Des technologies telles que l'intelligence artificielle, la robotique et l'automatisation des processus permettent aux entreprises d'optimiser leurs opérations et de réaliser d'importantes économies de coûts. Par exemple, selon une étude de McKinsey, les entreprises ayant mis en place des processus d'automatisation ont augmenté leur productivité en moyenne de 20 %.",
       "message3": "Expansion des opportunités de croissance : La numérisation ouvre de nouvelles perspectives de croissance pour les entreprises. En adoptant des modèles commerciaux basés sur la technologie, les entreprises peuvent étendre leur rayon d'action géographique, conquérir de nouveaux marchés et diversifier leurs offres de produits et de services. Selon une enquête menée par IDC, les entreprises ayant investi dans la transformation numérique ont connu une augmentation moyenne de 23 % de leurs ventes.",
-      "message4":"Amélioration de l'expérience client : La digitalisation permet aux entreprises de mieux comprendre les besoins et les préférences de leurs clients. Grâce à l'analyse des données, aux outils de gestion de la relation client et aux plateformes d'engagement en ligne, les entreprises peuvent personnaliser leurs offres, offrir des expériences client exceptionnelles et fidéliser leur clientèle. Une étude de Forrester a révélé que les entreprises axées sur l'expérience client surpassent leurs concurrents en termes de croissance des ventes, avec un écart moyen de 10 %.",
-      "message5":"Agilité et adaptabilité accrues : La numérisation permet aux entreprises de s'adapter rapidement aux changements du marché et aux évolutions de l'environnement concurrentiel. Les entreprises peuvent mettre en place des processus agiles, des structures organisationnelles flexibles et des équipes multidisciplinaires pour répondre aux besoins changeants. Selon une étude du Harvard Business Review, les entreprises qui investissent dans la transformation numérique ont 1,9 fois plus de chances de connaître une croissance rapide.",
-      "message6":"Optimisation des processus métier : La digitalisation facilite la gestion des processus internes tels que la gestion des ressources humaines, la gestion des stocks, la gestion financière et la gestion de la chaîne d'approvisionnement. Les entreprises peuvent utiliser des logiciels et des outils numériques pour simplifier les tâches administratives, automatiser les flux de travail et améliorer la prise de décision. Selon une enquête de Gartner, les entreprises ayant adopté des outils de gestion numérique ont réduit leurs coûts administratifs en moyenne de 15 %.",
-      "message7":"En adoptant la transformation numérique, les entreprises peuvent exploiter ces opportunités et avantages pour se positionner avantageusement sur le marché, accroître leur compétitivité et assurer leur succès à long terme. Les chiffres démontrent l'impact significatif de la transformation numérique sur les entreprises, en termes de ventes, de productivité, de satisfaction client et d'efficacité opérationnelle. Il est clair que la transformation numérique est devenue une nécessité si nous voulons rester compétitifs dans l'économie actuelle.",
+      "message4": "Amélioration de l'expérience client : La digitalisation permet aux entreprises de mieux comprendre les besoins et les préférences de leurs clients. Grâce à l'analyse des données, aux outils de gestion de la relation client et aux plateformes d'engagement en ligne, les entreprises peuvent personnaliser leurs offres, offrir des expériences client exceptionnelles et fidéliser leur clientèle. Une étude de Forrester a révélé que les entreprises axées sur l'expérience client surpassent leurs concurrents en termes de croissance des ventes, avec un écart moyen de 10 %.",
+      "message5": "Agilité et adaptabilité accrues : La numérisation permet aux entreprises de s'adapter rapidement aux changements du marché et aux évolutions de l'environnement concurrentiel. Les entreprises peuvent mettre en place des processus agiles, des structures organisationnelles flexibles et des équipes multidisciplinaires pour répondre aux besoins changeants. Selon une étude du Harvard Business Review, les entreprises qui investissent dans la transformation numérique ont 1,9 fois plus de chances de connaître une croissance rapide.",
+      "message6": "Optimisation des processus métier : La digitalisation facilite la gestion des processus internes tels que la gestion des ressources humaines, la gestion des stocks, la gestion financière et la gestion de la chaîne d'approvisionnement. Les entreprises peuvent utiliser des logiciels et des outils numériques pour simplifier les tâches administratives, automatiser les flux de travail et améliorer la prise de décision. Selon une enquête de Gartner, les entreprises ayant adopté des outils de gestion numérique ont réduit leurs coûts administratifs en moyenne de 15 %.",
+      "message7": "En adoptant la transformation numérique, les entreprises peuvent exploiter ces opportunités et avantages pour se positionner avantageusement sur le marché, accroître leur compétitivité et assurer leur succès à long terme. Les chiffres démontrent l'impact significatif de la transformation numérique sur les entreprises, en termes de ventes, de productivité, de satisfaction client et d'efficacité opérationnelle. Il est clair que la transformation numérique est devenue une nécessité si nous voulons rester compétitifs dans l'économie actuelle.",
       "messageDr": "Vous arrivez chez le médecin Dr. Hamidi et il vous parle d’un évènement indésirable survenu à son patient. Cliquez sur l’audio pour réécouter la conversation. <br/> <br/> Dans ce niveau, vous aurez à identifier les informations utiles dans son message pour remplir la fiche de notification.  ",
       "textBtnValid": "C'est noté"
     },
@@ -718,7 +712,7 @@
       "validation": {
         "title": "Lead data science:",
         "text": "Es-tu sûr de ton choix ? ",
-        "text1":"Félicitations ! Tu es maintenant familier avec les technologies émergentes et leur potentiel pour transformer les entreprises. Tu es prêt pour la prochaine étape !",
+        "text1": "Félicitations ! Tu es maintenant familier avec les technologies émergentes et leur potentiel pour transformer les entreprises. Tu es prêt pour la prochaine étape !",
         "textBtnValid": "Valider mes choix",
         "textBtnValid2": "C'est noté"
       }
@@ -839,38 +833,38 @@
       "MedecinTitle": "Collecte des données",
       "MedecinSTitle": "Choisissez les bonnes actions  qui vous permettront de réaliser votre analyse et choisir le meilleur scénario pour notre entreprise",
       "MedecinUnit": "minutes",
-      "127" : "Offrir une formation interne pour développer les compétences requises.",
-      "128" : "Mettre en place un programme de mentorat pour favoriser l'apprentissage entre pairs.",
-      "129" : "Organiser des ateliers et des formations pratiques pour faciliter l'apprentissage.",
-      "130" : "Recruter de nouveaux employés ayant déjà les compétences requises.",
-      "131" : "Embaucher des consultants externes pour gérer la transition.",
-      "132" : "Externaliser complètement la gestion des données à une entreprise spécialisée.",
-      "133" : "Collaborer avec des partenaires universitaires pour créer un programme de formation sur mesure.",
-      "134" : "Utiliser des cours en ligne et des ressources d'apprentissage à distance.",
-      "135" : "Former les employés actuels sur les bases de la robotique et de l'automatisation, ",
-      "136" : "Mettre en place des programmes de reconversion professionnelle pour les employés concernés",
-      "137" : "Utiliser des simulateurs et des outils de formation virtuels pour permettre aux employés de se familiariser avec les nouvelles technologies",
-      "138" : "Recruter de nouveaux employés ayant déjà des compétences en automatisation.",
-      "139" : "Embaucher des ingénieurs spécialisés dans l'automatisation pour superviser la transition.",
-      "140" : "Externaliser complètement la production à une entreprise spécialisée dans l'automatisation.",
-      "141" : "Collaborer avec des instituts de recherche pour développer des compétences internes en automatisation.",
-      "142" : "Former des équipes multidisciplinaires pour encourager l'échange de connaissances et la collaboration.",
-      "143" : "Former les employés actuels sur les dernières tendances et outils du marketing numérique",
-      "144" : "Mettre en place un programme de rotation des employés pour qu'ils acquièrent différentes compétences en marketing numérique, ",
-      "145" : "Collaborer avec des agences de formation spécialisées pour concevoir des programmes sur mesure, ",
-      "146" : "Utiliser des plateformes d'apprentissage en ligne pour permettre aux employés d'apprendre à leur propre rythme.",
-      "147" : "Prendre des décisions à partir des modèles en ignorant les facteurs externes non pris en comptes dans l'étude",
-      "148" : "Ignorer l'évaluation du modèle avec des données vierge puisque l'essentiel c'est d'avoir des résultats rapides",
-      "149" : "Croire sonolennement aux résultats du modèle puisque les mathématiques sont des sciences exactes",
-      "150" : "Prendre des décisions à base des résultats de l'analyse sans tester leur pertinence",
-      "151" : "Former les employés actuels sur les outils logiciels d'analyse de données populaires",
-      "152" : "Mettre en place un programme de mentorat pour développer les compétences en analyse de données",
-      "153" : "Collaborer avec des instituts académiques pour créer un programme de formation sur mesure,",
-      "154" : "Recruter de nouveaux employés ayant déjà des compétences avancées en analyse de données.",
-      "155" : "Embaucher des experts en analyse de données provenant d'autres entreprises.",
-      "156" : "Externaliser complètement l'analyse de données à une entreprise spécialisée.",
-      "157" : "Organiser des séminaires et des conférences sur les meilleures pratiques en analyse de données.",
-      "158" : "Utiliser des plateformes d'apprentissage en ligne pour permettre aux employés de se former à l'analyse de données.",
+      "127": "Offrir une formation interne pour développer les compétences requises.",
+      "128": "Mettre en place un programme de mentorat pour favoriser l'apprentissage entre pairs.",
+      "129": "Organiser des ateliers et des formations pratiques pour faciliter l'apprentissage.",
+      "130": "Recruter de nouveaux employés ayant déjà les compétences requises.",
+      "131": "Embaucher des consultants externes pour gérer la transition.",
+      "132": "Externaliser complètement la gestion des données à une entreprise spécialisée.",
+      "133": "Collaborer avec des partenaires universitaires pour créer un programme de formation sur mesure.",
+      "134": "Utiliser des cours en ligne et des ressources d'apprentissage à distance.",
+      "135": "Former les employés actuels sur les bases de la robotique et de l'automatisation, ",
+      "136": "Mettre en place des programmes de reconversion professionnelle pour les employés concernés",
+      "137": "Utiliser des simulateurs et des outils de formation virtuels pour permettre aux employés de se familiariser avec les nouvelles technologies",
+      "138": "Recruter de nouveaux employés ayant déjà des compétences en automatisation.",
+      "139": "Embaucher des ingénieurs spécialisés dans l'automatisation pour superviser la transition.",
+      "140": "Externaliser complètement la production à une entreprise spécialisée dans l'automatisation.",
+      "141": "Collaborer avec des instituts de recherche pour développer des compétences internes en automatisation.",
+      "142": "Former des équipes multidisciplinaires pour encourager l'échange de connaissances et la collaboration.",
+      "143": "Former les employés actuels sur les dernières tendances et outils du marketing numérique",
+      "144": "Mettre en place un programme de rotation des employés pour qu'ils acquièrent différentes compétences en marketing numérique, ",
+      "145": "Collaborer avec des agences de formation spécialisées pour concevoir des programmes sur mesure, ",
+      "146": "Utiliser des plateformes d'apprentissage en ligne pour permettre aux employés d'apprendre à leur propre rythme.",
+      "147": "Prendre des décisions à partir des modèles en ignorant les facteurs externes non pris en comptes dans l'étude",
+      "148": "Ignorer l'évaluation du modèle avec des données vierge puisque l'essentiel c'est d'avoir des résultats rapides",
+      "149": "Croire sonolennement aux résultats du modèle puisque les mathématiques sont des sciences exactes",
+      "150": "Prendre des décisions à base des résultats de l'analyse sans tester leur pertinence",
+      "151": "Former les employés actuels sur les outils logiciels d'analyse de données populaires",
+      "152": "Mettre en place un programme de mentorat pour développer les compétences en analyse de données",
+      "153": "Collaborer avec des instituts académiques pour créer un programme de formation sur mesure,",
+      "154": "Recruter de nouveaux employés ayant déjà des compétences avancées en analyse de données.",
+      "155": "Embaucher des experts en analyse de données provenant d'autres entreprises.",
+      "156": "Externaliser complètement l'analyse de données à une entreprise spécialisée.",
+      "157": "Organiser des séminaires et des conférences sur les meilleures pratiques en analyse de données.",
+      "158": "Utiliser des plateformes d'apprentissage en ligne pour permettre aux employés de se former à l'analyse de données.",
       "DelegueMedicalTitle": "ANALYSE DESCRIPTIVE",
       "DelegueMedicalSTitle": "Choisissez les bonnes actions  qui vous permettront de réaliser votre analyse et choisir le meilleur scénario pour notre entreprise",
       "DelegueMedicaltUnit": "PV COINS",
@@ -888,12 +882,10 @@
       "text3": "Apprentissage de la science des données : La science des données est un domaine en pleine expansion, et les entreprises ont besoin de collaborateurs compétents dans ce domaine pour tirer parti de l'analyse de données. Les formations peuvent inclure l'apprentissage des techniques d'analyse de données, de la modélisation statistique et de la visualisation des données. Cela permet aux collaborateurs de prendre des décisions éclairées basées sur des insights précis et de contribuer à la croissance de l'entreprise grâce à une utilisation stratégique des données.",
       "text4": "Compétences en intelligence artificielle : L'intelligence artificielle (IA) est de plus en plus présente dans de nombreux secteurs d'activité. Les formations peuvent inclure l'apprentissage des concepts fondamentaux de l'IA, tels que l'apprentissage automatique, le traitement du langage naturel et la vision par ordinateur. Les collaborateurs peuvent ensuite appliquer ces compétences pour développer des solutions basées sur l'IA qui améliorent l'efficacité opérationnelle, la personnalisation des services ou encore l'automatisation des processus.",
       "text5": "Formation à la transformation numérique : La transformation numérique est une réalité pour de nombreuses entreprises, et les collaborateurs doivent comprendre les enjeux et les opportunités qui y sont associés. Les formations peuvent inclure l'apprentissage des technologies émergentes, la compréhension des modèles commerciaux numériques et l'acquisition de compétences transversales pour faciliter la transition numérique au sein de l'entreprise. Cela permet aux collaborateurs de jouer un rôle clé dans le succès de la transformation digitale de leur organisation.",
-      "text6":"Compétences en gestion de projet agile :Dans un environnement numérique en constante évolution, les méthodes de gestion de projet traditionnelles peuvent ne pas suffire. Les formations peuvent inclure l'apprentissage des méthodologies de gestion de projet agile, telles que Scrum et Kanban, qui favorisent la collaboration, l'adaptabilité et la livraison itérative. Cela permet aux collaborateurs de gérer efficacement les projets digitaux, de s'adapter aux changements et d'assurer une livraison de valeur optimale.",
-      "text7":"Compétences en marketing digital : Avec la montée en puissance du marketing digital, les collaborateurs doivent maîtriser les compétences nécessaires pour promouvoir efficacement les produits et services de leur entreprise dans le monde numérique. Les formations peuvent inclure l'apprentissage de la publicité en ligne, du référencement, de la gestion des réseaux sociaux et de l'analyse des comportements des utilisateurs. Cela permet aux collaborateurs de contribuer à la visibilité de l'entreprise et à la génération de prospects et de ventes en ligne.",
-      "text8":"Formation à la gestion du changement :La transformation digitale implique souvent des changements importants au sein de l'entreprise. Les formations en gestion du changement aident les collaborateurs à comprendre les impacts de la transformation digitale, à adopter une attitude positive face au changement, et à développer des compétences pour faciliter la transition pour eux-mêmes et leurs collègues. Cela permet aux entreprises d'assurer une adoption réussie de la transformation digitale et de minimiser les résistances au changement.",
-      "text9":"Ces exemples illustrent comment les entreprises se sont adaptées aux exigences du monde numérique en investissant dans le reskilling et l'upskilling de leurs collaborateurs. En identifiant les compétences clés nécessaires pour réussir dans le digital, les entreprises peuvent offrir des formations ciblées pour préparer leurs équipes aux défis technologiques actuels et futurs. Les collaborateurs, quant à eux, peuvent développer des compétences précieuses qui les rendent compétitifs sur le marché du travail et leur permettent de contribuer activement à la réussite de leur entreprise dans l'ère digitale"
-      
-
+      "text6": "Compétences en gestion de projet agile :Dans un environnement numérique en constante évolution, les méthodes de gestion de projet traditionnelles peuvent ne pas suffire. Les formations peuvent inclure l'apprentissage des méthodologies de gestion de projet agile, telles que Scrum et Kanban, qui favorisent la collaboration, l'adaptabilité et la livraison itérative. Cela permet aux collaborateurs de gérer efficacement les projets digitaux, de s'adapter aux changements et d'assurer une livraison de valeur optimale.",
+      "text7": "Compétences en marketing digital : Avec la montée en puissance du marketing digital, les collaborateurs doivent maîtriser les compétences nécessaires pour promouvoir efficacement les produits et services de leur entreprise dans le monde numérique. Les formations peuvent inclure l'apprentissage de la publicité en ligne, du référencement, de la gestion des réseaux sociaux et de l'analyse des comportements des utilisateurs. Cela permet aux collaborateurs de contribuer à la visibilité de l'entreprise et à la génération de prospects et de ventes en ligne.",
+      "text8": "Formation à la gestion du changement :La transformation digitale implique souvent des changements importants au sein de l'entreprise. Les formations en gestion du changement aident les collaborateurs à comprendre les impacts de la transformation digitale, à adopter une attitude positive face au changement, et à développer des compétences pour faciliter la transition pour eux-mêmes et leurs collègues. Cela permet aux entreprises d'assurer une adoption réussie de la transformation digitale et de minimiser les résistances au changement.",
+      "text9": "Ces exemples illustrent comment les entreprises se sont adaptées aux exigences du monde numérique en investissant dans le reskilling et l'upskilling de leurs collaborateurs. En identifiant les compétences clés nécessaires pour réussir dans le digital, les entreprises peuvent offrir des formations ciblées pour préparer leurs équipes aux défis technologiques actuels et futurs. Les collaborateurs, quant à eux, peuvent développer des compétences précieuses qui les rendent compétitifs sur le marché du travail et leur permettent de contribuer activement à la réussite de leur entreprise dans l'ère digitale"
     },
     "DiscussMessage": {
       "title": "Directrice des ventes",
@@ -920,8 +912,6 @@
         "textBtnValid": "Valider mes choix",
         "textBtnValid2": "C'est noté"
       }
-
-
     },
     "directeur_general": {
       "title": "Le DIRECTEUR GENERAL",
@@ -940,16 +930,16 @@
       "produitsante": "Produit de santé",
       "notificateur": "Notificateur",
       "decisions": {
-        "114":"Le reskilling consiste à acquérir de nouvelles compétences pour effectuer des tâches différentes de celles réalisées auparavant",
-        "115":"L'upskilling vise à améliorer les compétences existantes afin de rester à jour avec les dernières avancées technologiques",
-        "116":"Le reskilling et l'upskilling vous aident à rester pertinents et employables sur le marché du travail. ",
-        "117":"Le reskilling est une réponse aux changements technologiques et aux évolutions du marché. ",
-        "118":"L'upskilling peut se faire à travers des formations en ligne et des cours en présentiel. ",
-        "119":"Le reskilling et l'upskilling ne sont pas importants pour votre carrière dans un environnement professionnel en constante évolution. ",
-        "120":"Le reskilling et l'upskilling ne contribuent pas au développement professionnel et à la satisfaction au travail",
-        "121":"Le reskilling se concentre principalement sur l'acquisition de compétences techniques. ",
-        "122":"L'upskilling est uniquement nécessaire pour les employés débutants. ",
-        "123":"Le reskilling et l'upskilling sont des initiatives individuelles et ne sont pas soutenus par les entreprises. "
+        "114": "Le reskilling consiste à acquérir de nouvelles compétences pour effectuer des tâches différentes de celles réalisées auparavant",
+        "115": "L'upskilling vise à améliorer les compétences existantes afin de rester à jour avec les dernières avancées technologiques",
+        "116": "Le reskilling et l'upskilling vous aident à rester pertinents et employables sur le marché du travail. ",
+        "117": "Le reskilling est une réponse aux changements technologiques et aux évolutions du marché. ",
+        "118": "L'upskilling peut se faire à travers des formations en ligne et des cours en présentiel. ",
+        "119": "Le reskilling et l'upskilling ne sont pas importants pour votre carrière dans un environnement professionnel en constante évolution. ",
+        "120": "Le reskilling et l'upskilling ne contribuent pas au développement professionnel et à la satisfaction au travail",
+        "121": "Le reskilling se concentre principalement sur l'acquisition de compétences techniques. ",
+        "122": "L'upskilling est uniquement nécessaire pour les employés débutants. ",
+        "123": "Le reskilling et l'upskilling sont des initiatives individuelles et ne sont pas soutenus par les entreprises. "
       },
       "categories": {
         "1": "Vraie",
@@ -962,26 +952,24 @@
       "decisions_title": "Parmi les options suivantes, quelle stratégie de formation serait la plus appropriée ?",
       "decisions_s_title": "1 choix à sélectionner",
       "decisions": {
-        "124":"Fournir une formation généralisée sur divers sujets technologiques pour que les employés aient une connaissance de base sur l'ensemble des nouvelles technologies.",
-        "125":"Identifier les compétences spécifiques nécessaires à chaque employé en fonction de son rôle et de ses responsabilités, puis proposer des formations personnalisées pour combler ces lacunes.",
-        "126":"Proposer une formation unique axée sur une seule technologie émergente, car cela permettra aux employés de devenir rapidement experts dans ce domaine spécifique."
+        "124": "Fournir une formation généralisée sur divers sujets technologiques pour que les employés aient une connaissance de base sur l'ensemble des nouvelles technologies.",
+        "125": "Identifier les compétences spécifiques nécessaires à chaque employé en fonction de son rôle et de ses responsabilités, puis proposer des formations personnalisées pour combler ces lacunes.",
+        "126": "Proposer une formation unique axée sur une seule technologie émergente, car cela permettra aux employés de devenir rapidement experts dans ce domaine spécifique."
       }
     },
-    "folder": {
-
-    }
+    "folder": {}
   },
   "textBtnValid": "Validate my choices",
-  "pasEncore":"non",
-  "btnSuivant":"Suivant",
-  "btnBack":"Précedent",
-  "noted":"C'est noté",
-  "exit":"Accueil",
-  "next_step":"Etape suivante",
-  "revoir":"Revoir la vidéo",
-  "rappels":"Rappels",
-  "msg_field_part_1":"Malheureusement vous n'avez pas pu obtenir le <br /> score minimal pour valider ce niveau !",
-  "msg_field_part_2":"Essayez à nouveau, vous y êtes presque!",
-  "rejouer":"Rejouer"
-
+  "pasEncore": "non",
+  "btnSuivant": "Suivant",
+  "btnBack": "Précedent",
+  "noted": "C'est noté",
+  "exit": "Accueil",
+  "next_step": "Etape suivante",
+  "back_step": "Etape président",
+  "revoir": "Revoir la vidéo",
+  "rappels": "Rappels",
+  "msg_field_part_1": "Malheureusement vous n'avez pas pu obtenir le <br /> score minimal pour valider ce niveau !",
+  "msg_field_part_2": "Essayez à nouveau, vous y êtes presque!",
+  "rejouer": "Rejouer"
 }

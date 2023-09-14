@@ -15,6 +15,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import ChartRadar from "../pvCh/card/ChartRd";
 import ChartRd2 from "../ChartRd2";
+import BackButton from "@/components/pvCh/BackButton";
 
 
 const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
@@ -114,7 +115,7 @@ const data = [
 
 
 
-function Matrix({ nextStep }) {
+function Matrix({ nextStep, onBack }) {
     const { t } = useTranslation();
     let history = useHistory();
     const [radar, setRadar] = useState()
@@ -544,9 +545,15 @@ function Matrix({ nextStep }) {
                 />
 
                 <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 " >
-                    <NextButton className={"step_quiz_btn_next2"}
-                        onClick={nextStep}
-                    />
+
+                    <div className="flex flex-row gap-4" >
+                        <BackButton className={"step_quiz_btn_next2"}
+                            onClick={onBack}
+                        />
+                        <NextButton className={"step_quiz_btn_next2"}
+                            onClick={nextStep}
+                        />
+                    </div>
                 </div>
             </div>}
 

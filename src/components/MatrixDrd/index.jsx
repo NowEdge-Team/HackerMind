@@ -19,6 +19,7 @@ import ListArticle from "./ListArticle";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import BackButton from "@/components/pvCh/BackButton/index.jsx";
 
 
 const data = [
@@ -163,7 +164,7 @@ const articleData = [
 
 
 
-function MatrixDrd({ nextStep }) {
+function MatrixDrd({ nextStep , onBack }) {
     const { t } = useTranslation();
     let history = useHistory();
 
@@ -579,10 +580,16 @@ function MatrixDrd({ nextStep }) {
                         {...listMsgPop[activeItem - 1]}
                     />
 
-                    <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 " >
+                    <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 gap-4 " >
+
+                        <BackButton className={"step_quiz_btn_next2"}
+                                    onClick={onBack}
+                        />
                         <NextButton title={config.current.isValid ? undefined : "Validate"} className={"step_quiz_btn_next2"}
                             onClick={config.current.isValid ? nextStep : onValidate}
                         />
+
+
                     </div>
                 </div>}
 

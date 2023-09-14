@@ -2,21 +2,21 @@ import _ from "lodash";
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import Level1Audio from "../../../assets/audio/Niv1/index.js";
-import img1 from "../../../assets/images/pv-challenge/character/character_1_11.png";
-import Dropzone from "../../../components/Dropzone/Dropzone.jsx";
-import PreLoaderWidget from "../../../components/Loader.jsx";
-import Modal1 from "../../../components/modal/modal1/index.jsx";
-import CancelButton from "../../../components/pvCh/CancelButton/index.jsx";
-import ModalTutorial from "../../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
-import NextButton from "../../../components/pvCh/NextButton/index.jsx";
-import Stepper from "../../../components/pvCh/Stepper/Stepper.jsx";
-import { StepperProvider } from "../../../components/pvCh/Stepper/context/index.jsx";
-import { useStepper } from "../../../components/pvCh/Stepper/hook.js";
-import ConfirmationModal from "../../../components/pvCh/day1/ConfirmationModal/ConfirmationModal.jsx";
-import ScoreModal from "../../../components/pvCh/day1/ScoreModal/StepModal.jsx";
-import Profile from "../../../components/pvCh/profile/profile.jsx";
-import ShowTuto from "../../../components/pvCh/showTuto/ShowTuto.jsx";
+import Level1Audio from "@/assets/audio/Niv1/index.js";
+import img1 from "@/assets/images/pv-challenge/character/character_1_11.png";
+import Dropzone from "@/components/Dropzone/Dropzone.jsx";
+import PreLoaderWidget from "@/components/Loader.jsx";
+import Modal1 from "@/components/modal/modal1/index.jsx";
+import CancelButton from "@/components/pvCh/CancelButton/index.jsx";
+import ModalTutorial from "@/components/pvCh/ModalTutorial/ModalTutorial.jsx";
+import NextButton from "@/components/pvCh/NextButton/index.jsx";
+import Stepper from "@/components/pvCh/Stepper/Stepper.jsx";
+import { StepperProvider } from "@/components/pvCh/Stepper/context/index.jsx";
+import { useStepper } from "@/components/pvCh/Stepper/hook.js";
+import ConfirmationModal from "@/components/pvCh/day1/ConfirmationModal/ConfirmationModal.jsx";
+import ScoreModal from "@/components/pvCh/day1/ScoreModal/StepModal.jsx";
+import Profile from "@/components/pvCh/profile/profile.jsx";
+import ShowTuto from "@/components/pvCh/showTuto/ShowTuto.jsx";
 import {
     // ChangeSelectedRadio,
     clearDayData,
@@ -25,25 +25,18 @@ import {
     dragDropUpdateDecisions
 } from "../../../redux/daysPvCh/actions.js";
 import "./style.scss";
-// import img3 from "../../../assets/images/pv-challenge/character/character-3.png"
-// import img3 from "../../../assets/images/pv-challenge/character/Ingénieur social.png"; 
-
-import img3 from "../../../assets/Ingénieur social.png";
-
-// import img4 from "../../../assets/images/pv-challenge/character/character_c.png"
-// import dayOne from "../../../components/pvCh/dayOne/day.jsx";
+import img3 from "@/assets/Ingénieur social.png";
 import { useHistory } from "react-router-dom";
-import Listlink from "../../../components/pvCh/Listlink/Listlink.jsx";
-import Card from "../../../components/pvCh/card/Card.jsx";
+import Card from "@/components/pvCh/card/Card.jsx";
 import DayOne from "./DayOne.jsx";
-import Matrix from "../../../components/Matrix/index.jsx";
-import MatrixDrd from "../../../components/MatrixDrd/index.jsx";
-import logo from "../../../assets/Tor_logo.png"
-import telegram from "../../../assets/telegram-logo.png"
-import proton from "../../../assets/protonmail-logo.png"
-import wiki from "../../../assets/wiki-logo.png"
-import nulled from "../../../assets/nulled.png"
-// import Box from '../../../components/pvCh/box/Box.jsx'
+import Matrix from "@/components/Matrix/index.jsx";
+import MatrixDrd from "@/components/MatrixDrd/index.jsx";
+import logo from "@/assets/Tor_logo.png"
+import telegram from "@/assets/telegram-logo.png"
+import proton from "@/assets/protonmail-logo.png"
+import wiki from "@/assets/wiki-logo.png"
+import nulled from "@/assets/nulled.png"
+import BackButton from "@/components/pvCh/BackButton/index.jsx";
 
 
 
@@ -72,7 +65,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const config = useRef({
         messages: [
             {
-                title: t("day1.messages.title"),
+                title: 1,//t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -84,7 +77,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 }
             },
             {
-                title: t("day1.messages.title"),
+                title: 2,//t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -96,7 +89,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 }
             },
             {
-                title: t("day1.messages.title"),
+                title: 3,//t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -193,6 +186,14 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     ]
 
 
+    const onBackStep = () => {
+        if ([2,4].includes(currentStep)) {
+            config.current.currentIndex -= 1;
+        }
+        decrementCurrentStep()
+    }
+
+
     return (
         <>
             <ConfirmationModal
@@ -226,10 +227,10 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                             />
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
-                            <Matrix nextStep={nextStep} />
+                            <Matrix nextStep={nextStep} onBack={onBackStep} />
                         </Stepper.Step>
                         <Stepper.Step id="4" name="Step 4">
-                            <MatrixDrd nextStep={nextStep} />
+                            <MatrixDrd nextStep={nextStep} onBack={onBackStep} />
                         </Stepper.Step>
                         <Stepper.Step id="5" name="Step 5">
                             <div>
@@ -241,9 +242,14 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 {![0, 2, 3].includes(currentStep) && <div className={"step_quiz_btn"}>
                     <CancelButton onClick={() => history.push("/")} className={"step_btn_cancel"} />
                     {/* {showNextBtn &&  */}
-                    <NextButton className={"step_quiz_btn_next2"}
-                        onClick={nextStep}
-                    />
+                    <div className="flex flex-row gap-4" >
+                        <BackButton className={"step_quiz_btn_next2"}
+                            onClick={onBackStep}
+                        />
+                        <NextButton className={"step_quiz_btn_next2"}
+                            onClick={nextStep}
+                        />
+                    </div>
                     {/* } */}
                 </div>}
             </div>
@@ -319,7 +325,7 @@ const Day1PvPharma = (props) => {
         //     title: t("day1.listMsg.title"),
         //     text: t("day1.listMsg.text2"),
         //     audio: Level1Audio.audio2,
-        // 
+        //
         //
         //     title: t("day1.listMsg.title"),
         //     text: t("day1.listMsg.text3"),
