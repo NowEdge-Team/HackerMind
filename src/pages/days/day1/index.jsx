@@ -31,11 +31,12 @@ import Card from "@/components/pvCh/card/Card.jsx";
 import DayOne from "./DayOne.jsx";
 import Matrix from "@/components/Matrix/index.jsx";
 import MatrixDrd from "@/components/MatrixDrd/index.jsx";
-import logo from "@/assets/Tor_logo.png"
+import tor from "@/assets/Tor_logo.png"
 import telegram from "@/assets/telegram-logo.png"
 import proton from "@/assets/protonmail-logo.png"
 import wiki from "@/assets/wiki-logo.png"
 import nulled from "@/assets/nulled.png"
+
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
 
 
@@ -65,7 +66,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const config = useRef({
         messages: [
             {
-                title: 1,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -77,7 +78,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 }
             },
             {
-                title: 2,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -89,7 +90,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 }
             },
             {
-                title: 3,//t("day1.messages.title"),
+                title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
@@ -178,7 +179,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const [showNextBtn, setShowNextBtn] = useState(true);
 
     const imgBib = [
-        logo,
+        tor,
         wiki,
         proton,
         telegram,
@@ -242,6 +243,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 {![0, 2, 3].includes(currentStep) && <div className={"step_quiz_btn"}>
                     <CancelButton onClick={() => history.push("/")} className={"step_btn_cancel"} />
                     {/* {showNextBtn &&  */}
+                    {/* <BackButton className={"step_quiz_btn_back"}  onClick={goback} /> */}
                     <div className="flex flex-row gap-4" >
                         <BackButton className={"step_quiz_btn_next2"}
                             onClick={onBackStep}

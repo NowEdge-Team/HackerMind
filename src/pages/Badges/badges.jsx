@@ -9,8 +9,7 @@ import badge3 from "../../assets/images/pv-challenge/Badges/Recon.png";
 import badge4 from "../../assets/images/pv-challenge/Badges/Intrusion.png";
 import badge5 from "../../assets/images/pv-challenge/Badges/Admin.png";
 import badge6 from "../../assets/images/pv-challenge/Badges/Hacked.png";
-import badge7 from "../../assets/images/pv-challenge/Badges/Arrested.png";
-import badge8 from "../../assets/images/pv-challenge/Badges/Cybercrime.png";
+import badge7 from "../../assets/images/pv-challenge/Badges/Cybercrime.png";
 
 
 
@@ -123,12 +122,6 @@ export default function Bradges() {
                         icon={badge7}
                         title={t(`badges.badge7.title`)}
                         description={t(`badges.badge7.description`)}
-                    /> 
-                     <Badge
-                        isActive={Badges.find(b => b?.badgeId === 8)?.status === 1}
-                        icon={badge8}
-                        title={t(`badges.badge8.title`)}
-                        description={t(`badges.badge8.description`)}
                     /> 
                 </div>
             </div>

@@ -61,10 +61,11 @@
     .bloc2{
        display: flex;
        flex-wrap: wrap;
+       justify-content: center;
        width: 745px;
       //  margin: 100px auto;
+      //  margin-left: 150px;
        margin-top: 60px;
-       margin-left: 150px;
        row-gap: 40px;
     }
       }
