@@ -146,8 +146,8 @@ function Matrix({ nextStep }) {
         if (activeItem === 9) {
 
             setCurrentMessage(() => ({
-                title: "presontation",
-                text: "presontation motivation",
+                title: "LE HACKER EN CHEF",
+                text: "Présentation des motivations",
                 audio: Level1Audio.audio1,
                 onClose: () => {
                     setShowTuto(item => false);

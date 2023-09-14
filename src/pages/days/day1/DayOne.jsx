@@ -171,7 +171,7 @@ function App({ onNext }) {
           <img src={ing} alt="" style={{ position: "absolute", top: "65%", left: "0%" }} />
         </div>
         <div className={styles.message}>
-          <h2>Ingénieur social</h2>
+          <h2>L'INGENIEUR SOCIAL</h2>
           <p className={styles.msg_text} >  {dataList[currentIndex_].msg}</p>
           <img src={poly} alt="" />
         </div>
