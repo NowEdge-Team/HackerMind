@@ -17,6 +17,22 @@ import ChartRadar from "../pvCh/card/ChartRd";
 import ChartRd2 from "../ChartRd2";
 
 
+const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
+    // 
+    return (
+        <div
+            onClick={activeItem === item.id && nextItem}
+            className={`${style[`hed_${isRow ? 'row' : 'col'}_${index + 1}`]} ${activeItem === item.id && style.active} ${activeItem >= item.id ? style.is_read : ''}`}>
+            <p className={style.text}>
+                {activeItem >= item.id && item.text}
+            </p>
+        </div>
+    )
+}
+
+
+
+
 const data = [
     {
         id: 1,
@@ -496,18 +512,20 @@ function Matrix({ nextStep }) {
                 </div> : null}
             </ModalTutorial>
             <div className={step === 0 ? style.mtx_container_1 : style.mtx_container_2}>
-                {data.filter(item => item.type === "profil").map((item, index) => <div onClick={activeItem === item.id && nextItem} key={item.id} className={`${style[`hed_row_${index + 1}`]} ${activeItem === item.id && style.active}`}>
-                    <p className={style.text}>
-                        {item.text}
-                    </p>
-                </div>)
+                {data.filter(item => item.type === "profil").map((item, index) => <HeaderBlock key={item.id} isRow={true} item={item} index={index} activeItem={activeItem} nextItem={nextItem} />
+                )
                 }
                 {step !== 0 &&
-                    data.filter(item => item.type === "motivation").map((item, index) => <div onClick={activeItem === item.id && nextItem} key={item.id} className={`${style[`hed_col_${index + 1}`]} ${activeItem === item.id && style.active}`}>
-                        <p className={style.text}>
-                            {item.text}
-                        </p>
-                    </div>)
+                    data.filter(item => item.type === "motivation").map((item, index) => <HeaderBlock key={item.id} isRow={false} item={item} index={index} activeItem={activeItem} nextItem={nextItem} />
+
+
+                        // <div onClick={activeItem === item.id && nextItem} key={item.id} className={`${style[`hed_col_${index + 1}`]} ${activeItem === item.id && style.active}`}>
+                        //     <p className={style.text}>
+                        //         {item.text}
+                        //     </p>
+                        // </div>
+
+                    )
                 }
                 {step === 2 &&
                     <>
