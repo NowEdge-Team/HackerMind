@@ -164,7 +164,7 @@ const articleData = [
 
 
 
-function MatrixDrd({ nextStep , onBack }) {
+function MatrixDrd({ nextStep, onBack }) {
     const { t } = useTranslation();
     let history = useHistory();
 
@@ -583,7 +583,7 @@ function MatrixDrd({ nextStep , onBack }) {
                     <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 gap-4 " >
 
                         <BackButton className={"step_quiz_btn_next2"}
-                                    onClick={onBack}
+                            onClick={onBack}
                         />
                         <NextButton title={config.current.isValid ? undefined : "Validate"} className={"step_quiz_btn_next2"}
                             onClick={config.current.isValid ? nextStep : onValidate}

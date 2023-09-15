@@ -29,13 +29,13 @@ const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personna
                 <div className={styles.block} >
                     <div className={styles.msg}>
                         <h3>
-                            {listMsg[index].title}
+                            {listMsg[index]?.title}
                         </h3>
-                        <p dangerouslySetInnerHTML={{ __html: listMsg[index].text }} />
+                        <p dangerouslySetInnerHTML={{ __html: listMsg[index]?.text }} />
                     </div>
                     {listMsg[index]?.audio &&
                         <div className={styles.audio}>
-                            <Audio src={listMsg[index].audio} />
+                            <Audio src={listMsg[index]?.audio} />
                         </div>
                     }
                 </div>
@@ -131,8 +131,8 @@ const ModalTutorial = props => {
     const next = () => {
         if (index < props.listMsg.length - 1)
             setIndex(prv => prv + 1)
-        else if (type_contrat !== 1 && typeof props.listMsg[index].onClose === "function") {
-            props.listMsg[index].onClose();
+        else if (type_contrat !== 1 && typeof props.listMsg[index]?.onClose === "function") {
+            props.listMsg[index]?.onClose();
         } else {
             props.onClose()
         }

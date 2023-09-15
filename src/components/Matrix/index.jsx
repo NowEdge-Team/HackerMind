@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import style from "./style.module.scss"
 import { useEffect } from "react";
 import Modal1 from "../modal/modal1";
@@ -16,13 +16,19 @@ import { useHistory } from "react-router-dom";
 import ChartRadar from "../pvCh/card/ChartRd";
 import ChartRd2 from "../ChartRd2";
 import BackButton from "@/components/pvCh/BackButton";
+import { useCallback } from "react";
+import { useRef } from "react";
 
 
 const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
-    // 
+
+    const onNExt = useCallback(() => {
+        nextItem(item)
+    }, [])
+
     return (
         <div
-            onClick={activeItem === item.id && nextItem}
+            onClick={activeItem >= item.id && onNExt}
             className={`${style[`hed_${isRow ? 'row' : 'col'}_${index + 1}`]} ${activeItem === item.id && style.active} ${activeItem >= item.id ? style.is_read : ''}`}>
             <p className={style.text}>
                 {activeItem >= item.id && item.text}
@@ -32,86 +38,189 @@ const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
 }
 
 
+const RoundedBlock = ({ index, listMsg, nextItem, activeItem }) => {
+
+    const findItem = listMsg.find((item) => item.index === index);
+    const findIndexItem = listMsg.findIndex((item) => item.index === index);
+
+    if (index === 0) {
+
+        console.clear();
+        console.log("🚀 ----> findIndexItem:", findIndexItem)
+
+        console.log("🚀 ~ ----> activeItem:", activeItem)
+
+    }
+    // const findItem = notifcationList[activeItem - 1];
+
+    const onnNextItem = () => {
+        // console.log("---findItem--", findItem);
+        nextItem(findItem)
+    }
+
+    return <div className={style.block_icon} >
+        {findItem && <i className={`fas fa-check cursor-pointer ${findIndexItem === activeItem - 1 ? style.active_icon : ''}`} onClick={onnNextItem} ></i>}
+    </div>
+}
+
+
 
 
 const data = [
     {
         id: 1,
         text: "ETATIQUE",
-        type: "profil"
+        type: "profil",
+        messageId: 1,
+        radarId: 1,
     },
     {
         id: 2,
         text: "CRIME ORGANISE",
-        type: "profil"
+        type: "profil",
+        messageId: 2,
+        radarId: 2,
     },
     {
         id: 3,
         text: "TERRORISTE",
-        type: "profil"
+        type: "profil",
+        messageId: 3,
+        radarId: 3,
     },
     {
         id: 4,
         text: "ACTIVISTE IDIOLOGIQUE",
-        type: "profil"
+        type: "profil",
+        messageId: 4,
+        radarId: 4,
     }
     ,
     {
         id: 5,
         text: "OFFICINE SPÉCIALISÉE",
-        type: "profil"
+        type: "profil",
+        messageId: 5,
+        radarId: 5,
     }
     ,
     {
         id: 6,
         text: "AMATEUR",
-        type: "profil"
+        type: "profil",
+        messageId: 6,
+        radarId: 6,
     }
     ,
     {
         id: 7,
         text: "VENGEUR",
-        type: "profil"
+        type: "profil",
+        messageId: 7,
+        radarId: 7,
     }
     ,
     {
         id: 8,
         text: "MALVEILLANT PATHOLOGIQUE",
-        type: "profil"
+        type: "profil",
+        messageId: 8,
+        radarId: 8,
     },
     {
         id: 9,
         text: "ESPIONNAGE",
-        type: "motivation"
+        type: "motivation",
+        messageId: 9
     },
     {
         id: 10,
         text: "PRÉPOSITIONNEMENT STRATÉGIQUE",
-        type: "motivation"
+        type: "motivation",
+        messageId: 10
     },
     {
         id: 11,
         text: "INFLUENCE",
-        type: "motivation"
+        type: "motivation",
+        messageId: 11
     },
     {
         id: 12,
         text: "ENTRAVE AU FONCTIONNEMENT",
-        type: "motivation"
+        type: "motivation",
+        messageId: 12
     },
     {
         id: 13,
         text: "LUCRATIF",
-        type: "motivation"
+        type: "motivation",
+        messageId: 13
     },
     {
         id: 14,
         text: "DÉFI, AMUSEMENT",
-        type: "motivation"
+        type: "motivation",
+        messageId: 14
     },
 ]
 
-
+const dataRadar = [
+    {
+        id: 1,
+        color: 'green',
+        bgColor: '#82E0AA',
+        dimension: [10, 10, 0, 10, 2]
+    },
+    {
+        id: 2,
+        color: 'blue',
+        bgColor: '#AED6F1',
+        dimension: [0, 10, 10, 2, 2]
+    }
+    ,
+    {
+        id: 3,
+        color: 'red',
+        bgColor: '#F5B7B1',
+        dimension: [1, 2, 2, 2, 2]
+    }
+    ,
+    {
+        id: 4,
+        color: 'green',
+        bgColor: 'LightGrey',
+        dimension: [1, 10, 2, 10, 10]
+    }
+    ,
+    {
+        id: 5,
+        color: 'green',
+        bgColor: 'LightGrey',
+        dimension: [10, 2, 10, 2, 10]
+    }
+    ,
+    {
+        id: 6,
+        color: 'green',
+        bgColor: 'LightGrey',
+        dimension: [1, 10, 10, 6, 3]
+    }
+    ,
+    {
+        id: 7,
+        color: 'green',
+        bgColor: 'LightGrey',
+        dimension: [1, 2, 2, 2, 2]
+    }
+    ,
+    {
+        id: 8,
+        color: 'green',
+        bgColor: 'LightGrey',
+        dimension: [1, 2, 2, 2, 2]
+    }
+]
 
 
 
@@ -123,11 +232,19 @@ function Matrix({ nextStep, onBack }) {
     const [step, setStep] = useState(0);
     const [activeItem, setActiveItem] = useState(1);
     const [currentMessage, setCurrentMessage] = useState({});
+    const config = useRef({
+        currentItem: null
+    });
 
-    const nextItem = () => {
-        if (step === 0)
-            setRadarData(activeItem);
-        setCurrentMessage(() => listMsg[activeItem - 1])
+    const nextItem = (currentItem) => {
+
+        config.current.currentItem = currentItem;
+        if (currentItem.type === "profil" || currentItem.type === "motivation") {
+            setRadar(_ => dataRadar.find(elm => elm.id === currentItem.radarId))
+            setCurrentMessage(() => listMsg.find(elm => elm.id === currentItem.messageId))
+        } else {
+            setCurrentMessage(currentItem)
+        }
         setShowTuto(true);
     }
 
@@ -169,83 +286,93 @@ function Matrix({ nextStep, onBack }) {
 
     const listMsg = [
         {
-            title: "LE HACKER EN CHEF",
+
+            title: "LE HACKER EN CHEF 1",
             text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
             audio: Level1Audio.audio1,
+            withRadar: true,
         },
         {
-            title: "LE HACKER EN CHEF",
+
+            title: "LE HACKER EN CHEF 2",
             text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
             //audio: Level1Audio.audio1,
+            withRadar: true,
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 3",
             text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",
             //audio: Level1Audio.audio1,
+            withRadar: true,
 
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 4",
             text: "Cyber-hacktivistes, groupements d’intérêt, sectes.",
             //audio: Level1Audio.audio1,
+            withRadar: true,
 
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 5",
             text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques 3 accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
             //audio: Level1Audio.audio1,
+            withRadar: true,
 
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 6",
             text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
             //audio: Level1Audio.audio1,
+            withRadar: true,
 
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 7",
             text: "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",
             //audio: Level1Audio.audio1,
+            withRadar: true,
 
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 8",
             text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",
             //audio: Level1Audio.audio1,
+            withRadar: true,
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 9",
             text: "Opération de renseignement (étatique, économique)",
             //audio: Level1Audio.audio1
         },
 
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 10",
             text: "Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho).",
             //audio: Level1Audio.audio1
         },
 
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 11",
             text: "Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État.",
             //audio: Level1Audio.audio1
 
         },
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 12",
             text: "Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique",
             //audio: Level1Audio.audio1
         },
 
 
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 13",
             text: "Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc.",
             //audio: Level1Audio.audio1
         },
 
         {
-            title: "LE HACKER EN CHEF",
+            title: "LE HACKER EN CHEF 14",
             text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
             //audio: Level1Audio.audio1
         },
@@ -281,7 +408,7 @@ function Matrix({ nextStep, onBack }) {
             //audio: Level1Audio.audio1
         }
 
-    ];
+    ].map((item, index) => ({ ...item, id: index + 1 }));
 
     const listMsgPop = [
         {
@@ -406,80 +533,15 @@ function Matrix({ nextStep, onBack }) {
     ];
 
     const closeModale = () => {
-        setActiveItem(index => index + 1);
+        if (config.current.currentItem.id === activeItem) { setActiveItem(index => index + 1); }
         setShowTuto(item => false);
         setRadar(null)
     }
 
-    const setRadarData = (id) => {
 
-        let dataRadar = null;
-        switch (id) {
-            case 1:
-                dataRadar = {
-                    color: 'green',
-                    bgColor: '#82E0AA',
-                    dimension: [10, 10, 0, 10, 2]
-                }
-                break;
-            case 2:
-                dataRadar = {
-                    color: 'blue',
-                    bgColor: '#AED6F1',
-                    dimension: [0, 10, 10, 2, 2]
-                }
-                break
 
-            case 3:
-                dataRadar = {
-                    color: 'red',
-                    bgColor: '#F5B7B1',
-                    dimension: [1, 2, 2, 2, 2]
-                }
-                break
-
-            case 4:
-                dataRadar = {
-                    color: 'green',
-                    bgColor: 'LightGrey',
-                    dimension: [1, 10, 2, 10, 10]
-                }
-                break
-
-            case 5:
-                dataRadar = {
-                    color: 'green',
-                    bgColor: 'LightGrey',
-                    dimension: [10, 2, 10, 2, 10]
-                }
-                break
-
-            case 6:
-                dataRadar = {
-                    color: 'green',
-                    bgColor: 'LightGrey',
-                    dimension: [1, 10, 10, 6, 3]
-                }
-                break
-            case 7:
-                dataRadar = {
-                    color: 'green',
-                    bgColor: 'LightGrey',
-                    dimension: [1, 2, 2, 2, 2]
-                }
-                break
-            case 8:
-                dataRadar = {
-                    color: 'green',
-                    bgColor: 'LightGrey',
-                    dimension: [1, 2, 2, 2, 2]
-                }
-                break
-
-        }
-        setRadar({ ...dataRadar })
-
-    }
+    const profilList = useMemo(() => data.filter(item => item.type === "profil"), [])
+    const motivationList = useMemo(() => data.filter(item => item.type === "motivation"), [])
 
 
 
@@ -513,11 +575,9 @@ function Matrix({ nextStep, onBack }) {
                 </div> : null}
             </ModalTutorial>
             <div className={step === 0 ? style.mtx_container_1 : style.mtx_container_2}>
-                {data.filter(item => item.type === "profil").map((item, index) => <HeaderBlock key={item.id} isRow={true} item={item} index={index} activeItem={activeItem} nextItem={nextItem} />
-                )
-                }
+                {profilList.map((item, index) => <HeaderBlock key={item.id} isRow={true} item={item} index={index} activeItem={activeItem} nextItem={nextItem} />)}
                 {step !== 0 &&
-                    data.filter(item => item.type === "motivation").map((item, index) => <HeaderBlock key={item.id} isRow={false} item={item} index={index} activeItem={activeItem} nextItem={nextItem} />
+                    motivationList.map((item, index) => <HeaderBlock key={item.id} isRow={false} item={item} index={index} activeItem={activeItem} nextItem={nextItem} />
 
 
                         // <div onClick={activeItem === item.id && nextItem} key={item.id} className={`${style[`hed_col_${index + 1}`]} ${activeItem === item.id && style.active}`}>
@@ -531,9 +591,10 @@ function Matrix({ nextStep, onBack }) {
                 {step === 2 &&
                     <>
                         <div></div>
-                        {[...Array(48).keys()].map((item, index) => <div className={style.block_icon} >
-                            {listMsg.findIndex((item) => item.index === index) !== -1 ? <i className={`fas fa-check cursor-pointer ${listMsg[activeItem - 1]?.index === index && style.active_icon}`} onClick={listMsg[activeItem - 1]?.index === index ? nextItem : null} ></i> : null}
-                        </div>)}
+                        {
+                            [...Array(48).keys()].map((item, index) => <RoundedBlock key={index} activeItem={activeItem} index={index} listMsg={listMsg} nextItem={nextItem} />)
+
+                        }
                     </>
                 }
             </div>
@@ -550,8 +611,7 @@ function Matrix({ nextStep, onBack }) {
                         <BackButton className={"step_quiz_btn_next2"}
                             onClick={onBack}
                         />
-                        <NextButton className={"step_quiz_btn_next2"}
-                            onClick={nextStep}
+                        <NextButton onClick={activeItem === 20 && nextStep} className={activeItem !== 20 ? "bg-slate-500" : ''}
                         />
                     </div>
                 </div>
