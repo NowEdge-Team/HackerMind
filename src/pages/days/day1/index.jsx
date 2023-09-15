@@ -38,6 +38,7 @@ import wiki from "@/assets/wiki-logo.png"
 import nulled from "@/assets/nulled.png"
 
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
+import { mModalConfirmSteps } from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
 
 
 
@@ -65,18 +66,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     // -> 2,6
     const config = useRef({
         messages: [
-            {
-                title: t("day1.messages.title"),
-                text: t("day1.messages.text1"),
-                showCancelBtn: true,
-                textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio6,
-                textBtnNotValid: t("pasEncore"),
-                valid: () => {
-                    config.current.currentIndex += 1;
-                    incrementCurrentStep();
-                }
-            },
             {
                 title: t("day1.messages.title"),
                 text: t("day1.messages.text1"),
@@ -166,7 +155,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 
 
     const nextStep = () => {
-        if ([2].includes(currentStep)) return incrementCurrentStep();
+        if ([2, 3].includes(currentStep)) return incrementCurrentStep();
 
         setShowConfirm(true);
     }
@@ -188,7 +177,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 
 
     const onBackStep = () => {
-        if ([2,4].includes(currentStep)) {
+        if ([2, 4].includes(currentStep)) {
             config.current.currentIndex -= 1;
         }
         decrementCurrentStep()
