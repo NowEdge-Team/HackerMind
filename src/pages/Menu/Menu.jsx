@@ -36,6 +36,8 @@ import * as PropTypes from "prop-types";
 import mstyles from "./style.module.scss"
 import PvChModalBadge from "../../components/modal/PvChModalBadge/index.jsx";
 import MissionAudio from "../../assets/audio/mission/index";
+import DefaultImg from '../../assets/images/pv-challenge/avatars/profile1.png'; // Importez votre image par défaut
+
 
 
 function isFirstTime(gameSessionId) {
@@ -348,21 +350,45 @@ function ConfigModal(props) {
     );
 }
 
+// function MenuBtnComponent({ img, title, onClick }) {
+//     return <div
+//         className={`border-darken-1  ${mstyles.menu_item_box}`}
+//         onClick={onClick}
+//     >
+//         <img
+//             src={img}
+//             alt="user-img"
+//             className="mb-1 sg-menu-item-box-img w-[88px] h-[77px]"
+//             width={88}
+//             height={77}
+//         />
+//         {title}
+//     </div>;
+// }
+
+
+
+
 function MenuBtnComponent({ img, title, onClick }) {
-    return <div
-        className={`border-darken-1  ${mstyles.menu_item_box}`}
-        onClick={onClick}
-    >
-        <img
-            src={img}
-            alt="user-img"
-            className="mb-1 sg-menu-item-box-img w-[88px] h-[77px]"
-            width={88}
-            height={77}
-        />
-        {title}
-    </div>;
+    const userImgSrc = img || DefaultImg; // Utilisez l'image par défaut si img est vide
+
+    return (
+        <div
+            className={`border-darken-1  ${mstyles.menu_item_box}`}
+            onClick={onClick}
+        >
+            <img
+                src={userImgSrc}
+                alt="user-img"
+                className="mb-1 sg-menu-item-box-img w-[88px] h-[77px]"
+                width={88}
+                height={77}
+            />
+            {title}
+        </div>
+    );
 }
+
 
 MenuBtnComponent.propTypes = {
     onClick: PropTypes.func,

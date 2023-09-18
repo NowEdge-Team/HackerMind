@@ -90,23 +90,25 @@ body.active-modal {
   position: relative;
 
   p{
-    font-size: 14px;
+    // font-size: 25px;
     color:black;
-    padding: 45px 60px 35px 30px;
+    font-size: 16px; /* Taille de police, adaptez-la à vos besoins */
+    // width: 550px;
     text-align: left;
+    padding: 35px 65px 0px 30px;
+    line-height: 150%;
+  }
+  .barre{
+    Width:20px;
+    Height: 397px;
+    position:absolute;
+    // position: relative;
+    top: 19px;
+    right: 20px;
+    background-color:  #00AAE2;
   }
 }
-// .desc p{
- 
-// }
-.desc span{
-  Width:20px;
-  Height: 397px;
-  position:absolute;
-  top: 19px;
-  right: 20px;
-  background-color:  #00AAE2;
-}
+
 
 .bg_media{
   width: 226px;

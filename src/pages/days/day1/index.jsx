@@ -43,7 +43,6 @@ import telegram from "../../../assets/telegram-logo.png"
 import proton from "../../../assets/protonmail-logo.png"
 import wiki from "../../../assets/wiki-logo.png"
 import nulled from "../../../assets/nulled.png"
-
 // import Box from '../../../components/pvCh/box/Box.jsx'
 
 
@@ -107,7 +106,8 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                     setTimeout(sendData, 1000)
                 }
             }
-            , {
+            ,
+            {
 
 
 
@@ -164,17 +164,15 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
         // } else {
         //     setShowConfirm(true);
         // }
-
     }
 
     const [show, setShowConfirm] = useState(false);
 
     const { incrementCurrentStep, decrementCurrentStep, currentStep } = useStepper();
 
-
     const nextStep = () => {
-        if ([2].includes(currentStep)) return incrementCurrentStep();
-
+        if ([2].includes(currentStep)) 
+        return incrementCurrentStep();
         setShowConfirm(true);
     }
 
@@ -400,7 +398,7 @@ const Day1PvPharma = (props) => {
                     <>
                         <div className="box-2-1_ew_pvch pt-2">
                             <div className="d-flex justify-content-center align-content-center align-items-center ">
-                                <Profile title={center?.name} avatarId={center?.avatarId} />
+                                <Profile title={center?.name} avatarId={center?.avatarId} colorText = "" />
                             </div>
                             <ShowTuto onClick={() => setShowTuto(true)} />
                         </div>

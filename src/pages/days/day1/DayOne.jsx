@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Typewriter from 'typewriter-effect';
 import styles from "./day.module.scss"
 import ing from "../../../assets/Ingénieur social.png"
 import bell from "../../../assets/bell.png"
@@ -172,30 +173,31 @@ function App({ onNext }) {
 
         <div className={styles.bell}>
 
-          {currentIndex === 0 &&
-            <img src={bell} alt="" width={25} className={styles.bell1} style={{ position: "absolute", top: "24%", left: "8%", }} onClick={() => {
-              toggleModal();
-            }} />}
-          {currentIndex === 1 &&
-            <img src={bell} alt="" width={25} className={styles.bell2} style={{ position: "absolute", top: "37%", left: "8%", }} onClick={() => {
-              toggleModal();
-            }} />}
-          {currentIndex === 2 &&
-            <img src={bell} alt="" width={25} className={styles.bell3} style={{ position: "absolute", top: "52%", left: "8%", }} onClick={() => {
-              toggleModal();
-            }} />}
-          {currentIndex === 3 &&
-            <img src={bell} alt="" width={25} className={styles.bell4} style={{ position: "absolute", top: "25%", left: "18%", }} onClick={() => {
-              toggleModal();
-            }} />}
-          {currentIndex === 4 &&
-            <img src={bell} alt="" width={25} className={styles.bell5} style={{ position: "absolute", top: "39%", left: "18%", }} onClick={() => {
-              toggleModal();
-            }} />}
-          {currentIndex === 5 &&
-            <img src={bell} alt="" width={25} className={styles.bell6} style={{ position: "absolute", top: "53%", left: "18%", }} onClick={() => {
-              toggleModal();
-            }} />}
+            {currentIndex >= 0 &&
+              <img src={bell} alt="" width={25} className={styles.bell1} style={{ position: "absolute", top: "24%", left: "8%", }} onClick={() => {
+                toggleModal();
+              }} />}
+            {currentIndex >= 1 &&
+              <img src={bell} alt="" width={25} className={styles.bell2} style={{ position: "absolute", top: "37%", left: "8%", }} onClick={() => {
+                toggleModal();
+              }} />}
+            {currentIndex >= 2 &&
+              <img src={bell} alt="" width={25} className={styles.bell3} style={{ position: "absolute", top: "52%", left: "8%", }} onClick={() => {
+                toggleModal();
+              }} />}
+            {currentIndex >= 3 &&
+              <img src={bell} alt="" width={25} className={styles.bell4} style={{ position: "absolute", top: "25%", left: "18%", }} onClick={() => {
+                toggleModal();
+              }} />}
+            {currentIndex >= 4 &&
+              <img src={bell} alt="" width={25} className={styles.bell5} style={{ position: "absolute", top: "39%", left: "18%", }} onClick={() => {
+                toggleModal();
+              }} />}
+            {currentIndex >= 5 &&
+              <img src={bell} alt="" width={25} className={styles.bell6} style={{ position: "absolute", top: "53%", left: "18%", }} onClick={() => {
+                toggleModal();
+              }} />}
+              
         </div>
 
         <div className={styles.Msg}>
@@ -247,8 +249,18 @@ function Modal({ modal = false, data, close, onBack }) {
         </div>
 
         <div className={styles.desc}>
-          <p>{data.text}</p>
-          <span style={{ backgroundColor: data.backgroundColor }}></span>
+          <p>
+            <Typewriter
+            options={{
+              strings: data.text,
+              autoStart: true,
+              // loop: true,
+              delay:30
+            }}
+          />
+          </p>
+          {}
+          <span className={styles.barre} style={{ backgroundColor: data.backgroundColor }}></span>
           <div className={styles.ModalAudio}>
             <Audio src={data.audio} />
           </div>
