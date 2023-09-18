@@ -39,6 +39,8 @@ import nulled from "../../../assets/nulled.png"
 
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
 import { mModalConfirmSteps } from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
+import { mScoreLevel } from "@/components/ScoreLevel/index.jsx";
+import { mFieldLevel } from "@/components/FieldModal/index.jsx";
 
 
 
@@ -86,7 +88,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 textBtnValid: t("day1.messages.textBtnValid"),
                 textBtnNotValid: t("pasEncore"),
                 audio: Level1Audio.audio6,
-                valid() {
+                valid: () => {
                     setTimeout(sendData, 1000)
                 }
             }
@@ -96,14 +98,15 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 
 
                 title: t("day1.messages.title"),
-
                 text: t("day1.messages.text4"),
                 showCancelBtn: false,
                 textBtnValid: t("day1.messages.textBtnValid2"),
                 textBtnNotValid: t("pasEncore"),
                 audio: Level1Audio.felicitation,
-                valid() {
-                    history.push("/");
+                valid: async () => {
+                    await mScoreLevel();
+                    history.push("/")
+
                 }
             }
         ],

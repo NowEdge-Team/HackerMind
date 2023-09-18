@@ -1,15 +1,16 @@
-import React, { Component, Suspense, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { connect } from "react-redux";
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { routes } from "./routes/routes.jsx";
-import detectBrowserLanguage from "detect-browser-language";
-import { useTranslation } from "react-i18next";
-import strategicGameLayout from "./components/strategicGameLayout.jsx";
-import "./assets/scss/DefaultTheme.scss";
-import ModalArticel from "./components/modal/ModalArticle/index.jsx";
 import ConfirmationModalSteps from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
+import FieldLevel from "@/components/FieldModal/index.jsx";
+import ScoreLevel from "@/components/ScoreLevel/index.jsx";
+import ModalArticel from "@/components/modal/ModalArticle/index.jsx";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import React, { Component, Suspense, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { connect } from "react-redux";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./assets/scss/DefaultTheme.scss";
+import strategicGameLayout from "./components/strategicGameLayout.jsx";
+import { routes } from "./routes/routes.jsx";
 
 const queryClient = new QueryClient()
 
@@ -32,7 +33,7 @@ const App = () => {
 
     /** change language to french */
     const { i18n } = useTranslation();
-    const userLanguage = detectBrowserLanguage().split("-")[0];
+    const userLanguage = "fr" // detectBrowserLanguage().split("-")[0];
 
     useEffect(() => {
         if (["fr", "en"].includes(userLanguage)) {
@@ -49,6 +50,8 @@ const App = () => {
     return (
         // rendering the router with layout
         <>
+            <FieldLevel />
+            <ScoreLevel />
             <ModalArticel />
             <ConfirmationModalSteps />
             <BrowserRouter>
