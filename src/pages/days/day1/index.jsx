@@ -36,14 +36,6 @@ import telegram from "../../../assets/telegram-logo.png"
 import proton from "../../../assets/protonmail-logo.png"
 import wiki from "../../../assets/wiki-logo.png"
 import nulled from "../../../assets/nulled.png"
-// import Box from '../../../components/pvCh/box/Box.jsx'
-import Matrix from "@/components/Matrix/index.jsx";
-import MatrixDrd from "@/components/MatrixDrd/index.jsx";
-import tor from "@/assets/Tor_logo.png"
-import telegram from "@/assets/telegram-logo.png"
-import proton from "@/assets/protonmail-logo.png"
-import wiki from "@/assets/wiki-logo.png"
-import nulled from "@/assets/nulled.png"
 
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
 import { mModalConfirmSteps } from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
@@ -163,8 +155,8 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const { incrementCurrentStep, decrementCurrentStep, currentStep } = useStepper();
 
     const nextStep = () => {
-        if ([2].includes(currentStep)) 
-        return incrementCurrentStep();
+        if ([2].includes(currentStep))
+            return incrementCurrentStep();
 
         if ([2, 3].includes(currentStep)) return incrementCurrentStep();
 
@@ -408,7 +400,7 @@ const Day1PvPharma = (props) => {
                     <>
                         <div className="box-2-1_ew_pvch pt-2">
                             <div className="d-flex justify-content-center align-content-center align-items-center ">
-                                <Profile title={center?.name} avatarId={center?.avatarId} colorText = "" />
+                                <Profile title={center?.name} avatarId={center?.avatarId} colorText="" />
                             </div>
                             <ShowTuto onClick={() => setShowTuto(true)} />
                         </div>
