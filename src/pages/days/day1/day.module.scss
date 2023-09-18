@@ -99,7 +99,7 @@ body.active-modal {
     line-height: 150%;
   }
   .barre{
-    Width:20px;
+    Width:13px;
     Height: 397px;
     position:absolute;
     // position: relative;
@@ -128,6 +128,9 @@ body.active-modal {
 
 .bell{
   cursor: pointer;
+ img{
+  width: 30px;
+ }
 }
 
 .desc .close button{

@@ -22,6 +22,7 @@ import { useRef } from "react";
 
 const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
 
+
     const onNExt = useCallback(() => {
         nextItem(item)
     }, [])
@@ -47,10 +48,9 @@ const RoundedBlock = ({ index, listMsg, nextItem, activeItem }) => {
 
         console.clear();
         console.log("🚀 ----> findIndexItem:", findIndexItem)
-
         console.log("🚀 ~ ----> activeItem:", activeItem)
-
     }
+
     // const findItem = notifcationList[activeItem - 1];
 
     const onnNextItem = () => {

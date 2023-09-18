@@ -21,13 +21,6 @@ import audio3 from "../../../assets/audio/Niv1/fr/Project_Haystack.m4a"
 import audio4 from "../../../assets/audio/Niv1/fr/ProtonMail.m4a"
 import audio5 from "../../../assets/audio/Niv1/fr/Telegram.m4a"
 import audio6 from "../../../assets/audio/Niv1/fr/Nulled.m4a"
-// import violet from "../../../assets/Book/Violet.png"
-// import red from "../../../assets/Book/Red.png"
-// import orange from "../../../assets/Book/Orange.png"
-// import azure from "../../../assets/Book/Azure.png"
-// import bleu from "../../../assets/Book/Bleu.png"
-// import indigo from "../../../assets/Book/Indigo.png"
-
 import torlogo from "../../../assets/Tor_logo.png"
 import telegramlogo from "../../../assets/telegram-logo.png"
 import protonlogo from "../../../assets/protonmail-logo.png"
@@ -37,28 +30,26 @@ import haystacklogo from "../../../assets/haystack.png"
 
 
 
-
-
-
 const dataList = [{
+  id:1,
   backgroundColor: "#602F80",
   backgroundIcon: "rgba(96, 47, 128, 0.49)",
   icon: tor,
   text: "TOR est comme un tunnel secret sur Internet. Imaginez que lorsque vous surfez sur le Web, vous laissez derrière vous des empreintes de pas. TOR vous aide à cacher ces empreintes en vous permettant de naviguer anonymement. Lorsque vous utilisez TOR, votre trafic Internet rebondit à travers différents ordinateurs dans le monde, masquant ainsi votre adresse IP. Cela signifie que personne ne peut facilement savoir qui vous êtes ou ce que vous faites en ligne. C'est utile pour protéger votre vie privée, mais cela peut également être utilisé par des personnes malveillantes, il faut donc l'utiliser avec précaution.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio1
-
   },
   {
+    id:2,
   backgroundColor: "#FF001C",
   backgroundIcon: "rgba(255, 0, 28, 0.47)",
   icon: hidden,
   text: "The Hidden Wiki est un peu comme un catalogue secret d'Internet. Il contient des liens vers des sites Web qui ne sont pas visibles sur Internet ordinaire. Certains de ces sites peuvent être utiles, mais beaucoup d'entre eux sont illégaux ou dangereux. Il est essentiel d'être très prudent lorsque vous explorez le contenu du darknet, car vous pourriez vous retrouver sur des sites malveillants ou illégaux sans le vouloir.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons  ",
   audio: audio2
-  
   },
   {
+  id:3,
   backgroundColor: "#F7941E",
   backgroundIcon: "rgba(247, 148, 30, 0.49)",
   icon: project,
@@ -67,6 +58,7 @@ const dataList = [{
   audio: audio3
   },
   {
+  id:4,
   backgroundColor: "#CBBAFF",
   backgroundIcon: "rgba(203, 186, 255, 0.49)",
   icon: proton,
@@ -75,6 +67,7 @@ const dataList = [{
   audio: audio4
   },
   {
+  id:5,
   backgroundColor: "#00AAE2",
   backgroundIcon: "rgba(0, 170, 226, 0.49)",
   icon: telegram,
@@ -83,6 +76,7 @@ const dataList = [{
   audio: audio5
   },
   {
+  id:6,
   backgroundColor: "#527D9A",
   backgroundIcon: "rgba(82, 125, 154, 0.49)",
   icon: nulled,
@@ -94,11 +88,8 @@ const dataList = [{
 
 function App({ onNext }) {
 
-
   const [modal, setModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
-
 
   const onCloseModal = () => {
     setCurrentIndex(() => currentIndex + 1)
@@ -110,15 +101,19 @@ function App({ onNext }) {
   };
 
 
-  if (modal) {
-    document.body.classList.add('active-modal')
-  } else {
-    document.body.classList.remove('active-modal')
-  }
+  // if (modal) {
+  //   document.body.classList.add('active-modal')
+  // } else {
+  //   document.body.classList.remove('active-modal')
+  // }
+
 
   const toggleModal = () => {
+   
     setModal(!modal);
+
   };
+
 
   let history = useHistory();
 
@@ -174,30 +169,29 @@ function App({ onNext }) {
         <div className={styles.bell}>
 
             {currentIndex >= 0 &&
-              <img src={bell} alt="" width={25} className={styles.bell1} style={{ position: "absolute", top: "24%", left: "8%", }} onClick={() => {
+              <img src={bell} alt="" className={styles.bell1} style={{ position: "absolute", top: "24%", left: "8%", }} onClick={() => {
                 toggleModal();
               }} />}
             {currentIndex >= 1 &&
-              <img src={bell} alt="" width={25} className={styles.bell2} style={{ position: "absolute", top: "37%", left: "8%", }} onClick={() => {
+              <img src={bell} alt="" className={styles.bell2} style={{ position: "absolute", top: "37%", left: "8%", }} onClick={() => {
                 toggleModal();
               }} />}
             {currentIndex >= 2 &&
-              <img src={bell} alt="" width={25} className={styles.bell3} style={{ position: "absolute", top: "52%", left: "8%", }} onClick={() => {
+              <img src={bell} alt="" className={styles.bell3} style={{ position: "absolute", top: "52%", left: "8%", }} onClick={() => {
                 toggleModal();
               }} />}
             {currentIndex >= 3 &&
-              <img src={bell} alt="" width={25} className={styles.bell4} style={{ position: "absolute", top: "25%", left: "18%", }} onClick={() => {
+              <img src={bell} alt="" className={styles.bell4} style={{ position: "absolute", top: "25%", left: "18%", }} onClick={() => {
                 toggleModal();
               }} />}
             {currentIndex >= 4 &&
-              <img src={bell} alt="" width={25} className={styles.bell5} style={{ position: "absolute", top: "39%", left: "18%", }} onClick={() => {
+              <img src={bell} alt="" className={styles.bell5} style={{ position: "absolute", top: "39%", left: "18%", }} onClick={() => {
                 toggleModal();
               }} />}
             {currentIndex >= 5 &&
-              <img src={bell} alt="" width={25} className={styles.bell6} style={{ position: "absolute", top: "53%", left: "18%", }} onClick={() => {
+              <img src={bell} alt="" className={styles.bell6} style={{ position: "absolute", top: "53%", left: "18%", }} onClick={() => {
                 toggleModal();
               }} />}
-              
         </div>
 
         <div className={styles.Msg}>
@@ -255,7 +249,7 @@ function Modal({ modal = false, data, close, onBack }) {
               strings: data.text,
               autoStart: true,
               // loop: true,
-              delay:30
+              delay:25
             }}
           />
           </p>
