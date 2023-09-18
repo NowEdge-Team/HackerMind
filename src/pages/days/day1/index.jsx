@@ -217,7 +217,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                             />
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
-                            <Matrix nextStep={nextStep} onBack={onBackStep} />
+                            <MatrixDrd nextStep={nextStep} onBack={onBackStep} />
                         </Stepper.Step>
                         <Stepper.Step id="4" name="Step 4">
                             <MatrixDrd nextStep={nextStep} onBack={onBackStep} />
@@ -343,7 +343,7 @@ const Day1PvPharma = (props) => {
                 personnageImage={img1}
                 listMsg={listMsg}
                 title="My Modal"
-                show={showTuto}
+                show={false}
                 video={{
                     id: "1KqKBdUcB5KvbVg7PRIQ-7HQBmjVUSQOG",
                     title: "Généralités de la Pharmacovigilance"

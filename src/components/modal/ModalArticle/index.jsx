@@ -11,7 +11,7 @@ export function mModalArticel(props) {
 }
 
 
-function DialogBody({ description, title, closeModal }) {
+function DialogBody({ description, title, closeModal, img }) {
 
 
     return (
@@ -19,9 +19,20 @@ function DialogBody({ description, title, closeModal }) {
             <div className="absolute right-3 top-3 p-1 cursor-pointer" onClick={closeModal} >
                 <i class="fas fa-times text-[20px]"></i>
             </div>
-            <div className="p-3 flex flex-col gap-3">
-                <h3 className="" >{title}</h3>
-                <p className="text-left">{description}</p>
+            <div className="flex flex-row">
+
+                <div className="p-3 flex flex-col gap-3">
+
+                    <h3 className="font-bold text-[22px] text-black" >{title}</h3>
+                    <div>
+                        <img className="float-left w-[20%] mr-4" src={img} />
+                        <p className="text-left text-black">
+                            {description}
+                        </p>
+                    </div>
+
+
+                </div>
             </div>
         </div>
     )
@@ -64,7 +75,7 @@ const ModalArticel = ({ }) => {
                     <div className="fixed inset-0 bg-black bg-opacity-25" />
                 </Transition.Child>
 
-                <div className="fixed inset-0 overflow-y-auto">
+                <div className="fixed inset-0 overflow-y-auto" onClick={closeModal}>
                     <div className="flex min-h-full items-center justify-center p-4 text-center ">
                         <Transition.Child
                             as={Fragment}
@@ -75,7 +86,7 @@ const ModalArticel = ({ }) => {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className={"flex flex-col justify-center w-full  max-w-[974px]"} >
+                            <Dialog.Panel className={"flex flex-col justify-center w-full  max-w-[974px] "} >
                                 <DialogBody
                                     currentIndex={currentIndex}
                                     setCurrentIndex={setCurrentIndex}
