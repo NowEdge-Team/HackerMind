@@ -31,7 +31,6 @@ import haystacklogo from "../../../assets/haystack.png"
 
 
 const dataList = [{
-  id:1,
   backgroundColor: "#602F80",
   backgroundIcon: "rgba(96, 47, 128, 0.49)",
   icon: tor,
@@ -40,7 +39,6 @@ const dataList = [{
   audio: audio1
   },
   {
-    id:2,
   backgroundColor: "#FF001C",
   backgroundIcon: "rgba(255, 0, 28, 0.47)",
   icon: hidden,
@@ -49,7 +47,6 @@ const dataList = [{
   audio: audio2
   },
   {
-  id:3,
   backgroundColor: "#F7941E",
   backgroundIcon: "rgba(247, 148, 30, 0.49)",
   icon: project,
@@ -58,7 +55,6 @@ const dataList = [{
   audio: audio3
   },
   {
-  id:4,
   backgroundColor: "#CBBAFF",
   backgroundIcon: "rgba(203, 186, 255, 0.49)",
   icon: proton,
@@ -67,7 +63,6 @@ const dataList = [{
   audio: audio4
   },
   {
-  id:5,
   backgroundColor: "#00AAE2",
   backgroundIcon: "rgba(0, 170, 226, 0.49)",
   icon: telegram,
@@ -76,7 +71,6 @@ const dataList = [{
   audio: audio5
   },
   {
-  id:6,
   backgroundColor: "#527D9A",
   backgroundIcon: "rgba(82, 125, 154, 0.49)",
   icon: nulled,
@@ -109,9 +103,10 @@ function App({ onNext }) {
 
 
   const toggleModal = () => {
-   
     setModal(!modal);
-
+    if(currentIndex <= 0){
+      return 
+    }
   };
 
 

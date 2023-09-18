@@ -23,7 +23,7 @@ import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.s
 import styles from "../style.module.scss"
 import ScoreModal from "../../components/pvCh/day1/ScoreModal/StepModal.jsx";
 import { httpClient_get } from "../../helpers/api.js";
-import FieldModal from "../../components/pvCh/FieldModal/FieldModal.jsx";
+import FieldModal from "../../components/FieldModal/index.jsx";
 import avatar1 from "../../assets/images/pv-challenge/avatars/profile1.png"
 import avatar2 from "../../assets/images/pv-challenge/avatars/profile2.png"
 import avatar3 from "../../assets/images/pv-challenge/avatars/profile3.png"
@@ -445,7 +445,7 @@ export default function Menu() {
                 }}
             />
 
-            <ScoreModal
+            {/* <ScoreModal
                 scoreDay={score}
                 show={showScore}
                 close={() => {
@@ -456,7 +456,7 @@ export default function Menu() {
                     setShowScore(() => false);
 
                 }}
-            />
+            /> */}
             <FieldModal
                 show={showFailedScore}
                 close={() => {
