@@ -1,3 +1,6 @@
+
+
+
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
@@ -34,7 +37,10 @@ import nulledlogo from "../../../assets/nulled.png";
 import protonlogo from "../../../assets/protonmail-logo.png";
 import telegramlogo from "../../../assets/telegram-logo.png";
 import wikilogo from "../../../assets/wiki-logo.png";
-import HeaderProfile from "@/components/HeaderPrfile";
+import nmaplogo from "../../../assets/nmaplogo.png"
+import burpsuitelogo from "../../../assets/burpsuitelogo.png"
+
+
 
 
 
@@ -173,14 +179,14 @@ function App({ onNext }) {
           <p style={{ width: "70px" }}>The hidden Wiki</p>
         </div>
 
-        <div className={styles.block} style={{ position: "absolute", top: "46%", left: "6%" }}>
-          <img src={haystacklogo} alt="" width={56} />
-          <p style={{ width: "70px" }}>Project Haystack</p>
+        <div className={styles.block} style={{ position: "absolute", top: "51%", left: "6%" }}>
+          <img src={nmaplogo} alt="" width={56} />
+          <p style={{ width: "56px", paddingTop: "8px" }}>Nmap</p>
         </div>
 
         <div className={styles.block} style={{ position: "absolute", top: "20%", left: "16%" }}>
-          <img src={protonlogo} alt="" width={56} />
-          <p>Proton-Mail</p>
+          <img src={burpsuitelogo} alt="" width={56} />
+          <p>burpsuite</p>
         </div>
 
         <div className={styles.block} style={{ position: "absolute", top: "34%", left: "16%" }}>
@@ -288,5 +294,9 @@ function Modal({ modal = false, data, close, onBack }) {
 
 
 export default App
+
+
+
+
 
 
