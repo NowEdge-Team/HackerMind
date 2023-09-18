@@ -217,7 +217,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                             />
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
-                            <MatrixDrd nextStep={nextStep} onBack={onBackStep} />
+                            <Matrix nextStep={nextStep} onBack={onBackStep} />
                         </Stepper.Step>
                         <Stepper.Step id="4" name="Step 4">
                             <MatrixDrd nextStep={nextStep} onBack={onBackStep} />

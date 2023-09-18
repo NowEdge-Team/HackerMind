@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import style from "./style.module.scss"
 import { useEffect } from "react";
 import Modal1 from "../modal/modal1";
@@ -425,6 +425,9 @@ function MatrixDrd({ nextStep, onBack }) {
 
     }
 
+    const listProfil = useMemo(() => data.filter(item => item.type === "profil"), [])
+    const listMotivation = useMemo(() => data.filter(item => item.type === "motivation"), [])
+
 
 
     return (
@@ -453,21 +456,21 @@ function MatrixDrd({ nextStep, onBack }) {
                     </h3>
                 </div>
 
-                <div className="flex flex-row h-3/4 mb-3" >
+                <div className="flex flex-row h-3/5" >
 
 
                     <ListArticle onDrop={onDropListArticle} listArticle={listArticle} />
 
 
                     <div className={`${style.mtx_container} border p-2 h-full`}>
-                        {data.filter(item => item.type === "profil").map((item, index) => <div key={item.id} className={`${style[`hed_row_${index + 1}`]}`}>
+                        {listProfil.map((item, index) => <div key={item.id} className={`${style[`hed_row_${index + 1}`]}`}>
                             <p className={style.text}>
                                 {item.text}
                             </p>
                         </div>)
                         }
                         {
-                            data.filter(item => item.type === "motivation").map((item, index) => <div className={`${style[`hed_col_${index + 1}`]}`}>
+                            listMotivation.map((item, index) => <div key={index} className={`${style[`hed_col_${index + 1}`]}`}>
                                 <p className={style.text}>
                                     {item.text}
                                 </p>
@@ -475,7 +478,7 @@ function MatrixDrd({ nextStep, onBack }) {
                         }
                         <>
                             <div></div>
-                            {dustbins.map((item, index) => <div className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
+                            {dustbins.map((item, index) => <div key={index} className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
                                 <Dustbin key={item.id} item={item} onDrop={onDrop} />
                             </div>)}
                         </>
