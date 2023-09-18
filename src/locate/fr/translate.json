@@ -1,7 +1,7 @@
 {
   "activityReport": {
     "rapport_activite": "RAPPORT D'ACTIVITÉ",
-    "description": "Synthèse de vos réalisations et feedback du président par rapport à votre avancée dans le jeu",
+    "description": "Synthèse de vos réalisations et feedback du leader par rapport à votre avancée dans le jeu",
     "s_connaissance": "Score de Connaissance",
     "points": "Points",
     "s_action": "Score d'Action"
