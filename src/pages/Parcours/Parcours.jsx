@@ -31,6 +31,7 @@ import styles from "./style.module.scss"
 import { useCookies } from "react-cookie";
 import { faCogs, faCubes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HeaderProfile from "@/components/HeaderPrfile";
 
 const base_url = ""
 
@@ -223,8 +224,6 @@ export default function Parcours() {
 
     const score = useSelector((state) => state.PvChallenge.score);
 
-    // const {gameSessionId} = useSelector((state) => state.Module.module);
-
 
     const dispatch = useDispatch();
 
@@ -242,39 +241,11 @@ export default function Parcours() {
     return (
         <div className={styles.mainBackground}>
             <PlayButton />
-            <div className={`par-row1 ${styles.par_row_tb}`}>
-                <div className="d-flex flex-column sg-onHover">
-                    <div className="d-flex justify-content-center align-items-center">
-                        <img
-                            src={getLogoById(center.avatarId, avatars)?.logo}
-                            alt="user-img"
-                            width={41}
-                            height={41}
-                            style={{
-                                backgroundColor: "#fff",
-                                borderRadius: "50px",
-                            }}
-                        />
-                        <span className="sg-menu-item-title" style={{ color: "#fff" }}>
-                            {center.name}
-                        </span>
-                    </div>
-                    <div className="sg-menu-item-btn-config-p" onClick={() => null}>
-                        <div className="sg-menu-item-btn-config-sp">
-                            <FontAwesomeIcon icon={faCubes} />{score.score1}{" "}
-                            {t(`parcours.point`)}
-                        </div>
-                        <div className="sg-menu-item-btn-config-sp">
-                            <FontAwesomeIcon icon={faCogs} />{score.score2}{" "}
-                            {t(`parcours.point`)}
-                        </div>
-                    </div>
-                </div>
-                <div className="parc-btnQ" onClick={() => history.push("/")}>
-                    {t(`parcours.quitter`)}
-                    <img src={runningSolid} style={{ marginLeft: "5px" }} />
-                </div>
+
+            <div className="px-[7%]">
+                <HeaderProfile />
             </div>
+
             <div className={`par-row2 ${styles.row2}`}>
                 <h3>
                     <span className={styles.title_x}>{t(`parcours.welcome`)}</span>{' '}
@@ -286,14 +257,7 @@ export default function Parcours() {
                     <span>{t(`parcours.description`)}</span>
                 </div>
             </div>
-            {/* 
-            <img src={manPic} style={{
-                position: "absolute",
-                left: `0%`,
-                bottom: `0`,
-                height: "70%",
 
-            }}/> */}
 
 
             <ItemSercl

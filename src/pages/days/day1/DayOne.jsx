@@ -34,6 +34,7 @@ import nulledlogo from "../../../assets/nulled.png";
 import protonlogo from "../../../assets/protonmail-logo.png";
 import telegramlogo from "../../../assets/telegram-logo.png";
 import wikilogo from "../../../assets/wiki-logo.png";
+import HeaderProfile from "@/components/HeaderPrfile";
 
 
 
@@ -160,13 +161,8 @@ function App({ onNext }) {
 
       <div className={styles.container}>
 
-        <div className={styles.profile}>
-          <Profile />
-        </div>
-        <div className={styles.backBtn}>
-          <button onClick={() => history.push("/")}>Accueil
-            <img src={runningSolid} />
-          </button>
+        <div className="pl-[6%] pr-32">
+          <HeaderProfile textStyle={"text-[#ffffff]"} />
         </div>
         <div className={styles.block} style={{ position: "absolute", top: "16%", left: "6%" }}>
           <img src={torlogo} alt="" width={56} />

@@ -1,3 +1,4 @@
+import avatar0 from "../assets/images/pv-challenge/avatars/profile0.png"
 import avatar1 from "../assets/images/pv-challenge/avatars/profile1.png"
 import avatar2 from "../assets/images/pv-challenge/avatars/profile2.png"
 import avatar3 from "../assets/images/pv-challenge/avatars/profile3.png"
@@ -8,6 +9,10 @@ import avatar7 from "../assets/images/pv-challenge/avatars/profile7.png"
 
 
 const avatars = [
+    {
+        id: 0,
+        logo: avatar0,
+    },
     {
         id: 1,
         logo: avatar1,
@@ -36,9 +41,10 @@ const avatars = [
         id: 7,
         logo: avatar7,
     },
+
 ];
 
-const getLogoById = (id = 1, array = avatars) => {
+const getLogoById = (id = 0, array = avatars) => {
 
     return array.find((a) => a.id === id);
 };

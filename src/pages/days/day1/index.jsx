@@ -41,6 +41,7 @@ import BackButton from "@/components/pvCh/BackButton/index.jsx";
 import { mModalConfirmSteps } from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
 import { mScoreLevel } from "@/components/ScoreLevel/index.jsx";
 import { mFieldLevel } from "@/components/FieldModal/index.jsx";
+import HeaderProfile from "@/components/HeaderPrfile/index.jsx";
 
 
 
@@ -403,7 +404,7 @@ const Day1PvPharma = (props) => {
                     <>
                         <div className="box-2-1_ew_pvch pt-2">
                             <div className="d-flex justify-content-center align-content-center align-items-center ">
-                                <Profile title={center?.name} avatarId={center?.avatarId} colorText="" />
+                                <HeaderProfile showCancel={false} />
                             </div>
                             <ShowTuto onClick={() => setShowTuto(true)} />
                         </div>
