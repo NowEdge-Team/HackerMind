@@ -27,6 +27,7 @@ import Badge from "../../components/pvCh/badge/badge.jsx";
 import styles from "./style.module.scss"
 import { faCogs, faCubes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HeaderProfile from "@/components/HeaderPrfile";
 
 export default function Bradges() {
     const [Badges, setBadges] = useState([]);
@@ -48,25 +49,9 @@ export default function Bradges() {
     const history = useHistory();
     return (
         <div className={styles.main_badge}>
-            <div className={styles.par_row1}>
-                <div className="d-flex flex-column sg-onHover">
-                    <Profile title={center?.name} avatarId={center?.avatarId} />
-                    <div className="sg-menu-item-btn-config-p" onClick={() => null}>
-                        <div className="sg-menu-item-btn-config-sp">
-                            <FontAwesomeIcon icon={faCubes} />{score.score1}{" "}
-                            {t(`parcours.point`)}
-                        </div>
-                        <div className="sg-menu-item-btn-config-sp">
-                            {" "}
-                            <FontAwesomeIcon icon={faCogs} /> {score.score2}{" "}
-                            {t(`parcours.point`)}
-                        </div>
-                    </div>
-                </div>
-                <div className="parc-btnQ" onClick={() => history.push("/")}>
-                    {t(`parcours.quitter`)}
-                    <img src={runningSolid} style={{ marginLeft: "5px" }} />
-                </div>
+
+            <div className="px-[70px]" >
+                <HeaderProfile btnStyle="bg-white text-[#5CB962]" />
             </div>
             <div className={styles.par_row2}>
                 <h4 className={`badge-title ${styles.badge_title}`} >{t(`badges.title`)}</h4>
@@ -93,19 +78,19 @@ export default function Bradges() {
                         title={t(`badges.badge2.title`)}
                         description={t(`badges.badge2.description`)}
                     />
-                     <Badge
+                    <Badge
                         isActive={Badges.find(b => b?.badgeId === 3)?.status === 1}
                         icon={badge3}
                         title={t(`badges.badge3.title`)}
                         description={t(`badges.badge3.description`)}
                     />
-                     <Badge
+                    <Badge
                         isActive={Badges.find(b => b?.badgeId === 4)?.status === 1}
                         icon={badge4}
                         title={t(`badges.badge4.title`)}
                         description={t(`badges.badge4.description`)}
                     />
-                     <Badge
+                    <Badge
                         isActive={Badges.find(b => b?.badgeId === 5)?.status === 1}
                         icon={badge5}
                         title={t(`badges.badge5.title`)}
@@ -117,12 +102,12 @@ export default function Bradges() {
                         title={t(`badges.badge6.title`)}
                         description={t(`badges.badge6.description`)}
                     />
-                     <Badge
+                    <Badge
                         isActive={Badges.find(b => b?.badgeId === 7)?.status === 1}
                         icon={badge7}
                         title={t(`badges.badge7.title`)}
                         description={t(`badges.badge7.description`)}
-                    /> 
+                    />
                 </div>
             </div>
         </div>

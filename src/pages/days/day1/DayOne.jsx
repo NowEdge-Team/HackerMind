@@ -168,7 +168,7 @@ function App({ onNext }) {
 
       <div className={styles.container}>
 
-        <div className="pl-[6%] pr-32">
+        <div className="pl-[6%] pt-[12px] pr-32">
           <HeaderProfile textStyle={"text-[#ffffff]"} />
         </div>
         <div className={styles.block} style={{ position: "absolute", top: "16%", left: "6%" }}>

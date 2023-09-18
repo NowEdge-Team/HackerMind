@@ -22,6 +22,7 @@ import { useHistory } from "react-router-dom";
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
 import { mModalConfirmSteps } from "../ConfirmationModalSteps/ConfirmationModal";
 import imgArticle from "@/assets/images/article1.png";
+import HeaderProfile from "../HeaderPrfile";
 
 const data = [
     {
@@ -440,15 +441,8 @@ function MatrixDrd({ nextStep, onBack }) {
                 onClose={closeModale}
             />
             <div className={style.container} >
-                <div className="flex flex-row justify-between py-2 " >
-                    <div className={""}>
-                        <Profile />
-                    </div>
-                    <div className={style.backBtn}>
-                        <button onClick={() => history.push("/")}>Accueil
-                            <img src={runningSolid} />
-                        </button>
-                    </div>
+                <div className=" py-2" >
+                    <HeaderProfile />
                 </div>
                 <div className="mb-4">
                     <h3 className="font-Karla text-[17px] text-left text-[#9f9f9f] uppercase" >

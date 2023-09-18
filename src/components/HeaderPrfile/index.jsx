@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
-function HeaderProfile({ showCancel = true, textStyle }) {
+function HeaderProfile({ showCancel = true, textStyle, btnStyle }) {
 
     const history = useHistory();
 
@@ -22,7 +22,7 @@ function HeaderProfile({ showCancel = true, textStyle }) {
 
 
     return (
-        <div className="flex flex-row py-1 justify-between ">
+        <div className="flex flex-row py-1 justify-between cursor-pointer ">
             <div className="group relative d-flex flex-column ">
                 <div className=" flex flex-row items-center">
                     <img
@@ -35,7 +35,7 @@ function HeaderProfile({ showCancel = true, textStyle }) {
                             borderRadius: "50px",
                         }}
                     />
-                    <h3 className={twMerge('sg-menu-item-title text-[#323a46] font-bold text-[15px]', textStyle)} >
+                    <h3 className={twMerge('sg-menu-item-title ml-3 text-[#323a46] font-bold text-[15px]', textStyle)} >
                         {center.name ?? 'Nabil Moujjane'}
                     </h3>
                 </div>
@@ -49,9 +49,9 @@ function HeaderProfile({ showCancel = true, textStyle }) {
                     </div>
                 </div>
             </div>
-            {showCancel && <button className="parc-btnQ cursor-pointer " onClick={() => history.push("/")}>
+            {showCancel && <button className={twMerge('font_Karla  text-white  text-[14px] bg-[#6C757D] rounded-md font-bold h-[40px] px-[14px]', btnStyle)} onClick={() => history.push("/")}>
                 {t(`parcours.quitter`)}
-                <img src={runningSolid} style={{ marginLeft: "5px" }} />
+                <i class="fas fa-running text-[18px] ml-2"></i>
             </button>}
 
         </div>

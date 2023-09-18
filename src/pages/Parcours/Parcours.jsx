@@ -243,7 +243,7 @@ export default function Parcours() {
             <PlayButton />
 
             <div className="px-[7%]">
-                <HeaderProfile />
+                <HeaderProfile btnStyle="bg-white text-[#5CB962]" textStyle="text-white" />
             </div>
 
             <div className={`par-row2 ${styles.row2}`}>

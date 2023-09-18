@@ -20,6 +20,7 @@ import { useCallback } from "react";
 import { useRef } from "react";
 import imgArticle from "@/assets/images/article1.png";
 import { mModalArticel } from "../modal/ModalArticle";
+import HeaderProfile from "../HeaderPrfile";
 
 
 const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
@@ -556,15 +557,8 @@ function Matrix({ nextStep, onBack }) {
 
     return (
         <div className={style.container} >
-            <div className="flex flex-row justify-between py-2" >
-                <div className={""}>
-                    <Profile />
-                </div>
-                <div className={style.backBtn}>
-                    <button onClick={() => history.push("/")}>Accueil
-                        <img src={runningSolid} />
-                    </button>
-                </div>
+            <div className=" py-2" >
+                <HeaderProfile />
             </div>
 
             <div className="mb-4">
