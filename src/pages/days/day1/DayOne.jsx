@@ -39,6 +39,7 @@ import telegramlogo from "../../../assets/telegram-logo.png";
 import wikilogo from "../../../assets/wiki-logo.png";
 import nmaplogo from "../../../assets/nmaplogo.png"
 import burpsuitelogo from "../../../assets/burpsuitelogo.png"
+import HeaderProfile from "@/components/HeaderPrfile";
 
 
 
