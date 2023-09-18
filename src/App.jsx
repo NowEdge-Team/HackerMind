@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import strategicGameLayout from "./components/strategicGameLayout.jsx";
 import "./assets/scss/DefaultTheme.scss";
 import ModalArticel from "./components/modal/ModalArticle/index.jsx";
+import ConfirmationModalSteps from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
 
 const queryClient = new QueryClient()
 
@@ -49,6 +50,7 @@ const App = () => {
         // rendering the router with layout
         <>
             <ModalArticel />
+            <ConfirmationModalSteps />
             <BrowserRouter>
                 <Switch>
                     {routes.map((route, index) => {

@@ -28,8 +28,9 @@ export const StepperSteps = function({ children ,style , className  }) {
     );
 };
 
-export const StepperStep = function({ children }) {
-    return <>{children}</>;
+export const StepperStep = function({ children , classContainer }) {
+    console.log("---classContainer---",classContainer)
+        return <div className={`${classContainer} bg-red `} >{children}</div>;
 };
 
 StepperStep.propTypes = {

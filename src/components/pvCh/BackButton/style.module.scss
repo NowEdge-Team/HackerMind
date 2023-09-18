@@ -1,0 +1,23 @@
+@import "../../../pages/functions";
+.button{
+  height: 40px;
+  /* UI Properties */
+  background: $color-1 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+
+  text-align: left;
+  font: normal normal bold 14px/17px Karla;
+  letter-spacing: 0.28px;
+  color: #FFFFFF;
+  opacity: 1;
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-evenly;
+  cursor: pointer;
+  gap: 0.5em;
+
+
+}

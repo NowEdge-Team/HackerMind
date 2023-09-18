@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import style from "./style.module.scss"
 import { useEffect } from "react";
 import Modal1 from "../modal/modal1";
@@ -19,7 +19,9 @@ import ListArticle from "./ListArticle";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-
+import BackButton from "@/components/pvCh/BackButton/index.jsx";
+import { mModalConfirmSteps } from "../ConfirmationModalSteps/ConfirmationModal";
+import imgArticle from "@/assets/images/article1.png";
 
 const data = [
     {
@@ -98,61 +100,68 @@ const data = [
     },
 ]
 
-
 const articleData = [
     {
         id: 1,
-        title: "Le phishing",
-        description: "Le phishing, ou hameçonnage, consiste à usurper l’identité d’un tiers par le biais d’un email (ou Smishing dans le cas d’un SMS) afin d’inciter le destinataire à réaliser une action : divulguer des informations sensibles et/ou confidentielles, cliquer sur un lien renvoyant vers une page non sécurisée, ou bien ouvrir une pièce jointe infectée.",
+        title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 1
     },
     {
         id: 2,
         title: "Le ransomware",
-        description: "Le ransomware (ou rançongiciel)vise à bloquer l’accès à l’appareil de l’utilisateur et/ou à crypter ses données, dans le but d’obtenir le paiement d’une rançon. C’est le type de cybermalveillance qui a connu la plus importante augmentation ces dernières années – + 95 % en 2021 (source gouvernementale) – avec une prédilection pour les entreprises privées, plus enclines à débourser les sommes demandées.",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 25
     },
     {
         id: 3,
         title: "L'ingénierie sociale : comment les pirates manipulent les victimes",
-        description: "Apprenez comment les cybercriminels utilisent l'ingénierie sociale pour tromper les gens.",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 30
     },
     {
         id: 4,
         title: "Les vulnérabilités Zero-Day : un défi pour la sécurité",
-        description: "Décryptez ce que sont les vulnérabilités Zero-Day et comment les chercheurs en sécurité travaillent à les détecter et à les corriger.",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 43
     },
     {
         id: 5,
         title: "Les attaques par hameçonnage",
-        description: "Comprenez comment fonctionnent les attaques par hameçonnage et comment éviter de devenir une victime.",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 16
     },
     {
         id: 6,
         title: "Sécurité des réseaux : les bonnes pratiques",
-        description: "Découvrez les bonnes pratiques pour renforcer la sécurité de votre réseau informatique.",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 38
     },
     {
         id: 7,
         title: "La menace des logiciels malveillants",
-        description: "Explorez la menace des logiciels malveillants et comment les prévenir efficacement.",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 18
     },
     {
         id: 8,
         title: "La cybersécurité dans le monde connecté d'aujourd'hui",
-        description: "Découvrez l'importance de la cybersécurité dans notre monde de plus en plus connecté.",
+        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+        img: imgArticle,
         idCell: -1,
         correctCellId: 8
     }
@@ -163,7 +172,7 @@ const articleData = [
 
 
 
-function MatrixDrd({ nextStep }) {
+function MatrixDrd({ nextStep, onBack }) {
     const { t } = useTranslation();
     let history = useHistory();
 
@@ -214,122 +223,6 @@ function MatrixDrd({ nextStep }) {
         }
 
     }, [activeItem]);
-
-    const listMsg = [
-        {
-            title: "ETATIQUE",
-            text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
-            audio: Level1Audio.audio1,
-        },
-        {
-            title: "CRIME ORGANISE",
-            text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
-            audio: Level1Audio.audio1,
-        },
-        {
-            title: "TERRORISTE",
-            text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",
-            audio: Level1Audio.audio1,
-
-        },
-        {
-            title: "ACTIVISTE IDIOLOGIQUE",
-            text: "Cyber-hacktivistes, groupements d’intérêt, sectes.",
-            audio: Level1Audio.audio1,
-
-        },
-        {
-            title: "OFFICINE SPÉCIALISÉE",
-            text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques 3 accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
-            audio: Level1Audio.audio1,
-
-        },
-        {
-            title: "AMATEUR",
-            text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
-            audio: Level1Audio.audio1,
-
-        },
-        {
-            title: "VENGEUR",
-            text: "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",
-            audio: Level1Audio.audio1,
-
-        },
-        {
-            title: "MALVEILLANT PATHOLOGIQUE",
-            text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",
-            audio: Level1Audio.audio1,
-        },
-        {
-            title: "ESPIONNAGE",
-            text: "Opération de renseignement (étatique, économique)",
-            audio: Level1Audio.audio1
-        },
-
-        {
-            title: "PRÉPOSITIONNEMENT STRATÉGIQUE",
-            text: "Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho).",
-            audio: Level1Audio.audio1
-        },
-
-        {
-            title: "INFLUENCE",
-            text: "Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État.",
-            audio: Level1Audio.audio1
-
-        },
-        {
-            title: "ENTRAVE AU FONCTIONNEMENT",
-            text: "Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique",
-            audio: Level1Audio.audio1
-        },
-
-
-        {
-            title: "LUCRATIF",
-            text: "Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc.",
-            audio: Level1Audio.audio1
-        },
-
-        {
-            title: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
-            audio: Level1Audio.audio1
-        },
-
-        {
-            index: 0,
-            title: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
-            audio: Level1Audio.audio1
-        },
-        {
-            index: 5,
-            title: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
-            audio: Level1Audio.audio1
-        },
-        {
-            index: 40,
-            title: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
-            audio: Level1Audio.audio1
-        },
-        {
-            index: 32,
-            title: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
-            audio: Level1Audio.audio1
-        },
-        {
-            index: 44,
-            title: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
-            audio: Level1Audio.audio1
-        }
-
-    ];
 
     const listMsgPop = [
         {
@@ -459,7 +352,6 @@ function MatrixDrd({ nextStep }) {
     }
 
     const onDrop = (item, rowItem) => {
-        console.log("🚀 ~ file: index.jsx:458 ~ onDrop ~ item:", item)
 
         dustbins = dustbins.map(elm => {
             if (elm.id !== rowItem.id && elm?.droppedItem?.id === item?.id) {
@@ -500,7 +392,26 @@ function MatrixDrd({ nextStep }) {
 
     }
 
-    const onValidate = () => {
+    const onValidate = async () => {
+
+
+
+        const check = listArticle.every(elm => elm.idCell !== -1)
+
+        if (!check) return;
+
+
+        const res = await mModalConfirmSteps({
+            title: t("day1.messages.title"),
+            text: t("day1.messages.text1"),
+            rotateImage: true
+        });
+
+        if (!res) return;
+
+        config.current.isValid = true;
+
+
         setListArticle(listArticle.map(elem => {
             if (elem.idCell !== elem.correctCellId) return { ...elem, className: "bg-red-500" }
             else return { ...elem, className: "bg-[#31a547]" }
@@ -512,8 +423,10 @@ function MatrixDrd({ nextStep }) {
             else return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-[#31a547]" } }
         })]);
 
-        config.current.isValid = true;
     }
+
+    const listProfil = useMemo(() => data.filter(item => item.type === "profil"), [])
+    const listMotivation = useMemo(() => data.filter(item => item.type === "motivation"), [])
 
 
 
@@ -543,21 +456,21 @@ function MatrixDrd({ nextStep }) {
                     </h3>
                 </div>
 
-                <div className="flex flex-row h-3/4 mb-3" >
+                <div className="flex flex-row h-3/5" >
 
 
                     <ListArticle onDrop={onDropListArticle} listArticle={listArticle} />
 
 
                     <div className={`${style.mtx_container} border p-2 h-full`}>
-                        {data.filter(item => item.type === "profil").map((item, index) => <div key={item.id} className={`${style[`hed_row_${index + 1}`]}`}>
+                        {listProfil.map((item, index) => <div key={item.id} className={`${style[`hed_row_${index + 1}`]}`}>
                             <p className={style.text}>
                                 {item.text}
                             </p>
                         </div>)
                         }
                         {
-                            data.filter(item => item.type === "motivation").map((item, index) => <div className={`${style[`hed_col_${index + 1}`]}`}>
+                            listMotivation.map((item, index) => <div key={index} className={`${style[`hed_col_${index + 1}`]}`}>
                                 <p className={style.text}>
                                     {item.text}
                                 </p>
@@ -565,7 +478,7 @@ function MatrixDrd({ nextStep }) {
                         }
                         <>
                             <div></div>
-                            {dustbins.map((item, index) => <div className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
+                            {dustbins.map((item, index) => <div key={index} className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
                                 <Dustbin key={item.id} item={item} onDrop={onDrop} />
                             </div>)}
                         </>
@@ -579,10 +492,16 @@ function MatrixDrd({ nextStep }) {
                         {...listMsgPop[activeItem - 1]}
                     />
 
-                    <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 " >
-                        <NextButton title={config.current.isValid ? undefined : "Validate"} className={"step_quiz_btn_next2"}
+                    <div className="flex flex-row  items-end justify-end w-full pb-2 pl-2 gap-4 " >
+
+                        <BackButton className={"step_quiz_btn_next2"}
+                            onClick={onBack}
+                        />
+                        <NextButton title={config.current.isValid ? undefined : "Validate"} className={!listArticle.every(elm => elm.idCell !== -1) ? 'bg-slate-500' : ''}
                             onClick={config.current.isValid ? nextStep : onValidate}
                         />
+
+
                     </div>
                 </div>}
 

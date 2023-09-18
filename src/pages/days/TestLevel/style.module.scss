@@ -1,0 +1,27 @@
+.band {
+  background-image: url("@/assets/images/levels/level3/Group.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.sidebar {
+  background-image: url("@/assets/images/background/bg-2.png");
+  background-size: 331% 115%;
+  background-repeat: no-repeat;
+}
+
+
+.body {
+  background: linear-gradient(to bottom,
+          #DCD83B 0%,
+          #DCD83B 50%,
+          #C50083 50%,
+          #C50083 100%);
+}
+
+.sidebar_1 {
+  background-image: url('@/assets/images/background/bg-2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}

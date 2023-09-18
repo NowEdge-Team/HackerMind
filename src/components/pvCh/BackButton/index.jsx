@@ -3,27 +3,28 @@ import PropTypes from 'prop-types';
 import arrowRight from '../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg'
 import styles from './style.module.scss'
 import { useTranslation } from 'react-i18next';
-const NextButton = (props) => {
+const BackButton = (props) => {
     const { t } = useTranslation();
-    const { title = t("next_step") } = props;
+    const { title = t("back_step") } = props;
 
     return (
         <button style={{ ...props.style }} className={`${styles.button} ${props.className}`} onClick={props.onClick}>
+            <img className="rotate-180" src={arrowRight} alt={""} />
+
             {title}
-            <img src={arrowRight} alt={""} />
         </button>
     );
 };
 
-NextButton.propTypes = {
+BackButton.propTypes = {
     onClick: PropTypes.func,
     title: PropTypes.string,
     className: PropTypes.string,
 };
-NextButton.defaultProps = {
+BackButton.defaultProps = {
     onClick: () => null,
     className: "",
     style: {}
 };
 
-export default NextButton;
+export default BackButton;
