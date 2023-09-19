@@ -127,8 +127,8 @@
     "modal": {
       "title_p1": "BIENVENUE DANS",
       "title_p2": "L'AVENTURE",
-      "description": "Vous êtes le catalyseur de notre transformation numérique, inspirant l'innovation à chaque étape de notre parcours.",
-      "name_taskforce": "Donnez un nom a votre taskforce",
+      "description": "",
+      "name_taskforce": "Donnez un nom à votre perasonna",
       "retour": "Retour",
       "enregistrer": "Enregistrer"
     },
