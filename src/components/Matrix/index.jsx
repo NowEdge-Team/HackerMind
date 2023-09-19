@@ -271,15 +271,12 @@ function Matrix({ nextStep, onBack }) {
                 text: "Présentation des motivations",
                 audio: Level1Audio.audio1,
                 onClose: () => {
+                    setStep(1);
                     setShowTuto(item => false);
                 }
             }));
+            setShowTuto(item => true);
 
-            setTimeout(() => {
-                setShowTuto(item => true);
-            }, 1000)
-
-            setStep(1);
         }
         if (activeItem === 15) {
             setStep(() => 2)

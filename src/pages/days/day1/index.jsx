@@ -46,6 +46,43 @@ import HeaderProfile from "@/components/HeaderPrfile/index.jsx";
 
 
 
+const Step2 = ({ modeEdit, dragDropUpdateDecisions, decisions_3, categories_3, imgBib, t }) => {
+
+    const [showTuto, setShowTuto] = useState(true);
+
+    return (<>
+        <ModalTutorial
+            // pictureClass={"personne"}
+            personnageImage={img1}
+            listMsg={[{
+                title: "title",
+                text: "desc",
+                audio: Level1Audio.audio1,
+            }]}
+            title="My Modal"
+            show={showTuto}
+            video={{
+                id: "1KqKBdUcB5KvbVg7PRIQ-7HQBmjVUSQOG",
+                title: "Généralités de la Pharmacovigilance"
+            }}
+            onClose={() => {
+                setShowTuto(false);
+
+            }}
+        />
+        <Dropzone
+            modeEdit={modeEdit}
+            day={1}
+            part={2}
+            callback={dragDropUpdateDecisions}
+            decisions={decisions_3}
+            categories={categories_3}
+            imgBib={imgBib}
+        />
+    </>)
+
+}
+
 
 const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, setStp }) => {
 
@@ -214,15 +251,18 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                             <DayOne onNext={incrementCurrentStep} />
                         </Stepper.Step>
                         <Stepper.Step id="2" name="Step 2">
-                            <Dropzone
+
+                            <Step2
                                 modeEdit={modeEdit}
                                 day={1}
                                 part={2}
-                                callback={dragDropUpdateDecisions}
-                                decisions={decisions_3}
-                                categories={categories_3}
+                                dragDropUpdateDecisions={dragDropUpdateDecisions}
+                                decisions_3={decisions_3}
+                                categories_3={categories_3}
                                 imgBib={imgBib}
+                                t={t}
                             />
+
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
                             <Matrix nextStep={nextStep} onBack={onBackStep} />
@@ -351,7 +391,7 @@ const Day1PvPharma = (props) => {
                 personnageImage={img1}
                 listMsg={listMsg}
                 title="My Modal"
-                show={false}
+                show={showTuto}
                 video={{
                     id: "1KqKBdUcB5KvbVg7PRIQ-7HQBmjVUSQOG",
                     title: "Généralités de la Pharmacovigilance"
