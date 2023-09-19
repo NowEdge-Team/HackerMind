@@ -143,7 +143,10 @@
     "l_title": "L'INGENIEUR SOCIAL",
     "ValideNiveau": "Valider le niveau",
 
-    "part1": {},
+    "part5": {
+      "g_title": "",
+      "description": "Cliquez sur les avatars pour découvrir les différents profils "
+    },
     "part2": {
       "g_title": "J'aimerais être sur que tu as bien compris à quoi servent les différents outils que nous utilisons. Associe chaque action principale à son outil de référence.",
       "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
@@ -155,6 +158,9 @@
         "13": "site permettant d’accéder aux liens en .onion…)",
         "14": "forum du darknet spécialise dans des discusions autour d'accès"
       },
+
+    
+
       "categories": {
         "1": "TOR",
         "2": "Haystack/The hidden Wiki",
