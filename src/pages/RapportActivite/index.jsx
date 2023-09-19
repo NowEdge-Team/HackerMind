@@ -22,6 +22,7 @@ import img4 from "../../assets/images/pv-challenge/images/days/Rectangle 2098.pn
 import img5 from "../../assets/images/pv-challenge/images/days/icon5.png";
 import img6 from "../../assets/images/pv-challenge/images/days/icon6.png";
 import img7 from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
+import HeaderProfile from "@/components/HeaderPrfile";
 
 
 const loadImg = (key) => {
@@ -266,7 +267,9 @@ function RapportActivite(props) {
 
     return (
         <div className={styles.rapport_activite}>
-            <Header {...props} score={score} t={t} />
+            <div className="z-30 px-[70px] pt-2" >
+                <HeaderProfile btnStyle="bg-white text-[#5CB962]" textStyle="text-white" />
+            </div>
             <Container t={t} days={days_} listDescriptions={listDescriptions} score={score} />
             <div className={styles.img1_content}>
                 <img src={imagePers4} className={styles.img2} alt="" />
