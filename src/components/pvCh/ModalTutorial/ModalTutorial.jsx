@@ -31,6 +31,9 @@ const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personna
                         <h3>
                             {listMsg[index]?.title}
                         </h3>
+                        <h3 className="mt-2">
+                            {listMsg[index]?.s_title}
+                        </h3>
                         <p dangerouslySetInnerHTML={{ __html: listMsg[index]?.text }} />
                     </div>
                     {listMsg[index]?.audio &&
