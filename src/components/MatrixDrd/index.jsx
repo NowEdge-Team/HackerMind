@@ -492,7 +492,7 @@ function MatrixDrd({ nextStep, onBack }) {
                             onClick={onBack}
                         />
                         <NextButton title={config.current.isValid ? undefined : "Validate"} className={!listArticle.every(elm => elm.idCell !== -1) ? 'bg-slate-500' : ''}
-                            onClick={!config.current.isValid ? nextStep : onValidate}
+                            onClick={config.current.isValid ? nextStep : onValidate}
                         />
 
 
