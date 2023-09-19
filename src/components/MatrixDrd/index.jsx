@@ -227,12 +227,12 @@ function MatrixDrd({ nextStep, onBack }) {
 
     const listMsgPop = [
         {
-            title: "ETATIQUE",
-            text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
+            title: "Le leader",
+            text: "Glisser-déposer les articles situés à gauche, dans le cas correspondant.",
             audio: Level1Audio.audio1,
         },
         {
-            title: "CRIME ORGANISE",
+            title: "2",
             text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
             audio: Level1Audio.audio1,
         },

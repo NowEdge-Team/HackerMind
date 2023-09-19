@@ -91,7 +91,7 @@ const Notif = ({ currentIndex, index, data, onClick }) => {
   }
 
 
-  if (index <= currentIndex)
+  if (index === currentIndex)
     return <img key={index} src={bell} alt="" width={25} className={styles.bell1} style={{ position: "absolute", top: data.top, left: data.left, }} onClick={onClick_} />
 }
 
@@ -142,26 +142,26 @@ function App({ onNext }) {
         <div className="pl-[6%] pt-[12px] pr-32">
           <HeaderProfile textStyle={"text-[#ffffff]"} />
         </div>
-        <div className={styles.block} style={{ position: "absolute", top: "16%", left: "6%" }}>
+        <div className={styles.block} style={{ position: "absolute", top: "16%", left: "6%" }} onClick={currentIndex >=0 ? ()=>toggleModal(listNotif[0].idMessage) : null}>
           <img src={torlogo} alt="" width={56} />
           <p>TOR</p>
         </div>
-        <div className={styles.block} style={{ position: "absolute", top: "36%", left: "6%" }}>
+        <div className={styles.block} style={{ position: "absolute", top: "36%", left: "6%" }} onClick={currentIndex >=1 ? ()=>toggleModal(listNotif[1].idMessage) : null} >
           <img src={wikilogo} alt="" width={56} />
           <p style={{ width: "70px" }}>The hidden Wiki</p>
         </div>
 
-        <div className={styles.block} style={{ position: "absolute", top: "51%", left: "6%" }}>
+        <div className={styles.block} style={{ position: "absolute", top: "51%", left: "6%" }} onClick={currentIndex >=2 ? ()=>toggleModal(listNotif[2].idMessage) : null}>
           <img src={nmaplogo} alt="" width={56} />
           <p style={{ width: "56px", paddingTop: "8px" }}>Nmap</p>
         </div>
 
-        <div className={styles.block} style={{ position: "absolute", top: "20%", left: "16%" }}>
+        <div className={styles.block} style={{ position: "absolute", top: "20%", left: "16%" }} onClick={currentIndex >=3 ? ()=>toggleModal(listNotif[3].idMessage) : null}>
           <img src={burpsuitelogo} alt="" width={56} />
           <p>burpsuite</p>
         </div>
 
-        <div className={styles.block} style={{ position: "absolute", top: "34%", left: "16%" }}>
+        <div className={styles.block} style={{ position: "absolute", top: "34%", left: "16%" }} onClick={currentIndex >=4 ? ()=>toggleModal(listNotif[4].idMessage) : null}>
           <img src={metasploitlogo} alt="" width={56} />
           <p>metasploit</p>
         </div>
@@ -172,8 +172,8 @@ function App({ onNext }) {
           {listNotif.map((elm, index) => {
 
             return <Notif key={index} currentIndex={currentIndex} index={index} data={elm} onClick={toggleModal} />
-          })}
 
+          })}
 
         </div>
 
