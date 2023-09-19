@@ -38,7 +38,7 @@ function ChartRadar({bgColor,color,dimension}) {
 
   return (
     <div>
-      <div style={{width:"280px"}}>
+      <div style={{width:"350px",height:"350px"}}>
         <Radar data={data} /> 
       </div>
     </div>
