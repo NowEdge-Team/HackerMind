@@ -66,9 +66,6 @@ const RoundedBlock = ({ index, listMsg, onClick, activeItem }) => {
     </div>
 }
 
-
-
-
 const data = [
     {
         id: 1,
@@ -286,7 +283,6 @@ function Matrix({ nextStep, onBack }) {
 
     const listMsg = [
         {
-
             title: "LE HACKER EN CHEF",
             subtitle:"ETATIQUE",
             text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
