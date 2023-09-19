@@ -55,8 +55,8 @@ const Step2 = ({ modeEdit, dragDropUpdateDecisions, decisions_3, categories_3, i
             // pictureClass={"personne"}
             personnageImage={img1}
             listMsg={[{
-                title: "title",
-                text: "desc",
+                title: "LE HACKER EN CHEF",
+                text: "Je vais voir maintenant si tu as bien compris à quoi nous servent ces outils au quotidien.",
                 audio: Level1Audio.audio1,
             }]}
             title="My Modal"
@@ -113,7 +113,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio6,
+                // audio: Level1Audio.audio6,
                 textBtnNotValid: t("pasEncore"),
                 valid: () => {
                     config.current.currentIndex += 1;
@@ -126,7 +126,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
                 textBtnNotValid: t("pasEncore"),
-                audio: Level1Audio.audio6,
+                // audio: Level1Audio.audio6,
                 valid: () => {
                     setTimeout(sendData, 1000)
                 }
