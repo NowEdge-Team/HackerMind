@@ -55,8 +55,8 @@ const Step2 = ({ modeEdit, dragDropUpdateDecisions, decisions_3, categories_3, i
             // pictureClass={"personne"}
             personnageImage={img1}
             listMsg={[{
-                title: "title",
-                text: "desc",
+                title: "LE HACKER EN CHEF",
+                text: "Je vais voir maintenant si tu as bien compris à quoi nous servent ces outils au quotidien.",
                 audio: Level1Audio.audio1,
             }]}
             title="My Modal"

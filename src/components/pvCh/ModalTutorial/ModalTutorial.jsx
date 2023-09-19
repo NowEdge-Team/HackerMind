@@ -19,7 +19,6 @@ const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personna
             style={{
                 backgroundImage: `linear-gradient(to bottom,rgba(12, 12, 12, 0.8),rgba(12, 12, 12, 0.43)),url('${backGrandImage}')`,
                 // backgroundImage: `url('${backGrandImage}')`,
-
             }}
             onClick={e => e.stopPropagation()}>
             <picture className={`${pictureClass} ${listMsg[index]?.styleCharacter}`} >
@@ -31,6 +30,9 @@ const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personna
                         <h3>
                             {listMsg[index]?.title}
                         </h3>
+                        <h4>
+                            {listMsg[index]?.subtitle}
+                        </h4>
                         <p dangerouslySetInnerHTML={{ __html: listMsg[index]?.text }} />
                     </div>
                     {listMsg[index]?.audio &&
