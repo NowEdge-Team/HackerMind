@@ -19,29 +19,43 @@ ChartJS.register(
 
 
 
-function ChartRadar({bgColor,color,dimension}) {
+function ChartRadar({ bgColor, color, dimension }) {
 
-  const data ={
+  const data = {
     labels: ['Compétences', 'moyens techniques', 'ressources financière', 'Accès au SI', 'Temps'],
     datasets: [
       {
         label: 'score par axe',
-        data:dimension,
-        backgroundColor:bgColor,
-        borderColor:color,
+        data: dimension,
+        backgroundColor: bgColor,
+        borderColor: color,
         borderWidth: 2,
       },
     ],
   };
 
-  console.log(bgColor,color,dimension);
+  console.log(bgColor, color, dimension);
 
   return (
-    <div>
-      <div style={{width:"350px",height:"350px"}}>
-        <Radar data={data} /> 
-      </div>
-    </div>
+    <Radar data={data} options={{
+      scales: {
+        r: {
+          pointLabels: {
+          },
+          ticks: {
+            display: false // Hides the labels in the middel (numbers)
+          }
+        }
+      },
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+
+        }
+      }
+    }} />
+
   )
 }
 
