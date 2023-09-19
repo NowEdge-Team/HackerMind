@@ -9,26 +9,32 @@ import avatar7 from "../../../assets/images/pv-challenge/avatars/profile7.png"
 import avatar8 from "../../../assets/images/pv-challenge/avatars/profile8.png"
 import ChartRd from "./ChartRd"
 import styles from "./card.module.scss";
+import ModalTutorial from "../ModalTutorial/ModalTutorial"
+import img1 from "@/assets/images/pv-challenge/character/character_1_11.png";
+import { useTranslation } from "react-i18next"
+import Level1Audio from "@/assets/audio/Niv1/index.js";
 
 
 
 
-function Card(){
+function Card() {
+    const { t } = useTranslation();
+    const [showTuto, setShowTuto] = useState(true);
 
-    const [title,setTitle] = useState("ÉTATIQUE")
-    const [text,setText] = useState('États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.')
-    const [color,setColor] = useState('')
-    const [activeitem,setActiveItem] = useState()
+    const [title, setTitle] = useState("ÉTATIQUE")
+    const [text, setText] = useState('États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.')
+    const [color, setColor] = useState('')
+    const [activeitem, setActiveItem] = useState()
 
 
-    const [radar,setRadar] = useState({
-            color:'green',
-            bgColor:'#82E0AA',
-            dimension:[9,0,0,9,10]
+    const [radar, setRadar] = useState({
+        color: 'green',
+        bgColor: '#82E0AA',
+        dimension: [9, 0, 0, 9, 10]
     })
 
 
-    const handlechange = (id,title,text,color) => {
+    const handlechange = (id, title, text, color) => {
         setActiveItem(id)
         // setImgsrc(imgSrc) ;
         setText(text)
@@ -36,105 +42,124 @@ function Card(){
         setColor(color)
         let dataRadar
         switch (id) {
-                case 1:
+            case 1:
                 dataRadar = {
-                    color:'green',
-                    bgColor:'#82E0AA',
-                    dimension:[9,0,0,9,10]
+                    color: 'green',
+                    bgColor: '#82E0AA',
+                    dimension: [9, 0, 0, 9, 10]
                 }
                 break;
 
-                case 2:
+            case 2:
                 dataRadar = {
-                    color:'blue',
-                    bgColor:'#AED6F1',
-                    dimension:[9,0,9,10,10]
+                    color: 'blue',
+                    bgColor: '#AED6F1',
+                    dimension: [9, 0, 9, 10, 10]
                 }
                 break
 
-                case 3:
+            case 3:
                 dataRadar = {
-                    color:'red',
-                    bgColor:'#F5B7B1',
-                    dimension:[0,0,9,10,9]
+                    color: 'red',
+                    bgColor: '#F5B7B1',
+                    dimension: [0, 0, 9, 10, 9]
                 }
                 break
 
-                case 4:
+            case 4:
                 dataRadar = {
-                    color:'#4D0AC3',
-                    bgColor:'#A372F8',
-                    dimension:[10,10,10,0,0]
+                    color: '#4D0AC3',
+                    bgColor: '#A372F8',
+                    dimension: [10, 10, 10, 0, 0]
                 }
                 break
 
-                case 5:
+            case 5:
                 dataRadar = {
-                    color:'#E717A4',
-                    bgColor:'#F1AADB',
-                    dimension:[9,6,8,8,6]
+                    color: '#E717A4',
+                    bgColor: '#F1AADB',
+                    dimension: [9, 6, 8, 8, 6]
                 }
                 break
 
-                case 6:
+            case 6:
                 dataRadar = {
-                    color:'green',
-                    bgColor:'LightGrey',
-                    dimension:[1,2,2,2,2]
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
                 }
                 break
 
-                case 7:
+            case 7:
                 dataRadar = {
-                    color:'green',
-                    bgColor:'LightGrey',
-                    dimension:[1,2,2,2,2]
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
                 }
                 break
-                
-                case 8:
+
+            case 8:
                 dataRadar = {
-                    color:'green',
-                    bgColor:'LightGrey',
-                    dimension:[1,2,2,2,2]
+                    color: 'green',
+                    bgColor: 'LightGrey',
+                    dimension: [1, 2, 2, 2, 2]
                 }
                 break
         }
-        setRadar({...dataRadar})
+        setRadar({ ...dataRadar })
     }
 
 
-  return (
-    <div className={styles.container} style={{backgroundColor:color}}>
-        <div className={styles.profil}>
+    return (
+        <div className={styles.container} style={{ backgroundColor: color }}>
+            <ModalTutorial
+                // pictureClass={"personne"}
+                personnageImage={img1}
+                listMsg={[{
+                    title: "title",
+                    text: "desc",
+                    audio: Level1Audio.audio1,
+                }]}
+                title="My Modal"
+                show={showTuto}
+                video={{
+                    id: "1KqKBdUcB5KvbVg7PRIQ-7HQBmjVUSQOG",
+                    title: "Généralités de la Pharmacovigilance"
+                }}
+                onClose={() => {
+                    setShowTuto(false);
 
-            <img src={avatar} alt="" className={`${activeitem=== 1 ? styles.active : "" }`} style={{position:"absolute",left:"6%",top:"5%"}} onClick={()=>handlechange(1,"ÉTATIQUE","États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.",'white')} />
-            <img src={avatar2} alt="" className={`${activeitem=== 2 ? styles.active : "" }`} style={{position:"absolute",left:"17%",top:"5%"}} onClick={()=>handlechange(2,"CRIME ORGANISÉ","Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel, exploitation de réseaux de « machines robots » (botnet), etc.",'white')}/>
-            <img src={avatar3} alt="" className={`${activeitem=== 3 ? styles.active : "" }`} style={{position:"absolute",left:"28%",top:"5%"}} onClick={()=>handlechange(3,"TERRORISTE","Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",'white')} />
-            <img src={avatar4} alt="" className={`${activeitem=== 4 ? styles.active : "" }`} style={{position:"absolute",left:"39%",top:"5%"}} onClick={()=>handlechange(4,"ACTIVISTE IDÉOLOGIQUE","Cyber-hacktivistes, groupements d’intérêt, sectes.",'white')} />
-            <img src={avatar5} alt="" className={`${activeitem=== 5 ? styles.active : "" }`} style={{position:"absolute",left:"50%",top:"5%"}} onClick={()=>handlechange(5,"OFFICINE SPÉCIALISÉE","Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",'white')}  />
-            <img src={avatar6} alt="" className={`${activeitem=== 6 ? styles.active : "" }`} style={{position:"absolute",left:"61%",top:"5%"}} onClick={()=>handlechange(6,"AMATEUR","Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",'white')} />
-            <img src={avatar7} alt="" className={`${activeitem=== 7 ? styles.active : "" }`} style={{position:"absolute",left:"72%",top:"5%"}} onClick={()=>handlechange(7,"VENGEUR","Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",'white')}/>
-            <img src={avatar8} alt="" className={`${activeitem=== 8 ? styles.active : "" }`} style={{position:"absolute",left:"83%",top:"5%"}} onClick={()=>handlechange(8,"MALVEILLANT PATHOLOGIQUE","Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",'white')}/>
-            
-        </div>
-        <div className={styles.desc}>
-            <h3>{title}</h3>
-            <p>{text}</p>
-        </div>
+                }}
+            />
+            <div className={styles.profil}>
 
-        <div className={styles.radar} style={{position:"absolute",right:"5%",top:"33%"}}>
-            {/* <img src={imgSrc} alt="" style={{position:"absolute",right:"8%",top:"36%"}} /> */}
+                <img src={avatar} alt="" className={`${activeitem === 1 ? styles.active : ""}`} style={{ position: "absolute", left: "6%", top: "5%" }} onClick={() => handlechange(1, "ÉTATIQUE", "États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.", 'white')} />
+                <img src={avatar2} alt="" className={`${activeitem === 2 ? styles.active : ""}`} style={{ position: "absolute", left: "17%", top: "5%" }} onClick={() => handlechange(2, "CRIME ORGANISÉ", "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel, exploitation de réseaux de « machines robots » (botnet), etc.", 'white')} />
+                <img src={avatar3} alt="" className={`${activeitem === 3 ? styles.active : ""}`} style={{ position: "absolute", left: "28%", top: "5%" }} onClick={() => handlechange(3, "TERRORISTE", "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration", 'white')} />
+                <img src={avatar4} alt="" className={`${activeitem === 4 ? styles.active : ""}`} style={{ position: "absolute", left: "39%", top: "5%" }} onClick={() => handlechange(4, "ACTIVISTE IDÉOLOGIQUE", "Cyber-hacktivistes, groupements d’intérêt, sectes.", 'white')} />
+                <img src={avatar5} alt="" className={`${activeitem === 5 ? styles.active : ""}`} style={{ position: "absolute", left: "50%", top: "5%" }} onClick={() => handlechange(5, "OFFICINE SPÉCIALISÉE", "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »", 'white')} />
+                <img src={avatar6} alt="" className={`${activeitem === 6 ? styles.active : ""}`} style={{ position: "absolute", left: "61%", top: "5%" }} onClick={() => handlechange(6, "AMATEUR", "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi", 'white')} />
+                <img src={avatar7} alt="" className={`${activeitem === 7 ? styles.active : ""}`} style={{ position: "absolute", left: "72%", top: "5%" }} onClick={() => handlechange(7, "VENGEUR", "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels", 'white')} />
+                <img src={avatar8} alt="" className={`${activeitem === 8 ? styles.active : ""}`} style={{ position: "absolute", left: "83%", top: "5%" }} onClick={() => handlechange(8, "MALVEILLANT PATHOLOGIQUE", "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)", 'white')} />
 
-            <ChartRd color={radar.color} bgColor={radar.bgColor} dimension={radar.dimension} />
+            </div>
+            <div className={styles.desc}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+            </div>
 
-            
+            <div className={styles.radar} style={{ position: "absolute", right: "5%", top: "33%" }}>
+                {/* <img src={imgSrc} alt="" style={{position:"absolute",right:"8%",top:"36%"}} /> */}
+
+                <ChartRd color={radar.color} bgColor={radar.bgColor} dimension={radar.dimension} />
+
+
+            </div>
+            <div className={styles.btn}>
+                {/* <button style={{position:"absolute",right:"9%",bottom:"4%"}} >valider</button> */}
+            </div>
         </div>
-        <div className={styles.btn}>
-            {/* <button style={{position:"absolute",right:"9%",bottom:"4%"}} >valider</button> */}
-        </div>
-    </div>
-  )
+    )
 }
 
 export default Card
