@@ -113,7 +113,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 text: t("day1.messages.text1"),
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
-                audio: Level1Audio.audio6,
+                // audio: Level1Audio.audio6,
                 textBtnNotValid: t("pasEncore"),
                 valid: () => {
                     config.current.currentIndex += 1;
@@ -126,7 +126,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 showCancelBtn: true,
                 textBtnValid: t("day1.messages.textBtnValid"),
                 textBtnNotValid: t("pasEncore"),
-                audio: Level1Audio.audio6,
+                // audio: Level1Audio.audio6,
                 valid: () => {
                     setTimeout(sendData, 1000)
                 }
