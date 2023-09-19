@@ -15,8 +15,8 @@ import styles from "./card.module.scss";
 
 function Card(){
 
-    const [title,setTitle] = useState("avatar 1")
-    const [text,setText] = useState('Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas dolores doloribus voluptatem.')
+    const [title,setTitle] = useState("ÉTATIQUE")
+    const [text,setText] = useState('États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.')
     const [color,setColor] = useState('')
     const [activeitem,setActiveItem] = useState()
 

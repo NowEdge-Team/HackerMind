@@ -32,10 +32,11 @@ import DayOne from "./DayOne.jsx";
 import Matrix from "../../../components/Matrix/index.jsx";
 import MatrixDrd from "../../../components/MatrixDrd/index.jsx";
 import tor from "../../../assets/Tor_logo.png"
-import telegram from "../../../assets/telegram-logo.png"
-import proton from "../../../assets/protonmail-logo.png"
+import metasploit from "../../../assets/metasploitlogo.png"
+import nmap from "../../../assets/nmaplogo.png"
 import wiki from "../../../assets/wiki-logo.png"
-import nulled from "../../../assets/nulled.png"
+import burpsuite from "../../../assets/burpsuitelogo.png"
+
 
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
 import { mModalConfirmSteps } from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
@@ -177,9 +178,9 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const imgBib = [
         tor,
         wiki,
-        proton,
-        telegram,
-        nulled
+        nmap,
+        metasploit,
+        burpsuite
     ]
 
 

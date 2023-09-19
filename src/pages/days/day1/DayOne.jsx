@@ -1,12 +1,8 @@
-
-
-
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
 import ing from "../../../assets/Ingénieur social.png";
 import poly from "../../../assets/Polygone 7.svg";
-import audio6 from "../../../assets/audio/Niv1/fr/Nulled.m4a";
 import audio3 from "../../../assets/audio/Niv1/fr/Project_Haystack.m4a";
 import audio4 from "../../../assets/audio/Niv1/fr/ProtonMail.m4a";
 import audio5 from "../../../assets/audio/Niv1/fr/Telegram.m4a";
@@ -15,32 +11,19 @@ import audio1 from "../../../assets/audio/Niv1/fr/Tor.m4a";
 import bell from "../../../assets/bell.png";
 import tor from "../../../assets/image1.png";
 import hidden from "../../../assets/image2.png";
-import project from "../../../assets/image3.png";
-import proton from "../../../assets/image4.png";
-import nulled from "../../../assets/image5.png";
+import project from "../../../assets/nmaplogo.png";
+import proton from "../../../assets/burpsuite.png";
 import arrow from "../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg";
-import runningSolid from "../../../assets/images/pv-challenge/running-solid2.svg";
-import telegram from "../../../assets/telegram.png";
+import telegram from "../../../assets/metasploit.png";
 import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx";
 import Profile from "../../../components/pvCh/profile/profile.jsx";
 import styles from "./day.module.scss";
-// import violet from "../../../assets/Book/Violet.png"
-// import red from "../../../assets/Book/Red.png"
-// import orange from "../../../assets/Book/Orange.png"
-// import azure from "../../../assets/Book/Azure.png"
-// import bleu from "../../../assets/Book/Bleu.png"
-// import indigo from "../../../assets/Book/Indigo.png"
-
 import torlogo from "../../../assets/Tor_logo.png";
-import haystacklogo from "../../../assets/haystack.png";
-import nulledlogo from "../../../assets/nulled.png";
-import protonlogo from "../../../assets/protonmail-logo.png";
-import telegramlogo from "../../../assets/telegram-logo.png";
+import metasploitlogo from "../../../assets/metasploitlogo.png";
 import wikilogo from "../../../assets/wiki-logo.png";
 import nmaplogo from "../../../assets/nmaplogo.png"
 import burpsuitelogo from "../../../assets/burpsuitelogo.png"
 import HeaderProfile from "@/components/HeaderPrfile";
-
 
 
 
@@ -51,7 +34,6 @@ const listNotif = [
   { top: "52%", left: "8%", idMessage: 3 },
   { top: "25%", left: "18%", idMessage: 4 },
   { top: "39%", left: "18%", idMessage: 5 },
-  { top: "53%", left: "18%", idMessage: 6 },
 ]
 
 const dataList = [{
@@ -62,7 +44,6 @@ const dataList = [{
   text: "TOR est comme un tunnel secret sur Internet. Imaginez que lorsque vous surfez sur le Web, vous laissez derrière vous des empreintes de pas. TOR vous aide à cacher ces empreintes en vous permettant de naviguer anonymement. Lorsque vous utilisez TOR, votre trafic Internet rebondit à travers différents ordinateurs dans le monde, masquant ainsi votre adresse IP. Cela signifie que personne ne peut facilement savoir qui vous êtes ou ce que vous faites en ligne. C'est utile pour protéger votre vie privée, mais cela peut également être utilisé par des personnes malveillantes, il faut donc l'utiliser avec précaution.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio1
-
 },
 {
   id: 2,
@@ -72,7 +53,6 @@ const dataList = [{
   text: "The Hidden Wiki est un peu comme un catalogue secret d'Internet. Il contient des liens vers des sites Web qui ne sont pas visibles sur Internet ordinaire. Certains de ces sites peuvent être utiles, mais beaucoup d'entre eux sont illégaux ou dangereux. Il est essentiel d'être très prudent lorsque vous explorez le contenu du darknet, car vous pourriez vous retrouver sur des sites malveillants ou illégaux sans le vouloir.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons  ",
   audio: audio2
-
 },
 {
   id: 3,
@@ -100,15 +80,6 @@ const dataList = [{
   text: "Telegram est une application de messagerie qui garde vos conversations privées. Lorsque vous envoyez un message, il est enveloppé dans un coffre-fort virtuel, de sorte que seuls vous et votre ami pouvez le voir. Vous pouvez même programmer vos messages pour qu'ils disparaissent après un certain temps. C'est comme avoir une conversation dans une pièce secrète qui s'efface automatiquement après un certain temps.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio5
-},
-{
-  id: 6,
-  backgroundColor: "#527D9A",
-  backgroundIcon: "rgba(82, 125, 154, 0.49)",
-  icon: nulled,
-  text: "Nulled est un endroit dangereux sur Internet. C'est comme une rue sombre où des personnes malveillantes vendent des choses illégales, comme des copies piratées de logiciels et des virus informatiques. Si vous visitez Nulled, vous pourriez être infecté par des logiciels malveillants ou vous mettre en danger juridiquement. Il est important de rester loin de ces endroits sombres en ligne.",
-  msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
-  audio: audio6
 }
 ]
 
@@ -160,7 +131,7 @@ function App({ onNext }) {
 
   let history = useHistory();
 
-  let currentIndex_ = currentIndex <= 5 ? currentIndex : 5;
+  let currentIndex_ = currentIndex <= 4 ? currentIndex : 4;
 
   return (
     <>
@@ -191,13 +162,8 @@ function App({ onNext }) {
         </div>
 
         <div className={styles.block} style={{ position: "absolute", top: "34%", left: "16%" }}>
-          <img src={telegramlogo} alt="" width={56} />
-          <p>Telegram</p>
-        </div>
-
-        <div className={styles.block} style={{ position: "absolute", top: "47%", left: "16%", }}>
-          <img src={nulledlogo} alt="" width={56} />
-          <p>Nulled</p>
+          <img src={metasploitlogo} alt="" width={56} />
+          <p>metasploit</p>
         </div>
 
 
@@ -223,7 +189,7 @@ function App({ onNext }) {
             <Audio/>
           </div> */}
 
-        <buttom className={`${currentIndex === 6 ? styles.btnNextEnble : styles.btnNextDesable}`} onClick={currentIndex === 6 ? onNext : onNext}  >
+        <buttom className={`${currentIndex === 5 ? styles.btnNextEnble : styles.btnNextDesable}`} onClick={currentIndex === 5 ? onNext : onNext}  >
           Etape suivante <img src={arrow} />
         </buttom>
       </div>
