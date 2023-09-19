@@ -1,26 +1,18 @@
-import { useMemo, useState } from "react";
-import style from "./style.module.scss"
-import { useEffect } from "react";
-import Modal1 from "../modal/modal1";
-import ModalTutorial from "../pvCh/ModalTutorial/ModalTutorial";
-import img1 from "../../assets/images/pv-challenge/character/character_1_11.png";
-import Level1Audio from "../../assets/audio/Niv1/index.js";
-import CharacterMessage from "../CharacterMessage";
-import imgCharacter from "../../assets/images/pv-challenge/character/Leader.png"
-import CancelButton from "../pvCh/CancelButton";
-import NextButton from "../pvCh/NextButton";
-import runningSolid from "../../assets/images/pv-challenge/running-solid2.svg";
-import Profile from "../pvCh/profile/profile";
+import imgArticle from "@/assets/images/article1.png";
+import BackButton from "@/components/pvCh/BackButton";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
-import ChartRadar from "../pvCh/card/ChartRd";
+import Level1Audio from "../../assets/audio/Niv1/index.js";
+import imgCharacter from "../../assets/images/pv-challenge/character/Leader.png";
+import img1 from "../../assets/images/pv-challenge/character/character_1_11.png";
+import CharacterMessage from "../CharacterMessage";
 import ChartRd2 from "../ChartRd2";
-import BackButton from "@/components/pvCh/BackButton";
-import { useCallback } from "react";
-import { useRef } from "react";
-import imgArticle from "@/assets/images/article1.png";
-import { mModalArticel } from "../modal/ModalArticle";
 import HeaderProfile from "../HeaderPrfile";
+import { mModalArticel } from "../modal/ModalArticle";
+import ModalTutorial from "../pvCh/ModalTutorial/ModalTutorial";
+import NextButton from "../pvCh/NextButton";
+import style from "./style.module.scss";
 
 
 const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
@@ -44,21 +36,16 @@ const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
 
 const RoundedBlock = ({ index, listMsg, onClick, activeItem }) => {
 
+
     const findItem = listMsg.find((item) => item.index === index);
     const findIndexItem = listMsg.findIndex((item) => item.index === index);
 
-    if (index === 0) {
-
-        console.clear();
-        console.log("🚀 ----> findIndexItem:", findIndexItem)
-        console.log("🚀 ~ ----> activeItem:", activeItem)
-    }
-
-    // const findItem = notifcationList[activeItem - 1];
 
     const onnNextItem = () => {
-        // console.log("---findItem--", findItem);
-        onClick(findItem)
+        console.log("🚀 ~ file: index.jsx:38 ~ RoundedBlock ~ activeItem:", activeItem)
+        console.log("🚀 ~ file: index.jsx:38 ~ RoundedBlock ~ index:", findIndexItem)
+        if (findIndexItem <= activeItem - 1)
+            onClick(findItem)
     }
 
     return <div className={style.block_icon} >
@@ -229,58 +216,14 @@ function Matrix({ nextStep, onBack }) {
     let history = useHistory();
     const [radar, setRadar] = useState()
     const [showTuto, setShowTuto] = useState(false);
-    const [step, setStep] = useState(0);
-    const [activeItem, setActiveItem] = useState(1);
+    const [step, setStep] = useState(2);
+    const [activeItem, setActiveItem] = useState(15);
     const [currentMessage, setCurrentMessage] = useState({});
     const config = useRef({
         currentItem: null
     });
-
-    const nextItem = (currentItem) => {
-
-        config.current.currentItem = currentItem;
-        if (currentItem.type === "profil" || currentItem.type === "motivation") {
-            setRadar(_ => dataRadar.find(elm => elm.id === currentItem.radarId))
-            setCurrentMessage(() => listMsg.find(elm => elm.id === currentItem.messageId))
-        } else {
-            setCurrentMessage(currentItem)
-        }
-        setShowTuto(true);
-    }
-
-    useEffect(() => {
-        setCurrentMessage(() => ({
-            title: "LE HACKER EN CHEF",
-            text: "Nous allons voir ensemble les différents profils et leurs motivations et ton objectif sera de selectionner le profil qui te correspond le mieux !",
-            audio: Level1Audio.audio1,
-            onClose: () => {
-                setShowTuto(item => false);
-            }
-        }));
-        setShowTuto(() => true);
-    }, [])
-
-    useEffect(() => {
-        if (activeItem === 9) {
-
-            setCurrentMessage(() => ({
-                title: "LE HACKER EN CHEF",
-                text: "Présentation des motivations",
-                audio: Level1Audio.audio1,
-                onClose: () => {
-                    setStep(1);
-                    setShowTuto(item => false);
-                }
-            }));
-            setShowTuto(item => true);
-
-        }
-        if (activeItem === 15) {
-            setStep(() => 2)
-        }
-
-    }, [activeItem]);
-
+    const profilList = useMemo(() => data.filter(item => item.type === "profil"), [])
+    const motivationList = useMemo(() => data.filter(item => item.type === "motivation"), [])
     const listMsg = [
         {
             title: "LE HACKER EN CHEF",
@@ -420,7 +363,6 @@ function Matrix({ nextStep, onBack }) {
         }
 
     ].map((item, index) => ({ ...item, id: index + 1 }));
-
     const listMsgPop = [
         {
             title: "Le leader",
@@ -544,17 +486,90 @@ function Matrix({ nextStep, onBack }) {
 
     ];
 
+
+    useEffect(() => {
+        setCurrentMessage(() => ({
+            title: "LE HACKER EN CHEF",
+            text: "Nous allons voir ensemble les différents profils et leurs motivations et ton objectif sera de selectionner le profil qui te correspond le mieux !",
+            audio: Level1Audio.audio1,
+            onClose: () => {
+                setShowTuto(item => false);
+            }
+        }));
+        setShowTuto(() => true);
+    }, [])
+
+    useEffect(() => {
+        if (activeItem === 9) {
+
+            if (step === 0) {
+                setCurrentMessage(() => ({
+                    title: "LE HACKER EN CHEF",
+                    text: "Présentation des motivations",
+                    audio: Level1Audio.audio1,
+                    onClose: () => {
+                        setStep(1);
+                        setShowTuto(item => false);
+                    }
+                }));
+                setShowTuto(item => true);
+            }
+            else {
+                setTimeout(() => {
+                    setCurrentMessage(() => ({
+                        title: "Title 2",
+                        text: " Présentation 2 ",
+                        audio: Level1Audio.audio1,
+                        onClose: () => {
+                            setShowTuto(item => false);
+                        }
+                    }));
+                    setShowTuto(item => true);
+                }, 500);
+            }
+        }
+
+
+
+        if (activeItem === 15) {
+
+            setTimeout(() => {
+                setCurrentMessage(() => ({
+                    title: "Title 3",
+                    text: " Présentation 3 ",
+                    audio: Level1Audio.audio1,
+                    onClose: () => {
+                        setShowTuto(item => false);
+                    }
+                }));
+                setShowTuto(item => true);
+            }, 500);
+
+
+            setStep(() => 2)
+        }
+
+    }, [activeItem, step]);
+
+
+
     const closeModale = () => {
         if (config.current.currentItem.id === activeItem) { setActiveItem(index => index + 1); }
         setShowTuto(item => false);
         setRadar(null)
     }
 
+    const nextItem = (currentItem) => {
 
-
-    const profilList = useMemo(() => data.filter(item => item.type === "profil"), [])
-    const motivationList = useMemo(() => data.filter(item => item.type === "motivation"), [])
-
+        config.current.currentItem = currentItem;
+        if (currentItem.type === "profil" || currentItem.type === "motivation") {
+            setRadar(_ => dataRadar.find(elm => elm.id === currentItem.radarId))
+            setCurrentMessage(() => listMsg.find(elm => elm.id === currentItem.messageId))
+        } else {
+            setCurrentMessage(currentItem)
+        }
+        setShowTuto(true);
+    }
 
     const clickRoundedBlock = async (currentItem) => {
         await mModalArticel(currentItem);
