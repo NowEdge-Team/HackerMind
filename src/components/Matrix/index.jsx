@@ -216,8 +216,8 @@ function Matrix({ nextStep, onBack }) {
     let history = useHistory();
     const [radar, setRadar] = useState()
     const [showTuto, setShowTuto] = useState(false);
-    const [step, setStep] = useState(2);
-    const [activeItem, setActiveItem] = useState(15);
+    const [step, setStep] = useState(0);
+    const [activeItem, setActiveItem] = useState(1);
     const [currentMessage, setCurrentMessage] = useState({});
     const config = useRef({
         currentItem: null
