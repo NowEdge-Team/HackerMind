@@ -156,55 +156,47 @@ const dataRadar = [
     {
         id: 1,
         color: 'green',
-        bgColor: 'transparent',
         dimension: [4, 4, 4, 2, 3]
     },
     {
         id: 2,
         color: 'blue',
-        bgColor: 'transparent',
         dimension: [3, 3, 3, 1, 1]
     }
     ,
     {
         id: 3,
         color: 'red',
-        bgColor: '#transparent',
         dimension: [2, 2, 2, 1, 4]
     }
     ,
     {
         id: 4,
         color: 'green',
-        bgColor: 'transparent',
         dimension: [2, 1, 1, 1, 4]
     }
     ,
     {
         id: 5,
         color: 'green',
-        bgColor: 'transparent',
         dimension: [4, 4, 3, 2, 3]
     }
     ,
     {
         id: 6,
         color: 'green',
-        bgColor: 'transparent',
         dimension: [1, 1, 1, 1, 2]
     }
     ,
     {
         id: 7,
         color: 'green',
-        bgColor: 'transparent',
         dimension: [2, 1, 1, 4, 2]
     }
     ,
     {
         id: 8,
         color: 'green',
-        bgColor: 'transparent',
         dimension: [2, 1, 2, 1, 2]
     }
 ]
@@ -596,7 +588,7 @@ function Matrix({ nextStep, onBack }) {
                 onClose={closeModale}
             >
                 {radar ? <div className="absolute flex justify-center rounded-[4px] items-center bottom-[55px] left-[26%] h-[200px] bg-white w-[71%]">
-                    <ChartRd2 color={radar.color} bgColor={radar.bgColor} dimension={radar.dimension} />
+                    <ChartRd2 color={radar.color} dimension={radar.dimension} />
                 </div> : null}
             </ModalTutorial>
             <div className={step === 0 ? style.mtx_container_1 : style.mtx_container_2}>
