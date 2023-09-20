@@ -13,6 +13,7 @@ const names = [
     {"audio5":"Audio 1.5"},
     {"audio6":"Audio 1.6"},
     {"audio7":"Audio 1.7"},
+    {"audio8":"Audio 1.8"},
     {"felicitation":"felicitation"}
 ]
 

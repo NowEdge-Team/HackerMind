@@ -117,9 +117,9 @@ function Card() {
                 // pictureClass={"personne"}
                 personnageImage={img1}
                 listMsg={[{
-                    title: "title",
-                    text: "desc",
-                    audio: Level1Audio.audio1,
+                    title: "LE HACKER EN CHEF",
+                    text: "Vous avez exploré avec succès les différents profils de hackers et leurs motivations. À présent, parcourez attentivement les divers profils des hackers en cliquant sur les avatars, puis sélectionnez le profil qui vous convient le mieux !",
+                    audio: Level1Audio.audio8,
                 }]}
                 title="My Modal"
                 show={showTuto}
