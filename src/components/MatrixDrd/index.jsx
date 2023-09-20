@@ -234,8 +234,8 @@ function MatrixDrd({ nextStep, onBack }) {
             audio: Level1Audio.audio1,
         },
         {
-            title: "2",
-            text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
+            title: "Le leader",
+            text: "Glisser-déposer les articles situés à gauche, dans le cas correspondant.",
             audio: Level1Audio.audio1,
         },
         {
