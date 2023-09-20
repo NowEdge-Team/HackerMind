@@ -11,30 +11,50 @@ export function mModalArticel(props) {
 }
 
 
-function DialogBody({ description, title, closeModal, img }) {
+const TempletVideo = ({ data }) => {
+
+    return <iframe
+        width="950"
+        height="534"
+        src={`https://www.youtube.com/embed/${data.idVideo}`}
+
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
+}
+
+
+const TempletArticle = ({ data, closeModal, img }) => {
+
+    return <div className="bg-white rounded-lg  relative">
+        <div className="absolute right-3 top-3 p-1 cursor-pointer" onClick={closeModal} >
+            <i class="fas fa-times text-[20px]"></i>
+        </div>
+        <div className="flex flex-row">
+
+            <div className="p-3 flex flex-col gap-3">
+
+                <h3 className="font-bold text-[22px] text-black" >{data.title}</h3>
+                <div>
+                    <img className="float-left w-[20%] mr-4" src={data.img} />
+                    <p className="text-left text-black">
+                        {data.description}
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+}
+
+
+function DialogBody({ data, closeModal }) {
+
+
+    if (data.type === "text") return <TempletArticle data={data} closeModal={closeModal} />
 
 
     return (
-        <div className="bg-white rounded-lg  relative">
-            <div className="absolute right-3 top-3 p-1 cursor-pointer" onClick={closeModal} >
-                <i class="fas fa-times text-[20px]"></i>
-            </div>
-            <div className="flex flex-row">
-
-                <div className="p-3 flex flex-col gap-3">
-
-                    <h3 className="font-bold text-[22px] text-black" >{title}</h3>
-                    <div>
-                        <img className="float-left w-[20%] mr-4" src={img} />
-                        <p className="text-left text-black">
-                            {description}
-                        </p>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
+        <TempletVideo data={data} />
     )
 
 
@@ -49,7 +69,10 @@ const ModalArticel = ({ }) => {
 
     confirmAction.current = (props) =>
         new Promise((resolve) => {
-            setProps(props)
+            setProps({
+                type: "text",
+                ...props
+            })
             setIsOpen(true);
             resolveRef.current = resolve;
         });
@@ -88,10 +111,9 @@ const ModalArticel = ({ }) => {
                         >
                             <Dialog.Panel className={"flex flex-col justify-center w-full  max-w-[974px] "} >
                                 <DialogBody
-                                    currentIndex={currentIndex}
-                                    setCurrentIndex={setCurrentIndex}
                                     closeModal={closeModal}
-                                    {...props} />
+                                    data={props}
+                                />
                             </Dialog.Panel>
                         </Transition.Child>
                     </div>
