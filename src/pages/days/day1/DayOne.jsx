@@ -10,7 +10,7 @@ import audio2 from "../../../assets/audio/Niv1/fr/The_Hidden_Wiki.m4a";
 import audio1 from "../../../assets/audio/Niv1/fr/Tor.m4a";
 import bell from "../../../assets/bell.png";
 import tor from "../../../assets/image1.png";
-import hidden from "../../../assets/image2.png";
+import shodan from "../../../assets/shodan-logo.png";
 import nmap from "../../../assets/nmaplogo.png";
 import burpsuite from "../../../assets/burpsuite.png";
 import arrow from "../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg";
@@ -20,7 +20,7 @@ import Profile from "../../../components/pvCh/profile/profile.jsx";
 import styles from "./day.module.scss";
 import torlogo from "../../../assets/Tor_logo.png";
 import metasploitlogo from "../../../assets/metasploitlogo.png";
-import wikilogo from "../../../assets/wiki-logo.png";
+import shodanlogo from "../../../assets/shodanlogo.png";
 import nmaplogo from "../../../assets/nmaplogo.png"
 import burpsuitelogo from "../../../assets/burpsuitelogo.png"
 import HeaderProfile from "@/components/HeaderPrfile";
@@ -49,7 +49,7 @@ const dataList = [{
   id: 2,
   backgroundColor: "#FF001C",
   backgroundIcon: "rgba(255, 0, 28, 0.47)",
-  icon: hidden,
+  icon: shodan,
   text: "The Hidden Wiki est un peu comme un catalogue secret d'Internet. Il contient des liens vers des sites Web qui ne sont pas visibles sur Internet ordinaire. Certains de ces sites peuvent être utiles, mais beaucoup d'entre eux sont illégaux ou dangereux. Il est essentiel d'être très prudent lorsque vous explorez le contenu du darknet, car vous pourriez vous retrouver sur des sites malveillants ou illégaux sans le vouloir.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons  ",
   audio: audio2
@@ -146,9 +146,9 @@ function App({ onNext }) {
           <img src={torlogo} alt="" width={56} />
           <p>TOR</p>
         </div>
-        <div className={styles.block} style={{ position: "absolute", top: "36%", left: "6%" }} onClick={currentIndex >=1 ? ()=>toggleModal(listNotif[1].idMessage) : null} >
-          <img src={wikilogo} alt="" width={56} />
-          <p style={{ width: "70px" }}>The hidden Wiki</p>
+        <div className={styles.block} style={{ position: "absolute", top: "34%", left: "6%" }} onClick={currentIndex >=1 ? ()=>toggleModal(listNotif[1].idMessage) : null} >
+          <img src={shodanlogo} alt="" width={56} />
+          <p style={{ width: "58px" }}>Shodan</p>
         </div>
 
         <div className={styles.block} style={{ position: "absolute", top: "51%", left: "6%" }} onClick={currentIndex >=2 ? ()=>toggleModal(listNotif[2].idMessage) : null}>
