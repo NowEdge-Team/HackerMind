@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import style from "./style.module.scss"
 import { useEffect } from "react";
 import Modal1 from "../modal/modal1";
@@ -185,7 +185,9 @@ function MatrixDrd({ nextStep, onBack }) {
     const [step, setStep] = useState(0);
     const [activeItem, setActiveItem] = useState(1);
     const [currentMessage, setCurrentMessage] = useState({});
-    let [dustbins, setDustbins] = useState([...Array(48).keys()].map((item) => ({ id: item + 1, droppedItem: null }))) // id : 1 -> 48
+    const list = useMemo(() => [...Array(48).keys()].map((item) => ({ id: item + 1, droppedItem: null })), []);
+    let [dustbins, setDustbins] = useState(list) // id : 1 -> 48
+    
     let [listArticle, setListArticle] = useState(articleData);
 
 
@@ -352,7 +354,11 @@ function MatrixDrd({ nextStep, onBack }) {
         setShowTuto(item => false);
     }
 
-    const onDrop = (item, rowItem) => {
+    const onDrop = useCallback((item, rowItem) => {
+
+        const findItem = dustbins.find(elm => elm.id === rowItem.id);
+
+        if (findItem.droppedItem !== null) return;
 
         dustbins = dustbins.map(elm => {
             if (elm.id !== rowItem.id && elm?.droppedItem?.id === item?.id) {
@@ -370,7 +376,7 @@ function MatrixDrd({ nextStep, onBack }) {
 
         setListArticle(_ => listArticle)
         setDustbins(_ => dustbins)
-    }
+    }, [listArticle, dustbins])
 
     const onDropListArticle = (item) => {
 
@@ -472,8 +478,8 @@ function MatrixDrd({ nextStep, onBack }) {
                         }
                         <>
                             <div></div>
-                            {dustbins.map((item, index) => <div key={index} className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
-                                <Dustbin key={item.id} item={item} onDrop={onDrop} />
+                            {dustbins.map((item, index) => <div key={item.id} className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
+                                <Dustbin item={item} onDrop={onDrop} />
                             </div>)}
                         </>
 
