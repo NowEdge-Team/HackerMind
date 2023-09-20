@@ -4,12 +4,16 @@ import CardDrd from "../Card"
 
 
 export default function Dustbin({ item, onDrop }) {
+
+    const { droppedItem } = item;
+
+
     const [{ canDrop, isOver }, drop] = useDrop(() => ({
         accept: "CARD",
         drop: (elem) => onDrop(elem, item),
         collect: (monitor) => ({
             isOver: monitor.isOver(),
-            canDrop: monitor.canDrop(),
+            canDrop: false //monitor.canDrop(),
         }),
     }))
     const isActive = canDrop && isOver
@@ -21,8 +25,8 @@ export default function Dustbin({ item, onDrop }) {
     }
     return (
         <div ref={drop} style={{ backgroundColor }} className="text-[10px] h-full" data-testid="dustbin">
-            {item?.droppedItem && (
-                <div className="max-w-[149px] h-full">  <CardDrd {...item.droppedItem} showExpand={false} /></div>
+            {droppedItem && (
+                <div className="max-w-[149px] h-full">  <CardDrd {...droppedItem} showExpand={false} /></div>
             )}
 
         </div>

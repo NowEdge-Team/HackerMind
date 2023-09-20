@@ -1,55 +1,58 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import MaskGroup145 from "../../assets/images/pv-challenge/ascending-arrow-symbol-with-three-circles.svg";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Style from "./style.module.scss"
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import icon from "../../assets/images/pv-challenge/images/equals-solid.svg"
 // import {day1Step2UpdateDecisions} from "../../../redux/daysPvCh/actions.js";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Drag = ({
-                  listP,
-                  item,
-                  modeEdit,
-                  onDrop = () => null,
-                  onDragOver = () => null,
-                  t,
-                  day,
-                 part,
-                  hasTowBlock=true,
-                  icons =[],
-                  index,
-                  flex_siz=0,
-                  logoBlock
-              }) => {
+    listP,
+    item,
+    modeEdit,
+    onDrop = () => null,
+    onDragOver = () => null,
+    t,
+    day,
+    part,
+    hasTowBlock = true,
+    icons = [],
+    index,
+    flex_siz = 0,
+    logoBlock
+}) => {
+    const [sahContent, setHasContent] = useState(false);
     const onDragStart = (ev, id) => {
+        
+        setHasContent(true);
         ev.dataTransfer.setData("id", id);
     };
 
-    if (!item.id) return  null;
+    if (!item.id) return null;
     return (
         <div
             className={Style.drag_block}
             onDrop={(ev, cat) => onDrop(ev, cat, item.id)}
             onDragOver={onDragOver}
         >
-           <div className={Style.title_block} style={{flex:flex_siz}}>
+            <div className={Style.title_block} style={{ flex: flex_siz }}>
                 <img src={logoBlock} alt="" width={36} />
-               <h3 className={`${Style.title} m-0`}> {t(`day${day}.part${part}.categories.${item.id}`)} </h3>
-               {icons.length > 0 && <FontAwesomeIcon width={25} icon={icons[index].icon} color={icons[index].color}/>}
-           </div>
+                <h3 className={`${Style.title} m-0`}> {t(`day${day}.part${part}.categories.${item.id}`)} </h3>
+                {icons.length > 0 && <FontAwesomeIcon width={25} icon={icons[index].icon} color={icons[index].color} />}
+            </div>
 
-            <div className={`${hasTowBlock ?  Style.body_2 :Style.body } mt-1`}>
+            <div className={`${hasTowBlock ? Style.body_2 : Style.body} mt-1`}>
                 {listP.map((elem, index) => {
                     if (elem.category === item.id) {
                         return (
                             <div
                                 key={index}
                                 className={Style.item_pvch}
-                                draggable={modeEdit}
+                                draggable={modeEdit && !sahContent}
                                 onDragStart={(e) => onDragStart(e, elem.id)}
                             >
-                                <img draggable={modeEdit} src={icon} alt={""}/>
+                                <img draggable={modeEdit} src={icon} alt={""} />
                                 <p title={t(`day${day}.part${part}.decisions.${elem.id}`)}>
                                     {t(`day${day}.part${part}.decisions.${elem.id}`)}
                                 </p>
@@ -62,10 +65,10 @@ const Drag = ({
     );
 };
 
-const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,part=2,icons,flex_siz=0,imgBib}) => {
+const Dropzone = ({ modeEdit = true, decisions, categories, callback, day = 1, part = 2, icons, flex_siz = 0, imgBib }) => {
     // const {decisions, categories} = useSelector((state) => state.DaysPvCh.day2.part1);
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const [tasks, setTasks] = useState(categories);
 
@@ -77,7 +80,7 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
         setListP(d);
     }, []);
     const onDragStart = (ev, id) => {
-        //console.log("dragstart:", id);
+        //
         ev.dataTransfer.setData("id", id);
     };
     const onDragOver = (ev) => {
@@ -87,13 +90,19 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
         if (idBlock) {
             let id = ev.dataTransfer.getData("id");
 
-            let tasks_ = listP.map((task) => {
-                if (task.id == id) {
-                    task.category = idBlock;
-                }
-                return task;
-            });
-            dispatch(callback(tasks_ ,`day${day}`,`part${part}`));
+            const findIndex = listP.find(task => task.category === idBlock);
+            
+            
+
+            if (!findIndex) {
+                let tasks_ = listP.map((task) => {
+                    if (task.id == id) {
+                        task.category = idBlock;
+                    }
+                    return task;
+                });
+                dispatch(callback(tasks_, `day${day}`, `part${part}`));
+            }
         } else {
             let id = ev.dataTransfer.getData("id");
             let tasks_ = listP.map((task) => {
@@ -103,13 +112,13 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
                 return task;
             });
 
-            dispatch(callback(tasks_,  `day${day}`,`part${part}`));
+            dispatch(callback(tasks_, `day${day}`, `part${part}`));
         }
     };
 
     const hasTowBlock = useMemo(() => {
 
-        return tasks.find(elm=> elm.block === 2)
+        return tasks.find(elm => elm.block === 2)
     }, [tasks.length]);
 
     return (
@@ -129,7 +138,7 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
                                     onDragStart={(e) => onDragStart(e, item.id)}
                                     className={Style.list_dr_item}
                                 >
-                                    <img src={icon} alt={""}/>
+                                    <img src={icon} alt={""} />
                                     <span>
                                         {t(`day${day}.part${part}.decisions.${item.id}`)}
                                     </span>
@@ -141,7 +150,7 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
             </div>
             <div className={Style.block_2}>
                 <div className={Style.block_2_1}>
-                    <img alt={""} src={MaskGroup145}/>
+                    <img alt={""} src={MaskGroup145} />
                 </div>
                 <div className={Style.block_2_2}>
                     <div className={Style.block_2_2_row}>
@@ -192,7 +201,7 @@ const Dropzone = ({modeEdit = true, decisions , categories , callback , day=1,pa
                                     );
                             })}
                         </div>
-                  }
+                    }
                 </div>
             </div>
         </div>
