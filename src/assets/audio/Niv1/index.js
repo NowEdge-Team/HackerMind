@@ -14,6 +14,21 @@ const names = [
     {"audio6":"Audio 1.6"},
     {"audio7":"Audio 1.7"},
     {"audio8":"Audio 1.8"},
+    {"audio9":"p1"},
+    {"audio10":"p2"},
+    {"audio11":"p3"},
+    {"audio12":"p4"}, 
+    {"audio13":"p5"},
+    {"audio14":"p6"},
+    {"audio15":"p7"},
+    {"audio16":"p8"},
+    {"audio17":"m1"},
+    {"audio18":"m2"},
+    {"audio19":"m3"},
+    {"audio20":"m4"},
+    {"audio21":"m5"},
+    {"audio22":"m6"},
+
     {"felicitation":"felicitation"}
 ]
 

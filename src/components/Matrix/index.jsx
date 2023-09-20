@@ -156,55 +156,47 @@ const dataRadar = [
     {
         id: 1,
         color: 'green',
-        bgColor: '#82E0AA',
         dimension: [4, 4, 4, 2, 3]
     },
     {
         id: 2,
         color: 'blue',
-        bgColor: '#AED6F1',
         dimension: [3, 3, 3, 1, 1]
     }
     ,
     {
         id: 3,
         color: 'red',
-        bgColor: '#F5B7B1',
         dimension: [2, 2, 2, 1, 4]
     }
     ,
     {
         id: 4,
         color: 'green',
-        bgColor: 'LightGrey',
         dimension: [2, 1, 1, 1, 4]
     }
     ,
     {
         id: 5,
         color: 'green',
-        bgColor: 'LightGrey',
         dimension: [4, 4, 3, 2, 3]
     }
     ,
     {
         id: 6,
         color: 'green',
-        bgColor: 'LightGrey',
         dimension: [1, 1, 1, 1, 2]
     }
     ,
     {
         id: 7,
         color: 'green',
-        bgColor: 'LightGrey',
         dimension: [2, 1, 1, 4, 2]
     }
     ,
     {
         id: 8,
         color: 'green',
-        bgColor: 'LightGrey',
         dimension: [2, 1, 2, 1, 2]
     }
 ]
@@ -231,7 +223,7 @@ function Matrix({ nextStep, onBack }) {
             title: "LE HACKER EN CHEF",
             subtitle: "ETATIQUE",
             text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio9,
             withRadar: true,
         },
         {
@@ -239,14 +231,14 @@ function Matrix({ nextStep, onBack }) {
             title: "LE HACKER EN CHEF",
             subtitle: "CRIME ORGANISE",
             text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio10,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "TERRORISTE",
             text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio11,
             withRadar: true,
 
         },
@@ -254,7 +246,7 @@ function Matrix({ nextStep, onBack }) {
             title: "LE HACKER EN CHEF",
             subtitle: "ACTIVISTE IDIOLOGIQUE",
             text: "Cyber-hacktivistes, groupements d’intérêt, sectes.",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio12,
             withRadar: true,
 
         },
@@ -262,7 +254,7 @@ function Matrix({ nextStep, onBack }) {
             title: "LE HACKER EN CHEF",
             subtitle: "OFFICINE SPÉCIALISÉE",
             text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques 3 accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio13,
             withRadar: true,
 
         },
@@ -270,14 +262,14 @@ function Matrix({ nextStep, onBack }) {
             title: "LE HACKER EN CHEF",
             subtitle: "AMATEUR",
             text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio14,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "VENGEUR",
             text: "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio15,
             withRadar: true,
 
         },
@@ -285,35 +277,35 @@ function Matrix({ nextStep, onBack }) {
             title: "LE HACKER EN CHEF",
             subtitle: "MALVEILLANT PATHOLOGIQUE",
             text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",
-            audio: Level1Audio.audio1,
+            audio: Level1Audio.audio16,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ESPIONNAGE",
             text: "Opération de renseignement (étatique, économique)",
-            audio: Level1Audio.audio1
+            audio: Level1Audio.audio17
         },
 
         {
             title: "LE HACKER EN CHEF",
             subtitle: "PRÉPOSITIONNEMENT STRATÉGIQUE",
             text: "Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho).",
-            audio: Level1Audio.audio1
+            audio: Level1Audio.audio18
         },
 
         {
             title: "LE HACKER EN CHEF",
             subtitle: "INFLUENCE",
             text: "Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État.",
-            audio: Level1Audio.audio1
+            audio: Level1Audio.audio19
 
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ENTRAVE AU FONCTIONNEMENT",
             text: "Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique",
-            audio: Level1Audio.audio1
+            audio: Level1Audio.audio20
         },
 
 
@@ -321,13 +313,13 @@ function Matrix({ nextStep, onBack }) {
             title: "LE HACKER EN CHEF",
             subtitle: "LUCRATIF",
             text: "Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc.",
-            audio: Level1Audio.audio1
+            audio: Level1Audio.audio21
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "DÉFI, AMUSEMENT",
             text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
-            audio: Level1Audio.audio1
+            audio: Level1Audio.audio22
         },
 
         {
@@ -588,7 +580,7 @@ function Matrix({ nextStep, onBack }) {
                 onClose={closeModale}
             >
                 {radar ? <div className="absolute flex justify-center rounded-[4px] items-center bottom-[55px] left-[26%] h-[200px] bg-white w-[71%]">
-                    <ChartRd2 color={radar.color} bgColor={radar.bgColor} dimension={radar.dimension} />
+                    <ChartRd2 color={radar.color} dimension={radar.dimension} />
                 </div> : null}
             </ModalTutorial>
             <div className={step === 0 ? style.mtx_container_1 : style.mtx_container_2}>
