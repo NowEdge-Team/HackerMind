@@ -11,10 +11,10 @@ import audio1 from "../../../assets/audio/Niv1/fr/Tor.m4a";
 import bell from "../../../assets/bell.png";
 import tor from "../../../assets/image1.png";
 import hidden from "../../../assets/image2.png";
-import project from "../../../assets/nmaplogo.png";
-import proton from "../../../assets/burpsuite.png";
+import nmap from "../../../assets/nmaplogo.png";
+import burpsuite from "../../../assets/burpsuite.png";
 import arrow from "../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg";
-import telegram from "../../../assets/metasploit.png";
+import metasploit from "../../../assets/metasploit.png";
 import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx";
 import Profile from "../../../components/pvCh/profile/profile.jsx";
 import styles from "./day.module.scss";
@@ -56,18 +56,18 @@ const dataList = [{
 },
 {
   id: 3,
-  backgroundColor: "#F7941E",
-  backgroundIcon: "rgba(247, 148, 30, 0.49)",
-  icon: project,
+  backgroundColor: "#CBBAFF",
+  backgroundIcon: "rgba(203, 186, 255, 0.49)",
+  icon: nmap,
   text: "Project Haystack se concentre sur l'organisation des données provenant d'appareils connectés, tels que des thermostats intelligents ou des capteurs de température. L'idée est de rendre ces données plus faciles à gérer et à utiliser. Cependant, il est important de noter que la collecte de données provenant d'appareils IoT peut poser des problèmes de sécurité si ces données ne sont pas correctement protégées. C'est comme si vous aviez une boîte à secrets, mais vous devez vous assurer que personne d'autre ne puisse l'ouvrir.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio3
 },
 {
   id: 4,
-  backgroundColor: "#CBBAFF",
-  backgroundIcon: "rgba(203, 186, 255, 0.49)",
-  icon: proton,
+  backgroundColor: "#F7941E",
+  backgroundIcon: "rgba(247, 148, 30, 0.49)",
+  icon: burpsuite,
   text: "ProtonMail est une boîte aux lettres électronique super sécurisée. Lorsque vous envoyez un e-mail via ProtonMail, il est verrouillé dans une boîte à secrets virtuelle, et seul le destinataire peut l'ouvrir. Cela signifie que même si quelqu'un d'autre intercepte votre e-mail en cours de route, il ne pourra pas le lire. C'est un peu comme envoyer une lettre dans un coffre-fort. C'est une excellente façon de protéger vos messages personnels.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio4
@@ -76,7 +76,7 @@ const dataList = [{
   id: 5,
   backgroundColor: "#00AAE2",
   backgroundIcon: "rgba(0, 170, 226, 0.49)",
-  icon: telegram,
+  icon: metasploit,
   text: "Telegram est une application de messagerie qui garde vos conversations privées. Lorsque vous envoyez un message, il est enveloppé dans un coffre-fort virtuel, de sorte que seuls vous et votre ami pouvez le voir. Vous pouvez même programmer vos messages pour qu'ils disparaissent après un certain temps. C'est comme avoir une conversation dans une pièce secrète qui s'efface automatiquement après un certain temps.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio5
