@@ -144,7 +144,7 @@ function App({ onNext }) {
         </div>
         <div className={styles.block} style={{ position: "absolute", top: "16%", left: "6%" }} onClick={currentIndex >=0 ? ()=>toggleModal(listNotif[0].idMessage) : null}>
           <img src={torlogo} alt="" width={56} />
-          <p>TOR</p>
+          <p>Tor</p>
         </div>
         <div className={styles.block} style={{ position: "absolute", top: "34%", left: "6%" }} onClick={currentIndex >=1 ? ()=>toggleModal(listNotif[1].idMessage) : null} >
           <img src={shodanlogo} alt="" width={56} />
