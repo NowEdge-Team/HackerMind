@@ -245,7 +245,7 @@ function Modal({ modal = false, data, close, onBack }) {
             <button onClick={() => close(data.id)}>Terminé<img src={arrow} /></button>
           </div>
           <div className={styles.back}>
-            <button onClick={onBack}>Pas encore</button>
+            <button onClick={onBack}>non</button>
           </div>
 
         </div>

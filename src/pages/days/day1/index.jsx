@@ -34,7 +34,7 @@ import MatrixDrd from "../../../components/MatrixDrd/index.jsx";
 import tor from "../../../assets/Tor_logo.png"
 import metasploit from "../../../assets/metasploitlogo.png"
 import nmap from "../../../assets/nmaplogo.png"
-import wiki from "../../../assets/wiki-logo.png"
+import shodan from "../../../assets/shodanlogo.png"
 import burpsuite from "../../../assets/burpsuitelogo.png"
 
 
@@ -217,10 +217,10 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 
     const imgBib = [
         tor,
-        wiki,
+        shodan,
         nmap,
-        metasploit,
-        burpsuite
+        burpsuite,
+        metasploit
     ]
 
 

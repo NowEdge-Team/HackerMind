@@ -469,7 +469,7 @@ const DayOne = ({modeEdit, saveData}) => {
             text: t("day5.messages.text3"),
             showCancelBtn: true,
             showCancel: true,
-            textBtnValid: "Valider mes choix",
+            textBtnValid: "oui",
             audio: Level5Audio.audio11
         }, {
             title: t("day5.messages.title_msg_3"),
@@ -545,7 +545,7 @@ const DayOne = ({modeEdit, saveData}) => {
                     text={t("day5.responsable_m.text")}
                     showCancel={true}
                     audio={Level5Audio.audio11}
-                    textBtnValid="Valider mes choix"
+                    textBtnValid="oui"
                     show={showStart}
                     close={() => {
                         setShowStart(false);
