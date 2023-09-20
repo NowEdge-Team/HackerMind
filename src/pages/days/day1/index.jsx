@@ -144,7 +144,10 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 audio: Level1Audio.felicitation,
                 valid: async () => {
                     await mScoreLevel();
-                    history.push("/")
+                    history.push({
+                        pathname: '/',
+                        state: { badgeIndex: 1 },
+                    })
 
                 }
             }

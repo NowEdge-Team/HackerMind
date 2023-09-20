@@ -57,7 +57,8 @@ function ChartRadar({ bgColor, color, dimension }) {
     // }} />
 
     <Radar data={data}
-      width={300}
+    width={400}
+    height={225}
       options={{
         maintainAspectRatio: false,
         plugins: {
