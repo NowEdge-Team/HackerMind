@@ -157,55 +157,55 @@ const dataRadar = [
         id: 1,
         color: 'green',
         bgColor: '#82E0AA',
-        dimension: [10, 10, 0, 10, 2]
+        dimension: [4, 4, 4, 2, 3]
     },
     {
         id: 2,
         color: 'blue',
         bgColor: '#AED6F1',
-        dimension: [0, 10, 10, 2, 2]
+        dimension: [3, 3, 3, 1, 1]
     }
     ,
     {
         id: 3,
         color: 'red',
         bgColor: '#F5B7B1',
-        dimension: [1, 2, 2, 2, 2]
+        dimension: [2, 2, 2, 1, 4]
     }
     ,
     {
         id: 4,
         color: 'green',
         bgColor: 'LightGrey',
-        dimension: [1, 10, 2, 10, 10]
+        dimension: [2, 1, 1, 1, 4]
     }
     ,
     {
         id: 5,
         color: 'green',
         bgColor: 'LightGrey',
-        dimension: [10, 2, 10, 2, 10]
+        dimension: [4, 4, 3, 2, 3]
     }
     ,
     {
         id: 6,
         color: 'green',
         bgColor: 'LightGrey',
-        dimension: [1, 10, 10, 6, 3]
+        dimension: [1, 1, 1, 1, 2]
     }
     ,
     {
         id: 7,
         color: 'green',
         bgColor: 'LightGrey',
-        dimension: [1, 2, 2, 2, 2]
+        dimension: [2, 1, 1, 4, 2]
     }
     ,
     {
         id: 8,
         color: 'green',
         bgColor: 'LightGrey',
-        dimension: [1, 2, 2, 2, 2]
+        dimension: [2, 1, 2, 1, 2]
     }
 ]
 

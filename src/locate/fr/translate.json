@@ -325,7 +325,7 @@
         "title": "Lead data science :",
         "text": "Es-tu sûr de ton choix ? ",
         "text1": "Bravo pour avoir mené à bien la collecte et la valorisation des données pour notre projet. Votre expertise dans ce domaine a été précieuse pour l'équipe et nous sommes confiants que les informations que vous avez recueillies nous aideront à prendre des décisions éclairées pour l'avenir. Merci pour votre travail acharné et votre dévouement envers ce projet.",
-        "textBtnValid": "Valider mes choix",
+        "textBtnValid": "oui",
         "textBtnValid2": "C'est noté"
       }
     },
@@ -497,7 +497,7 @@
         "title": "Lead data science :",
         "text": "Es-tu sûr de ton choix ? ",
         "text1": "Excellent travail ! Tu as une vision claire des opportunités qu'offre la transformation digitale. Continue sur cette lancée !",
-        "textBtnValid": "Valider mes choix",
+        "textBtnValid": "oui",
         "textBtnValid2": "C'est noté"
       }
     }
@@ -512,7 +512,7 @@
     "suivant": "Suivant",
     "subTitle": "Cliquez successivement sur chacune des pastilles rouges pour  découvrir les cas reçus. Il faudra valider les notifications exhaustives et supprimer celles qui sont incomplètes.",
     "validLevel": "Valider le niveau",
-    "validChoice": "Valider mes choix",
+    "validChoice": "oui",
     "c_note": "C'est noté",
     "listMsg": {
       "title": "RESPONSABLE PHARMACOVIGILANCE INTERNE:",
@@ -530,7 +530,7 @@
         "title": "Lead data science:",
         "text": "Es-tu sûr de ton choix ? ",
         "text1": "Félicitations ! Tu es maintenant familier avec les technologies émergentes et leur potentiel pour transformer les entreprises. Tu es prêt pour la prochaine étape !",
-        "textBtnValid": "Valider mes choix",
+        "textBtnValid": "oui",
         "textBtnValid2": "C'est noté"
       }
     },
@@ -726,7 +726,7 @@
       "validation": {
         "title": "Lead data science :",
         "text": "Es-tu sûr de ton choix ? ",
-        "textBtnValid": "Valider mes choix",
+        "textBtnValid": "oui",
         "textBtnValid2": "C'est noté"
       }
     },

@@ -20,8 +20,8 @@ const ConfirmationModalSteps = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [props, setProps] = useState({
-        textBtnValid: "Valider mes choix",
-        textBtnNotValid: "Pas encore",
+        textBtnValid: "oui",
+        textBtnNotValid: "non",
         showCancelBtn: true,
         title: "Le ministre",
         text: "",
@@ -37,8 +37,8 @@ const ConfirmationModalSteps = () => {
         new Promise((resolve) => {
 
             const initProps = {
-                textBtnValid: "Valider mes choix",
-                textBtnNotValid: "Pas encore",
+                textBtnValid: "oui",
+                textBtnNotValid: "non",
                 showCancelBtn: true,
                 title: "Le ministre",
                 text: "",

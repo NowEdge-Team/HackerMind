@@ -37,24 +37,35 @@ function ChartRadar({ bgColor, color, dimension }) {
   console.log(bgColor, color, dimension);
 
   return (
-    <Radar data={data} options={{
-      scales: {
-        r: {
-          pointLabels: {
-          },
-          ticks: {
-            display: false // Hides the labels in the middel (numbers)
+    // <Radar data={data} options={{
+    //   scales: {
+    //     r: {
+    //       pointLabels: {
+    //       },
+    //       ticks: {
+    //         display: false // Hides the labels in the middel (numbers)
+    //       }
+    //     }
+    //   },
+    //   maintainAspectRatio: false,
+    //   plugins: {
+    //     legend: {
+    //       display: false
+
+    //     }
+    //   }
+    // }} />
+
+    <Radar data={data}
+      width={300}
+      options={{
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
           }
         }
-      },
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false
-
-        }
-      }
-    }} />
+      }} />
 
   )
 }
