@@ -42,6 +42,12 @@ function ChartRd2({ bgColor, color, dimension }) {
       width={100}
       height={50}
       options={{
+        scales: {
+          r: {
+            min: 0,  // Définissez la limite minimale ici
+            max: 4, // Définissez la limite maximale ici
+          },
+        },
         maintainAspectRatio: false,
         plugins: {
           legend: {

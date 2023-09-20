@@ -30,7 +30,8 @@ function Card() {
 
     const [radar, setRadar] = useState({
         color: 'green',
-        bgColor: '#82E0AA',
+        // bgColor: '#82E0AA',
+        bgColor: 'transparent',
         dimension: [4, 4, 4, 2, 3]
     })
 
@@ -46,7 +47,7 @@ function Card() {
             case 1:
                 dataRadar = {
                     color: 'green',
-                    bgColor: '#82E0AA',
+                    bgColor: 'transparent',
                     dimension: [4, 4, 4, 2, 3]
                 }
                 break;
@@ -54,7 +55,7 @@ function Card() {
             case 2:
                 dataRadar = {
                     color: 'blue',
-                    bgColor: '#AED6F1',
+                    bgColor: 'transparent',
                     dimension: [3, 3, 3, 1, 1]
                 }
                 break
@@ -62,7 +63,7 @@ function Card() {
             case 3:
                 dataRadar = {
                     color: 'red',
-                    bgColor: '#F5B7B1',
+                    bgColor: 'transparent',
                     dimension: [2, 2, 2, 1, 4]
                 }
                 break
@@ -70,7 +71,7 @@ function Card() {
             case 4:
                 dataRadar = {
                     color: '#4D0AC3',
-                    bgColor: '#A372F8',
+                    bgColor: 'transparent',
                     dimension: [2, 1, 1, 1, 4]
                 }
                 break
@@ -78,7 +79,7 @@ function Card() {
             case 5:
                 dataRadar = {
                     color: '#E717A4',
-                    bgColor: '#F1AADB',
+                    bgColor: 'transparent',
                     dimension: [4, 4, 3, 2, 3]
                 }
                 break
@@ -86,7 +87,7 @@ function Card() {
             case 6:
                 dataRadar = {
                     color: 'green',
-                    bgColor: 'LightGrey',
+                    bgColor: 'transparent',
                     dimension: [1, 1, 1, 1, 2]
                 }
                 break
@@ -94,7 +95,7 @@ function Card() {
             case 7:
                 dataRadar = {
                     color: 'green',
-                    bgColor: 'LightGrey',
+                    bgColor: 'transparent',
                     dimension: [2, 1, 1, 4, 2]
                 }
                 break
@@ -102,7 +103,7 @@ function Card() {
             case 8:
                 dataRadar = {
                     color: 'green',
-                    bgColor: 'LightGrey',
+                    bgColor: 'transparent',
                     dimension: [2, 1, 2, 1, 2]
                 }
                 break
