@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./assets/scss/DefaultTheme.scss";
 import strategicGameLayout from "./components/strategicGameLayout.jsx";
 import { routes } from "./routes/routes.jsx";
+import BadgePopup from "@/components/modal/PvChModalBadge";
 
 const queryClient = new QueryClient()
 
@@ -50,6 +51,7 @@ const App = () => {
     return (
         // rendering the router with layout
         <>
+            <BadgePopup />
             <FieldLevel />
             <ScoreLevel />
             <ModalArticel />

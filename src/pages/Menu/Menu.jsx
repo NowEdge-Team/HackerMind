@@ -1,42 +1,32 @@
+import * as PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
-import { Dropdown, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
+import { Cookies, useCookies } from "react-cookie";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { getLoggedInUser } from "../../helpers/authUtils.js";
-import MySvg from "../../assets/images/pv-challenge/group-3883.png"
-import mySvg1 from "../../assets/images/pv-challenge/logo.png";
-import badg7 from "../../assets/images/pv-challenge/contest.svg";
+import { useHistory, useLocation } from "react-router-dom";
+import MissionAudio from "../../assets/audio/mission/index";
 import badg5 from "../../assets/images/pv-challenge/Layer_15.svg";
 import badg6 from "../../assets/images/pv-challenge/Layer_26.svg";
+import DefaultImg from '../../assets/images/pv-challenge/avatars/profile1.png'; // Importez votre image par défaut
+import { default as Dock, default as persoImage } from "../../assets/images/pv-challenge/character/Leader.png";
+import badg7 from "../../assets/images/pv-challenge/contest.svg";
+import MySvg from "../../assets/images/pv-challenge/group-3883.png";
+import backImgTuto from "../../assets/images/pv-challenge/images/background_1_m22.png";
+import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.svg";
 import playIcon from "../../assets/images/pv-challenge/images/rectangle552131.png";
+import mySvg1 from "../../assets/images/pv-challenge/logo.png";
 import badg3 from "../../assets/images/pv-challenge/travel-itinerary.svg";
+import FieldModal from "../../components/FieldModal/index.jsx";
 import Loader from "../../components/Loader.jsx";
+import PvChModalBadge, { mBadgePopup } from "../../components/modal/PvChModalBadge/index.jsx";
 import ModalFinalGame from "../../components/modal/modalFinalGame/index.jsx";
+import ModalTutorial from "../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
+import { httpClient_get } from "../../helpers/api.js";
+import { getLoggedInUser } from "../../helpers/authUtils.js";
 import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
 import { closeDayPvChClear, getCenterInfoPvCh, updateCenterPvChInfo } from "../../redux/pvChallenge/actions.js";
-import Dock from "../../assets/images/pv-challenge/character/Leader.png"
-import ModalTutorial from "../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
-import backImgTuto from "../../assets/images/pv-challenge/images/background_1_m22.png";
-import persoImage from "../../assets/images/pv-challenge/character/Leader.png";
-import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.svg";
-import styles from "../style.module.scss"
-import ScoreModal from "../../components/pvCh/day1/ScoreModal/StepModal.jsx";
-import { httpClient_get } from "../../helpers/api.js";
-import FieldModal from "../../components/FieldModal/index.jsx";
-import avatar1 from "../../assets/images/pv-challenge/avatars/profile1.png"
-import avatar2 from "../../assets/images/pv-challenge/avatars/profile2.png"
-import avatar3 from "../../assets/images/pv-challenge/avatars/profile3.png"
-import avatar4 from "../../assets/images/pv-challenge/avatars/profile4.png"
-import avatar5 from "../../assets/images/pv-challenge/avatars/profile5.png"
-import avatar6 from "../../assets/images/pv-challenge/avatars/profile6.png"
-import avatar7 from "../../assets/images/pv-challenge/avatars/profile7.png"
-import { Cookies, useCookies } from "react-cookie";
-import * as PropTypes from "prop-types";
-import mstyles from "./style.module.scss"
-import PvChModalBadge from "../../components/modal/PvChModalBadge/index.jsx";
-import MissionAudio from "../../assets/audio/mission/index";
-import DefaultImg from '../../assets/images/pv-challenge/avatars/profile1.png'; // Importez votre image par défaut
+import mstyles from "./style.module.scss";
 
 
 
@@ -312,7 +302,7 @@ MenuBtnComponent.propTypes = {
 export default function Menu() {
     const [cookies, setCookie, removeCookie] = useCookies();
     const gameSessionId = cookies.gameSessionId;
-
+    const location = useLocation();
     const [regleJeu, setRegleJeu] = useState(false);
     const [showConfig, setShowConfig] = useState(false);
     const [showBadge, setShowBadge] = useState(false);
@@ -330,6 +320,13 @@ export default function Menu() {
     const { t } = useTranslation();
     const { days, challengeId, missionId } = useSelector((state) => state.PvChallenge.center);
 
+    useEffect(() => {
+        if (location.pathname === "/" && location.state) {
+
+            mBadgePopup({ badgeIndex: location.state.badgeIndex })
+
+        }
+    }, [location]);
 
     useEffect(() => {
         console.log("----closeDay---", closeDay)
@@ -428,7 +425,7 @@ export default function Menu() {
 
             <PvChModalBadge
                 badges={badges}
-                // show={true}
+                show={true}
                 close={() => {
                     setShowBadge(false);
                     setTimeout(() => {
