@@ -57,7 +57,7 @@ const Step2 = ({ modeEdit, dragDropUpdateDecisions, decisions_3, categories_3, i
             listMsg={[{
                 title: "LE HACKER EN CHEF",
                 text: "Je vais voir maintenant si tu as bien compris à quoi nous servent ces outils au quotidien.",
-                audio: Level1Audio.audio1,
+                audio: Level1Audio.audio2,
             }]}
             title="My Modal"
             show={showTuto}

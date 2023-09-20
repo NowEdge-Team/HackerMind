@@ -492,8 +492,8 @@ function Matrix({ nextStep, onBack }) {
     useEffect(() => {
         setCurrentMessage(() => ({
             title: "LE HACKER EN CHEF",
-            text: "Nous allons voir ensemble les différents profils et leurs motivations et ton objectif sera de selectionner le profil qui te correspond le mieux !",
-            audio: Level1Audio.audio1,
+            text: " Nous verrons ensemble les différents profils et leurs motivations, et votre objectif sera de sélectionner le profil qui vous convient le mieux !     Commençons par les différents profils !",
+            audio: Level1Audio.audio3,
             onClose: () => {
                 setShowTuto(item => false);
             }
@@ -507,8 +507,8 @@ function Matrix({ nextStep, onBack }) {
             if (step === 0) {
                 setCurrentMessage(() => ({
                     title: "LE HACKER EN CHEF",
-                    text: "Présentation des motivations",
-                    audio: Level1Audio.audio1,
+                    text: "Maintenant que tu as pu découvrir les différents profils des hackers, passons à découvrir leurs différentes motivations.",
+                    audio: Level1Audio.audio4,
                     onClose: () => {
                         setStep(1);
                         setShowTuto(item => false);
@@ -519,9 +519,9 @@ function Matrix({ nextStep, onBack }) {
             else {
                 setTimeout(() => {
                     setCurrentMessage(() => ({
-                        title: "Title 2",
-                        text: " Présentation 2 ",
-                        audio: Level1Audio.audio1,
+                        title: "LE HACKER EN CHEF",
+                        text: " Appuyez sur la case qui clignote pour révéler la motivation",
+                        audio: Level1Audio.audio5,
                         onClose: () => {
                             setShowTuto(item => false);
                         }
@@ -537,9 +537,9 @@ function Matrix({ nextStep, onBack }) {
 
             setTimeout(() => {
                 setCurrentMessage(() => ({
-                    title: "Title 3",
-                    text: " Présentation 3 ",
-                    audio: Level1Audio.audio1,
+                    title: "LE HACKER EN CHEF",
+                    text: " À présent, nous allons examiner des exemples d'attaques pour illustrer la corrélation entre les profils et les motivations. Chaque case cochée dans le tableau représente un profil correspondant à la motivation correspondante. Cliquez sur la case cochée qui clignote pour découvrir les exemples. ",
+                    audio: Level1Audio.audio6,
                     onClose: () => {
                         setShowTuto(item => false);
                     }
