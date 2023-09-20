@@ -163,10 +163,10 @@
 
       "categories": {
         "1": "TOR",
-        "2": "Haystack/The hidden Wiki",
+        "2": "Shodan",
         "3": "Nmap",
-        "4": "Metasploit",
-        "5": "Burpsuite"
+        "4": "Burpsuite",
+        "5": "Metasploit"
       }
     },
     "messages": {

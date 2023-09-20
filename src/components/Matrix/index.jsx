@@ -413,39 +413,39 @@ function Matrix({ nextStep, onBack }) {
         },
         {
             title: "Le leader",
-            text: "Cliquez sur la coche pour voir un exemple d'attaque",
+            text: "Cliquez sur la case pour découvrir la motivation",
             audio: Level1Audio.audio1
         },
 
         {
             title: "Le leader",
-            text: "Cliquez sur la coche pour voir un exemple d'attaque",
+            text: "Cliquez sur la case pour découvrir la motivation",
             audio: Level1Audio.audio1
         },
 
         {
             title: "Le leader",
-            text: "Cliquez sur la coche pour voir un exemple d'attaque",
+            text: "Cliquez sur la case pour découvrir la motivation",
             audio: Level1Audio.audio1
 
         },
         {
 
             title: "Le leader",
-            text: "Cliquez sur la coche pour voir un exemple d'attaque",
+            text: "Cliquez sur la case pour découvrir la motivation",
             audio: Level1Audio.audio1
         },
 
 
         {
             title: "Le leader",
-            text: "Cliquez sur la coche pour voir un exemple d'attaque",
+            text: "Cliquez sur la case pour découvrir la motivation",
             audio: Level1Audio.audio1
         },
 
         {
             title: "Le leader",
-            text: "Cliquez sur la coche pour voir un exemple d'attaque",
+            text: "Cliquez sur la case pour découvrir la motivation",
             audio: Level1Audio.audio1
         },
 
