@@ -428,7 +428,7 @@ export default function Menu() {
 
             <PvChModalBadge
                 badges={badges}
-                show={showBadge}
+                // show={true}
                 close={() => {
                     setShowBadge(false);
                     setTimeout(() => {

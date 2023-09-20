@@ -43,7 +43,6 @@ const ConfirmationModalSteps = () => {
                 title: "Le ministre",
                 text: "",
                 imgBackground: img1,
-                audio: Level1Audio.audio1,
                 rotateImage: false,
                 classImg: "",
                 ...props
