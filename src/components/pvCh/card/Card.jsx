@@ -13,6 +13,7 @@ import ModalTutorial from "../ModalTutorial/ModalTutorial"
 import img1 from "@/assets/images/pv-challenge/character/character_1_11.png";
 import { useTranslation } from "react-i18next"
 import Level1Audio from "@/assets/audio/Niv1/index.js";
+import { twMerge } from "tailwind-merge"
 
 
 
@@ -111,7 +112,7 @@ function Card() {
 
 
     return (
-        <div className={styles.container} style={{ backgroundColor: color }}>
+        <div className={`${styles.container} py-3 px-4`} style={{ backgroundColor: color }}>
             <ModalTutorial
                 // pictureClass={"personne"}
                 personnageImage={img1}
@@ -131,30 +132,29 @@ function Card() {
 
                 }}
             />
-            <div className={styles.profil}>
-
-                <img src={avatar} alt="" className={`${activeitem === 1 ? styles.active : ""}`} style={{ position: "absolute", left: "6%", top: "5%" }} onClick={() => handlechange(1, "ÉTATIQUE", "États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.", 'white')} />
-                <img src={avatar2} alt="" className={`${activeitem === 2 ? styles.active : ""}`} style={{ position: "absolute", left: "17%", top: "5%" }} onClick={() => handlechange(2, "CRIME ORGANISÉ", "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel, exploitation de réseaux de « machines robots » (botnet), etc.", 'white')} />
-                <img src={avatar3} alt="" className={`${activeitem === 3 ? styles.active : ""}`} style={{ position: "absolute", left: "28%", top: "5%" }} onClick={() => handlechange(3, "TERRORISTE", "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration", 'white')} />
-                <img src={avatar4} alt="" className={`${activeitem === 4 ? styles.active : ""}`} style={{ position: "absolute", left: "39%", top: "5%" }} onClick={() => handlechange(4, "ACTIVISTE IDÉOLOGIQUE", "Cyber-hacktivistes, groupements d’intérêt, sectes.", 'white')} />
-                <img src={avatar5} alt="" className={`${activeitem === 5 ? styles.active : ""}`} style={{ position: "absolute", left: "50%", top: "5%" }} onClick={() => handlechange(5, "OFFICINE SPÉCIALISÉE", "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »", 'white')} />
-                <img src={avatar6} alt="" className={`${activeitem === 6 ? styles.active : ""}`} style={{ position: "absolute", left: "61%", top: "5%" }} onClick={() => handlechange(6, "AMATEUR", "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi", 'white')} />
-                <img src={avatar7} alt="" className={`${activeitem === 7 ? styles.active : ""}`} style={{ position: "absolute", left: "72%", top: "5%" }} onClick={() => handlechange(7, "VENGEUR", "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels", 'white')} />
-                <img src={avatar8} alt="" className={`${activeitem === 8 ? styles.active : ""}`} style={{ position: "absolute", left: "83%", top: "5%" }} onClick={() => handlechange(8, "MALVEILLANT PATHOLOGIQUE", "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)", 'white')} />
-
+            <div className="flex flex-row justify-center gap-5" >
+                <img src={avatar} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 1 ? styles.active : ""}`} onClick={() => handlechange(1, "ÉTATIQUE", "États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.", 'white')} />
+                <img src={avatar2} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 2 ? styles.active : ""}`} onClick={() => handlechange(2, "CRIME ORGANISÉ", "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel, exploitation de réseaux de « machines robots » (botnet), etc.", 'white')} />
+                <img src={avatar3} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 3 ? styles.active : ""}`} onClick={() => handlechange(3, "TERRORISTE", "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration", 'white')} />
+                <img src={avatar4} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 4 ? styles.active : ""}`} onClick={() => handlechange(4, "ACTIVISTE IDÉOLOGIQUE", "Cyber-hacktivistes, groupements d’intérêt, sectes.", 'white')} />
+                <img src={avatar5} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 5 ? styles.active : ""}`} onClick={() => handlechange(5, "OFFICINE SPÉCIALISÉE", "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »", 'white')} />
+                <img src={avatar6} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 6 ? styles.active : ""}`} onClick={() => handlechange(6, "AMATEUR", "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi", 'white')} />
+                <img src={avatar7} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 7 ? styles.active : ""}`} onClick={() => handlechange(7, "VENGEUR", "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels", 'white')} />
+                <img src={avatar8} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 8 ? styles.active : ""}`} onClick={() => handlechange(8, "MALVEILLANT PATHOLOGIQUE", "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)", 'white')} />
             </div>
-            <div className={styles.desc}>
-                <h3>{title}</h3>
-                <p>{text}</p>
+            <div className="flex flex-row mt-[10%]">
+                <div className={twMerge(styles.desc, 'w-1/2')}>
+                    <h3>{title}</h3>
+                    <p>{text}</p>
+                </div>
+                <div className="w-1/2">
+                    <ChartRd color={radar.color} bgColor={radar.bgColor} dimension={radar.dimension} />
+                </div>
             </div>
 
-            <div className={styles.radar} style={{ position: "absolute", right: "5%", top: "33%" }}>
-                {/* <img src={imgSrc} alt="" style={{position:"absolute",right:"8%",top:"36%"}} /> */}
-
-                <ChartRd color={radar.color} bgColor={radar.bgColor} dimension={radar.dimension} />
 
 
-            </div>
+
             <div className={styles.btn}>
                 {/* <button style={{position:"absolute",right:"9%",bottom:"4%"}} >valider</button> */}
             </div>

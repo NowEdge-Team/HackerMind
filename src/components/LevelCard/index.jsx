@@ -16,7 +16,7 @@ export const StartBlock = ({ numberOfStart, className }) => {
 
 
 
-function LevelCard({ icon, index, state = -1, numberOfStart = 1, directions = "left" }) {
+function LevelCard({ title, icon, index, state = -1, numberOfStart = 1, directions = "left" }) {
     const { t } = useTranslation();
     return (
         <div className={twMerge(style.container, 'group z-0 hover:z-20 cursor-pointer')}>
@@ -27,7 +27,7 @@ function LevelCard({ icon, index, state = -1, numberOfStart = 1, directions = "l
                 </div>
                 <div className={twMerge(style.content, "gap-1 flex flex-col items-start")}>
                     <h3 className='text-[#9f9f9f] text-sm' >NIVEAU {index}</h3>
-                    <p className='text-[#3f4351] text-sm font-bold' >{'S’introduire en douceur'}</p>
+                    <p className='text-[#3f4351] text-sm font-bold' >{title}</p>
                     <p className={twMerge('text-[#9f9f9f] text-sm', state === 1 ? 'text-[#10C469]' : state === 0 ? 'text-[#F9C851]' : '')}>
                         {state === 1
                             ? t(`parcours.termine`)

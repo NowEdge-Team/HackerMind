@@ -79,13 +79,13 @@ export default function Parcours() {
 
     const score = useSelector((state) => state.PvChallenge.score);
     const [listLevles, setListLevels] = useState([
-        { left: "left-[12%]", top: "top-[78%]", urlId: '1', img: img1, statue: 0, numberOfStart: 0, },
-        { left: "left-[21%]", top: "top-[26%]", urlId: '2', img: img2, statue: -1, numberOfStart: 0, },
-        { left: "left-[35%]", top: "top-[79%]", urlId: '3', img: img3, statue: -1, numberOfStart: 0, },
-        { left: "left-[49%]", top: "top-[38%]", urlId: '4', img: img4, statue: -1, numberOfStart: 0, },
-        { left: "left-[66%]", top: "top-[79%]", urlId: '5', img: img5, statue: -1, numberOfStart: 0, },
-        { left: "left-[70%]", top: "top-[22%]", urlId: '6', img: img6, statue: -1, numberOfStart: 0, },
-        { left: "left-[88%]", top: "top-[78%]", urlId: '7', img: img7, statue: -1, numberOfStart: 0, directions: "right" },
+        { left: "left-[12%]", top: "top-[78%]", urlId: '1', title: t(`parcours.day1title`), img: img1, statue: 0, numberOfStart: 0, },
+        { left: "left-[21%]", top: "top-[26%]", urlId: '2', title: t(`parcours.day2title`), img: img2, statue: -1, numberOfStart: 0, },
+        { left: "left-[35%]", top: "top-[79%]", urlId: '3', title: t(`parcours.day3title`), img: img3, statue: -1, numberOfStart: 0, },
+        { left: "left-[49%]", top: "top-[38%]", urlId: '4', title: t(`parcours.day4title`), img: img4, statue: -1, numberOfStart: 0, },
+        { left: "left-[66%]", top: "top-[79%]", urlId: '5', title: t(`parcours.day5title`), img: img5, statue: -1, numberOfStart: 0, },
+        { left: "left-[70%]", top: "top-[22%]", urlId: '6', title: t(`parcours.day6title`), img: img6, statue: -1, numberOfStart: 0, },
+        { left: "left-[88%]", top: "top-[78%]", urlId: '7', title: t(`parcours.day7title`), img: img7, statue: -1, numberOfStart: 0, directions: "right" },
 
     ]);
 
@@ -132,7 +132,7 @@ export default function Parcours() {
 
 
             {listLevles.map((item, index) => <div onClick={navTo(item.urlId)} key={index} className={twMerge(`absolute`, item.left, item.top)}>
-                <LevelCard index={index + 1} directions={item.directions} numberOfStart={item.numberOfStart} state={item.statue} icon={item.img} />
+                <LevelCard index={index + 1} title={item.title} directions={item.directions} numberOfStart={item.numberOfStart} state={item.statue} icon={item.img} />
             </div>)}
 
 
