@@ -151,11 +151,11 @@
       "g_title": "J'aimerais être sur que tu as bien compris à quoi servent les différents outils que nous utilisons. Associe chaque action principale à son outil de référence.",
       "s_description": "Aidez le à cerner les avantages, les inconvénients, les défis et les perspectives de l'analytics",
       "decisions": {
-        "9": "permet de repérer des vulnérabilités sur les applications webs,",
-        "10": "Navigateur spécialisé permettant notamment de trouver des sites",
-        "11": "moteur de recherche préservant l’anonymat",
-        "12": "outil de découverte réseau permettant d’identifier par exemple des ports ouverts,",
-        "13": "site permettant d’accéder aux liens en .onion…)",
+        "9": "Permet la navigation anonyme sur Internet via un réseau mondial d'utilisateurs.",
+        "10": "Identifie des objets connectés grâce à des scans massifs de ports.",
+        "11": "Détecte les ports ouverts et collecte des informations sur les systèmes.",
+        "12": "Crée des requêtes web nuisibles pour tester la sécurité des applications.",
+        "13": "Facilite la détection et l'exploitation des vulnérabilités informatiques.",
         "14": "forum du darknet spécialise dans des discusions autour d'accès"
       },
 

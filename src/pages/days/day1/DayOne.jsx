@@ -41,7 +41,7 @@ const dataList = [{
   backgroundColor: "#602F80",
   backgroundIcon: "rgba(96, 47, 128, 0.49)",
   icon: tor,
-  text: "TOR est comme un tunnel secret sur Internet. Imaginez que lorsque vous surfez sur le Web, vous laissez derrière vous des empreintes de pas. TOR vous aide à cacher ces empreintes en vous permettant de naviguer anonymement. Lorsque vous utilisez TOR, votre trafic Internet rebondit à travers différents ordinateurs dans le monde, masquant ainsi votre adresse IP. Cela signifie que personne ne peut facilement savoir qui vous êtes ou ce que vous faites en ligne. C'est utile pour protéger votre vie privée, mais cela peut également être utilisé par des personnes malveillantes, il faut donc l'utiliser avec précaution.",
+  text: " TOR fait référence à The Onion Router. TOR est un navigateur web comme Google Chrome ou Microsoft Edge permettant de naviguer de façon anonyme sur le web, grâce à un réseau constitué par les utilisateurs du monde entier.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio1
 },
@@ -50,7 +50,7 @@ const dataList = [{
   backgroundColor: "#FF001C",
   backgroundIcon: "rgba(255, 0, 28, 0.47)",
   icon: shodan,
-  text: "The Hidden Wiki est un peu comme un catalogue secret d'Internet. Il contient des liens vers des sites Web qui ne sont pas visibles sur Internet ordinaire. Certains de ces sites peuvent être utiles, mais beaucoup d'entre eux sont illégaux ou dangereux. Il est essentiel d'être très prudent lorsque vous explorez le contenu du darknet, car vous pourriez vous retrouver sur des sites malveillants ou illégaux sans le vouloir.",
+  text: "Shodan est un moteur de recherche créé en 2009. Shodan est un site web spécialisé dans la recherche d'objets connectés à Internet, et ayant donc une adresse IP visible sur le réseau. Ces recherches sont effectuées par des scans de ports massifs effectués sur le réseau Internet",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons  ",
   audio: audio2
 },
@@ -59,7 +59,7 @@ const dataList = [{
   backgroundColor: "#CBBAFF",
   backgroundIcon: "rgba(203, 186, 255, 0.49)",
   icon: nmap,
-  text: "Project Haystack se concentre sur l'organisation des données provenant d'appareils connectés, tels que des thermostats intelligents ou des capteurs de température. L'idée est de rendre ces données plus faciles à gérer et à utiliser. Cependant, il est important de noter que la collecte de données provenant d'appareils IoT peut poser des problèmes de sécurité si ces données ne sont pas correctement protégées. C'est comme si vous aviez une boîte à secrets, mais vous devez vous assurer que personne d'autre ne puisse l'ouvrir.",
+  text: "Nmap est un scanner de ports libre permettant de détecter les ports ouverts, identifier les services hébergés et obtenir des informations sur le système d'exploitation d'un ordinateur distant. ",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio3
 },
@@ -68,7 +68,7 @@ const dataList = [{
   backgroundColor: "#F7941E",
   backgroundIcon: "rgba(247, 148, 30, 0.49)",
   icon: burpsuite,
-  text: "ProtonMail est une boîte aux lettres électronique super sécurisée. Lorsque vous envoyez un e-mail via ProtonMail, il est verrouillé dans une boîte à secrets virtuelle, et seul le destinataire peut l'ouvrir. Cela signifie que même si quelqu'un d'autre intercepte votre e-mail en cours de route, il ne pourra pas le lire. C'est un peu comme envoyer une lettre dans un coffre-fort. C'est une excellente façon de protéger vos messages personnels.",
+  text: "BUrpsuite est un outil qui offre la possibilité de créer des requêtes webs nuisibles pour une application. Il peut également aider à la détection de vulnérabilités classiques comme des injections SQL, des vulnérabilités de type cross-site scripting ou autre. Il est utilisé par les cyberattaquants mais aussi par les auditeurs techniques.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio4
 },
@@ -77,7 +77,7 @@ const dataList = [{
   backgroundColor: "#00AAE2",
   backgroundIcon: "rgba(0, 170, 226, 0.49)",
   icon: metasploit,
-  text: "Telegram est une application de messagerie qui garde vos conversations privées. Lorsque vous envoyez un message, il est enveloppé dans un coffre-fort virtuel, de sorte que seuls vous et votre ami pouvez le voir. Vous pouvez même programmer vos messages pour qu'ils disparaissent après un certain temps. C'est comme avoir une conversation dans une pièce secrète qui s'efface automatiquement après un certain temps.",
+  text: "Le but de Metasploit est de fournir des informations sur les vulnérabilités de systèmes informatiques, d'aider à l’intrusion dans les systèmes informatiques. Il est notamment connu pour permettre la réalisation d’exploit (le fait d’exploiter une vulnérabilité) contre une machine située sur un réseau distant. ",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio5
 }
