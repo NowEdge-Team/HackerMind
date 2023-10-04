@@ -4,279 +4,28 @@
       "id": 1,
       "day": 1,
       "categorie": "General about Analytics",
-      "description": "Your answers to the quizzes regarding the main objective of data analysis have earned you ## Knowledge points out of 10 points"
+      "description": "Your answers in the Drag & Drop activity regarding the main use of different cybersecurity tools have earned you ## Knowledge points out of 25 points"
     },
     {
       "id": 2,
       "day": 1,
       "categorie": "General about Analytics",
-      "description": "Your answers in the Drag & Drop activity regarding the advantages, disadvantages, challenges and perspectives of Analytics have earned you ## Knowledge points out of 75 points"
-    },
-    {
-      "id": 3,
-      "day": 1,
-      "categorie": "General about Analytics",
-      "description": "It's a very good start, well done! During this day you were able to show a real mastery of the generalities of Analytics. Your answers during this day have earned you ## Knowledge points out of 85 points"
-    },
-    {
-      "id": 4,
-      "day": 2,
-      "categorie": "Data collection and valuation",
-      "description": "Your answers to the activity of sorting the steps of a Data-Driven decision have earned you ## Action points out of 35 points"
-    },
-    {
-      "id": 5,
-      "day": 2,
-      "categorie": "Data collection and valuation",
-      "description": "Your choices in the Drag & Drop activity to affect the analytics use cases have earned you ## Knowledge points out of 130 points and @@ Action points out of 130 points. Bravo!"
-    },
-    {
-      "id": 6,
-      "day": 2,
-      "categorie": "Data collection and valuation",
-      "description": "Your answers concerning the quiz dealing with the issue of 'Garbage In, Garbage Out!' earned you ## Knowledge points out of 10 points"
-    },
-    {
-      "id": 7,
-      "day": 2,
-      "categorie": "Data collection and valuation",
-      "description": "Your answers regarding the quiz of the purpose behind the establishment of the General Data Protection Regulation (GDPR) law earned you ## Knowledge points out of 10 points"
-    },
-    {
-      "id": 8,
-      "day": 2,
-      "categorie": "Data collection and valuation",
-      "description": "Congratulations for this performance! During this day you were able to discover the different important aspects concerning the collection and use of data within a company and you were able to earn ## Knowledge points out of 150 points and @@ Action points out of 165 points"
-    },
-    {
-      "id": 9,
-      "day": 3,
-      "categorie": "Understanding what the data tells us (Descriptive approach)",
-      "description": "Your answers to the multi-select activity questions have earned you ## Knowledge points out of 25 points"
-    },
-    {
-      "id": 10,
-      "day": 3,
-      "categorie": "Understanding what the data tells us (Descriptive approach)",
-      "description": "Your choices in the Drag & Drop activity to classify descriptive analytics tools have earned you ## of Knowledge score out of 75 points. Bravo!"
-    },
-    {
-      "id": 11,
-      "day": 3,
-      "categorie": "Understanding what the data tells us (Descriptive approach)",
-      "description": "Congratulations for this performance! During this day you were able to discover descriptive analytics, its contributions and its tools and you were able to earn ## Knowledge points out of 100 points"
-    },
-    {
-      "id": 12,
-      "day": 4,
-      "categorie": "The predictive approach to predict the future",
-      "description": "Thanks to your choices in the Drag & Drop activity of ranking tools of the predictive approach. You were able to get a Knowledge score of ## points out of 85 points !"
-    },
-    {
-      "id": 13,
-      "day": 4,
-      "categorie": "The predictive approach to predict the future",
-      "description": "Thanks to your answers regarding the regression analysis objective quiz, you were able to earn ## Knowledge points out of 10 points"
-    },
-    {
-      "id": 14,
-      "day": 4,
-      "categorie": "The predictive approach to predict the future",
-      "description": "Thanks to your answers regarding the quiz on the usefulness of the confusion matrix in classification, you were able to earn ## points of Knowledge out of 10 points"
-    },
-    {
-      "id": 15,
-      "day": 4,
-      "categorie": "The predictive approach to predict the future",
-      "description": "Thanks to your answers regarding the quiz on the definition of clustering, you were able to earn ## Knowledge points out of 10 points"
-    },
-    {
-      "id": 16,
-      "day": 4,
-      "categorie": "The predictive approach to predict the future",
-      "description": "At the end of this day, you have shown that the use of the predictive approach in decision-making is no longer a mystery to you, Bravo! Your answers have earned you a total of ## Knowledge score points out of 115 points"
-    },
-    {
-      "id": 17,
-      "day": 5,
-      "categorie": "Improving the future with the prescriptive approach",
-      "description": "Your choices in the Drag & Drop activity showing the pros and cons of prescriptive analytics earned you ## Knowledge score points out of 40 !"
-    },
-    {
-      "id": 18,
-      "day": 5,
-      "categorie": "Improving the future with the prescriptive approach",
-      "description": "Thanks to your answers regarding the quiz on the difference between descriptive, predictive and prescriptive approach, you were able to earn ## Knowledge points out of 10 points"
-    },
-    {
-      "id": 19,
-      "day": 5,
-      "categorie": "Improving the future with the prescriptive approach",
-      "description": "Regarding the Data Collection file, your answers earned you ## additional points to your Action score out of 20 points !"
-    },
-    {
-      "id": 20,
-      "day": 5,
-      "categorie": "Improving the future with the prescriptive approach",
-      "description": "For the Descriptive Analytics folder, you were able to process this folder and earn ## Action score points out of 20 points"
-    },
-    {
-      "id": 21,
-      "day": 5,
-      "categorie": "Improving the future with the prescriptive approach",
-      "description": "Regarding the Predictive Analytics file, your answers earned you ## additional points to your Action score out of 15 points !"
-    },
-    {
-      "id": 22,
-      "day": 5,
-      "categorie": "Improving the future with the prescriptive approach",
-      "description": "For the Prescriptive Analytics folder, you were able to process this folder and earn ## Action score points out of 20 points"
-    },
-    {
-      "id": 23,
-      "day": 5,
-      "categorie": "Improving the future with the prescriptive approach",
-      "description": "Your task force carried out an exemplary mission, during this last day you were able to deal with various files. Congratulations ! So you were able to collect ## Knowledge score points out of 50 and @@ Action score points out of 75 !"
+      "description": "Your answers in the Drag & Drop activity regarding the motivations of the attacker profiles have earned you ## Knowledge points out of 50 points"
     }
+    
   ],
   "fr": [
     {
       "id": 1,
       "day": 1,
       "categorie": "Généralités sur l'Analytics",
-      "description": "Vos réponses aux quiz concernant l'objectif principal de l'analyse des données vous ont rapporté ## points de Connaissance sur 10 points"
+      "description": "Vos réponses dans l'activité de Drag & Drop concernant l'usage principal de différents outils de cybersécurité vous ont rapporté ## points de Connaissance sur 25 points"
     },
     {
       "id": 2,
       "day": 1,
       "categorie": "Généralités sur l'Analytics",
-      "description": "Vos réponses dans l'activité de Drag & Drop concernant les avantages, les inconvénients, les défis et les perspectives de l'Analytics vous ont rapporté ## points de Connaissance sur 75 points"
-    },
-    {
-      "id": 3,
-      "day": 1,
-      "categorie": "Généralités sur l'Analytics",
-      "description": "C'est un très bon début, Bravo! Durant cette journée vous avez pu montrer une vraie maitrise des généralités de l'Analytics. Vos réponses durant cette journée vous ont rapporté ## points de Connaissance sur 85 points"
-    },
-    {
-      "id": 4,
-      "day": 2,
-      "categorie": "Collecte et valorisation des données",
-      "description": "Vos réponses à l'activité du classement des étapes d'une décision data-driven vous ont rapporté ## points d'Action sur 35 points"
-    },
-    {
-      "id": 5,
-      "day": 2,
-      "categorie": "Collecte et valorisation des données",
-      "description": "Vos choix dans l'activité de Drag & Drop pour affecter les cas pratiques de l'analytics vous ont permis de gagner ## points de Connaissance sur 130 points et @@  points d'Action sur 130 points. Bravo!"
-    },
-    {
-      "id": 6,
-      "day": 2,
-      "categorie": "Collecte et valorisation des données",
-      "description": "Vos réponses concernant le quiz traitant la problématique de 'Garbage In, Garbage Out !' vous ont fait gagner ## points de Connaissance sur 10 points"
-    },
-    {
-      "id": 7,
-      "day": 2,
-      "categorie": "Collecte et valorisation des données",
-      "description": "Vos réponses concernant le quiz de l'objectif derrière la mise en place de la loi du  Règlement général sur la protection des données (RGPD) vous ont fait gagner ## points de Connaissance sur 10 points"
-    },
-    {
-      "id": 8,
-      "day": 2,
-      "categorie": "Collecte et valorisation des données",
-      "description": "Bravo pour cette performance ! Durant cette journée vous avez pu découvrir les différents aspects importants concernant la collecte et l'utilisation des données au sein d'une entreprise et vous avez pu gagner ## points de Connaissance sur 150 points et @@ points d'Action sur 165 points"
-    },
-    {
-      "id": 9,
-      "day": 3,
-      "categorie": "Comprendre ce que les données nous racontent (Approche descriptive)",
-      "description": "Vos réponses aux questions de l'activité de multi-sélection vous ont fait gagner ## points de Connaissance sur 25 points"
-    },
-    {
-      "id": 10,
-      "day": 3,
-      "categorie": "Comprendre ce que les données nous racontent (Approche descriptive)",
-      "description": "Vos choix dans l'activité de Drag & Drop pour classer les outils de l'analyse descriptive vous ont permis de gagner ## de score de Connaissance sur 75 points. Bravo!"
-    },
-    {
-      "id": 11,
-      "day": 3,
-      "categorie": "Comprendre ce que les données nous racontent (Approche descriptive)",
-      "description": "Bravo pour cette performance ! Durant cette journée vous avez pu découvrir l'analyse descriptive, ses apports et ses outils et vous avez pu gagner ## points de Connaissance sur 100 points"
-    },
-    {
-      "id": 12,
-      "day": 4,
-      "categorie": "L'approche prédictive pour prédire l'avenir",
-      "description": "Grâce à vos choix dans l'activité de Drag & Drop de classement des outils de l'approche prédictive. Vous avez pu obtenir un score de Connaissance de ## points sur 85 points !"
-    },
-    {
-      "id": 13,
-      "day": 4,
-      "categorie": "L'approche prédictive pour prédire l'avenir",
-      "description": "Grâce à vos réponses concernant le quiz sur l'objectif de l'analyse de régression, vous avez pu gagner ## points de Connaissance sur 10 points"
-    },
-    {
-      "id": 14,
-      "day": 4,
-      "categorie": "L'approche prédictive pour prédire l'avenir",
-      "description": "Grâce à vos réponses concernant le quiz sur l'utilité de la matrice de confusion dans la classification, vous avez pu gagner ## points de Connaissance sur 10 points"
-    },
-    {
-      "id": 15,
-      "day": 4,
-      "categorie": "L'approche prédictive pour prédire l'avenir",
-      "description": "Grâce à vos réponses concernant le quiz sur la signification du clustering, vous avez pu gagner ## points de Connaissance sur 10 points"
-    },
-    {
-      "id": 16,
-      "day": 4,
-      "categorie": "L'approche prédictive pour prédire l'avenir",
-      "description": "A la fin de cette journée, vous avez montré que l'utilisation de l'approche prédictive dans la prise de décision n'est plus un mystère pour vous, Bravo ! Vos réponses vous ont rapporté un total de ## points de score de Connaissance sur 115 points"
-    },
-    {
-      "id": 17,
-      "day": 5,
-      "categorie": "Améliorer l'avenir avec l'approche prescriptive",
-      "description": "Vos choix dans l'activité de Drag & Drop montrant les avantages et les inconvénients de l'analyse prescriptive vous ont fait gagner ## points de score de Connaissance sur 40 points !"
-    },
-    {
-      "id": 18,
-      "day": 5,
-      "categorie": "Améliorer l'avenir avec l'approche prescriptive",
-      "description": "Grâce à vos réponses concernant le quiz sur la différence entre l'approche descriptive, prédictive et prescriptive, vous avez pu gagner ## points de Connaissance sur 10 points"
-    },
-    {
-      "id": 19,
-      "day": 5,
-      "categorie": "Améliorer l'avenir avec l'approche prescriptive",
-      "description": "Concernant le dossier Collecte des données, vos réponses vous ont rapporté ## points supplémentaires à votre score Action sur 20 points !"
-    },
-    {
-      "id": 20,
-      "day": 5,
-      "categorie": "Améliorer l'avenir avec l'approche prescriptive",
-      "description": "Pour le dossier Analyse descriptive, vous avez pu traiter ce dossier et gagner ## points de score Action sur 20 points"
-    },
-    {
-      "id": 21,
-      "day": 5,
-      "categorie": "Améliorer l'avenir avec l'approche prescriptive",
-      "description": "Concernant le dossier Analyse prédictive, vos réponses vous ont rapporté ## points supplémentaires à votre score Action sur 15 points !"
-    },
-    {
-      "id": 22,
-      "day": 5,
-      "categorie": "Améliorer l'avenir avec l'approche prescriptive",
-      "description": "Pour le dossier Analyse prescriptive, vous avez pu traiter ce dossier et gagner ## points de score Action sur 20 points"
-    },
-    {
-      "id": 23,
-      "day": 5,
-      "categorie": "Améliorer l'avenir avec l'approche prescriptive",
-      "description": "Votre task force a réalisé une mission exemplaire, vous avez pu durant cette dernière journée traiter différents dossiers. Je vous félicite ! Ainsi, vous avez pu collecter ## points de score Connaissance sur 50 points et @@ points de score Action sur 75 !"
+      "description": "Vos réponses dans l'activité de Drag & Drop concernant les motivations des profil d'attaquantsvous ont rapporté ## points de Connaissance sur 50 points"
     }
   ]
 }
