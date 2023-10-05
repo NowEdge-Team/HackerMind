@@ -1,5 +1,5 @@
 
-# digital-ambassadors
+# hackermind
 
 description of what this project
 
@@ -13,9 +13,9 @@ is a version manager for node.js, designed to be installed per-user, and invoked
 Install with npm
 
 ```bash
-  git clone https://github.com/NowEdge-Team/digital-ambassadors.git
+  git clone https://github.com/NowEdge-Team/hackermind.git
 
-  cd digital-ambassadors
+  cd hackermind
   
   npm i 
 ```

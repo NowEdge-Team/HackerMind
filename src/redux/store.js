@@ -7,7 +7,7 @@ import rootReducer from './reducers';
 const composeEnhancers = (import.meta.env.VITE_NODE_ENV === "development" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
 const persistConfig = {
-    key: 'digital-ambassadors',
+    key: 'hackermind',
     storage,
 };
 

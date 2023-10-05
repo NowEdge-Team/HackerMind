@@ -20,18 +20,18 @@ const roles = ['Participant'];
 
 
 const lisPaths = [
-    {path: '/', name: 'digital-ambassadors', component: Menu},
-    {path: '/activity-report', name: 'digital-ambassadors-activity-report',component: RapportActivite_pvPharma},
-    {path: '/parcours', name: 'digital-ambassadors-activity-report', component: Parcours},
-    {path: '/classement', name: 'digital-ambassadors-activity-report', component: Classement},
-    {path: '/badges', name: 'digital-ambassadors-badges', component: Badges},
-    {path: '/day/1', name: 'digital-ambassadors-day-1', component: Day1},
-    {path: '/day/2', name: 'digital-ambassadors-day-2', component: Day2},
-    {path: '/day/3', name: 'digital-ambassadors-day-3', component: Day3},
-    {path: '/day/4', name: 'digital-ambassadors-day-4', component: Day4},
-    {path: '/day/5', name: 'digital-ambassadors-day-4', component: Day5},
+    {path: '/', name: 'hackermind', component: Menu},
+    {path: '/activity-report', name: 'hackermind-activity-report',component: RapportActivite_pvPharma},
+    {path: '/parcours', name: 'hackermind-activity-report', component: Parcours},
+    {path: '/classement', name: 'hackermind-activity-report', component: Classement},
+    {path: '/badges', name: 'hackermind-badges', component: Badges},
+    {path: '/day/1', name: 'hackermind-day-1', component: Day1},
+    {path: '/day/2', name: 'hackermind-day-2', component: Day2},
+    {path: '/day/3', name: 'hackermind-day-3', component: Day3},
+    {path: '/day/4', name: 'hackermind-day-4', component: Day4},
+    {path: '/day/5', name: 'hackermind-day-5', component: Day5},
     {path: '/404', name: '404', component: NotFound},
-    {path: '/loaderPage', name: 'digital-ambassadors', component: LoaderPage},
+    {path: '/loaderPage', name: 'hackermind', component: LoaderPage},
     {path: '/test', name: 'test', component: TestLevel},
 
 ]

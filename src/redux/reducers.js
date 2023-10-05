@@ -6,7 +6,7 @@ import PvChallenge from "./pvChallenge/reducers";
 import DaysPvCh from "./daysPvCh/reducers";
 
 const persistConfig = {
-    key: 'digital-ambassadors', storage: storage, whitelist: [],
+    key: 'hackermind', storage: storage, whitelist: [],
 };
 
 const appReducer = combineReducers({
@@ -14,9 +14,10 @@ const appReducer = combineReducers({
     DaysPvCh
 });
 
+
 const rootReducer = (state, action) => {
     if (action.type === LOGOUT_USER) {
-        storage.removeItem('persist:digital-ambassadors');
+        storage.removeItem('persist:hackermind');
         state = undefined;
     }
     return appReducer(state, action);

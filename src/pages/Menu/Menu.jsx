@@ -391,7 +391,7 @@ export default function Menu() {
 
     const downloadCertificate = () => {
         setIsLoading(true)
-        httpClient_get(`/participant/digital_ambassadors/export_certificate?missionId=${missionId}`, {
+        httpClient_get(`/participant/hackermind/export_certificate?missionId=${missionId}`, {
             responseType: "blob"
         })
             .then((response) => {

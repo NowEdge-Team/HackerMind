@@ -38,7 +38,7 @@ export default function Bradges() {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getscorePVCh(center.missionId));
-        httpClient_get(`/participant/digital_ambassadors/getbadgesstatus?missionId=${missionId}`)
+        httpClient_get(`/participant/hackermind/getbadgesstatus?missionId=${missionId}`)
             .then((data) => {
                 setBadges(data.data);
             })
