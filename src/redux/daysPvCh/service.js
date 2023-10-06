@@ -1,6 +1,6 @@
 import { httpClient_get, httpClient_post } from "../../helpers/api";
 
-const path  =  "digital_ambassadors";
+const path  =  "hackermind";
 
 const responsesDay75 = [
   //NOVICE
@@ -538,10 +538,10 @@ const validCasService5 = (cas, _idCas, _idLevel) => {
   return { cas, _idCas, _idLevel };
 };
 
-const saveDetailsService5 = (dayId, missionId, details) => {
+const saveDetailsService5 = (day_id, mission_id, details) => {
   return httpClient_post(`/participant/${path}/savedecisiondetails`, {
-    missionId,
-    dayId,
+    mission_id,
+    day_id,
     details,
   })
     .then((response) => {
@@ -551,14 +551,14 @@ const saveDetailsService5 = (dayId, missionId, details) => {
       throw error;
     });
 };
-const saveDecisionsService5 = (dayId, decisions, missionId) => {
+const saveDecisionsService5 = (day_id, decisions, mission_id) => {
   decisions = decisions.filter(function (el) {
     return el != null;
   });
   return httpClient_post(`/participant/${path}/savedecisions`, {
-    missionId,
+    mission_id,
     decisions,
-    dayId,
+    day_id,
   })
     .then((response) => {
       return response.data;
@@ -567,9 +567,9 @@ const saveDecisionsService5 = (dayId, decisions, missionId) => {
       throw error;
     });
 };
-const activateImputabilityBadgeService5 = (missionId, level) => {
+const activateImputabilityBadgeService5 = (mission_id, level) => {
   return httpClient_post(
-    `/participant/${path}/activateimputabilitybadge?challengeId=${missionId}&level=${level}`,
+    `/participant/${path}/activateimputabilitybadge?challengeId=${mission_id}&level=${level}`,
     {}
   )
     .then((response) => {
@@ -579,9 +579,9 @@ const activateImputabilityBadgeService5 = (missionId, level) => {
       throw error;
     });
 };
-const closeDayService5 = (dayId, missionId) => {
+const closeDayService5 = (day_id, mission_id) => {
   return httpClient_get(
-    `/participant/${path}/closeday?missionId=${missionId}&dayId=${dayId}`
+    `/participant/${path}/closeday?mission_id=${mission_id}&day_id=${day_id}`
   )
     .then((response) => {
       return response.data;
@@ -591,9 +591,9 @@ const closeDayService5 = (dayId, missionId) => {
     });
 };
 
-const getDetailsService5 = (dayId, missionId, parse = true) => {
+const getDetailsService5 = (day_id, mission_id, parse = true) => {
   return httpClient_get(
-    `/participant/${path}/getdecisiondetails?missionId=${missionId}&dayId=${dayId}`
+    `/participant/${path}/getdecisiondetails?mission_id=${mission_id}&day_id=${day_id}`
   )
     .then((response) => {
       if (!parse) {
@@ -613,10 +613,10 @@ const getDetailsService5 = (dayId, missionId, parse = true) => {
 };
 
 
-const getHistoricScoresPvCh = (missionId) => {
+const getHistoricScoresPvCh = (mission_id) => {
 
   return httpClient_get(
-    `/participant/${path}/gethistoricscores?missionId=${missionId}`
+    `/participant/${path}/gethistoricscores?mission_id=${mission_id}`
   )
     .then((response) => {
       return response.data;

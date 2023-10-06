@@ -65,7 +65,7 @@ const PlayButton = () => {
 export default function Parcours() {
 
     const [cookies, setCookie, removeCookie] = useCookies();
-    const gameSessionId = cookies.gameSessionId;
+    const game_session_id = cookies.game_session_id;
 
     const history = useHistory();
 
@@ -92,9 +92,9 @@ export default function Parcours() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getscorePVCh(center.missionId));
+        dispatch(getscorePVCh(center.mission_id));
         if (!days) {
-            dispatch(getCenterInfoPvCh(gameSessionId));
+            dispatch(getCenterInfoPvCh(game_session_id));
         }
     }, [challengeId]);
     const to = (path) => {

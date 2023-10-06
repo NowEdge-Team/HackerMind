@@ -26,7 +26,7 @@ const ListClassItem = ({ t, active = false, onClick, index, item = {} }) => {
             <div className="list-item-classment-b1">
                 <h3 className={"mb-0"} >{item?.position}</h3>
                 <img
-                    src={getLogoById(item.insightsMission?.avatarId, avatars)?.logo}
+                    src={getLogoById(item.insightsMission?.avatar_id, avatars)?.logo}
                     style={{
                         backgroundColor: "aliceblue",
                         borderRadius: " 50%",
@@ -129,7 +129,7 @@ const DetailsClassmentItemList = ({ t, score1, score2, score3 }) => {
 const DetailsClassment = ({
     t,
     scoreGlobal,
-    missionId,
+    mission_id,
     user1,
     user2,
     user3,
@@ -186,7 +186,7 @@ const DetailsClassment = ({
                             }}
                         >
                             <img
-                                src={getLogoById(user2.insightsMission.avatarId, avatars)?.logo}
+                                src={getLogoById(user2.insightsMission.avatar_id, avatars)?.logo}
                                 style={{ width: "80px", height: "100px" }}
                             />
                             <img
@@ -217,7 +217,7 @@ const DetailsClassment = ({
                     <>
                         <div className="details-class-1" style={{ height: "161px" }}>
                             <img
-                                src={getLogoById(user1.insightsMission.avatarId, avatars)?.logo}
+                                src={getLogoById(user1.insightsMission.avatar_id, avatars)?.logo}
                                 style={{ width: "80px", height: "100px", alignSelf: "center" }}
                             />
                             <img
@@ -246,7 +246,7 @@ const DetailsClassment = ({
                 {user3 && (
                     <>
                         <div className="details-class-3" style={{ height: "140px" }}>
-                            <img src={getLogoById(user3.insightsMission.avatarId, avatars)?.logo}
+                            <img src={getLogoById(user3.insightsMission.avatar_id, avatars)?.logo}
                                 style={{ width: "80px", height: "100px", alignSelf: "center" }} />
                             <img
                                 src={badge3}
@@ -276,7 +276,7 @@ const DetailsClassment = ({
 export default function Classement() {
     const history = useHistory();
     const [cookies, setCookie, removeCookie] = useCookies();
-    const gameSessionId = cookies.gameSessionId;
+    const game_session_id = cookies.game_session_id;
     const scoreGlobal = useSelector((state) => state.PvChallenge.scoreGlobal);
 
     const center = useSelector((state) => state.PvChallenge.center);
@@ -284,8 +284,8 @@ export default function Classement() {
     const { t } = useTranslation();
     const score = useSelector((state) => state.PvChallenge.score);
     useEffect(() => {
-        dispatch(getscorePVCh(center.missionId));
-        dispatch(getScoreGlobalPvCh(gameSessionId));
+        dispatch(getscorePVCh(center.mission_id));
+        dispatch(getScoreGlobalPvCh(game_session_id));
     }, []);
 
     let list = scoreGlobal

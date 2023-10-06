@@ -52,7 +52,7 @@ const loadImg = (key) => {
     }
 }
 
-// status,dayId,text
+// status,day_id,text
 const Item = ({ item, title, text, onClick, index, activeIndex }) => {
 
     const { img } = loadImg(index)
@@ -99,7 +99,7 @@ const List = ({ days = [], clickDay, t }) => {
                                 index={index + 1}
                                 activeIndex={activeIndex}
                                 img={img4}
-                                title={`NIVEAU ${elem.dayId}`}
+                                title={`NIVEAU ${elem.day_id}`}
                                 text="Le système de collecte "
                                 onClick={onClickItem} />)
                         })
@@ -202,36 +202,36 @@ function RapportActivite(props) {
     const { t } = useTranslation();
 
     const [cookies, setCookie, removeCookie] = useCookies();
-    const gameSessionId = cookies.gameSessionId;
+    const game_session_id = cookies.game_session_id;
     const [data, setData] = useState([]);
     const [days_, setDays] = useState([
-        { status: 0, dayId: 1, text: t(`parcours.day1title`) },
-        { status: 0, dayId: 2, text: t(`parcours.day2title`) },
-        { status: 0, dayId: 3, text: t(`parcours.day3title`) },
-        { status: 0, dayId: 4, text: t(`parcours.day4title`) },
-        { status: 0, dayId: 5, text: t(`parcours.day5title`) },
-        { status: 0, dayId: 6, text: t(`parcours.day6title`) },
-        { status: 0, dayId: 7, text: t(`parcours.day7title`) }
+        { status: 0, day_id: 1, text: t(`parcours.day1title`) },
+        { status: 0, day_id: 2, text: t(`parcours.day2title`) },
+        { status: 0, day_id: 3, text: t(`parcours.day3title`) },
+        { status: 0, day_id: 4, text: t(`parcours.day4title`) },
+        { status: 0, day_id: 5, text: t(`parcours.day5title`) },
+        { status: 0, day_id: 6, text: t(`parcours.day6title`) },
+        { status: 0, day_id: 7, text: t(`parcours.day7title`) }
 
     ]);
     const [listDescriptions, setListDescriptions] = useState([]);
     const score = useSelector((state) => state.PvChallenge.score);
     const days = useSelector((state) => state.PvChallenge.center.days);
-    const { missionId } = useSelector((state) => state.PvChallenge.center);
-    // const {gameSessionId} = useSelector((state) => state.Module.module);
+    const { mission_id } = useSelector((state) => state.PvChallenge.center);
+    // const {game_session_id} = useSelector((state) => state.Module.module);
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getscorePVCh(missionId));
+        dispatch(getscorePVCh(mission_id));
 
         if (!days) {
-            dispatch(getCenterInfoPvCh(gameSessionId));
+            dispatch(getCenterInfoPvCh(game_session_id));
         }
-    }, [gameSessionId]);
+    }, [game_session_id]);
 
     useEffect(() => {
-        getHistoricScoresPvCh(missionId).then((res) => {
+        getHistoricScoresPvCh(mission_id).then((res) => {
             setData(res);
 
             const data_history_ = data_history[i18n.language]?.map((elem, index) => {

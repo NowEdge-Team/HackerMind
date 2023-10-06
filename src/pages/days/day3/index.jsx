@@ -67,7 +67,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                 correctResponse: [49, 52, 55, 58, 61]
             }
 
-            dispatch(validDay(center.missionId, 3, option, (success) => {
+            dispatch(validDay(center.mission_id, 3, option, (success) => {
 
                 if (!success) return history.push("/");
 
@@ -209,7 +209,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                         correctResponse: [65, 68, 71, 73, 77]
                     }
 
-                    dispatch(validDay(center.missionId, 3, option, () => {
+                    dispatch(validDay(center.mission_id, 3, option, () => {
                         return history.push("/");
                     }));
 
@@ -293,7 +293,7 @@ const Day3 = (props) => {
     const {currentStep} = useStepper();
 
     useEffect(() => {
-        const currentDay = center.days?.find((d) => d.dayId === 3);
+        const currentDay = center.days?.find((d) => d.day_id === 3);
 
         if (currentDay?.status === -1) {
             history.push("/parcours");
@@ -302,7 +302,7 @@ const Day3 = (props) => {
         if (currentDay?.status === 1) {
             setModeEdit(false);
             setValidTask(true);
-            dispatch(day3getDetail(center.missionId));
+            dispatch(day3getDetail(center.mission_id));
         } else {
             dispatch(clearDayData(3));
         }
@@ -394,7 +394,7 @@ const Day3 = (props) => {
             <div className="box box-2" style={{paddingTop: `${currentStep === 1 ? "75px" : ""}`}}>
                 <div className="box-2-1_ew pt-2">
                     <div className="d-flex justify-content-center align-content-center align-items-center ">
-                        <Profile title={center?.name} avatarId={center?.avatarId}/>
+                        <Profile title={center?.name} avatar_id={center?.avatar_id}/>
                     </div>
                     <Stack direction={"row"} spacing={1}>
                         <ShowTuto onClick={() => setShowTuto(true)}/>

@@ -134,8 +134,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
             ,
             {
 
-
-
                 title: t("day1.messages.title"),
                 text: t("day1.messages.text4"),
                 showCancelBtn: false,
@@ -341,7 +339,7 @@ const Day1PvPharma = (props) => {
 
 
     useEffect(() => {
-        const currentDay = center.days?.find((d) => d.dayId === 1);
+        const currentDay = center.days?.find((d) => d.day_id === 1);
 
         if (currentDay?.status === -1) {
             history.push("/parcours");
@@ -350,7 +348,7 @@ const Day1PvPharma = (props) => {
         if (currentDay?.status === 1) {
             setModeEdit(false);
             setValidTask(true);
-            dispatch(day1getDetail(center.missionId));
+            dispatch(day1getDetail(center.mission_id));
         } else {
             dispatch(clearDayData(1));
         }

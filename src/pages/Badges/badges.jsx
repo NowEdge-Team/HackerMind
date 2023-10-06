@@ -32,13 +32,13 @@ import HeaderProfile from "@/components/HeaderPrfile";
 export default function Bradges() {
     const [Badges, setBadges] = useState([]);
     const center = useSelector((state) => state.PvChallenge.center);
-    const { missionId } = useSelector((state) => state.PvChallenge.center);
+    const { mission_id } = useSelector((state) => state.PvChallenge.center);
     const score = useSelector((state) => state.PvChallenge.score);
     const { t } = useTranslation();
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getscorePVCh(center.missionId));
-        httpClient_get(`/participant/hackermind/getbadgesstatus?missionId=${missionId}`)
+        dispatch(getscorePVCh(center.mission_id));
+        httpClient_get(`/participant/hackermind/getbadgesstatus?mission_id=${mission_id}`)
             .then((data) => {
                 setBadges(data.data);
             })

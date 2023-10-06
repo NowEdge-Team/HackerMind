@@ -14,7 +14,7 @@ export default function Header(props) {
         <div className={styles.header} >
             <div className="d-flex flex-column sg-onHover">
                 <div className="d-flex justify-content-center align-items-center">
-                    <Profile colorText={"#ffffff"} title={center?.name} avatarId={center?.avatarId} />
+                    <Profile colorText={"#ffffff"} title={center?.name} avatar_id={center?.avatar_id} />
                 </div>
                 <div className="sg-menu-item-btn-config-p" onClick={() => null}>
                     <div className="sg-menu-item-btn-config-sp">

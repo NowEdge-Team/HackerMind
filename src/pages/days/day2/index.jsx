@@ -95,7 +95,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, history, di
                 },
                 correctResponse: [37, 41 , 47]
             }
-            dispatch(validDay(center.missionId, 2, option, (success) => {
+            dispatch(validDay(center.mission_id, 2, option, (success) => {
                 if (!success) return history.push("/");
 
                 setShowModal(true);
@@ -368,7 +368,7 @@ const Day2 = (props) => {
 
 
     useEffect(() => {
-        const currentDay = center.days?.find((d) => d.dayId === 2);
+        const currentDay = center.days?.find((d) => d.day_id === 2);
 
         if (currentDay?.status === -1) {
             history.push("/parcours");
@@ -377,7 +377,7 @@ const Day2 = (props) => {
         if (currentDay?.status === 1) {
             setModeEdit(false);
             setValidTask(true);
-            dispatch(day2getDetail(center.missionId));
+            dispatch(day2getDetail(center.mission_id));
         } else {
             dispatch(clearDayData(2));
         }
@@ -463,7 +463,7 @@ const Day2 = (props) => {
             <div className="box box-2">
                 <div className="box-2-1_ew pt-2">
                     <div className="d-flex justify-content-center align-content-center align-items-center ">
-                        <Profile title={center?.name} avatarId={center?.avatarId}/>
+                        <Profile title={center?.name} avatar_id={center?.avatar_id}/>
                     </div>
                     <Stack direction={"row"} spacing={1}>
                         <ShowTuto onClick={() => setShowTuto(true)}/>

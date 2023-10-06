@@ -1,11 +1,11 @@
 import { httpClient_get, httpClient_post } from "../../helpers/api";
 
 
-const path = "digital_ambassadors";
+const path = "hackermind";
 
-const getCenterInfoService = (gameSessionId) => {
+const getCenterInfoService = (game_session_id) => {
     return httpClient_get(
-        `/participant/${path}/getmission?gameSessionId=${gameSessionId}`
+        `/participant/${path}/getmission?game_session_id=${game_session_id}`
     )
         .then((response) => {
             return response.data;
@@ -18,15 +18,15 @@ const getCenterInfoService = (gameSessionId) => {
 export { getCenterInfoService };
 
 const updateCenterInfoService = (
-    gameSessionId,
+    game_session_id,
     name,
-    avatarId,
+    avatar_id,
     fonction
 ) => {
     return httpClient_post(`/participant/${path}/updatemission`, {
-        gameSessionId,
+        game_session_id,
         name,
-        avatarId,
+        avatar_id,
         fonction,
     })
         .then((response) => {
@@ -37,11 +37,11 @@ const updateCenterInfoService = (
         });
 };
 
-const getScoreService = (missionId) => {
-    // if (missionId === false || missionId === undefined) {
+const getScoreService = (mission_id) => {
+    // if (mission_id === false || mission_id === undefined) {
     //     return {}
     // }
-    return httpClient_get(`/participant/${path}/getscore?missionId=${missionId}`)
+    return httpClient_get(`/participant/${path}/getscore?mission_id=${mission_id}`)
         .then((response) => {
             return response.data;
         })
@@ -50,8 +50,8 @@ const getScoreService = (missionId) => {
         });
 };
 
-const getScoreGlobalService = (gameSessionId) => {
-    return httpClient_get(`/participant/${path}/getscores?gameSessionId=${gameSessionId}`)
+const getScoreGlobalService = (game_session_id) => {
+    return httpClient_get(`/participant/${path}/getscores?game_session_id=${game_session_id}`)
         .then((response) => {
             return response.data;
         })
@@ -60,8 +60,8 @@ const getScoreGlobalService = (gameSessionId) => {
         });
 };
 
-const getScoreGlobalModeratorService = (gameSessionId) => {
-    return httpClient_get(`/moderator/${path}/getscores?gameSessionId=${gameSessionId}`)
+const getScoreGlobalModeratorService = (game_session_id) => {
+    return httpClient_get(`/moderator/${path}/getscores?game_session_id=${game_session_id}`)
         .then((response) => {
             return response.data;
         })

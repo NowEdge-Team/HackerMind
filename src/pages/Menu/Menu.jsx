@@ -30,17 +30,17 @@ import mstyles from "./style.module.scss";
 
 
 
-function isFirstTime(gameSessionId) {
+function isFirstTime(game_session_id) {
 
     const cookies = new Cookies();
-    const discovery_mission = cookies.get(`discovery_mission_${gameSessionId}`);
+    const discovery_mission = cookies.get(`discovery_mission_${game_session_id}`);
     return !!discovery_mission;
 
 }
 
-function setIsFirstTime(gameSessionId) {
+function setIsFirstTime(game_session_id) {
     const cookies = new Cookies();
-    cookies.set(`discovery_mission_${gameSessionId}`, true, { path: '/' });
+    cookies.set(`discovery_mission_${game_session_id}`, true, { path: '/' });
 }
 
 
@@ -50,7 +50,7 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => {
     const { center } = useSelector((state) => state.PvChallenge);
 
     useEffect(() => {
-        if (center.days && center.days.find((d) => d.dayId === 1)?.status === 1)
+        if (center.days && center.days.find((d) => d.day_id === 1)?.status === 1)
             setDisableEdit(true);
     }, []);
     return (
@@ -103,13 +103,13 @@ function ConfigModal(props) {
     const [disableEdit, setDisableEdit] = useState(false);
 
     useEffect(() => {
-        if (center.days && center.days.find((d) => d.dayId === 1)?.status === 1)
+        if (center.days && center.days.find((d) => d.day_id === 1)?.status === 1)
             setDisableEdit(true);
         else
             setDisableEdit(false);
 
         setName(center.name);
-        setAvatarLogo(getLogoById(center.avatarId));
+        setAvatarLogo(getLogoById(center.avatar_id));
         setFonction(center?.fonction);
     }, [center]);
 
@@ -221,7 +221,7 @@ function ConfigModal(props) {
                                                     setErrorName(false);
                                                     props.dispatch(
                                                         updateCenterPvChInfo(
-                                                            props.gameSessionId,
+                                                            props.game_session_id,
                                                             name,
                                                             avatarLogo.id,
                                                             fonction
@@ -301,7 +301,7 @@ MenuBtnComponent.propTypes = {
 };
 export default function Menu() {
     const [cookies, setCookie, removeCookie] = useCookies();
-    const gameSessionId = cookies.gameSessionId;
+    const game_session_id = cookies.game_session_id;
     const location = useLocation();
     const [regleJeu, setRegleJeu] = useState(false);
     const [showConfig, setShowConfig] = useState(false);
@@ -318,7 +318,7 @@ export default function Menu() {
     const history = useHistory();
     const dispatch = useDispatch();
     const { t } = useTranslation();
-    const { days, challengeId, missionId } = useSelector((state) => state.PvChallenge.center);
+    const { days, challengeId, mission_id } = useSelector((state) => state.PvChallenge.center);
 
     useEffect(() => {
         if (location.pathname === "/" && location.state) {
@@ -352,16 +352,16 @@ export default function Menu() {
     }, [closeDay]);
 
     useEffect(() => {
-        dispatch(getCenterInfoPvCh(gameSessionId));
+        dispatch(getCenterInfoPvCh(game_session_id));
 
     }, []);
 
     useEffect(() => {
-        if (gameSessionId) {
-            const res = !isFirstTime(gameSessionId);
+        if (game_session_id) {
+            const res = !isFirstTime(game_session_id);
             setRegleJeu(res);
         }
-    }, [gameSessionId]);
+    }, [game_session_id]);
 
 
 
@@ -391,7 +391,7 @@ export default function Menu() {
 
     const downloadCertificate = () => {
         setIsLoading(true)
-        httpClient_get(`/participant/hackermind/export_certificate?missionId=${missionId}`, {
+        httpClient_get(`/participant/hackermind/export_certificate?mission_id=${mission_id}`, {
             responseType: "blob"
         })
             .then((response) => {
@@ -446,7 +446,7 @@ export default function Menu() {
                 scoreDay={score}
                 show={showScore}
                 close={() => {
-                    if (closeDay?.dayId === 5 && closeDay?.success) setShowFinalGame(true);
+                    if (closeDay?.day_id === 5 && closeDay?.success) setShowFinalGame(true);
 
                     if (badges.length > 0) setShowBadge(() => true);
 
@@ -464,7 +464,7 @@ export default function Menu() {
                 t={t}
                 show={showConfig}
                 center={center}
-                gameSessionId={gameSessionId}
+                game_session_id={game_session_id}
                 dispatch={dispatch}
                 onClose={() => {
                     setShowConfig(false);
@@ -481,7 +481,7 @@ export default function Menu() {
                 backGrandImage={backImgTuto}
                 show={regleJeu}
                 onClose={() => {
-                    setIsFirstTime(gameSessionId);
+                    setIsFirstTime(game_session_id);
 
                     setRegleJeu(false);
                 }}
@@ -492,7 +492,7 @@ export default function Menu() {
                     <div className={`d-flex flex-column sg-onHover ${mstyles.sg_onHover}`}>
                         <div className="d-flex justify-content-center align-items-center">
                             <img
-                                src={getLogoById(center.avatarId, avatars)?.logo}
+                                src={getLogoById(center.avatar_id, avatars)?.logo}
                                 alt="user-img"
                                 width={41}
                                 height={41}

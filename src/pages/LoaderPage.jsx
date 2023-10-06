@@ -22,7 +22,7 @@ const LoaderPage = (props) => {
             const data = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
             const cookies = new Cookies();
             cookies.set("token",data.token ,  { path: '/' } );
-            cookies.set("gameSessionId",data.gameSessionId ,  { path: '/' } );
+            cookies.set("game_session_id",data.game_session_id ,  { path: '/' } );
 
             dispatch(initDaysData());
 
