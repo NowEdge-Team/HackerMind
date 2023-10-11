@@ -34,7 +34,7 @@ const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
 }
 
 
-const RoundedBlock = ({ index, listMsg, onClick, activeItem }) => {
+const RoundedBlock = ({ index, listMsg, onClick, activeItem , showPopup=true}) => {
 
 
     const findItem = listMsg.find((item) => item.index === index);
@@ -47,9 +47,10 @@ const RoundedBlock = ({ index, listMsg, onClick, activeItem }) => {
         if (findIndexItem <= activeItem - 1)
             onClick(findItem)
     }
+    console.log("showw",showPopup );
 
     return <div className={style.block_icon} >
-        {findItem && <i className={`fas fa-check cursor-pointer ${findIndexItem === activeItem - 1 ? style.active_icon : ''}`} onClick={onnNextItem} ></i>}
+        {findItem && <i className={`fas fa-check cursor-pointer ${findIndexItem === activeItem - 1 && findItem.showPopup === undefined ? style.active_icon : ''}`} onClick={findItem.showPopup === undefined ? onnNextItem : null}  ></i>}
     </div>
 }
 
@@ -321,43 +322,145 @@ function Matrix({ nextStep, onBack }) {
             text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
             audio: Level1Audio.audio22
         },
-
         {
             index: 0,
             title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
-            description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
+            description:`Airbus a été la cible de plusieurs attaques 
+            informatiques en 2019 passant par ses sous-traitants, éveillant des soupçons 
+            d'espionnage industriel en provenance de Chine. Ces attaques ont touché Expleo 
+            (anciennement Assystem), Rolls-Royce, et deux sous-traitants non identifiés d'Airbus.
+            Les attaques ont suivi un modèle où les sous-traitants étaient visés pour ensuite 
+            infiltrer Airbus via leurs accès. Les motivations semblent inclure la recherche de 
+            documents techniques de certification et d'informations liées à la motorisation 
+            d'aéronefs, y compris l'A400M et l'A350. Bien que la Chine soit soupçonnée, 
+            l'attribution reste difficile dans le domaine des cyberattaques. Ces incidents 
+            soulignent les vulnérabilités du secteur aéronautique face aux cybermenaces`,
             img: imgArticle,
-
+        },
+        // {
+        //     index: 10,
+        //     idVideo: "8VsvdCaSyaQ",
+        //     type: "video"
+        // },
+        {
+            index: 10,
+            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
+            description: ` Le groupe de cybercriminels francophone OPERA1ER, 
+            également connu sous les noms de DESKTOP-GROUP, Common Raven et NXSMS, 
+            a ciblé des organismes bancaires, financiers et de télécommunications en Afrique de 
+            l'Ouest depuis 2016. L'analyse de Group-IB révèle qu'ils ont réussi à extorquer 11 
+            millions de dollars grâce à 35 cyberattaques répertoriées entre 2018 et 2022. Les 
+            attaques ont commencé par des e-mails de phishing contenant des chevaux de Troie 
+            d'accès à distance (RAT) et d'autres outils visant à voler les identifiants des 
+            utilisateurs. Les hackers ont ensuite étudié les réseaux des victimes pendant une 
+            période de dormance allant jusqu'à un an avant de détourner des fonds vers des 
+            comptes détenus par des tiers.`,
+            img: imgArticle,
         },
         {
-            index: 5,
+            index: 27,
+            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
+            description: `NotPetya, un puissant malware apparu en juin 2017, a 
+            redéfini les attaques de logiciels malveillants et forcé les professionnels de la sécurité
+            à revoir leurs stratégies. Contrairement à la plupart des ransomwares, NotPetya 
+            n'était pas destiné à extorquer de l'argent, mais à effacer les données. Propagé via 
+            l'outil EternalBlue volé à la NSA, il a infecté des milliers d'entreprises dans le monde, 
+            causant plus de 10 milliards de dollars de dommages. Les experts considèrent que 
+            NotPetya, attribué à des opérateurs russes a marqué le passage des ransomwares 
+            opportunistes aux armes de guerre cybernétiques soutenues par des États-nations, 
+            incitant les RSSI à repenser leur approche de la sécurité`,
+            img: imgArticle,
+        },
+        {
+            
+            index: 34,
             idVideo: "8VsvdCaSyaQ",
             type: "video"
         },
         {
+            index: 35,
+            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
+            description: `La NASA a été victime d'une attaque informatique qui a
+            utilisé un mini-ordinateur Raspberry Pi, coûtant seulement 35 dollars (30 euros), pour
+            infiltrer le réseau du Jet Propulsion Laboratory (JPL) à Pasadena, en Californie. 
+            L'attaque a débuté en avril 2018 et a duré près d'un an, compromettant 
+            temporairement les systèmes de contrôle des vols spatiaux du JPL. Environ 500 
+            mégaoctets de données ont été volés, dont des fichiers confidentiels liés à des 
+            données scientifiques du rover Curiosity sur Mars et à des informations soumises à la
+            réglementation sur le contrôle des exportations de technologies à usage militaire. La 
+            NASA craignait également que d'autres sites puissent être compromis par l'attaquant,
+            ce qui a conduit à des déconnexions préventives.`,
+            img: imgArticle,
+        },
+        {
+            index: 1,
+            showPopup:false,
+        },
+        {
+            index: 2,
+            showPopup:false,
+        },
+        {
+            index: 3,
+            showPopup:false,
+        },
+        {
+            index: 14,
+            showPopup:false,
+        },
+        {
+            index: 15,
+            showPopup:false,
+        },
+        {
+            index: 16,
+            showPopup:false,
+        },
+        {
+            index: 18,
+            showPopup:false,
+        },
+        {
+            index: 20,
+            showPopup:false,
+        },
+        {
+            index: 21,
+            showPopup:false,
+        },
+        {
+            index: 24,
+            showPopup:false,
+        },
+        {
+            index: 25,
+            showPopup:false,
+        },
+        {
+            index: 39,
+            showPopup:false,
+        },
+        {
             index: 40,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
-            description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-            img: imgArticle,
-        },
-        {
-            index: 32,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
-            description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-            img: imgArticle,
+            showPopup:false,
         },
         {
             index: 44,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
-            description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-            img: imgArticle,
+            showPopup:false,
         },
         {
-            index: 44,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
-            description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-            img: imgArticle,
+            index: 45,
+            showPopup:false,
+        },
+        {
+            index: 46,
+            showPopup:false,
+        },
+        {
+            index: 47,
+            showPopup:false,
         }
+   
 
     ].map((item, index) => ({ ...item, id: index + 1 }));
     const listMsgPop = [
@@ -606,7 +709,7 @@ function Matrix({ nextStep, onBack }) {
                         <div></div>
                         {
                             [...Array(48).keys()].map((item, index) => <RoundedBlock key={index} activeItem={activeItem} index={index} listMsg={listMsg} onClick={clickRoundedBlock} />)
-
+                        
                         }
                     </>
                 }
