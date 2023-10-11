@@ -21,7 +21,12 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
 import { mModalConfirmSteps } from "../ConfirmationModalSteps/ConfirmationModal";
-import imgArticle from "@/assets/images/article1.png";
+import article1 from "@/assets/images/doc11.png";
+import article2 from "@/assets/images/doc12.png";
+import article3 from "@/assets/images/doc13.png";
+import article4 from "@/assets/images/doc14.png";
+import article5 from "@/assets/images/doc15.png";
+
 import HeaderProfile from "../HeaderPrfile";
 
 const data = [
@@ -116,7 +121,7 @@ const articleData = [
         ralentir le programme. Il aurait été introduit dans la centrale de Natanz par une clé 
         USB ou un ordinateur portable, et Edward Snowden a suggéré une implication de la 
         NSA américaine et des services secrets israéliens`,
-        img: imgArticle,
+        img: article1,
         idCell: -1,
         correctCellId: 3
     },
@@ -131,7 +136,7 @@ const articleData = [
         menacaient de rendre publiques les données volées si la rançon n'était pas payée.
         Bouygues Construction a confirmé l'attaque. Cette attaque est similaire à celle 
         subie par d'autres entreprises depuis`,
-        img: imgArticle,
+        img: article2,
         idCell: -1,
         correctCellId: 10
     },
@@ -148,7 +153,7 @@ const articleData = [
         criminalité et avait collaboré avec la police canadienne dans son enquête. La 
         CNIL avait précédemment émis des conseils pour protéger sa vie privée en ligne 
         lors de l'utilisation de sites de rencontres`,
-        img: imgArticle,
+        img: article3,
         idCell: -1,
         correctCellId: 20
     },
@@ -164,7 +169,7 @@ const articleData = [
         téraoctets de données au fil de plusieurs mois. Ils ont divulgué des films inédits, 
         des mots de passe, des informations sur les employés, des données stratégiques, 
         et menacent de révéler davantage`,
-        img: imgArticle,
+        img: article4,
         idCell: -1,
         correctCellId: 26
     },
@@ -179,7 +184,7 @@ const articleData = [
         menée à l'aide de la technologie memcached, qui a un potentiel d'amplification 
         énorme. Memcached ne nécessite aucune authentification, ce qui le rend 
         vulnérable à l'usurpation et à une utilisation malveillante`,
-        img: imgArticle,
+        img: article5,
         idCell: -1,
         correctCellId: 35
     }

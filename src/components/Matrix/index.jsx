@@ -1,4 +1,3 @@
-import imgArticle from "@/assets/images/article1.png";
 import BackButton from "@/components/pvCh/BackButton";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -12,6 +11,12 @@ import HeaderProfile from "../HeaderPrfile";
 import { mModalArticel } from "../modal/ModalArticle";
 import ModalTutorial from "../pvCh/ModalTutorial/ModalTutorial";
 import NextButton from "../pvCh/NextButton";
+import article1 from "@/assets/images/doc1.png";
+import article2 from "@/assets/images/doc2.png";
+import article3 from "@/assets/images/doc3.png";
+import article4 from "@/assets/images/doc4.png";
+import article5 from "@/assets/images/doc5.png";
+
 import style from "./style.module.scss";
 
 
@@ -324,18 +329,14 @@ function Matrix({ nextStep, onBack }) {
         },
         {
             index: 0,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
-            description:`Airbus a été la cible de plusieurs attaques 
-            informatiques en 2019 passant par ses sous-traitants, éveillant des soupçons 
-            d'espionnage industriel en provenance de Chine. Ces attaques ont touché Expleo 
-            (anciennement Assystem), Rolls-Royce, et deux sous-traitants non identifiés d'Airbus.
-            Les attaques ont suivi un modèle où les sous-traitants étaient visés pour ensuite 
-            infiltrer Airbus via leurs accès. Les motivations semblent inclure la recherche de 
-            documents techniques de certification et d'informations liées à la motorisation 
-            d'aéronefs, y compris l'A400M et l'A350. Bien que la Chine soit soupçonnée, 
-            l'attribution reste difficile dans le domaine des cyberattaques. Ces incidents 
-            soulignent les vulnérabilités du secteur aéronautique face aux cybermenaces`,
-            img: imgArticle,
+            title: "Des hackers algériens s’en prennent à des sites marocains ",
+            description:`Une cyberattaque a visé le site officiel de l’Université des sciences
+            Dhar El Mahraz de Fès (FSDM) vendredi 5 août, rapporte Morroco World News.
+            L’auteur de cette manœuvre serait un hacker algérien, qui a laissé sa signature
+            avec le drapeau algérien sur le site Web de l’université et une légende : « Pas de
+            paix entre les systèmes ». Sur Twitter, il a affirmé avoir collecté trois millions de
+            lignes de données, y compris des e-mails et des mots de passe.`,
+            img: article1,
         },
         // {
         //     index: 10,
@@ -344,7 +345,7 @@ function Matrix({ nextStep, onBack }) {
         // },
         {
             index: 10,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
+            title: "Le cybergang francophone OPERA1ER enchaine les victimes en Afrique",
             description: ` Le groupe de cybercriminels francophone OPERA1ER, 
             également connu sous les noms de DESKTOP-GROUP, Common Raven et NXSMS, 
             a ciblé des organismes bancaires, financiers et de télécommunications en Afrique de 
@@ -355,11 +356,11 @@ function Matrix({ nextStep, onBack }) {
             utilisateurs. Les hackers ont ensuite étudié les réseaux des victimes pendant une 
             période de dormance allant jusqu'à un an avant de détourner des fonds vers des 
             comptes détenus par des tiers.`,
-            img: imgArticle,
+            img: article2,
         },
         {
             index: 27,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
+            title: "5 ans après, quelles leçons tirer des attaques NotPetya",
             description: `NotPetya, un puissant malware apparu en juin 2017, a 
             redéfini les attaques de logiciels malveillants et forcé les professionnels de la sécurité
             à revoir leurs stratégies. Contrairement à la plupart des ransomwares, NotPetya 
@@ -369,17 +370,23 @@ function Matrix({ nextStep, onBack }) {
             NotPetya, attribué à des opérateurs russes a marqué le passage des ransomwares 
             opportunistes aux armes de guerre cybernétiques soutenues par des États-nations, 
             incitant les RSSI à repenser leur approche de la sécurité`,
-            img: imgArticle,
+            img: article3,
         },
         {
-            
             index: 34,
-            idVideo: "8VsvdCaSyaQ",
-            type: "video"
+            title: "Espionnage : Airbus, cible d'une série de cyberattaques",
+            description: `Airbus a été la cible de plusieurs attaques informatiques en 2019 passant par ses sous-traitants, 
+            éveillant des soupçons d'espionnage industriel en provenance de Chine. Ces attaques ont touché Expleo 
+            (anciennement Assystem), Rolls-Royce, et deux sous-traitants non identifiés d'Airbus. Les attaques ont suivi 
+            un modèle où les sous-traitants étaient visés pour ensuite infiltrer Airbus via leurs accès. Les motivations 
+            semblent inclure la recherche de documents techniques de certification et d'informations liées à la motorisation 
+            d'aéronefs, y compris l'A400M et l'A350. Bien que la Chine soit soupçonnée, l'attribution reste difficile dans 
+            le domaine des cyberattaques. Ces incidents soulignent les vulnérabilités du secteur aéronautique face aux cybermenaces.`,
+            img: article4,
         },
         {
             index: 35,
-            title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
+            title: "Un hacker pirate un centre de l'agence spatiale américaine avec un mini-ordinateur à 35 dollars",
             description: `La NASA a été victime d'une attaque informatique qui a
             utilisé un mini-ordinateur Raspberry Pi, coûtant seulement 35 dollars (30 euros), pour
             infiltrer le réseau du Jet Propulsion Laboratory (JPL) à Pasadena, en Californie. 
@@ -390,7 +397,7 @@ function Matrix({ nextStep, onBack }) {
             réglementation sur le contrôle des exportations de technologies à usage militaire. La 
             NASA craignait également que d'autres sites puissent être compromis par l'attaquant,
             ce qui a conduit à des déconnexions préventives.`,
-            img: imgArticle,
+            img: article5,
         },
         {
             index: 1,
