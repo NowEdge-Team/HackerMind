@@ -21,7 +21,12 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
 import { mModalConfirmSteps } from "../ConfirmationModalSteps/ConfirmationModal";
-import imgArticle from "@/assets/images/article1.png";
+import article1 from "@/assets/images/doc11.png";
+import article2 from "@/assets/images/doc12.png";
+import article3 from "@/assets/images/doc13.png";
+import article4 from "@/assets/images/doc14.png";
+import article5 from "@/assets/images/doc15.png";
+
 import HeaderProfile from "../HeaderPrfile";
 
 const data = [
@@ -104,71 +109,86 @@ const data = [
 const articleData = [
     {
         id: 1,
-        title: "Cybersécurité : Protégez vos Données dans un Monde Numérique",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
+        title: "Stuxnet, l’espion qui voulait saboter le nucléaire iranien",
+        description: `examine l'histoire de Stuxnet, un virus initialement 
+        conçu pour saboter le programme nucléaire iranien. Découvert en 2010, son 
+        développement aurait commencé vers 2005-2006, au moment où l'Iran relançait son 
+        programme d'enrichissement d'uranium. Stuxnet se distingue en exploitant quatre 
+        vulnérabilités 0-day, ce qui démontre un niveau de sophistication élevé. Il se réplique 
+        efficacement sur les réseaux informatiques, mais son objectif principal est de cibler 
+        les logiciels Siemens utilisés pour les centrifugeuses nucléaires. Lorsqu'il détecte ces
+        logiciels, Stuxnet modifie subtilement leurs paramètres pour provoquer des casses et 
+        ralentir le programme. Il aurait été introduit dans la centrale de Natanz par une clé 
+        USB ou un ordinateur portable, et Edward Snowden a suggéré une implication de la 
+        NSA américaine et des services secrets israéliens`,
+        img: article1,
         idCell: -1,
-        correctCellId: 1
+        correctCellId: 3
     },
     {
         id: 2,
-        title: "Le ransomware",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
+        title: "Ransomware : les 3 infos sur l’attaque contre Bouygues Construction",
+        description: `Bouygues Construction a été la cible d'une attaque de ransomware
+        en 2020, où des pirates informatiques ont chiffré leurs données et exigé une 
+        rançon de 10 millions d'euros pour ne pas les divulguer. L'attaque a affecté les 
+        serveurs de l'entreprise et a temporairement arrêté ses systèmes informatiques. 
+        L'attaque aurait été menée par un groupe de hackers appelé Maze. Ils 
+        menacaient de rendre publiques les données volées si la rançon n'était pas payée.
+        Bouygues Construction a confirmé l'attaque. Cette attaque est similaire à celle 
+        subie par d'autres entreprises depuis`,
+        img: article2,
         idCell: -1,
-        correctCellId: 25
+        correctCellId: 10
     },
     {
         id: 3,
-        title: "L'ingénierie sociale : comment les pirates manipulent les victimes",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
+        title: "Piratage d'Ashley Madison : 260 000 contacts français touchés",
+        description: `Avid Life Media, la société 
+        propriétaire du site de rencontres Ashley Madison, enquêtait sur la fuite de 
+        données personnelles qui avait eu lieu suite au piratage en juillet 2015. Le 
+        groupe de pirates, Impact Team, avait publié les informations de plus de 32 
+        millions d'utilisateurs, y compris des adresses e-mail en .fr, dont certaines avec 
+        une extension .gouv.fr. Impact Team avait justifié son action en contestant la 
+        moralité d'Ashley Madison. Avid Life Media avait affirmé que cela relevait de la 
+        criminalité et avait collaboré avec la police canadienne dans son enquête. La 
+        CNIL avait précédemment émis des conseils pour protéger sa vie privée en ligne 
+        lors de l'utilisation de sites de rencontres`,
+        img: article3,
         idCell: -1,
-        correctCellId: 30
+        correctCellId: 20
     },
     {
         id: 4,
-        title: "Les vulnérabilités Zero-Day : un défi pour la sécurité",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
+        title: "Piratage de Sony : un désastre qui coûterait déjà 380 millions de dollars ?",
+        description: `Le 17 
+        avril 2011, le groupe "Lulz Security" a piraté près de 100 millions de comptes 
+        Sony et volé plus de 20 millions de numéros de cartes de crédit. Cette attaque a 
+        coûté environ 120 millions de dollars à Sony en frais de réparation et a 
+        gravement endommagé sa réputation. En novembre 2014, un groupe appelé 
+        "GOP" (Guardians of Peace) a attaqué Sony en obtenant secrètement 11 
+        téraoctets de données au fil de plusieurs mois. Ils ont divulgué des films inédits, 
+        des mots de passe, des informations sur les employés, des données stratégiques, 
+        et menacent de révéler davantage`,
+        img: article4,
         idCell: -1,
-        correctCellId: 43
+        correctCellId: 26
     },
     {
         id: 5,
-        title: "Les attaques par hameçonnage",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
+        title: "GitHub a subi ce qui semble être la plus grosse attaque DDOS enregistrée jusqu’ici",
+        description: `GitHub a été la cible d'une 
+        attaque DDoS (Distributed Denial of Service) extrêmement puissante le 28 février
+        2018, avec un pic de trafic atteignant 1,3 térabit par seconde, selon Akamai. Il 
+        s'agirait de l'une des attaques DDoS les plus intenses jamais divulguées 
+        publiquement. L'attaque a temporairement rendu GitHub inaccessible. Elle a été 
+        menée à l'aide de la technologie memcached, qui a un potentiel d'amplification 
+        énorme. Memcached ne nécessite aucune authentification, ce qui le rend 
+        vulnérable à l'usurpation et à une utilisation malveillante`,
+        img: article5,
         idCell: -1,
-        correctCellId: 16
-    },
-    {
-        id: 6,
-        title: "Sécurité des réseaux : les bonnes pratiques",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
-        idCell: -1,
-        correctCellId: 38
-    },
-    {
-        id: 7,
-        title: "La menace des logiciels malveillants",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
-        idCell: -1,
-        correctCellId: 18
-    },
-    {
-        id: 8,
-        title: "La cybersécurité dans le monde connecté d'aujourd'hui",
-        description: `La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure. La cybersécurité est devenue l'un des défis les plus cruciaux de notre ère numérique. Avec l'avancée rapide de la technologie et la prolifération des appareils connectés, la sécurité de nos données et de nos systèmes est devenue une préoccupation majeure.`,
-        img: imgArticle,
-        idCell: -1,
-        correctCellId: 8
+        correctCellId: 35
     }
 ]
-
-
 
 
 
