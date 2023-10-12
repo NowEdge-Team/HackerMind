@@ -222,7 +222,7 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ETATIQUE",
-            text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
+            text: "États, agences de renseignement. Attaques généralement conduites par des professionnels, respectant un calendrier et un mode opératoire prédéfinis. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible. Par extension, ces acteurs ontles moyens d’acheter ou de découvrir des vulnérabilités jour zéro (0-Day) et certains sont capables d’infiltrer des réseaux isolés et de réaliser des attaques successives pour atteindre une ou des cibles (par exemple au moyen d’une attaque visant la chaîne d’approvisionnement).",
             audio: Level1Audio.audio9,
             withRadar: true,
         },
@@ -230,14 +230,14 @@ function Matrix({ nextStep, onBack }) {
 
             title: "LE HACKER EN CHEF",
             subtitle: "CRIME ORGANISE",
-            text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
+            text: "Organisations cybercriminelles (mafias, gangs, officines). Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel, exploitation de réseaux de « machines robots » (botnet), etc. En raison notamment de la prolifération de kits d’attaques facilement accessibles en ligne, les cybercriminels mènent des opérations de plus en plus sophistiquées et organisées à des fins lucratives ou de fraude. Certains ont les moyens d’acheter ou de découvrir des vulnérabilités jour zéro (0-Day).",
             audio: Level1Audio.audio10,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "TERRORISTE",
-            text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",
+            text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées mais menées avec détermination à des fins de déstabilisation et de destruction : déni de service (visant par exemple à rendre indisponibles les services d’urgence d’un centre hospitalier, arrêts intempestifs d’un système industriel de production d’énergie), exploitation de vulnérabilités de sites Internet et défigurations",
             audio: Level1Audio.audio11,
             withRadar: true,
 
@@ -245,7 +245,7 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ACTIVISTE IDIOLOGIQUE",
-            text: "Cyber-hacktivistes, groupements d’intérêt, sectes.",
+            text: "Cyber-hacktivistes, groupements d’intérêt, sectes. Modes opératoires et sophistication des attaques relativement similaires à ceux des cyberterroristes mais motivés par des intentions moins destructrices. Certains acteurs vont mener ces attaques pour véhiculer une idéologie, un message (exemple: utilisation massive des réseaux sociaux comme caisse de résonnance).",
             audio: Level1Audio.audio12,
             withRadar: true,
 
@@ -253,7 +253,7 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "OFFICINE SPÉCIALISÉE",
-            text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques 3 accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
+            text: "Profil de « cybermercenaire » doté de capacités informatiques généralement élevées sur le plan technique. Il est de ce fait à distinguer des script-kiddies avec qui il partage toutefois l’esprit de défi et la quête de reconnaissance mais avec un objectif lucratif. De tels groupes peuvent s’organiser en officines spécialisées proposant de véritables services de piratage. Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques   accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main » par d’autres groupes d’attaquants. Il n’a pas de motivations particulières autres que le gain financier",
             audio: Level1Audio.audio13,
             withRadar: true,
 
@@ -261,14 +261,14 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "AMATEUR",
-            text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
+            text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi. Attaques basiques mais capacité à utiliser les kits d’attaques accessibles en ligne",
             audio: Level1Audio.audio14,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "VENGEUR",
-            text: "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",
+            text: "Les motivations de ce profil d’attaquant sont guidées par un esprit de vengeance aigüe ou un sentiment d’injustice (exemples : salarié licencié pour faute grave, prestataire mécontent suite au non-renouvellement d’un marché, etc.). Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels. Cela peut le rendre redoutable et lui conférer un pouvoir de nuisance important.",
             audio: Level1Audio.audio15,
             withRadar: true,
 
@@ -276,35 +276,35 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "MALVEILLANT PATHOLOGIQUE",
-            text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",
+            text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur). Ici, soit l’attaquant dispose d’un socle de connaissances en informatique qui l’amène à tenter de compromettre le SI de sa cible, soit il exploite par lui-même des kits d’attaques disponibles en ligne, soit il décide de sous-traiter l’attaque informatique en faisant appel à une officine spécialisée. Dans certains cas, l’attaquant peut porter son attention sur une source interne (salarié mécontent, prestataire peu scrupuleux) et tenter de la corrompre. ",
             audio: Level1Audio.audio16,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ESPIONNAGE",
-            text: "Opération de renseignement (étatique, économique)",
+            text: "Opération de renseignement (étatique, économique). Dans de nombreux cas, l’attaquant s’installe durablement dans le système d’information et en toute discrétion. L’armement, le spatial, l’aéronautique, le secteur pharmaceutique, l’énergie ou encore certaines activités de l’État (économie, finances, affaires étrangères) constituent des cibles privilégiées.",
             audio: Level1Audio.audio17
         },
 
         {
             title: "LE HACKER EN CHEF",
             subtitle: "PRÉPOSITIONNEMENT STRATÉGIQUE",
-            text: "Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho).",
+            text: "Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho). La compromission soudaine et massive d’ordinateurs afin de constituer un réseau de robots peut être affiliée à cette catégorie.",
             audio: Level1Audio.audio18
         },
 
         {
             title: "LE HACKER EN CHEF",
             subtitle: "INFLUENCE",
-            text: "Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État.",
+            text: "Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État. La finalité est généralement la déstabilisation ou la modification des perceptions",
             audio: Level1Audio.audio19
 
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ENTRAVE AU FONCTIONNEMENT",
-            text: "Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique",
+            text: "Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique. Les systèmes industriels peuvent être particulièrement exposés et vulnérables au travers des réseaux informatiques auxquels ils sont interconnectés (exemple : envoi de commandes afin de générer un dommage matériel ou une panne nécessitant une maintenance lourde). Les attaques en déni de service distribué (DDoS) sont    des techniques largement utilisées pour neutraliser des ressources numériques",
             audio: Level1Audio.audio20
         },
 
@@ -312,13 +312,13 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "LUCRATIF",
-            text: "Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc.",
+            text: "Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc. Il est à noter que certaines opérations à but lucratif peuvent recourir à un mode opératoire relevant des catégories ci-dessus (exemple: espionnage et vol de données, rançongiciel pour neutraliser une activité) mais l’objectif final reste financier.",
             audio: Level1Audio.audio21
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
+            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement. Même si l’objectif est essentiellement ludique et sans volonté particulière de nuire, ce type d’opération peut avoir de lourdes conséquences pour la victime.",
             audio: Level1Audio.audio22
         },
 
