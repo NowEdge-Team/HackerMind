@@ -39,8 +39,8 @@
     },
     "modal": {
       "badge1": {
-        "title": "badge EXPERT",
-        "body": "Félicitations ! Grâce à vos actions, vous avez remporté le badge EXPERT. Rendez-vous dans la vue des badges pour plus de détails"
+        "title": "badge AVATAR",
+        "body": "Félicitations ! Grâce à vos actions, vous avez remporté le badge AVATAR. Rendez-vous dans la vue des badges pour plus de détails"
       },
       "badge2": {
         "title": "badge Ambassadeur",
