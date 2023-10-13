@@ -3,10 +3,10 @@ import { useHistory } from "react-router-dom";
 import Typewriter from 'typewriter-effect';
 import ing from "../../../assets/Ingénieur social.png";
 import poly from "../../../assets/Polygone 7.svg";
-import audio3 from "../../../assets/audio/Niv1/fr/Project_Haystack.m4a";
-import audio4 from "../../../assets/audio/Niv1/fr/ProtonMail.m4a";
-import audio5 from "../../../assets/audio/Niv1/fr/Telegram.m4a";
-import audio2 from "../../../assets/audio/Niv1/fr/The_Hidden_Wiki.m4a";
+import audio3 from "../../../assets/audio/Niv1/fr/Nmap.m4a";
+import audio4 from "../../../assets/audio/Niv1/fr/BurpSuite.m4a";
+import audio5 from "../../../assets/audio/Niv1/fr/Metasploit.m4a";
+import audio2 from "../../../assets/audio/Niv1/fr/Shodan.m4a";
 import audio1 from "../../../assets/audio/Niv1/fr/Tor.m4a";
 import bell from "../../../assets/bell.png";
 import tor from "../../../assets/image1.png";
@@ -41,7 +41,7 @@ const dataList = [{
   backgroundColor: "#602F80",
   backgroundIcon: "rgba(96, 47, 128, 0.49)",
   icon: tor,
-  text: " TOR fait référence à The Onion Router. TOR est un navigateur web comme Google Chrome ou Microsoft Edge permettant de naviguer de façon anonyme sur le web, grâce à un réseau constitué par les utilisateurs du monde entier.",
+  text: "Le moteur de recherche TOR, également connu sous le nom de 'TOR search', est un outil utilisé pour naviguer sur le réseau TOR, un réseau décentralisé et anonyme. Contrairement aux moteurs de recherche conventionnels, il permet d'explorer des sites web hébergés sur le darknet, une partie cachée d'Internet. Il sert à trouver des ressources, des marchés en ligne, et des informations tout en préservant l'anonymat de l'utilisateur grâce à l'acheminement des requêtes via un réseau de serveurs relayeurs. Cela favorise la confidentialité et la sécurité en ligne, utilisées parfois à des fins légales, mais aussi illicites.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio1
 },
@@ -50,7 +50,7 @@ const dataList = [{
   backgroundColor: "#FF001C",
   backgroundIcon: "rgba(255, 0, 28, 0.47)",
   icon: shodan,
-  text: "Shodan est un moteur de recherche créé en 2009. Shodan est un site web spécialisé dans la recherche d'objets connectés à Internet, et ayant donc une adresse IP visible sur le réseau. Ces recherches sont effectuées par des scans de ports massifs effectués sur le réseau Internet",
+  text: "Shodan est un moteur de recherche spécialisé dans l'exploration des dispositifs connectés à Internet. Contrairement aux moteurs de recherche traditionnels, Shodan scanne les ports et indexe les informations des appareils connectés, tels que serveurs, caméras de sécurité, routeurs, et plus encore. Il permet aux chercheurs en sécurité, aux administrateurs réseau, et parfois aux cybercriminels de trouver des dispositifs vulnérables. Shodan sert principalement à des fins de surveillance, d'évaluation de la sécurité des infrastructures, de recherche de vulnérabilités et de protection contre les cybermenaces en identifiant les points faibles.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons  ",
   audio: audio2
 },
@@ -59,7 +59,7 @@ const dataList = [{
   backgroundColor: "#CBBAFF",
   backgroundIcon: "rgba(203, 186, 255, 0.49)",
   icon: nmap,
-  text: "Nmap est un scanner de ports libre permettant de détecter les ports ouverts, identifier les services hébergés et obtenir des informations sur le système d'exploitation d'un ordinateur distant. ",
+  text: "Nmap, abréviation de Network Mapper, est un logiciel d'exploration de réseaux utilisé pour découvrir des dispositifs et des services actifs sur un réseau informatique. Il analyse les ports ouverts, identifie les systèmes d'exploitation, et fournit des informations essentielles sur la configuration réseau. Nmap est un outil essentiel pour les administrateurs réseau, les chercheurs en sécurité, et les hackers, car il permet d'évaluer la sécurité d'un réseau, de détecter des vulnérabilités potentielles et de planifier des mesures de sécurité appropriées. Il est souvent utilisé pour des audits de sécurité, la surveillance réseau, et la défense contre les intrusions.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio3
 },
@@ -68,7 +68,7 @@ const dataList = [{
   backgroundColor: "#F7941E",
   backgroundIcon: "rgba(247, 148, 30, 0.49)",
   icon: burpsuite,
-  text: "BUrpsuite est un outil qui offre la possibilité de créer des requêtes webs nuisibles pour une application. Il peut également aider à la détection de vulnérabilités classiques comme des injections SQL, des vulnérabilités de type cross-site scripting ou autre. Il est utilisé par les cyberattaquants mais aussi par les auditeurs techniques.",
+  text: "Burp Suite, un logiciel de test de sécurité, est parfois utilisé par les hackers non éthiques pour trouver des failles dans des sites web et y pénétrer illégalement. Ils explorent les faiblesses, comme les failles de sécurité, et les exploitent pour voler des données sensibles, diffuser des logiciels malveillants ou causer d'autres dommages. C'est pourquoi les professionnels de la sécurité utilisent Burp Suite pour renforcer la protection des sites web contre ces attaques, afin de garantir la sécurité des données en ligne et de prévenir les cybercrimes.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio4
 },
@@ -77,7 +77,7 @@ const dataList = [{
   backgroundColor: "#00AAE2",
   backgroundIcon: "rgba(0, 170, 226, 0.49)",
   icon: metasploit,
-  text: "Le but de Metasploit est de fournir des informations sur les vulnérabilités de systèmes informatiques, d'aider à l’intrusion dans les systèmes informatiques. Il est notamment connu pour permettre la réalisation d’exploit (le fait d’exploiter une vulnérabilité) contre une machine située sur un réseau distant. ",
+  text: "Metasploit se distingue de Burp Suite en tant qu'outil spécialisé dans l'exploitation de vulnérabilités, plutôt que dans l'analyse des failles de sécurité. Il offre une plateforme complète pour identifier les faiblesses dans les systèmes et, de manière plus inquiétante, pour les exploiter à des fins malveillantes. Les hackers non éthiques utilisent Metasploit pour pénétrer illégalement dans des systèmes, tandis que les experts en sécurité l'emploient pour réaliser des tests d'intrusion autorisés, aider à renforcer la sécurité, et protéger les entreprises contre les cyberattaques.",
   msg: "Cliquez sur la notification pour découvrir les applications que nous utilisons ",
   audio: audio5
 }

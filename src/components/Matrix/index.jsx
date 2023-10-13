@@ -228,7 +228,7 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ETATIQUE",
-            text: "États, agences de renseignement. Ce profil d’attaquant secaractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible",
+            text: "Le Stratège en Ombre : Ces experts du cyberespace agissent en tant que professionnels au service des États et des agences de renseignement. Ils opèrent avec une précision d'horloger, suivant un calendrier et des procédures bien établies. Leur flexibilité leur permet de personnaliser leurs outils et méthodes pour s'adapter à la topologie de leurs cibles. Certains de ces acteurs ont un accès à des vulnérabilités jour zéro (0-Day) et sont capables de s'infiltrer dans des réseaux isolés, menant des attaques successives pour atteindre leurs objectifs.",
             audio: Level1Audio.audio9,
             withRadar: true,
         },
@@ -236,14 +236,14 @@ function Matrix({ nextStep, onBack }) {
 
             title: "LE HACKER EN CHEF",
             subtitle: "CRIME ORGANISE",
-            text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel,exploitation de réseaux de « machines robots » (botnet), etc.",
+            text: "Les Maîtres de l'Ombre Financière : Ces organisations cybercriminelles, qu'elles soient mafias, gangs, ou officines, sont obsédées par le profit. Elles se lancent dans des opérations sophistiquées, de l'escroquerie en ligne à la demande de rançon ou aux attaques par rançongiciel. Grâce à l'accessibilité croissante des kits d'attaques en ligne, ces cybercriminels sont devenus de véritables experts. Certains d'entre eux ont également accès à des vulnérabilités jour zéro (0-Day).",
             audio: Level1Audio.audio10,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "TERRORISTE",
-            text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",
+            text: "Les Harbingers du Chaos : Les cyberterroristes et cybermilices n'ont pas besoin de sophistication technique pour semer la destruction. Leur détermination est leur arme principale, utilisée pour déstabiliser et détruire, que ce soit par des attaques de déni de service ou l'exploitation de vulnérabilités de sites Internet avec des défigurations.",
             audio: Level1Audio.audio11,
             withRadar: true,
 
@@ -251,7 +251,7 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ACTIVISTE IDIOLOGIQUE",
-            text: "Cyber-hacktivistes, groupements d’intérêt, sectes.",
+            text: "Les Porteurs d'un Message Virtuel : Les cyber-hacktivistes et les groupes d'intérêt partagent des modes opératoires similaires aux cyberterroristes, mais leurs intentions sont moins destructrices. Ils utilisent leurs compétences pour véhiculer une idéologie ou un message, parfois en utilisant massivement les réseaux sociaux comme caisse de résonance.",
             audio: Level1Audio.audio12,
             withRadar: true,
 
@@ -259,7 +259,7 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "OFFICINE SPÉCIALISÉE",
-            text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques 3 accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
+            text: "Les Mercenaires de l'Encre Noire : Ces cybermercenaires sont des virtuoses de la cyberattaque, dotés de compétences techniques exceptionnelles. Ils conçoivent des outils et des kits d'attaques en ligne, parfois monnayés, qui sont ensuite utilisés par d'autres groupes d'attaquants. Leur motivation principale est le gain financier.",
             audio: Level1Audio.audio13,
             withRadar: true,
 
@@ -267,14 +267,14 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "AMATEUR",
-            text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
+            text: "Les Apprentis de l'Ombre : Les script-kiddies et les hackers amateurs ont de bonnes connaissances informatiques, mais leurs attaques sont souvent basiques. Ils s'engagent dans des actes de piratage principalement pour la reconnaissance sociale, le plaisir et le défi, utilisant des kits d'attaques en ligne.",
             audio: Level1Audio.audio14,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "VENGEUR",
-            text: "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",
+            text: "Les Justiciers Virtuels : Motivés par la vengeance et un sentiment d'injustice, ces hackers sont redoutables en raison de leur connaissance interne des systèmes et des processus organisationnels. Leur motivation personnelle peut leur conférer un pouvoir de nuisance significatif.",
             audio: Level1Audio.audio15,
             withRadar: true,
 
@@ -282,35 +282,35 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "MALVEILLANT PATHOLOGIQUE",
-            text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",
+            text: "Les Sombres Opportunistes : Les motivations de ces attaquants sont souvent liées à des troubles ou à l'appât du gain. Ils peuvent avoir des connaissances informatiques pour compromettre les systèmes de leurs cibles, utiliser des kits d'attaques en ligne, ou même sous-traiter des attaques à des officines spécialisées. Leur cible peut parfois inclure des sources internes, comme des salariés mécontents ou des prestataires peu scrupuleux.",
             audio: Level1Audio.audio16,
             withRadar: true,
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ESPIONNAGE",
-            text: "Opération de renseignement (étatique, économique)",
+            text: "Cette motivation conduit les attaquants à mener des opérations de renseignement, qu'elles soient d'origine étatique ou économique. Ils cherchent à s'infiltrer discrètement dans les systèmes d'information et à s'y maintenir durablement. Les secteurs visés incluent souvent des domaines sensibles tels que l'armement, l'aérospatial, la pharmacie, l'énergie, l'économie, les finances et les affaires étrangères.",
             audio: Level1Audio.audio17
         },
 
         {
             title: "LE HACKER EN CHEF",
             subtitle: "PRÉPOSITIONNEMENT STRATÉGIQUE",
-            text: "Prépositionnement visant généralement une attaque sur le long terme, sans que la finalité poursuivie soit clairement établie (exemples: compromission de réseaux d’opérateurs de télécommunication, infiltration de sites Internet d’information de masse pour lancer une opération d’influence politique ou économique à fort écho).",
+            text: "Les attaquants prépositionnent leurs ressources en vue d'attaques à long terme, sans dévoiler immédiatement leurs intentions. Ils peuvent compromettre les réseaux d'opérateurs de télécommunication ou infiltrer des sites Internet à fort impact, prêts à lancer des opérations d'influence politique ou économique à grande échelle.",
             audio: Level1Audio.audio18
         },
 
         {
             title: "LE HACKER EN CHEF",
             subtitle: "INFLUENCE",
-            text: "Opération visant à diffuser de fausses informations ou à les altérer, mobiliser les leaders d’opinion sur les réseaux sociaux, détruire des réputations, divulguer des informations confidentielles, dégrader l’image d’une organisation ou d’un État.",
+            text: "Les opérations d'influence visent à diffuser de fausses informations, à altérer la vérité, à mobiliser les leaders d'opinion sur les réseaux sociaux, à détruire des réputations, à divulguer des informations confidentielles ou à dégrader l'image d'une organisation ou d'un État. L'objectif final est généralement la déstabilisation ou la modification des perceptions.",
             audio: Level1Audio.audio19
 
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "ENTRAVE AU FONCTIONNEMENT",
-            text: "Opération de sabotage visant par exemple à rendre indisponible un site Internet, à provoquer une saturation informationnelle, à empêcher l’usage d’une ressource numérique, à rendre indisponible une installation physique",
+            text: "Ces attaquants cherchent à perturber le fonctionnement normal en rendant indisponibles des sites Internet, en provoquant une saturation informationnelle, en empêchant l'utilisation de ressources numériques ou en affectant des installations physiques. Les systèmes industriels sont particulièrement vulnérables, exposés aux attaques par le biais de réseaux informatiques interconnectés.",
             audio: Level1Audio.audio20
         },
 
@@ -318,13 +318,13 @@ function Matrix({ nextStep, onBack }) {
         {
             title: "LE HACKER EN CHEF",
             subtitle: "LUCRATIF",
-            text: "Opération visant un gain financier, de façon directe ou indirecte. Généralement liée au crime organisé, on peut citer: escroquerie sur Internet, blanchiment d’argent, extorsion ou détournement d’argent, manipulation de marchés financiers, falsification de documents administratifs, usurpation d’identité, etc.",
+            text: "Les attaquants motivés par le gain financier sont principalement liés au crime organisé. Leurs opérations incluent des escroqueries en ligne, du blanchiment d'argent, de l'extorsion, des détournements d'argent, la manipulation des marchés financiers, la falsification de documents administratifs, l'usurpation d'identité, etc. Certaines opérations lucratives peuvent utiliser des méthodes provenant d'autres catégories, mais l'objectif final reste le profit.",
             audio: Level1Audio.audio21
         },
         {
             title: "LE HACKER EN CHEF",
             subtitle: "DÉFI, AMUSEMENT",
-            text: "Opération visant à réaliser un exploit à des fins de reconnaissance sociale, de défi ou de simple amusement",
+            text: "Les attaquants qui cherchent le défi et l'amusement effectuent des exploits pour la reconnaissance sociale, le plaisir ou le simple défi. Même si leurs intentions ne sont pas nécessairement malveillantes, de telles opérations peuvent avoir des conséquences graves pour les victimes.",
             audio: Level1Audio.audio22
         },
         {
