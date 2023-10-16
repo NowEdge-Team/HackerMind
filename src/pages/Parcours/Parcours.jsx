@@ -79,13 +79,13 @@ export default function Parcours() {
 
     const score = useSelector((state) => state.PvChallenge.score);
     const [listLevles, setListLevels] = useState([
-        { left: "left-[12%]", top: "top-[78%]", urlId: '1', title: t(`parcours.day1title`), img: img1, statue: 0, numberOfStart: 0, },
-        { left: "left-[21%]", top: "top-[26%]", urlId: '2', title: t(`parcours.day2title`), img: img2, statue: -1, numberOfStart: 0, },
-        { left: "left-[35%]", top: "top-[79%]", urlId: '3', title: t(`parcours.day3title`), img: img3, statue: -1, numberOfStart: 0, },
-        { left: "left-[49%]", top: "top-[38%]", urlId: '4', title: t(`parcours.day4title`), img: img4, statue: -1, numberOfStart: 0, },
-        { left: "left-[66%]", top: "top-[79%]", urlId: '5', title: t(`parcours.day5title`), img: img5, statue: -1, numberOfStart: 0, },
-        { left: "left-[70%]", top: "top-[22%]", urlId: '6', title: t(`parcours.day6title`), img: img6, statue: -1, numberOfStart: 0, },
-        { left: "left-[88%]", top: "top-[78%]", urlId: '7', title: t(`parcours.day7title`), img: img7, statue: -1, numberOfStart: 0, directions: "right" },
+        { left: "left-[9%]", top: "top-[56%] xl:top-[60%]", urlId: '1', title: t(`parcours.day1title`), img: img1, statue: 0, numberOfStart: 0, },
+        { left: "left-[19%] xl:left-[20%]", top: "top-[1%] xl:top-[-5%]", urlId: '2', title: t(`parcours.day2title`), img: img2, statue: -1, numberOfStart: 0, },
+        { left: "lg:left-[31%] xl:left-[33%]", top: "lg:top-[67%] md:top-[66%]", urlId: '3', title: t(`parcours.day3title`), img: img3, statue: -1, numberOfStart: 0, },
+        { left: "left-[46%]", top: "top-[18%]  ", urlId: '4', title: t(`parcours.day4title`), img: img4, statue: -1, numberOfStart: 0, },
+        { left: "right-[28%]", top: "top-[59%]", urlId: '5', title: t(`parcours.day5title`), img: img5, statue: -1, numberOfStart: 0, },
+        { left: "right-[24%]", top: "top-[-1%] min-[1151px]:top-[-8%] ", urlId: '6', title: t(`parcours.day6title`), img: img6, statue: -1, numberOfStart: 0, },
+        { left: "right-[6%]", top: "top-[57%] min-[1151px]:top-[63%]", urlId: '7', title: t(`parcours.day7title`), img: img7, statue: -1, numberOfStart: 0, directions: "right" },
 
     ]);
 
@@ -111,7 +111,7 @@ export default function Parcours() {
         <div className={styles.mainBackground}>
             <PlayButton />
 
-            <div className="px-[7%]">
+            <div className="px-[7%] ">
                 <HeaderProfile btnStyle="bg-white text-[#5CB962]" textStyle="text-white" />
             </div>
 
@@ -131,9 +131,11 @@ export default function Parcours() {
 
 
 
-            {listLevles.map((item, index) => <div onClick={navTo(item.urlId)} key={index} className={twMerge(`absolute`, item.left, item.top)}>
-                <LevelCard index={index + 1} title={item.title} directions={item.directions} numberOfStart={item.numberOfStart} state={item.statue} icon={item.img} />
-            </div>)}
+            <div className={styles.path}>
+                {listLevles.map((item, index) => <div onClick={navTo(item.urlId)} key={index} className={twMerge(`absolute`, item.left, item.top)}>
+                    <LevelCard index={index + 1} title={item.title} directions={item.directions} numberOfStart={item.numberOfStart} state={item.statue} icon={item.img} />
+                </div>)}
+            </div>
 
 
 
