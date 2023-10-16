@@ -39,7 +39,7 @@ const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
 }
 
 
-const RoundedBlock = ({ index, listMsg, onClick, activeItem , showPopup=true}) => {
+const RoundedBlock = ({ index, listMsg, onClick, activeItem, showPopup = true }) => {
 
 
     const findItem = listMsg.find((item) => item.index === index);
@@ -52,7 +52,7 @@ const RoundedBlock = ({ index, listMsg, onClick, activeItem , showPopup=true}) =
         if (findIndexItem <= activeItem - 1)
             onClick(findItem)
     }
-    console.log("showw",showPopup );
+    console.log("showw", showPopup);
 
     return <div className={style.block_icon} >
         {findItem && <i className={`fas fa-check cursor-pointer ${findIndexItem === activeItem - 1 && findItem.showPopup === undefined ? style.active_icon : ''}`} onClick={findItem.showPopup === undefined ? onnNextItem : null}  ></i>}
@@ -330,7 +330,7 @@ function Matrix({ nextStep, onBack }) {
         {
             index: 0,
             title: "Des hackers algériens s’en prennent à des sites marocains ",
-            description:`Une cyberattaque a visé le site officiel de l’Université des sciences
+            description: `Une cyberattaque a visé le site officiel de l’Université des sciences
             Dhar El Mahraz de Fès (FSDM) vendredi 5 août, rapporte Morroco World News.
             L’auteur de cette manœuvre serait un hacker algérien, qui a laissé sa signature
             avec le drapeau algérien sur le site Web de l’université et une légende : « Pas de
@@ -401,73 +401,73 @@ function Matrix({ nextStep, onBack }) {
         },
         {
             index: 1,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 2,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 3,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 14,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 15,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 16,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 18,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 20,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 21,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 24,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 25,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 39,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 40,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 44,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 45,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 46,
-            showPopup:false,
+            showPopup: false,
         },
         {
             index: 47,
-            showPopup:false,
+            showPopup: false,
         }
-   
+
 
     ].map((item, index) => ({ ...item, id: index + 1 }));
     const listMsgPop = [
@@ -689,7 +689,7 @@ function Matrix({ nextStep, onBack }) {
                 <HeaderProfile />
             </div>
 
-            <div className="mb-4">
+            <div className="mb-3">
                 <h3 className="font-Karla text-[17px] text-left text-[#9f9f9f] uppercase" >
                     {t("day1.level")}
                 </h3>
@@ -702,7 +702,7 @@ function Matrix({ nextStep, onBack }) {
                 show={showTuto}
                 onClose={closeModale}
             >
-                {radar ? <div className="absolute flex justify-center rounded-[4px] items-center bottom-[55px] left-[26%] h-[200px] bg-white w-[71%]">
+                {radar ? <div className=" flex justify-center rounded-[4px] items-center h-[180px] bg-white w-[100%]">
                     <ChartRd2 color={radar.color} dimension={radar.dimension} />
                 </div> : null}
             </ModalTutorial>
@@ -716,7 +716,7 @@ function Matrix({ nextStep, onBack }) {
                         <div></div>
                         {
                             [...Array(48).keys()].map((item, index) => <RoundedBlock key={index} activeItem={activeItem} index={index} listMsg={listMsg} onClick={clickRoundedBlock} />)
-                        
+
                         }
                     </>
                 }

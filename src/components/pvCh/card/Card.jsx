@@ -25,7 +25,7 @@ function Card() {
     const [title, setTitle] = useState("ÉTATIQUE")
     const [text, setText] = useState('États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.')
     const [color, setColor] = useState('')
-    const [activeitem, setActiveItem] = useState()
+    const [activeitem, setActiveItem] = useState(1)
 
 
     const [radar, setRadar] = useState({
