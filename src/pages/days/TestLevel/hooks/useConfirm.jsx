@@ -1,14 +1,14 @@
 
 
 import { mModalConfirm } from "@/components/ModalConfirm";
-import ch2 from "../../../../assets/images/charachters/ch-7.png";
-import bg3 from "../../../../assets/images/levels/level1/confirm/bg.png";
+// import ch2 from "../../../../assets/images/charachters/ch-7.png";
+// import bg3 from "../../../../assets/images/levels/level1/confirm/bg.png";
 
 
 
 const data = [
     {
-        backgrand: bg3,
+        // backgrand: bg3,
         messages: [
             {
                 title: "CHARACTER X",
@@ -18,7 +18,7 @@ const data = [
         ],
         charachters: [
             {
-                url: ch2,
+                // url: ch2,
                 style: "h-[432px] bottom-0"
             }
         ]
@@ -34,7 +34,7 @@ const data = [
         ],
         charachters: [
             {
-                url: ch2,
+                // url: ch2,
                 style: "h-[432px] bottom-0"
             }
         ]
