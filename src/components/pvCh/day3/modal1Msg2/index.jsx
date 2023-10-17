@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from "react";
-import {Modal} from "react-bootstrap";
+import React, { useEffect, useRef, useState } from "react";
+import { Modal } from "react-bootstrap";
 import img1 from "../../../../assets/images/pv-challenge/Component 49 – 1@2x.png";
 import img2 from "../../../../assets/images/pv-challenge/s77auimage_33.png";
 import img3 from "../../../../assets/images/pv-challenge/image_31-900.png";
@@ -8,23 +8,23 @@ import img5 from "../../../../assets/images/pv-challenge/image_31-902.png";
 import img6 from "../../../../assets/images/pv-challenge/image_31-903.png";
 
 import "./style.scss";
-import {useDispatch, useSelector} from "react-redux";
-import {onChangePvChCat3Day4} from "../../../../redux/daysPvCh/actions";
-import {useTranslation} from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { onChangePvChCat3Day4 } from "../../../../redux/levels/actions";
+import { useTranslation } from "react-i18next";
 
 const Content2Item = ({
-                          img,
-                          yesId,
-                          noId,
-                          heightImg = 162,
-                          width,
-                          index,
-                          onSelect,
-                          defaultValue,
-                          dispatch,
-                          modeEdit,
-                          t
-                      }) => {
+    img,
+    yesId,
+    noId,
+    heightImg = 162,
+    width,
+    index,
+    onSelect,
+    defaultValue,
+    dispatch,
+    modeEdit,
+    t
+}) => {
     const [btn, setBtn] = useState(null);
 
     useEffect(() => {
@@ -32,9 +32,9 @@ const Content2Item = ({
     }, [defaultValue]);
 
     return (
-        <div className="carousel_item" style={{width: width}}>
+        <div className="carousel_item" style={{ width: width }}>
             <section className="sub-item-2">
-                <img src={img} alt="" style={{objectFit: "contain", height: `${heightImg}px`}}/>
+                <img src={img} alt="" style={{ objectFit: "contain", height: `${heightImg}px` }} />
             </section>
             <div className="mt-2">
                 <button
@@ -46,9 +46,8 @@ const Content2Item = ({
                         }
                     }}
                     type="button"
-                    className={`btn waves-danger-cost waves-effect  width-md  mr-2 ${
-                        btn === noId ? "waves-danger-cost-valid" : ""
-                    }`}
+                    className={`btn waves-danger-cost waves-effect  width-md  mr-2 ${btn === noId ? "waves-danger-cost-valid" : ""
+                        }`}
                 >
                     {t("day4.supprimer")}
                 </button>
@@ -61,10 +60,9 @@ const Content2Item = ({
                         }
                     }}
                     type="button"
-                    className={`btn waves-effect  width-md waves-success-cost ${
-                        btn === yesId ? "waves-success-cost-valid" : ""
-                    }`}
-                    style={{backgroundColor: "transparent !important"}}
+                    className={`btn waves-effect  width-md waves-success-cost ${btn === yesId ? "waves-success-cost-valid" : ""
+                        }`}
+                    style={{ backgroundColor: "transparent !important" }}
                 >
                     {t("day4.valide")}
                 </button>
@@ -73,7 +71,7 @@ const Content2Item = ({
     );
 };
 
-const Content2 = ({containerWidth, left = 0, onSelect, modeEdit, t}) => {
+const Content2 = ({ containerWidth, left = 0, onSelect, modeEdit, t }) => {
     const [total, setTotal] = useState(0);
     const dispatch = useDispatch();
     const category = useSelector((state) => state.DaysPvCh.day4.categories[2]);
@@ -174,12 +172,12 @@ const Content2 = ({containerWidth, left = 0, onSelect, modeEdit, t}) => {
 };
 
 const Modal1Msg2 = ({
-                        show,
-                        close = () => null,
-                        onHide = () => null,
-                        modeEdit
-                    }) => {
-    const {t} = useTranslation();
+    show,
+    close = () => null,
+    onHide = () => null,
+    modeEdit
+}) => {
+    const { t } = useTranslation();
 
     const [containerWidth, setContainerWidth] = useState(0);
     const [left, setLeft] = useState(0);
@@ -225,9 +223,9 @@ const Modal1Msg2 = ({
             onClick={onHide}
             onHide={onHide}
         >
-            <Modal.Body style={{minWidth: "100%", backgroundColor: "transparent"}}>
+            <Modal.Body style={{ minWidth: "100%", backgroundColor: "transparent" }}>
                 <div className={"dayOneModal-modal1Msg2"}>
-                    <img src={img1} alt=""/>
+                    <img src={img1} alt="" />
                     <div className="black-msg" ref={ref_}>
                         <Content2
                             left={left}
@@ -246,7 +244,7 @@ const Modal1Msg2 = ({
                                 }}
                                 type="button"
                                 className="btn btn-secondary waves-effect width-md"
-                                style={{visibility: `${index === 1 ? "hidden" : ""}`}}
+                                style={{ visibility: `${index === 1 ? "hidden" : ""}` }}
                             >
                                 {t("day4.previous")}
                             </button>
@@ -270,7 +268,7 @@ const Modal1Msg2 = ({
                                     onHide();
                                 }}
                                 type="button"
-                                style={{visibility: checkIfAllSelected() ? "hidden" : ""}}
+                                style={{ visibility: checkIfAllSelected() ? "hidden" : "" }}
                                 className="btn btn-success waves-effect width-md waves-light-pvc"
                             >
                                 {t("day4.valide")}

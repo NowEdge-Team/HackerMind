@@ -1,17 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
 import "./style.scss"
-import {day3Part2UpdateDecisions} from "../../../redux/daysPvCh/actions.js";
+import { day3Part2UpdateDecisions } from "../../../redux/levels/actions.js";
 
 const RowDragSelected = ({
-                             list = [],
-                             title,
-                             type,
-                             onDrop,
-                             onDragStart,
-                             ValidTask,
-                             t,
-                         }) => {
+    list = [],
+    title,
+    type,
+    onDrop,
+    onDragStart,
+    ValidTask,
+    t,
+}) => {
     const [ls, setLs] = useState([{}, {}, {}]);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const RowDragSelected = ({
 
         list.map((item, index) => {
             if (item.category === type) {
-                ls_[item.blocIndex] = {...item, isValid: ls.category_v === type};
+                ls_[item.blocIndex] = { ...item, isValid: ls.category_v === type };
             }
             //  item.category === type;
         });
@@ -79,7 +79,7 @@ const RowDragSelected = ({
     );
 };
 
-const RowDrag = ({List, onDragStart, onDrop, ValidTask, t}) => {
+const RowDrag = ({ List, onDragStart, onDrop, ValidTask, t }) => {
     const onDragOver = (ev) => {
         ev.preventDefault();
     };
@@ -108,7 +108,7 @@ const RowDrag = ({List, onDragStart, onDrop, ValidTask, t}) => {
 };
 
 
-const Step2 = ({ValidTask, t}) => {
+const Step2 = ({ ValidTask, t }) => {
     const [List, setList] = useState([]);
     const decisions = useSelector((state) => state.DaysPvCh.day3.part2.decisions);
     const dispatch = useDispatch();

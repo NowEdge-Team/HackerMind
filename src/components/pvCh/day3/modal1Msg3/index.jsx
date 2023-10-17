@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from "react";
-import {Modal} from "react-bootstrap";
+import React, { useEffect, useRef, useState } from "react";
+import { Modal } from "react-bootstrap";
 
 import img7 from "../../../../assets/images/pv-challenge/avatar/1233idjlksd.png";
 import img8 from "../../../../assets/images/pv-challenge/avatar/ewwllipse_233.png";
@@ -9,31 +9,31 @@ import img11 from "../../../../assets/images/pv-challenge/avatar/ellipse_233.png
 import img1 from "../../../../assets/images/pv-challenge/group_5063-phone.png";
 
 import "./style.scss";
-import {useDispatch, useSelector} from "react-redux";
-import {onChangePvChCat1Day4} from "../../../../redux/daysPvCh/actions";
-import {useTranslation} from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { onChangePvChCat1Day4 } from "../../../../redux/levels/actions";
+import { useTranslation } from "react-i18next";
 
 const Content2Item = ({
-                          phone,
-                          img,
-                          width,
-                          text = "",
-                          onSelect,
-                          index,
-                          yesId,
-                          noId,
-                          defaultValue,
-                          modeEdit,
-                          dispatch,
-                          t,
-                      }) => {
+    phone,
+    img,
+    width,
+    text = "",
+    onSelect,
+    index,
+    yesId,
+    noId,
+    defaultValue,
+    modeEdit,
+    dispatch,
+    t,
+}) => {
     const [btn, setBtn] = useState(null);
 
     useEffect(() => {
         setBtn(defaultValue);
     }, [defaultValue]);
     return (
-        <div className="carousel_item" style={{width: width}}>
+        <div className="carousel_item" style={{ width: width }}>
             <section className="sub-item-2">
                 <div className="phoneNumber">
                     <h5>{phone}</h5>
@@ -41,11 +41,11 @@ const Content2Item = ({
                 <div className="msg-lin">
                     <div className="msg-lin-img"></div>
                     <div className="msg-lin-text">
-                        <img src={img} alt="" style={{width: "33px", height: "33px"}}/>
+                        <img src={img} alt="" style={{ width: "33px", height: "33px" }} />
                         <p className="m-0">{text}</p>
                     </div>
                 </div>
-                <div className="mt-2" style={{textAlign: "end"}}>
+                <div className="mt-2" style={{ textAlign: "end" }}>
                     <button
                         onClick={(e) => {
                             if (modeEdit) {
@@ -56,9 +56,8 @@ const Content2Item = ({
                             }
                         }}
                         type="button"
-                        className={`btn waves-danger-cost waves-effect  mr-2 ${
-                            btn === noId ? "waves-danger-cost-valid" : ""
-                        }`}
+                        className={`btn waves-danger-cost waves-effect  mr-2 ${btn === noId ? "waves-danger-cost-valid" : ""
+                            }`}
                     >
                         {t("day4.supprimer")}
                     </button>
@@ -72,10 +71,9 @@ const Content2Item = ({
                             }
                         }}
                         type="button"
-                        className={`btn waves-effect   waves-success-cost ${
-                            btn === yesId ? "waves-success-cost-valid" : ""
-                        }`}
-                        style={{backgroundColor: "transparent !important"}}
+                        className={`btn waves-effect   waves-success-cost ${btn === yesId ? "waves-success-cost-valid" : ""
+                            }`}
+                        style={{ backgroundColor: "transparent !important" }}
                     >
                         {t("day4.valide")}
                     </button>
@@ -85,7 +83,7 @@ const Content2Item = ({
     );
 };
 
-const Content2 = ({containerWidth, left = 0, onSelect, modeEdit, t}) => {
+const Content2 = ({ containerWidth, left = 0, onSelect, modeEdit, t }) => {
     const category = useSelector((state) => state.DaysPvCh.day4.categories[0]);
     const dispatch = useDispatch();
     const [total, setTotal] = useState(0);
@@ -195,16 +193,16 @@ const Content2 = ({containerWidth, left = 0, onSelect, modeEdit, t}) => {
 };
 
 const Modal1Msg3 = ({
-                        show,
-                        btnText = "Primary",
-                        close = () => null,
-                        onHide = () => null,
-                        modeEdit
-                    }) => {
+    show,
+    btnText = "Primary",
+    close = () => null,
+    onHide = () => null,
+    modeEdit
+}) => {
     const [containerWidth, setContainerWidth] = useState(0);
     const [left, setLeft] = useState(0);
     const [index, setIndex] = useState(1);
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const category = useSelector((state) => state.DaysPvCh.day4.categories[0]);
     const ref_ = useRef(null);
@@ -247,7 +245,7 @@ const Modal1Msg3 = ({
             onClick={onHide}
             onHide={onHide}
         >
-            <Modal.Body style={{minWidth: "100%", backgroundColor: "transparent"}}>
+            <Modal.Body style={{ minWidth: "100%", backgroundColor: "transparent" }}>
                 <div
                     className={"dayOneModal-modal1Msg3"}
                     onClick={(e) => {
@@ -265,7 +263,7 @@ const Modal1Msg3 = ({
                         />
                     </div>
                     <div className="carousel_nav">
-                        <div style={{visibility: `${index === 1 ? "hidden" : ""}`}}>
+                        <div style={{ visibility: `${index === 1 ? "hidden" : ""}` }}>
                             <button
                                 onClick={(e) => {
                                     e.stopPropagation();
@@ -297,7 +295,7 @@ const Modal1Msg3 = ({
                                     onHide();
                                 }}
                                 type="button"
-                                style={{visibility: checkIfAllSelected() ? "hidden" : ""}}
+                                style={{ visibility: checkIfAllSelected() ? "hidden" : "" }}
                                 className="btn btn-success waves-effect  waves-light-pvc"
                             >
                                 {t("day4.valide")}

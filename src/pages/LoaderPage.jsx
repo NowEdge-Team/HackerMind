@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import CryptoJS from "crypto-js";
 import { Cookies, useCookies, withCookies } from "react-cookie";
-import { initDaysData } from "../redux/daysPvCh/actions.js";
+import { initDaysData } from "../redux/levels/actions.js";
 import { useDispatch } from "react-redux";
 import { useLocation, useHistory } from 'react-router-dom'
 

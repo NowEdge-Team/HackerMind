@@ -1,25 +1,25 @@
-import React, {useEffect, useRef, useState} from "react";
-import {Modal} from "react-bootstrap";
-import {useDispatch, useSelector} from "react-redux";
+import React, { useEffect, useRef, useState } from "react";
+import { Modal } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 import "./style.scss";
-import {useTranslation} from "react-i18next";
-import {onChangePvChCat2Day4} from "../../../../redux/daysPvCh/actions";
+import { useTranslation } from "react-i18next";
+import { onChangePvChCat2Day4 } from "../../../../redux/levels/actions";
 
 const Content2Item = ({
-                          width,
-                          index,
-                          onSelect,
-                          email,
-                          date,
-                          sujet,
-                          body,
-                          yesId,
-                          noId,
-                          defaultValue,
-                          dispatch,
-                          modeEdit,
-                          t,
-                      }) => {
+    width,
+    index,
+    onSelect,
+    email,
+    date,
+    sujet,
+    body,
+    yesId,
+    noId,
+    defaultValue,
+    dispatch,
+    modeEdit,
+    t,
+}) => {
     const [btn, setBtn] = useState(null);
 
     useEffect(() => {
@@ -29,11 +29,11 @@ const Content2Item = ({
         <div className="carousel_item pl-2">
             <section className="sub-item-2">
                 <p className="m-0">
-                    {email} <br/>
-                    {date} <br/>
+                    {email} <br />
+                    {date} <br />
                     {sujet}
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     {body?.split("\n").map((str) => (
                         <p>{str}</p>
                     ))}
@@ -49,9 +49,8 @@ const Content2Item = ({
                         }
                     }}
                     type="button"
-                    className={`btn waves-danger-cost waves-effect  width-md  mr-2 ${
-                        btn === noId ? "waves-danger-cost-valid" : ""
-                    }`}
+                    className={`btn waves-danger-cost waves-effect  width-md  mr-2 ${btn === noId ? "waves-danger-cost-valid" : ""
+                        }`}
                 >
                     {t("day4.supprimer")}
                 </button>
@@ -64,11 +63,10 @@ const Content2Item = ({
                         }
                     }}
                     type="button"
-                    className={`btn waves-effect  width-md waves-success-cost ${
-                        btn === yesId ? "waves-success-cost-valid" : ""
-                    }`}
+                    className={`btn waves-effect  width-md waves-success-cost ${btn === yesId ? "waves-success-cost-valid" : ""
+                        }`}
                     // backticks``
-                    style={{backgroundColor: "transparent !important"}}
+                    style={{ backgroundColor: "transparent !important" }}
                 >
                     {t("day4.valide")}
                 </button>
@@ -77,7 +75,7 @@ const Content2Item = ({
     );
 };
 
-const Content2 = ({containerWidth, left = 0, onSelect, modeEdit, t}) => {
+const Content2 = ({ containerWidth, left = 0, onSelect, modeEdit, t }) => {
     const [total, setTotal] = useState(0);
 
     const category = useSelector((state) => state.DaysPvCh.day4.categories[1]);
@@ -220,13 +218,13 @@ const Content2 = ({containerWidth, left = 0, onSelect, modeEdit, t}) => {
 };
 
 const Modal1Msg = ({
-                       modeEdit,
-                       show,
-                       close = () => null,
-                       onHide = () => null,
+    modeEdit,
+    show,
+    close = () => null,
+    onHide = () => null,
 
-                   }) => {
-    const {t} = useTranslation();
+}) => {
+    const { t } = useTranslation();
 
 
     const [containerWidth, setContainerWidth] = useState(0);
@@ -275,7 +273,7 @@ const Modal1Msg = ({
             onClick={onHide}
             onHide={onHide}
         >
-            <Modal.Body style={{minWidth: "100%", backgroundColor: "transparent"}}>
+            <Modal.Body style={{ minWidth: "100%", backgroundColor: "transparent" }}>
                 <div
                     className={"dayOneModal-modal1Msg"}
                     onClick={(e) => {
@@ -300,7 +298,7 @@ const Modal1Msg = ({
                                 }}
                                 type="button"
                                 className="btn btn-secondary waves-effect width-md"
-                                style={{visibility: `${index === 1 ? "hidden" : ""}`}}
+                                style={{ visibility: `${index === 1 ? "hidden" : ""}` }}
                             >
                                 {t("day4.previous")}
                             </button>
@@ -324,7 +322,7 @@ const Modal1Msg = ({
                                 onClick={(e) => {
                                     onHide();
                                 }}
-                                style={{visibility: checkIfAllSelected() ? "hidden" : ""}}
+                                style={{ visibility: checkIfAllSelected() ? "hidden" : "" }}
                                 type="button"
                                 className="btn btn-success waves-effect width-md waves-light-pvc"
                             >

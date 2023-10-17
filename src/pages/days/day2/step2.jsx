@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import MaskGroup145 from "../../../assets/images/pv-challenge/ascending-arrow-symbol-with-three-circles.svg";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./style.scss"
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import icon from "../../../assets/images/pv-challenge/images/equals-solid.svg"
-import {dragDropUpdateDecisions} from "../../../redux/daysPvCh/actions.js";
+import { dragDropUpdateDecisions } from "../../../redux/levels/actions.js";
 
 const Drag = ({
-                  listP,
-                  item,
-                  modeEdit,
-                  onDrop = () => null,
-                  onDragOver = () => null,
-                  t,
-              }) => {
+    listP,
+    item,
+    modeEdit,
+    onDrop = () => null,
+    onDragOver = () => null,
+    t,
+}) => {
     const onDragStart = (ev, id) => {
         ev.dataTransfer.setData("id", id);
     };
@@ -35,7 +35,7 @@ const Drag = ({
                                 draggable={modeEdit}
                                 onDragStart={(e) => onDragStart(e, elem.id)}
                             >
-                                <img draggable={modeEdit} src={icon} alt={""}/>
+                                <img draggable={modeEdit} src={icon} alt={""} />
                                 <p title={t(`day2.part2.decisions.${elem.id}`)}>
                                     {t(`day2.part2.decisions.${elem.id}`)}
                                 </p>
@@ -48,10 +48,10 @@ const Drag = ({
     );
 };
 
-const Step2 = ({modeEdit}) => {
-    const {decisions, categories} = useSelector((state) => state.DaysPvCh.day2.part1);
+const Step2 = ({ modeEdit }) => {
+    const { decisions, categories } = useSelector((state) => state.DaysPvCh.day2.part1);
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const [tasks, setTasks] = useState(categories);
 
     const dispatch = useDispatch();
@@ -116,7 +116,7 @@ const Step2 = ({modeEdit}) => {
                                     onDragStart={(e) => onDragStart(e, item.id)}
                                     className="list-dr-item"
                                 >
-                                    <img src={icon} alt={""}/>
+                                    <img src={icon} alt={""} />
                                     <span>
                                         {t(`day2.part2.decisions.${item.id}`)}
                                     </span>
@@ -128,7 +128,7 @@ const Step2 = ({modeEdit}) => {
             </div>
             <div className="block-2">
                 <div className="block-2-1">
-                    <img src={MaskGroup145}/>
+                    <img src={MaskGroup145} />
                 </div>
                 <div className="block-2-2">
                     <div className="block-2-2row">

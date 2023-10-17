@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import {useState} from "react";
+import {useHistory} from "react-router-dom";
 import Typewriter from 'typewriter-effect';
 import ing from "../../../assets/Ingénieur social.png";
 import poly from "../../../assets/Polygone 7.svg";
@@ -12,20 +12,17 @@ import bell from "../../../assets/bell.png";
 import tor from "../../../assets/image1.png";
 import shodan from "../../../assets/shodan-logo.png";
 import nmap from "../../../assets/nmaplogo.png";
+import nmaplogo from "../../../assets/nmaplogo.png";
 import burpsuite from "../../../assets/burpsuite.png";
 import arrow from "../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg";
 import metasploit from "../../../assets/metasploit.png";
 import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx";
-import Profile from "../../../components/pvCh/profile/profile.jsx";
 import styles from "./day.module.scss";
 import torlogo from "../../../assets/Tor_logo.png";
 import metasploitlogo from "../../../assets/metasploitlogo.png";
 import shodanlogo from "../../../assets/shodanlogo.png";
-import nmaplogo from "../../../assets/nmaplogo.png"
 import burpsuitelogo from "../../../assets/burpsuitelogo.png"
 import HeaderProfile from "@/components/HeaderPrfile";
-
-
 
 
 const listNotif = [
@@ -104,7 +101,7 @@ function App({ onNext }) {
   const [currentIndex, setCurrentIndex] = useState(0); // 0 , 1 ,3
 
 
-  //  0 
+  //  0
   const onCloseModal = (id) => {
     if (currentIndex === id - 1)
       setCurrentIndex(() => currentIndex + 1)

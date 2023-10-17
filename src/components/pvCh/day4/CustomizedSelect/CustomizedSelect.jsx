@@ -1,12 +1,12 @@
-import {styled} from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import * as React from "react";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import {useDispatch, useSelector} from "react-redux";
-import {day2Part2ChangeIsSelected} from "../../../../redux/daysPvCh/actions";
-import {useEffect} from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { day2Part2ChangeIsSelected } from "../../../../redux/levels/actions";
+import { useEffect } from "react";
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
     '& .MuiInputBase-input': {
         borderRadius: 4,
@@ -45,13 +45,13 @@ const LabelInput = styled("label")(({ theme }) => ({
     color: "#3f4351",
 }));
 
-export default  function CustomizedSelect({item, index, modeEdit}) {
+export default function CustomizedSelect({ item, index, modeEdit }) {
     const [value, setValue] = React.useState("");
-    const {part2} = useSelector(state => state.DaysPvCh.day2);
+    const { part2 } = useSelector(state => state.DaysPvCh.day2);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if(part2[index]) {
+        if (part2[index]) {
             setValue(part2[index]);
         }
     }, [part2[index]]);
@@ -61,17 +61,17 @@ export default  function CustomizedSelect({item, index, modeEdit}) {
         setValue(event.target.value);
     };
     return (
-        <FormControl fullWidth  variant="standard" style={{ margin: 10}}>
-            {item?.title && <LabelInput style={{fontSize: 18}} id="demo-customized-select-label">{item?.title}</LabelInput>}
+        <FormControl fullWidth variant="standard" style={{ margin: 10 }}>
+            {item?.title && <LabelInput style={{ fontSize: 18 }} id="demo-customized-select-label">{item?.title}</LabelInput>}
             <Select
                 labelId="demo-customized-select-label"
                 id="demo-customized-select"
                 value={value}
                 onChange={handleChange}
                 fullWidth
-                input={<BootstrapInput/>}
+                input={<BootstrapInput />}
                 MenuProps={{
-                    style: {zIndex: 35001}
+                    style: { zIndex: 35001 }
                 }}
                 disabled={!modeEdit}
             >

@@ -28,6 +28,8 @@ import article4 from "@/assets/images/doc14.png";
 import article5 from "@/assets/images/doc15.png";
 
 import HeaderProfile from "../HeaderPrfile";
+import {useDispatch} from "react-redux";
+import {validateActivity} from "@/redux/levels/actions.js";
 
 const data = [
     {
@@ -108,7 +110,7 @@ const data = [
 
 const articleData = [
     {
-        id: 1,
+        id: 6,
         title: "Stuxnet, l’espion qui voulait saboter le nucléaire iranien",
         description: `examine l'histoire de Stuxnet, un virus initialement 
         conçu pour saboter le programme nucléaire iranien. Découvert en 2010, son 
@@ -122,11 +124,11 @@ const articleData = [
         USB ou un ordinateur portable, et Edward Snowden a suggéré une implication de la 
         NSA américaine et des services secrets israéliens`,
         img: article1,
-        idCell: -1,
+        idCell: 4,
         correctCellId: 4
     },
     {
-        id: 2,
+        id: 7,
         title: "Ransomware : les 3 infos sur l’attaque contre Bouygues Construction",
         description: `Bouygues Construction a été la cible d'une attaque de ransomware
         en 2020, où des pirates informatiques ont chiffré leurs données et exigé une 
@@ -137,11 +139,11 @@ const articleData = [
         Bouygues Construction a confirmé l'attaque. Cette attaque est similaire à celle 
         subie par d'autres entreprises depuis`,
         img: article2,
-        idCell: -1,
+        idCell: 11,
         correctCellId: 11
     },
     {
-        id: 3,
+        id: 8,
         title: "Piratage d'Ashley Madison : 260 000 contacts français touchés",
         description: `Avid Life Media, la société 
         propriétaire du site de rencontres Ashley Madison, enquêtait sur la fuite de 
@@ -154,11 +156,11 @@ const articleData = [
         CNIL avait précédemment émis des conseils pour protéger sa vie privée en ligne 
         lors de l'utilisation de sites de rencontres`,
         img: article3,
-        idCell: -1,
+        idCell: 21,
         correctCellId: 21
     },
     {
-        id: 4,
+        id: 9,
         title: "Piratage de Sony : un désastre qui coûterait déjà 380 millions de dollars ?",
         description: `Le 17 
         avril 2011, le groupe "Lulz Security" a piraté près de 100 millions de comptes 
@@ -170,11 +172,11 @@ const articleData = [
         des mots de passe, des informations sur les employés, des données stratégiques, 
         et menacent de révéler davantage`,
         img: article4,
-        idCell: -1,
+        idCell: 27,
         correctCellId: 27
     },
     {
-        id: 5,
+        id: 10,
         title: "GitHub a subi ce qui semble être la plus grosse attaque DDOS enregistrée jusqu’ici",
         description: `GitHub a été la cible d'une 
         attaque DDoS (Distributed Denial of Service) extrêmement puissante le 28 février
@@ -185,7 +187,7 @@ const articleData = [
         énorme. Memcached ne nécessite aucune authentification, ce qui le rend 
         vulnérable à l'usurpation et à une utilisation malveillante`,
         img: article5,
-        idCell: -1,
+        idCell: 36,
         correctCellId: 36
     }
 ]
@@ -194,7 +196,7 @@ const articleData = [
 function MatrixDrd({ nextStep, onBack }) {
     const { t } = useTranslation();
     let history = useHistory();
-
+    const dispatch = useDispatch();
     const config = useRef({
         isValid: false
     });
@@ -205,7 +207,7 @@ function MatrixDrd({ nextStep, onBack }) {
     const [currentMessage, setCurrentMessage] = useState({});
     const list = useMemo(() => [...Array(48).keys()].map((item) => ({ id: item + 1, droppedItem: null })), []);
     let [dustbins, setDustbins] = useState(list) // id : 1 -> 48
-    
+
     let [listArticle, setListArticle] = useState(articleData);
 
 
@@ -272,13 +274,11 @@ function MatrixDrd({ nextStep, onBack }) {
             title: "OFFICINE SPÉCIALISÉE",
             text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques 3 accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
             audio: Level1Audio.audio1,
-
         },
         {
             title: "AMATEUR",
             text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
             audio: Level1Audio.audio1,
-
         },
         {
             title: "VENGEUR",
@@ -436,10 +436,19 @@ function MatrixDrd({ nextStep, onBack }) {
 
         config.current.isValid = true;
 
+        const listCorrectIds = [];
 
         setListArticle(listArticle.map(elem => {
-            if (elem.idCell !== elem.correctCellId) return { ...elem, className: "bg-red-500" }
-            else return { ...elem, className: "bg-[#31a547]" }
+            if (elem.idCell !== elem.correctCellId) {
+                listCorrectIds.push({id:elem.id,isCorrect:false});
+                return { ...elem, className: "bg-red-500" }
+            }
+
+            else{
+                listCorrectIds.push({id:elem.id,isCorrect:true});
+                return { ...elem, className: "bg-[#31a547]" }       ;
+
+            }
         }))
 
         setDustbins([...dustbins.map(elem => {
@@ -448,6 +457,7 @@ function MatrixDrd({ nextStep, onBack }) {
             else return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-[#31a547]" } }
         })]);
 
+        dispatch(validateActivity("day1","part2",listCorrectIds));
     }
 
     const listProfil = useMemo(() => data.filter(item => item.type === "profil"), [])

@@ -1,9 +1,9 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
-import {persistReducer} from 'redux-persist';
-import {LOGOUT_USER} from '../constants/actionTypes';
+import { persistReducer } from 'redux-persist';
+import { LOGOUT_USER } from '../constants/actionTypes';
 import PvChallenge from "./pvChallenge/reducers";
-import DaysPvCh from "./daysPvCh/reducers";
+import Levels from "./levels/reducers";
 
 const persistConfig = {
     key: 'hackermind', storage: storage, whitelist: [],
@@ -11,7 +11,7 @@ const persistConfig = {
 
 const appReducer = combineReducers({
     PvChallenge,
-    DaysPvCh
+    Levels
 });
 
 

@@ -20,10 +20,10 @@ import ShowTuto from "@/components/pvCh/showTuto/ShowTuto.jsx";
 import {
     // ChangeSelectedRadio,
     clearDayData,
-    day1getDetail,
+    // day1getDetail,
     // day1Part3Change,
-    dragDropUpdateDecisions
-} from "../../../redux/daysPvCh/actions.js";
+    dragDropUpdateDecisions, validDay
+} from "../../../redux/levels/actions.js";
 import "./style.scss";
 import img3 from "@/assets/Ingénieur social.png";
 import { useHistory } from "react-router-dom";
@@ -73,7 +73,7 @@ const Step2 = ({ modeEdit, dragDropUpdateDecisions, decisions_3, categories_3, i
         <Dropzone
             modeEdit={modeEdit}
             day={1}
-            part={2}
+            part={1}
             callback={dragDropUpdateDecisions}
             decisions={decisions_3}
             categories={categories_3}
@@ -86,10 +86,8 @@ const Step2 = ({ modeEdit, dragDropUpdateDecisions, decisions_3, categories_3, i
 
 const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, setStp }) => {
 
-    // const {decisions: decisions_2, categories: categories_2} = useSelector((state) => state.DaysPvCh.day1.part2);
 
-    const { decisions: decisions_3, categories: categories_3 } = useSelector((state) => state.DaysPvCh.day1.part2);
-    // const {decisions: decisions_7} = useSelector((state) => state.DaysPvCh.day1.part7);
+    const {part1, part2 } = useSelector((state) => state.Levels.day1);
 
 
     const [showScoreModal, setShowScoreModal] = useState(false);
@@ -156,41 +154,28 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     });
 
     const sendData = () => {
-
         config.current.currentIndex += 1;
-        setShowConfirm(true);
+        if (config.current.modeEdit) {
 
-        // config.current.currentIndex += 1;
-        // if (config.current.modeEdit) {
+            const option = {
+                day_index: 1,
+                parts: {
+                    1: {
+                        type: "dgd"
+                    },
+                    2:{
+                        type: "matrixDrd"
+                    }
+                },
+            }
+            dispatch(validDay(center.mission_id, 1, option, (success) => {
+                    if (!success) return history.push("/");
+                     setShowConfirm(true);
+            }));
 
-        //     const option = {
-        //         day_index: 1,
-        //         parts: {
-        //             1: {
-        //                 type: "select"
-        //             },
-        //             2: {
-        //                 type: "dgd"
-        //             },
-        //             3: {
-        //                 type: "dgd"
-        //             }
-        //         },
-        //         // correctResponse: [2]
-        //     }
-        //     dispatch(validDay(center.missionId, 1, option, (success) => {
-
-        //             if (!success) return history.push("/");
-
-
-        //              setShowConfirm(true);
-
-
-        //     }));
-
-        // } else {
-        //     setShowConfirm(true);
-        // }
+        } else {
+            setShowConfirm(true);
+        }
     }
 
     const [show, setShowConfirm] = useState(false);
@@ -249,18 +234,16 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                             <DayOne onNext={incrementCurrentStep} />
                         </Stepper.Step>
                         <Stepper.Step id="2" name="Step 2">
-
                             <Step2
                                 modeEdit={modeEdit}
                                 day={1}
-                                part={2}
+                                part={1}
                                 dragDropUpdateDecisions={dragDropUpdateDecisions}
-                                decisions_3={decisions_3}
-                                categories_3={categories_3}
+                                decisions_3={part1.decisions}
+                                categories_3={part1.categories}
                                 imgBib={imgBib}
                                 t={t}
                             />
-
                         </Stepper.Step>
                         <Stepper.Step id="3" name="Step 3">
                             <Matrix nextStep={nextStep} onBack={onBackStep} />
@@ -277,8 +260,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 </Stepper>
                 {![0, 2, 3].includes(currentStep) && <div className={"step_quiz_btn"}>
                     <CancelButton onClick={() => history.push("/")} className={"step_btn_cancel"} />
-                    {/* {showNextBtn &&  */}
-                    {/* <BackButton className={"step_quiz_btn_back"}  onClick={goback} /> */}
                     <div className="flex flex-row gap-4" >
                         <BackButton className={"step_quiz_btn_next2"}
                             onClick={onBackStep}
@@ -298,20 +279,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 const Day1PvPharma = (props) => {
     const { t } = useTranslation();
 
-    // const config = useRef({
-    //     messages: [
-    //         {
-    //             title: t("day1.messages.title"),
-    //             text: t("day1.messages.text3"),
-    //             showCancelBtn: false,
-    //             textBtnValid: t("day1.messages.textBtnValid2"),
-    //             audio: Level1Audio.audio7
-    //         },
-    //     ],
-    //     is_first_time: false,
-    //     currentIndex: 0
-    // });
-
     let history = useHistory();
     const [showM, setShowM] = useState(false);
     const [showM3, setShowM3] = useState(false);
@@ -319,7 +286,7 @@ const Day1PvPharma = (props) => {
     const [showTuto, setShowTuto] = useState(true);
 
     const dispatch = useDispatch();
-    const { day1, loading } = useSelector((state) => state.DaysPvCh);
+    const { level1, loading } = useSelector((state) => state.Levels);
     const { center } = useSelector((state) => state.PvChallenge);
     const [showBolck, setShowBolck] = useState(true);
     let [stp_, setStp] = useState(1);
@@ -345,7 +312,7 @@ const Day1PvPharma = (props) => {
         if (currentDay?.status === 1) {
             setModeEdit(false);
             setValidTask(true);
-            dispatch(day1getDetail(center.mission_id));
+            // dispatch(day1getDetail(center.mission_id));
         } else {
             dispatch(clearDayData(1));
         }
@@ -466,7 +433,7 @@ const Day1PvPharma = (props) => {
                         ValidTask={ValidTask}
                         dispatch={dispatch}
                         center={center}
-                        day1={day1}
+                        day1={level1}
                         history={history}
                         setStp={setStp}
                     />

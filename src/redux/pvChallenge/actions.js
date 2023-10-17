@@ -23,17 +23,17 @@ import {
 
 export const getCenterInfoPvCh = (gameSessionId) => ({
     type: GET_CENTER_INF_PV_CH,
-    payload: {gameSessionId},
+    payload: { gameSessionId },
 });
 
 export const getCenterInfoPvChSuccess = (center) => ({
     type: GET_CENTER_INF_PV_CH_SUCCESS,
-    payload: {center},
+    payload: { center },
 });
 
 export const getCenterInfoPvChFailed = (error) => ({
     type: GET_CENTER_INF_PV_CH_FAILED,
-    payload: {error},
+    payload: { error },
 });
 
 export const updateCenterPvChInfo = (
@@ -43,65 +43,65 @@ export const updateCenterPvChInfo = (
     fonction
 ) => ({
     type: UPDATE_CENTER_INF_PV_CH,
-    payload: {gameSessionId, name, avatarId, fonction},
+    payload: { gameSessionId, name, avatarId, fonction },
 });
 
 export const updateCenterInfoPvChSuccess = (center) => ({
     type: UPDATE_CENTER_INF_PV_CH_SUCCESS,
-    payload: {center},
+    payload: { center },
 });
 
 export const updateCenterInfoPvChFailed = (error) => ({
     type: UPDATE_CENTER_INF_PV_CH_FAILED,
-    payload: {error},
+    payload: { error },
 });
 
 export const getscorePvCh = (centerId) => ({
     type: GET_SCORE_PV_CH,
-    payload: {centerId},
+    payload: { centerId },
 });
 
 export const getscorePvChSuccess = (score) => ({
     type: GET_SCORE_PV_CH_SUCCESS,
-    payload: {score},
+    payload: { score },
 });
 
 export const getscorePvChFailed = (error) => ({
     type: GET_SCORE_PV_CH_FAILED,
-    payload: {error},
+    payload: { error },
 });
 
 export const getScoreGlobalPvCh = (gameSessionId) => ({
     type: GET_SCORE_GLOBAL_PV_CH,
-    payload: {gameSessionId},
+    payload: { gameSessionId },
 });
 
 export const getScoreGlobalPvChSuccess = (scoreGlobal) => ({
     type: GET_SCORE_GLOBAL_PV_CH_SUCCESS,
-    payload: {scoreGlobal},
+    payload: { scoreGlobal },
 });
 
 export const getScoreGlobalPvChFailed = (error) => ({
     type: GET_SCORE_GLOBAL_PV_CH_FAILED,
-    payload: {error},
+    payload: { error },
 });
 
 export const getScoreGlobalPvChModerator = (gameSessionId) => ({
     type: GET_SCORE_GLOBAL_MODERATOR_PV_CH,
-    payload: {gameSessionId},
+    payload: { gameSessionId },
 });
 
 export const getScoreGlobalModeratorPvChSuccess = (scoreGlobalModerator) => ({
     type: GET_SCORE_GLOBAL_MODERATOR_PV_CH_SUCCESS,
-    payload: {scoreGlobalModerator},
+    payload: { scoreGlobalModerator },
 });
 
 export const getScoreGlobalModeratorPvChFailed = (error) => ({
     type: GET_SCORE_GLOBAL_MODERATOR_PV_CH_FAILED,
-    payload: {error},
+    payload: { error },
 });
 
-export const closeDayPVChSuccess = (closeDay) => ({
+export const closeDaySuccess = (closeDay) => ({
     type: CLOSE_DAY_PV_CH,
     payload: closeDay,
 });
@@ -114,15 +114,15 @@ export const closeDayPvChClear = () => ({
 
 export const getscorePVCh = (missionId) => ({
     type: GET_SCORE5_PV_CH,
-    payload: {missionId},
+    payload: { missionId },
 });
 
 export const getscorePVChSuccess = (score) => ({
     type: GET_SCORE5_PV_CH_SUCCESS,
-    payload: {score},
+    payload: { score },
 });
 
 export const getscorePVChFailed = (error) => ({
     type: GET_SCORE5_PV_CH_FAILED,
-    payload: {error},
+    payload: { error },
 });

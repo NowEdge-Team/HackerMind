@@ -10,7 +10,7 @@ import { getCenterInfoPvCh, getscorePVCh } from "../../redux/actions.js";
 import data_history from "./data.json";
 import styles from "./style.module.scss";
 import Header from "../Header/Header.jsx";
-import { getHistoricScoresPvCh } from "../../redux/daysPvCh/service.js";
+import { getHistoricScoresPvCh } from "../../redux/levels/service.js";
 import { useCookies } from "react-cookie";
 // import imagePers2 from "../../assets/images/pv-challenge/character/expert.png";
 import imagePers3 from "../../assets/images/pv-challenge/character/character_1_11.png";

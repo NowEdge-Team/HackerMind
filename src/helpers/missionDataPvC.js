@@ -10,7 +10,7 @@ import avatar7 from "../assets/images/pv-challenge/avatars/profile7.png"
 
 const avatars = [
     {
-        id: 0,
+        id: -1,
         logo: avatar0,
     },
     {
@@ -45,8 +45,10 @@ const avatars = [
 ];
 
 const getLogoById = (id = 0, array = avatars) => {
-
-    return array.find((a) => a.id === id);
+    return array.find((a) => a.id === id) ?? {
+        id: -1,
+        logo: avatar0,
+    };
 };
 
 export { avatars, getLogoById };

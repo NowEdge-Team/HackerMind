@@ -1,12 +1,12 @@
-import React, {forwardRef, useEffect, useImperativeHandle, useRef, useState} from "react";
+import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import "./style.scss";
-import {useTranslation} from "react-i18next";
-import {useDispatch, useSelector} from "react-redux";
+import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
 import Profile from "../../../components/pvCh/profile/profile.jsx";
 import ShowTuto from "../../../components/pvCh/showTuto/ShowTuto.jsx";
 import Stepper from "../../../components/pvCh/Stepper/Stepper.jsx";
-import {useStepper} from "../../../components/pvCh/Stepper/hook.js";
-import {StepperProvider} from "../../../components/pvCh/Stepper/context/index.jsx";
+import { useStepper } from "../../../components/pvCh/Stepper/hook.js";
+import { StepperProvider } from "../../../components/pvCh/Stepper/context/index.jsx";
 import NextButton from "../../../components/pvCh/NextButton/index.jsx";
 import CancelButton from "../../../components/pvCh/CancelButton/index.jsx";
 import ModalTutorial from "../../../components/pvCh/ModalTutorial/ModalTutorial.jsx";
@@ -16,10 +16,10 @@ import {
     day4getDetail,
     dragDropUpdateDecisions,
     validDay
-} from "../../../redux/daysPvCh/actions.js";
+} from "../../../redux/levels/actions.js";
 import ConfirmationModalDay2 from "../../../components/pvCh/day2/ConfirmationModal/ConfirmationModal.jsx";
-import {Stack} from "@mui/material";
-import {useHistory} from "react-router-dom";
+import { Stack } from "@mui/material";
+import { useHistory } from "react-router-dom";
 import backImageMode from "../../../assets/images/pv-challenge/images/background_55_m3.png"
 import ListChois from "../../../components/pvCh/ListChois/ListChois.jsx";
 import Level4Audio from "../../../assets/audio/Niv4/index.js";
@@ -36,13 +36,13 @@ function sleep(ms) {
 }
 
 
-const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolck, setStp, history, dispatch}, ref) => {
+const DaySteper = forwardRef(({ t, modeEdit, ValidTask, setValidTask, setShowBolck, setStp, history, dispatch }, ref) => {
 
-    const {decisions, categories} = useSelector((state) => state.DaysPvCh.day4.part1);
+    const { decisions, categories } = useSelector((state) => state.DaysPvCh.day4.part1);
     const decisions2 = useSelector((state) => state.DaysPvCh.day4.part2.decisions);
     const decisions3 = useSelector((state) => state.DaysPvCh.day4.part3.decisions);
     const decisions4 = useSelector((state) => state.DaysPvCh.day4.part4.decisions);
-    const {center} = useSelector((state) => state.PvChallenge);
+    const { center } = useSelector((state) => state.PvChallenge);
     const [showModal, setShowModal] = useState(false);
 
 
@@ -68,7 +68,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                         type: "select",
                     },
                 },
-                correctResponse: [106 , 109 , 113 ]
+                correctResponse: [106, 109, 113]
             }
             dispatch(validDay(center.mission_id, 4, option, (success) => {
 
@@ -100,7 +100,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                 title: t("day4.messages.validation.title"),
                 text: t("day4.messages.validation.text"),
                 textBtnValid: t("day4.messages.validation.textBtnValid"),
-                textBtnCancel:t("btnBack"),
+                textBtnCancel: t("btnBack"),
                 showCancel: true,
                 audio: Level4Audio.audio10,
                 valid: async () => {
@@ -117,7 +117,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                 title: t("day4.messages.validation.title"),
                 text: t("day4.messages.validation.text"),
                 textBtnValid: t("day4.messages.validation.textBtnValid"),
-                textBtnCancel:t("btnBack"),
+                textBtnCancel: t("btnBack"),
                 showCancel: true,
                 audio: Level4Audio.audio10,
                 valid: () => {
@@ -131,7 +131,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                 title: t("day4.messages.validation.title"),
                 text: t("day4.messages.validation.text"),
                 textBtnValid: t("day4.messages.validation.textBtnValid"),
-                textBtnCancel:t("btnBack"),
+                textBtnCancel: t("btnBack"),
                 showCancel: true,
                 audio: Level4Audio.audio10,
                 valid: () => {
@@ -145,7 +145,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                 title: t("day4.messages.validation.title"),
                 text: t("day4.messages.validation.text"),
                 textBtnValid: t("day4.messages.validation.textBtnValid"),
-                textBtnCancel:t("btnBack"),
+                textBtnCancel: t("btnBack"),
                 showCancel: true,
                 audio: Level4Audio.audio10,
                 valid: () => {
@@ -158,7 +158,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                 text: t("day4.messages.validation.text1"),
                 textBtnValid: t("day4.messages.validation.textBtnValid2"),
                 showCancel: false,
-                imgP:img2,
+                imgP: img2,
                 audio: Level4Audio.audio12,
                 valid: () => {
                     history.push("/");
@@ -182,7 +182,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
     }, []);
 
 
-    const {incrementCurrentStep, currentStep} = useStepper();
+    const { incrementCurrentStep, currentStep } = useStepper();
 
 
     const nextStep = () => {
@@ -210,7 +210,7 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                 {...config.current.messages[config.current.currentIndex]}
             />
             <div className={`${currentStep === 3 ? "step_quiz_4" : "step_quiz"}`}>
-                <Stepper style={{flex: 1}}>
+                <Stepper style={{ flex: 1 }}>
                     <Stepper.Steps>
                         <Stepper.Step id="1" name="Step 1">
                             <Dropzone
@@ -276,8 +276,8 @@ const DaySteper = forwardRef(({t, modeEdit, ValidTask, setValidTask, setShowBolc
                     </Stepper.Steps>
                 </Stepper>
                 <div className={"step_quiz_btn"}>
-                    <CancelButton onClick={() => history.push("/parcours")}/>
-                    <NextButton className={"step_quiz_btn_2"} onClick={config.current.enableNextBtn ? nextStep : null}/>
+                    <CancelButton onClick={() => history.push("/parcours")} />
+                    <NextButton className={"step_quiz_btn_2"} onClick={config.current.enableNextBtn ? nextStep : null} />
                 </div>
             </div>
         </>)
@@ -291,15 +291,15 @@ const Day4 = (props) => {
     const [modeEdit, setModeEdit] = useState(true);
     const [showTuto, setShowTuto] = useState(true);
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const dispatch = useDispatch();
-    const {center} = useSelector((state) => state.PvChallenge);
-    const {loading} = useSelector((state) => state.DaysPvCh);
+    const { center } = useSelector((state) => state.PvChallenge);
+    const { loading } = useSelector((state) => state.DaysPvCh);
 
     const [showBolck, setShowBolck] = useState(false);
     const [stp_, setStp] = useState(0);
     const [ValidTask, setValidTask] = useState(false);
-    const {currentStep} = useStepper();
+    const { currentStep } = useStepper();
 
     useEffect(() => {
         const currentDay = center.days?.find((d) => d.day_id === 4);
@@ -365,7 +365,7 @@ const Day4 = (props) => {
     return (
 
         <div className="container-day-4-ins">
-            {loading && <Loader/>}
+            {loading && <Loader />}
 
             <ModalTutorial
                 personnageImage={img1}
@@ -393,18 +393,18 @@ const Day4 = (props) => {
                         </p>
                     </div>
                     <div className="perso_image">
-                        <img src={img3} className="imgPrs3"/>
-                        <img src={img4} className="imgPrs4"/>
+                        <img src={img3} className="imgPrs3" />
+                        <img src={img4} className="imgPrs4" />
                     </div>
                 </div>
             )}
-            <div className="box box-2" style={{paddingTop: `${currentStep === 1 ? "75px" : ""}`}}>
+            <div className="box box-2" style={{ paddingTop: `${currentStep === 1 ? "75px" : ""}` }}>
                 <div className="box-2-1_ew pt-2">
                     <div className="d-flex justify-content-center align-content-center align-items-center ">
-                        <Profile title={center?.name} avatar_id={center?.avatar_id}/>
+                        <Profile title={center?.name} avatar_id={center?.avatar_id} />
                     </div>
                     <Stack direction={"row"} spacing={1}>
-                        <ShowTuto onClick={() => setShowTuto(true)}/>
+                        <ShowTuto onClick={() => setShowTuto(true)} />
                     </Stack>
                 </div>
                 <div className="box-2-2_ew pt-0 pb-0">
@@ -437,4 +437,4 @@ const Day4 = (props) => {
     );
 };
 
-export default () => <StepperProvider> <Day4/> </StepperProvider>;
+export default () => <StepperProvider> <Day4 /> </StepperProvider>;

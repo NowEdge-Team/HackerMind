@@ -24,7 +24,7 @@ const Drag = ({
 }) => {
     const [sahContent, setHasContent] = useState(false);
     const onDragStart = (ev, id) => {
-        
+
         setHasContent(true);
         ev.dataTransfer.setData("id", id);
     };
@@ -68,11 +68,12 @@ const Drag = ({
 const Dropzone = ({ modeEdit = true, decisions, categories, callback, day = 1, part = 2, icons, flex_siz = 0, imgBib }) => {
     // const {decisions, categories} = useSelector((state) => state.DaysPvCh.day2.part1);
 
-    const { t } = useTranslation();
+    const {t} = useTranslation();
 
     const [tasks, setTasks] = useState(categories);
 
     const dispatch = useDispatch();
+
     const [listP, setListP] = useState(decisions);
 
     useEffect(() => {
@@ -89,11 +90,7 @@ const Dropzone = ({ modeEdit = true, decisions, categories, callback, day = 1, p
     const onDrop = (ev, cat, idBlock) => {
         if (idBlock) {
             let id = ev.dataTransfer.getData("id");
-
             const findIndex = listP.find(task => task.category === idBlock);
-            
-            
-
             if (!findIndex) {
                 let tasks_ = listP.map((task) => {
                     if (task.id == id) {
@@ -139,6 +136,7 @@ const Dropzone = ({ modeEdit = true, decisions, categories, callback, day = 1, p
                                     className={Style.list_dr_item}
                                 >
                                     <img src={icon} alt={""} />
+
                                     <span>
                                         {t(`day${day}.part${part}.decisions.${item.id}`)}
                                     </span>
