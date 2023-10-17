@@ -45,16 +45,16 @@ const PlayButton = () => {
     return (
         <div
             style={{
-                width: "20px",
-                height: "25px",
+                width: "35px",
+                height: "auto",
                 position: "absolute",
-                right: "35px",
-                top: "18px",
+                right: "31px",
+                top: "9px",
                 cursor: "pointer",
             }}
             onClick={click_}
         >
-            <img src={paused ? soundOff : soundLoud} width={40} height={40} alt={""} />
+            <img src={paused ? soundOff : soundLoud}  alt={""} />
             <audio autoPlay className="audio-element" onEnded={onEnded_}>
                 <source src={music}></source>
             </audio>
@@ -112,7 +112,7 @@ export default function Parcours() {
         <div className={styles.mainBackground}>
             <PlayButton />
 
-            <div className="px-[7%] ">
+            <div className="pl-[7%] pr-[5%]">
                 <HeaderProfile btnStyle="bg-white text-[#5CB962]" textStyle="text-white" />
             </div>
 
