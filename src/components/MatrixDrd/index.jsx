@@ -9,7 +9,7 @@ import CharacterMessage from "../CharacterMessage";
 import imgCharacter from "../../assets/images/pv-challenge/character/Leader.png"
 import CancelButton from "../pvCh/CancelButton";
 import NextButton from "../pvCh/NextButton";
-import runningSolid from "../../assets/images/pv-challenge/running-solid2.svg";
+import runningSolid from "../../assets/images/pv-challenge/running-solid.svg";
 import Profile from "../pvCh/profile/profile";
 import { DndProvider, useDrag, useDrop } from 'react-dnd'
 import { HTML5Backend } from "react-dnd-html5-backend";

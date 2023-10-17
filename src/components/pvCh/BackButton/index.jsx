@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import arrowRight from '../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg'
+import arrowRight from '../../../assets/images/pv-challenge/images/arrow-right.svg'
 import styles from './style.module.scss'
 import { useTranslation } from 'react-i18next';
 const BackButton = (props) => {

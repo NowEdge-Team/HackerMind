@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Modal } from "react-bootstrap";
 
-import img7 from "../../../../assets/images/pv-challenge/avatar/1233idjlksd.png";
-import img8 from "../../../../assets/images/pv-challenge/avatar/ewwllipse_233.png";
-import img9 from "../../../../assets/images/pv-challenge/avatar/ellipse_234.png";
-import img10 from "../../../../assets/images/pv-challenge/avatar/ellipse_23321.png";
-import img11 from "../../../../assets/images/pv-challenge/avatar/ellipse_233.png";
-import img1 from "../../../../assets/images/pv-challenge/group_5063-phone.png";
+import img7 from "../../../../assets/images/pv-challenge/avatar/women1.png";
+import img8 from "../../../../assets/images/pv-challenge/avatar/women3.png";
+import img9 from "../../../../assets/images/pv-challenge/avatar/women2.png";
+import img10 from "../../../../assets/images/pv-challenge/avatar/men1.png";
+import img11 from "../../../../assets/images/pv-challenge/avatar/men2.png";
+import img1 from "../../../../assets/images/pv-challenge/phone_img.png";
 
 import "./style.scss";
 import { useDispatch, useSelector } from "react-redux";

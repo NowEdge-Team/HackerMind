@@ -1,8 +1,8 @@
 
 import styles from './style.module.scss'
-import score1 from "../../../assets/images/pv-challenge/images/scor1.svg"
-import score2 from "../../../assets/images/pv-challenge/images/scor2.svg"
-import score3 from "../../../assets/images/pv-challenge/images/scor3.svg"
+import score1 from "../../../assets/images/pv-challenge/images/score1.svg"
+import score2 from "../../../assets/images/pv-challenge/images/score2.svg"
+import score3 from "../../../assets/images/pv-challenge/images/score3.svg"
 import image1 from "../../../assets/images/pv-challenge/images/rectangle_2100.svg"
 import {avatars, getLogoById} from "../../../helpers/missionDataPvC";
 import React from "react";

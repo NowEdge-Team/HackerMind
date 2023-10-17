@@ -15,8 +15,8 @@ import { useCookies } from "react-cookie";
 import { twMerge } from "tailwind-merge";
 import music from "../../assets/audio/main-music.mp3";
 import img7 from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
-import soundLoud from "../../assets/images/pv-challenge/sound-loud-filled-svgrepo-com.svg";
-import soundOff from "../../assets/images/pv-challenge/sound-off-filled-svgrepo-com.svg";
+import soundLoud from "../../assets/images/pv-challenge/sound-loud.svg";
+import soundOff from "../../assets/images/pv-challenge/sound-off.svg";
 import { getCenterInfoPvCh, getscorePVCh } from "../../redux/actions.js";
 import styles from "./style.module.scss";
 
@@ -45,16 +45,16 @@ const PlayButton = () => {
     return (
         <div
             style={{
-                width: "20px",
-                height: "25px",
+                width: "35px",
+                height: "auto",
                 position: "absolute",
-                right: "35px",
-                top: "18px",
+                right: "31px",
+                top: "9px",
                 cursor: "pointer",
             }}
             onClick={click_}
         >
-            <img src={paused ? soundOff : soundLoud} width={40} height={40} alt={""} />
+            <img src={paused ? soundOff : soundLoud}  alt={""} />
             <audio autoPlay className="audio-element" onEnded={onEnded_}>
                 <source src={music}></source>
             </audio>
@@ -103,6 +103,7 @@ export default function Parcours() {
 
 
     const navTo = (urlId) => (e) => {
+        if (urlId==='1')
         to(`/day/${urlId}`)
     }
 
@@ -111,7 +112,7 @@ export default function Parcours() {
         <div className={styles.mainBackground}>
             <PlayButton />
 
-            <div className="px-[7%] ">
+            <div className="pl-[7%] pr-[5%]">
                 <HeaderProfile btnStyle="bg-white text-[#5CB962]" textStyle="text-white" />
             </div>
 

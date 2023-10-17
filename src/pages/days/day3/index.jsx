@@ -27,7 +27,7 @@ import Dropzone from "../../../components/Dropzone/Dropzone.jsx";
 import Loader from "../../../components/Loader.jsx";
 import img1 from "../../../assets/images/pv-challenge/character/character_1_11.png";
 import img2 from "../../../assets/images/pv-challenge/character/character_1.png"
-import img3 from "../../../assets/images/pv-challenge/character/character-3.png"
+import img3 from "../../../assets/images/pv-challenge/character/Leader.png"
 import img4 from "../../../assets/images/pv-challenge/character/character_c.png"
 
 

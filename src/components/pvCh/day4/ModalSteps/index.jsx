@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
 import styles from "./style.module.scss";
 import PropTypes from "prop-types";
-import img1 from '../../../../assets/images/pv-challenge/images/research-center.png'
 import img2 from '../../../../assets/images/pv-challenge/images/group_8048.svg'
 import CustomizedSelect from "../CustomizedSelect/CustomizedSelect";
 import {useTranslation} from "react-i18next";

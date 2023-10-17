@@ -1,5 +1,5 @@
 import styles from "./profile.module.scss";
-import playIcon from "../../../assets/images/pv-challenge/images/Play button.svg";
+import playIcon from "../../../assets/images/pv-challenge/images/.svg";
 
 export default function  BtnAudio({onClick=()=>null}){
 

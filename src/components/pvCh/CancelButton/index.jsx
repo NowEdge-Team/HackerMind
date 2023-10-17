@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import running from '../../../assets/images/pv-challenge/running-solid2.svg'
+import running from '../../../assets/images/pv-challenge/running-solid.svg'
 import styles from './style.module.scss'
 import NextButton from "../NextButton/index.jsx";
 import { useTranslation } from 'react-i18next';

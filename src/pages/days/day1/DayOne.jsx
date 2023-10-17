@@ -14,7 +14,7 @@ import shodan from "../../../assets/shodan-logo.png";
 import nmap from "../../../assets/nmaplogo.png";
 import nmaplogo from "../../../assets/nmaplogo.png";
 import burpsuite from "../../../assets/burpsuite.png";
-import arrow from "../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg";
+import arrow from "../../../assets/images/pv-challenge/images/arrow-right.svg";
 import metasploit from "../../../assets/metasploit.png";
 import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx";
 import styles from "./day.module.scss";
@@ -113,7 +113,6 @@ function App({ onNext }) {
     setModal(!modal);
   };
 
-
   if (modal) {
     document.body.classList.add('active-modal')
   } else {
@@ -182,6 +181,7 @@ function App({ onNext }) {
           <p className={styles.msg_text} >  {dataList[currentIndex_].msg}</p>
           <img src={poly} alt="" />
         </div>
+
         {/* <div className={styles.audio}>
             <Audio/>
           </div> */}
