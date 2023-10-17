@@ -15,8 +15,8 @@ import { useCookies } from "react-cookie";
 import { twMerge } from "tailwind-merge";
 import music from "../../assets/audio/main-music.mp3";
 import img7 from "../../assets/images/pv-challenge/images/days/Rectangle 2099.png";
-import soundLoud from "../../assets/images/pv-challenge/sound-loud-filled-svgrepo-com.svg";
-import soundOff from "../../assets/images/pv-challenge/sound-off-filled-svgrepo-com.svg";
+import soundLoud from "../../assets/images/pv-challenge/sound-loud.svg";
+import soundOff from "../../assets/images/pv-challenge/sound-off.svg";
 import { getCenterInfoPvCh, getscorePVCh } from "../../redux/actions.js";
 import styles from "./style.module.scss";
 

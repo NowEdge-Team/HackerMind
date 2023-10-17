@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 import {Modal} from "react-bootstrap";
 import style from "./style.module.scss";
 import img1 from "../../../../assets/images/pv-challenge/images/background_3_m4.svg"
-import imgPerso2 from "../../../../assets/images/pv-challenge/character/character-3.png"
+import imgPerso2 from "../../../../assets/images/pv-challenge/character/Leader.png"
 import Audio from "../AudioPlayer/Audio";
 const ConfirmationModalDay2 = ({
                                     imgP=imgPerso2,

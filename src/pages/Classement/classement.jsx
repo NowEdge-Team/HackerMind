@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
-import badge1 from "../../assets/images/pv-challenge/Component25e311.svg";
+import badge1 from "../../assets/images/pv-challenge/pieces.svg";
 import badge2 from "../../assets/images/pv-challenge/Component3581.svg";
-import badge3 from "../../assets/images/pv-challenge/Componente3551.svg";
+import badge3 from "../../assets/images/pv-challenge/2pieces.svg";
 import runningSolid from "../../assets/images/pv-challenge/running-solid.svg";
 import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
 import { getScoreGlobalPvCh, getscorePVCh } from "../../redux/actions.js";

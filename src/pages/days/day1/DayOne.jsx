@@ -116,7 +116,6 @@ function App({ onNext }) {
     setModal(!modal);
   };
 
-
   if (modal) {
     document.body.classList.add('active-modal')
   } else {
@@ -185,6 +184,7 @@ function App({ onNext }) {
           <p className={styles.msg_text} >  {dataList[currentIndex_].msg}</p>
           <img src={poly} alt="" />
         </div>
+
         {/* <div className={styles.audio}>
             <Audio/>
           </div> */}

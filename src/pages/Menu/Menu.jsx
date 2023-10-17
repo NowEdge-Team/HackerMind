@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import MissionAudio from "../../assets/audio/mission/index";
-import badg5 from "../../assets/images/pv-challenge/Layer_15.svg";
-import badg6 from "../../assets/images/pv-challenge/Layer_26.svg";
+import badg5 from "../../assets/images/pv-challenge/Badge.svg";
+import badg6 from "../../assets/images/pv-challenge/Mail.svg";
 import DefaultImg from '../../assets/images/pv-challenge/avatars/profile1.png'; // Importez votre image par défaut
 import { default as Dock, default as persoImage } from "../../assets/images/pv-challenge/character/Leader.png";
 import badg7 from "../../assets/images/pv-challenge/contest.svg";

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import styles from "./style.module.scss";
 import PropTypes from "prop-types";
 import arrowRight from '../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg'
-import doc from "../../../assets/images/pv-challenge/character/character-3.png"
+import doc from "../../../assets/images/pv-challenge/character/Leader.png"
 import imagePath from "../../../assets/images/pv-challenge/images/background_22.png"
 import Audio from "../day2/AudioPlayer/Audio";
 import { Player } from 'video-react';

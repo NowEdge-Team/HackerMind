@@ -11,7 +11,7 @@ import "./style.scss";
 import img3 from "../../../assets/images/pv-challenge/images/group_7932.svg";
 import CancelButton from "../../../components/pvCh/CancelButton/index.jsx";
 import Level5Audio from "../../../assets/audio/Niv5/index.js"
-import personage1 from "../../../assets/images/pv-challenge/character/character-3.png"
+import personage1 from "../../../assets/images/pv-challenge/character/Leader.png"
 import ConfirmationModalDay2 from "../../../components/pvCh/day2/ConfirmationModal/ConfirmationModal.jsx";
 import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'

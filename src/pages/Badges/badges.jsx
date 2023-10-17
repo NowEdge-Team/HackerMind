@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-
-
-// import badge1 from "../../assets/images/pv-challenge/group_3875.svg";
-// import badge2 from "../../assets/images/pv-challenge/logo_ambassadeur_color.png";
 import badge1 from "../../assets/images/pv-challenge/Badges/Avatar.png";
 import badge2 from "../../assets/images/pv-challenge/Badges/Contrat.png";
 import badge3 from "../../assets/images/pv-challenge/Badges/Recon.png";
@@ -10,25 +6,14 @@ import badge4 from "../../assets/images/pv-challenge/Badges/Intrusion.png";
 import badge5 from "../../assets/images/pv-challenge/Badges/Admin.png";
 import badge6 from "../../assets/images/pv-challenge/Badges/Hacked.png";
 import badge7 from "../../assets/images/pv-challenge/Badges/Cybercrime.png";
-
-
-
-
-
-
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import runningSolid from "../../assets/images/pv-challenge/running-solid.svg";
 import { httpClient_get } from "../../helpers/api.js";
 import { useTranslation } from "react-i18next";
 import { getscorePVCh, getscorePvChSuccess } from "../../redux/actions.js";
-import Profile from "../../components/pvCh/profile/profile.jsx";
 import Badge from "../../components/pvCh/badge/badge.jsx";
 import styles from "./style.module.scss"
-import { faCogs, faCubes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeaderProfile from "@/components/HeaderPrfile";
-
 export default function Bradges() {
     const [Badges, setBadges] = useState([]);
     const center = useSelector((state) => state.PvChallenge.center);
