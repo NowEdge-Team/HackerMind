@@ -1,7 +1,7 @@
-import lv1_chr3 from "@/assets/images/charachters/ch-3.png";
-import lv1_chr7 from "@/assets/images/charachters/ch-7.png";
+// import lv1_chr3 from "@/assets/images/charachters/ch-3.png";
+// import lv1_chr7 from "@/assets/images/charachters/ch-7.png";
 import style from "../style.module.scss"
-import {useMemo} from "react";
+import { useMemo } from "react";
 
 
 
@@ -10,11 +10,11 @@ const initData = [
         backgrnad: `bg-[#C60F1F] ${style.sidebar_1}`,
         personage: [
             {
-                src: lv1_chr7,
+                // src: lv1_chr7,
                 class: "h-[400px] "
             },
             {
-                src: lv1_chr3,
+                // src: lv1_chr3,
                 class: "h-[400px] "
             },
 
@@ -30,11 +30,11 @@ const initData = [
         backgrnad: `bg-[#C60F1F] ${style.sidebar_1}`,
         personage: [
             {
-                src: lv1_chr7,
+                // src: lv1_chr7,
                 class: "h-[400px] "
             },
             {
-                src: lv1_chr3,
+                // src: lv1_chr3,
                 class: "h-[400px] "
             },
 
@@ -54,10 +54,10 @@ const initData = [
 
 
 
-const useSidebar = ({currentStep,hideOnSteps=[]}) => {
+const useSidebar = ({ currentStep, hideOnSteps = [] }) => {
 
-    const data =  initData[currentStep];
-    const showSidebar = useMemo(() =>  !hideOnSteps.includes(currentStep), [currentStep, hideOnSteps]);
+    const data = initData[currentStep];
+    const showSidebar = useMemo(() => !hideOnSteps.includes(currentStep), [currentStep, hideOnSteps]);
     return {
         data,
         showSidebar

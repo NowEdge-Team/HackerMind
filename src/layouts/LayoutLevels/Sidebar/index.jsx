@@ -1,5 +1,5 @@
-import lv1_chr1 from "@/assets/images/charachters/ch-3.png";
-import lv1_chr2 from "@/assets/images/charachters/ch-7.png";
+// import lv1_chr1 from "@/assets/images/charachters/ch-3.png";
+// import lv1_chr2 from "@/assets/images/charachters/ch-7.png";
 // import { TextLevel, TextLevelWithIcons } from "@/components/TextLevel";
 
 import PropTypes from 'prop-types';
@@ -40,11 +40,11 @@ Sidebar.defaultProps = {
         backgrnad: "bg-[#FF0009]",
         personage: [
             {
-                src: lv1_chr1,
+                // src: lv1_chr1,
                 class: "h-[419px]"
             },
             {
-                src: lv1_chr2,
+                // src: lv1_chr2,
                 class: "h-[392px]"
             }
         ],

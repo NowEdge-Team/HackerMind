@@ -25,29 +25,32 @@ const Template1 = ({ pictureClass, listMsg, backGrandImage, endBtnText, personna
                 <img src={personnageImage} alt={""} />
             </picture>
             <div className={styles.modal_body}>
-                <div className={styles.block} >
-                    <div className={styles.msg}>
-                        <h3>
-                            {listMsg[index]?.title}
-                        </h3>
-                        <h4>
-                            {listMsg[index]?.subtitle}
-                        </h4>
-                        <p dangerouslySetInnerHTML={{ __html: listMsg[index]?.text }} />
-                    </div>
-                    {listMsg[index]?.audio &&
-                        <div className={styles.audio}>
-                            <Audio src={listMsg[index]?.audio} />
+                <div className="flex flex-row">
+                    <div className={styles.block} >
+                        <div className={styles.msg}>
+                            <h3>
+                                {listMsg[index]?.title}
+                            </h3>
+                            <h4>
+                                {listMsg[index]?.subtitle}
+                            </h4>
+                            <p dangerouslySetInnerHTML={{ __html: listMsg[index]?.text }} />
                         </div>
-                    }
-                </div>
+                        {listMsg[index]?.audio &&
+                            <div className={styles.audio}>
+                                <Audio src={listMsg[index]?.audio} />
+                            </div>
+                        }
+                        {Children.map(children, child =>
+                            <>
+                                {child}
+                            </>
+                        )}
+                    </div>
 
+                </div>
             </div>
-            {Children.map(children, child =>
-                <>
-                    {child}
-                </>
-            )}
+
             <div className={styles.modal_footer}>
                 {index > 0 && <button className={styles.prv_btn} onClick={prv}>
                     {t("btnBack")}

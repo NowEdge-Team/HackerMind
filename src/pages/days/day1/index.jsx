@@ -198,9 +198,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const { incrementCurrentStep, decrementCurrentStep, currentStep } = useStepper();
 
     const nextStep = () => {
-        if ([2].includes(currentStep))
-            return incrementCurrentStep();
-
         if ([2, 3].includes(currentStep)) return incrementCurrentStep();
 
         setShowConfirm(true);

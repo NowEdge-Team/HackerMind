@@ -81,7 +81,6 @@ const ConfirmationModalSteps = () => {
                     </div>}
                     <div
                         className={style.control}
-                        onClick={() => { close(false); }}
                     >
                         {props.showCancelBtn && <button className={style.btn_close} onClick={closeModal(false)}>
                             {props.textBtnNotValid}
