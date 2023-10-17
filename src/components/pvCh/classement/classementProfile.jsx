@@ -17,7 +17,7 @@ export default function ClassementProfile ({name,score,classement, item}){
                         <img src={image1} alt={''}/>
                        </div>
                     }
-                    <img src={getLogoById(item.insightsMission.avatarId, avatars)?.logo} alt={""} style={{height: classement=== 1 ? 122 :  106 ,"border-radius":"50%"}}/>
+                    <img src={getLogoById(item.hacker_mind_mission.avatarId, avatars)?.logo} alt={""} style={{height: classement=== 1 ? 122 :  106 ,"border-radius":"50%"}}/>
 
                     <div className={styles.score_icon}>
                         <img src={classement=== 1 ? score1 : classement=== 2 ? score2 :  score3} alt={''} />
@@ -25,8 +25,8 @@ export default function ClassementProfile ({name,score,classement, item}){
                 </picture>
                 <h1 className={styles.name}>{name}</h1>
                 <h4 className={styles.score}>{score}</h4>
-                 <span  className={styles.state} style={{color:`${ item.insightsMission.finishDate ? "#10c469" : "#f9c851" }`}}>
-                   {item.insightsMission.finishDate ? "Terminé" : "En cours"}
+                 <span  className={styles.state} style={{color:`${ item.hacker_mind_mission.finishDate ? "#10c469" : "#f9c851" }`}}>
+                   {item.hacker_mind_mission.finishDate ? "Terminé" : "En cours"}
                 </span>
 
                 <div className={`sg-menu-item-btn-config-p ${styles.sg_menu_item_btn_config_p}`} onClick={() => null}>

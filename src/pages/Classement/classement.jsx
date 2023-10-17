@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {useTranslation} from "react-i18next";
+import {useDispatch, useSelector} from "react-redux";
+import {useHistory} from "react-router-dom";
 
 import badge1 from "../../assets/images/pv-challenge/pieces.svg";
 import badge2 from "../../assets/images/pv-challenge/Component3581.svg";
 import badge3 from "../../assets/images/pv-challenge/2pieces.svg";
-import runningSolid from "../../assets/images/pv-challenge/running-solid.svg";
-import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
-import { getScoreGlobalPvCh, getscorePVCh } from "../../redux/actions.js";
+import {avatars, getLogoById} from "../../helpers/missionDataPvC.js";
+import {getScoreGlobalPvCh, getscorePVCh} from "../../redux/actions.js";
 import ClassementProfile from "../../components/pvCh/classement/classementProfile.jsx";
-import Profile from "../../components/pvCh/profile/profile.jsx";
 import styles from "./style.module.scss"
-import { useCookies } from "react-cookie";
-import { faCogs, faCubes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {useCookies} from "react-cookie";
 import HeaderProfile from "@/components/HeaderPrfile";
 
 const ListClassItem = ({ t, active = false, onClick, index, item = {} }) => {
@@ -33,10 +29,10 @@ const ListClassItem = ({ t, active = false, onClick, index, item = {} }) => {
                         width: `34px`,
                     }}
                 />
-                <div>{item.insightsMission.name}</div>
+                <div>{item.hacker_mind_mission.name}</div>
             </div>
-            <span style={{ color: `${item.insightsMission.finishDate ? "#10c469" : "#f9c851"}` }}>
-                {item.insightsMission.finishDate ? "Terminé" : "En cours"}
+            <span style={{ color: `${item.hacker_mind_mission.finishDate ? "#10c469" : "#f9c851"}` }}>
+                {item.hacker_mind_mission.finishDate ? "Terminé" : "En cours"}
             </span>
             <div className="list-item-classment-b2">
                 <h3 className={"mb-0"}>{t(`classement.score`)} :</h3>
@@ -68,7 +64,7 @@ const ListClass = ({ t, scoreGlobal = [] }) => {
     list.splice(0, 3);
 
     useEffect(() => {
-        const index = list.findIndex((s) => s.insightsMission.challengeId === challengeId)
+        const index = list.findIndex((s) => s.hacker_mind_mission.challengeId === challengeId)
         setindexActive(index)
     }, [list])
 
@@ -186,14 +182,14 @@ const DetailsClassment = ({
                             }}
                         >
                             <img
-                                src={getLogoById(user2.insightsMission.avatar_id, avatars)?.logo}
+                                src={getLogoById(user2.hacker_mind_mission.avatar_id, avatars)?.logo}
                                 style={{ width: "80px", height: "100px" }}
                             />
                             <img
                                 src={badge2}
                                 style={{ position: "absolute", right: "40px", top: "55px" }}
                             />
-                            <p>{user2?.insightsMission.name}</p>
+                            <p>{user2?.hacker_mind_mission.name}</p>
                             <div>
                                 <div className="text-score">
                                     {" "}
@@ -217,14 +213,14 @@ const DetailsClassment = ({
                     <>
                         <div className="details-class-1" style={{ height: "161px" }}>
                             <img
-                                src={getLogoById(user1.insightsMission.avatar_id, avatars)?.logo}
+                                src={getLogoById(user1.hacker_mind_mission.avatar_id, avatars)?.logo}
                                 style={{ width: "80px", height: "100px", alignSelf: "center" }}
                             />
                             <img
                                 src={badge1}
                                 style={{ position: "absolute", right: "37px", top: "58px" }}
                             />
-                            <p>{user1?.insightsMission.name}</p>
+                            <p>{user1?.hacker_mind_mission.name}</p>
                             <div>
                                 <div className="text-score">
                                     {t(`classement.score`)} :
@@ -246,13 +242,13 @@ const DetailsClassment = ({
                 {user3 && (
                     <>
                         <div className="details-class-3" style={{ height: "140px" }}>
-                            <img src={getLogoById(user3.insightsMission.avatar_id, avatars)?.logo}
+                            <img src={getLogoById(user3.hacker_mind_mission.avatar_id, avatars)?.logo}
                                 style={{ width: "80px", height: "100px", alignSelf: "center" }} />
                             <img
                                 src={badge3}
                                 style={{ position: "absolute", right: "40px", top: "55px" }}
                             />
-                            <p style={{ marginTop: "20px" }}>{user3?.insightsMission.name}</p>
+                            <p style={{ marginTop: "20px" }}>{user3?.hacker_mind_mission.name}</p>
                             <div>
                                 <div className="text-score">
                                     {t(`classement.score`)} :
@@ -297,7 +293,7 @@ export default function Classement() {
             return b.total - a.total;
         });
 
-    const currentUserMissionIndex = list.findIndex((elem) => elem.insightsMission.userId === center.userId);
+    const currentUserMissionIndex = list.findIndex((elem) => elem.hacker_mind_mission.userId === center.userId);
     const CLASSEMENT = list[currentUserMissionIndex]?.position;
 
     const user1 = list.length >= 1 ? list[0] : null;
