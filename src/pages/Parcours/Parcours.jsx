@@ -103,6 +103,7 @@ export default function Parcours() {
 
 
     const navTo = (urlId) => (e) => {
+        if (urlId==='1')
         to(`/day/${urlId}`)
     }
 

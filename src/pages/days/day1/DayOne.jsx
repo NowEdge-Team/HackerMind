@@ -13,7 +13,7 @@ import tor from "../../../assets/image1.png";
 import shodan from "../../../assets/shodan-logo.png";
 import nmap from "../../../assets/nmaplogo.png";
 import burpsuite from "../../../assets/burpsuite.png";
-import arrow from "../../../assets/images/pv-challenge/images/arrow-right-solid (1).svg";
+import arrow from "../../../assets/images/pv-challenge/images/arrow-right.svg";
 import metasploit from "../../../assets/metasploit.png";
 import Audio from "../../../components/pvCh/day2/AudioPlayer/Audio.jsx";
 import Profile from "../../../components/pvCh/profile/profile.jsx";
