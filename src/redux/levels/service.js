@@ -57,19 +57,20 @@ const getHistoricScoresPvCh = (mission_id) => {
     });
 }
 
-const updateAvatar = (mission_id,avatar_id) => {
+const updateAvatar = (game_session_id, avatar_id) => {
+
   return httpClient_post(
-      `/participant/${path}/gethistoricscores`
-  ,{
-          mission_id,
-          avatar_id,
-         })
-      .then((response) => {
-        return response.data;
-      })
-      .catch((error) => {
-        throw error;
-      });
+    `/participant/${path}/updateavatar`
+    , {
+      game_session_id,
+      avatar_id,
+    })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      throw error;
+    });
 }
 
 export {

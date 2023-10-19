@@ -28,8 +28,8 @@ import article4 from "@/assets/images/doc14.png";
 import article5 from "@/assets/images/doc15.png";
 
 import HeaderProfile from "../HeaderPrfile";
-import {useDispatch} from "react-redux";
-import {validateActivity} from "@/redux/levels/actions.js";
+import { useDispatch } from "react-redux";
+import { validateActivity } from "@/redux/levels/actions.js";
 
 const data = [
     {
@@ -124,7 +124,7 @@ const articleData = [
         USB ou un ordinateur portable, et Edward Snowden a suggéré une implication de la 
         NSA américaine et des services secrets israéliens`,
         img: article1,
-        idCell: 4,
+        idCell: -1,
         correctCellId: 4
     },
     {
@@ -139,7 +139,7 @@ const articleData = [
         Bouygues Construction a confirmé l'attaque. Cette attaque est similaire à celle 
         subie par d'autres entreprises depuis`,
         img: article2,
-        idCell: 11,
+        idCell: -1,
         correctCellId: 11
     },
     {
@@ -156,7 +156,7 @@ const articleData = [
         CNIL avait précédemment émis des conseils pour protéger sa vie privée en ligne 
         lors de l'utilisation de sites de rencontres`,
         img: article3,
-        idCell: 21,
+        idCell: -1,
         correctCellId: 21
     },
     {
@@ -172,7 +172,7 @@ const articleData = [
         des mots de passe, des informations sur les employés, des données stratégiques, 
         et menacent de révéler davantage`,
         img: article4,
-        idCell: 27,
+        idCell: -1,
         correctCellId: 27
     },
     {
@@ -187,7 +187,7 @@ const articleData = [
         énorme. Memcached ne nécessite aucune authentification, ce qui le rend 
         vulnérable à l'usurpation et à une utilisation malveillante`,
         img: article5,
-        idCell: 36,
+        idCell: -1,
         correctCellId: 36
     }
 ]
@@ -440,13 +440,13 @@ function MatrixDrd({ nextStep, onBack }) {
 
         setListArticle(listArticle.map(elem => {
             if (elem.idCell !== elem.correctCellId) {
-                listCorrectIds.push({id:elem.id,isCorrect:false});
+                listCorrectIds.push({ id: elem.id, isCorrect: false });
                 return { ...elem, className: "bg-red-500" }
             }
 
-            else{
-                listCorrectIds.push({id:elem.id,isCorrect:true});
-                return { ...elem, className: "bg-[#31a547]" }       ;
+            else {
+                listCorrectIds.push({ id: elem.id, isCorrect: true });
+                return { ...elem, className: "bg-[#31a547]" };
 
             }
         }))
@@ -457,7 +457,7 @@ function MatrixDrd({ nextStep, onBack }) {
             else return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-[#31a547]" } }
         })]);
 
-        dispatch(validateActivity("day1","part2",listCorrectIds));
+        dispatch(validateActivity("day1", "part2", listCorrectIds));
     }
 
     const listProfil = useMemo(() => data.filter(item => item.type === "profil"), [])

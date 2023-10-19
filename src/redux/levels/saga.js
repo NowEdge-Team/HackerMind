@@ -5,12 +5,10 @@ import {
 import { closeDaySuccess } from "../pvChallenge/actions";
 import store from "../store.js";
 import {
-    day1Step2ValidationsFailed,
     validDaySuccess
 } from "./actions";
 import { closeDayService, saveDecisionsService, saveDetailsService } from "./service";
 import _ from "lodash";
-
 
 
 const validateData = (day, option) => {
@@ -35,7 +33,7 @@ const validateData = (day, option) => {
                 list.push(parts[key].decisions.filter(elm => correctResponse.includes(elm)));
                 break;
             case 'matrixDrd':
-                list.push(part.decisions.filter(elm => elm.isCorrect).map(elm=>elm.id));
+                list.push(part.decisions.filter(elm => elm.isCorrect).map(elm => elm.id));
                 break;
         }
     }

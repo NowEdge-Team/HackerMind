@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import start2 from "./group_7843.svg";
 import start1 from "./group_7844.svg";
 import style from "./style.module.scss";
+import { useSelector } from "react-redux";
 
 const ChartLine = ({ fill = "#ff5b5b" }) => (
     <svg
@@ -92,6 +93,8 @@ const ScoreLevel = () => {
 
     const resolveRef = useRef(() => null);
 
+    const { score1, score2, stars } = useSelector(state => state.PvChallenge.closeDay);
+
     const [props, setProps] = useState({
         total: 0,
         number_of_start: 1,
@@ -124,20 +127,20 @@ const ScoreLevel = () => {
                     <h1 className={style.title}>BRAVO ! VOUS AVEZ REUSSI CE NIVEAU 👏🏽</h1>
                     <div className={style.score_body}>
                         <div className={style.score_start}>
-                            {[...Array(props.scoreDay?.stars).keys()].map(() => {
+                            {[...Array(stars).keys()].map(() => {
 
                                 return <img src={start2} width={100} alt={""} />
                             })}
 
-                            {[...Array(3 - props.scoreDay?.stars).keys()].map(() => <img src={start1} width={68} alt={""} />)}
+                            {[...Array(3 - stars).keys()].map(() => <img src={start1} width={68} alt={""} />)}
                         </div>
                         <div className={style.row_score} >
                             <RowScore
                                 title={"Score de Connaissance"}
                                 points={
-                                    props.scoreDay?.score1
+                                    score1
                                 }
-                                state={props.scoreDay?.score1 > 0 ? 1 : 2}
+                                state={score1 > 0 ? 1 : 2}
                                 t={t}
                             />
                         </div>
@@ -145,9 +148,9 @@ const ScoreLevel = () => {
                             <RowScore
                                 title={"Score d'Action"}
                                 points={
-                                    props.scoreDay?.score2
+                                    score2
                                 }
-                                state={props.scoreDay?.score2 > 0 ? 1 : 2}
+                                state={score2 > 0 ? 1 : 2}
                                 t={t}
                             />
                         </div>

@@ -43,6 +43,7 @@ import { mModalConfirmSteps } from "@/components/ConfirmationModalSteps/Confirma
 import { mScoreLevel } from "@/components/ScoreLevel/index.jsx";
 import { mFieldLevel } from "@/components/FieldModal/index.jsx";
 import HeaderProfile from "@/components/HeaderPrfile/index.jsx";
+import { updateAvatar } from "@/redux/levels/service.js";
 
 
 
@@ -87,8 +88,7 @@ const Step2 = ({ modeEdit, dragDropUpdateDecisions, decisions_3, categories_3, i
 const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, setStp }) => {
 
 
-    const {part1, part2 } = useSelector((state) => state.Levels.day1);
-
+    const { part1, part2 } = useSelector((state) => state.Levels.day1);
 
     const [showScoreModal, setShowScoreModal] = useState(false);
 
@@ -103,7 +103,6 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
 
     }, [modeEdit]);
 
-    // -> 2,6
     const config = useRef({
         messages: [
             {
@@ -150,7 +149,8 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
         ],
         is_first_time: false,
         currentIndex: 0,
-        modeEdit
+        modeEdit,
+        avatarId: 1
     });
 
     const sendData = () => {
@@ -163,14 +163,15 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                     1: {
                         type: "dgd"
                     },
-                    2:{
+                    2: {
                         type: "matrixDrd"
                     }
                 },
             }
             dispatch(validDay(center.mission_id, 1, option, (success) => {
-                    if (!success) return history.push("/");
-                     setShowConfirm(true);
+                if (!success) return history.push("/");
+                setShowConfirm(true);
+                dispatch(updateAvatar(center.game_session_id, config.current.avatarId))
             }));
 
         } else {
@@ -209,6 +210,11 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
             config.current.currentIndex -= 1;
         }
         decrementCurrentStep()
+    }
+
+    const onSelectAvatar = (id) => {
+
+        config.current.avatarId = id;
     }
 
 
@@ -253,7 +259,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                         </Stepper.Step>
                         <Stepper.Step id="5" name="Step 5">
                             <div>
-                                <Card />
+                                <Card onSelectAvatar={onSelectAvatar} />
                             </div>
                         </Stepper.Step>
                     </Stepper.Steps>

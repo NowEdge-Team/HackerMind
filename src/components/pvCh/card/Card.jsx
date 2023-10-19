@@ -18,7 +18,7 @@ import { twMerge } from "tailwind-merge"
 
 
 
-function Card() {
+function Card({ onSelectAvatar }) {
     const { t } = useTranslation();
     const [showTuto, setShowTuto] = useState(true);
 
@@ -36,6 +36,7 @@ function Card() {
 
 
     const handlechange = (id, title, text, color) => {
+        onSelectAvatar(id);
         setActiveItem(id)
         // setImgsrc(imgSrc) ;
         setText(text)

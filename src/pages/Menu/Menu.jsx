@@ -323,7 +323,15 @@ export default function Menu() {
     useEffect(() => {
         if (location.pathname === "/" && location.state) {
 
-            mBadgePopup({ badgeIndex: location.state.badgeIndex })
+            const loopBadge = async _ => {
+                for (let index = 0; index < closeDay.badges.length; index++) {
+                    await mBadgePopup({ badgeIndex: location.state.badgeIndex })
+
+                }
+            }
+
+            loopBadge();
+
 
         }
     }, [location]);
