@@ -325,19 +325,14 @@ export default function Menu() {
 
             const loopBadge = async _ => {
                 for (let index = 0; index < closeDay.badges.length; index++) {
-                    await mBadgePopup({ badgeIndex: location.state.badgeIndex })
-
+                    await mBadgePopup({ badgeIndex: closeDay.badges[index] })
                 }
             }
-
             loopBadge();
-
-
         }
     }, [location]);
 
     useEffect(() => {
-        console.log("----closeDay---", closeDay)
         if (closeDay !== null) {
             setScore({
                 stars: closeDay.stars,
