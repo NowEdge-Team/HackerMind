@@ -26,7 +26,7 @@ function HeaderProfile({ showCancel = true, textStyle, btnStyle }) {
             <div className="group relative d-flex flex-column ">
                 <div className=" flex flex-row items-center">
                     <img
-                        src={getLogoById(center.avatarId, avatars)?.logo}
+                        src={getLogoById(center.avatar_id, avatars)?.logo}
                         alt="user-img"
                         width={41}
                         height={41}

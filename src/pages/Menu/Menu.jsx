@@ -563,7 +563,7 @@ export default function Menu() {
                         }}
                         onClick={downloadCertificate}
                     >
-                        <div className="d-flex">
+                        {/* <div className="d-flex">
                             <img
                                 src={pdfSvgrepo}
                                 alt="user-img"
@@ -583,7 +583,7 @@ export default function Menu() {
                             >
                                 {t(`menu.t_certificat`)}
                             </h3>
-                        </div>
+                        </div> */}
                     </div>}
                 </div>
                 <div className={`d-flex align-items-baseline ml-5 ${mstyles.title_logo}`}>

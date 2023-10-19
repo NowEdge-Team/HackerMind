@@ -93,7 +93,7 @@ const ScoreLevel = () => {
 
     const resolveRef = useRef(() => null);
 
-    const { score1, score2, stars } = useSelector(state => state.PvChallenge.closeDay);
+    const { score1 = 0, score2 = 0, stars = 0 } = useSelector(state => state.PvChallenge?.closeDay ?? {});
 
     const [props, setProps] = useState({
         total: 0,
