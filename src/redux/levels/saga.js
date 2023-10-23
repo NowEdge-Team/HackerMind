@@ -1,13 +1,16 @@
 import { all, call, fork, put, takeEvery } from "redux-saga/effects";
 import {
+    DAY_GET_DETAIL,
     VALIDATION_DAY
 } from "../../constants/actionTypes";
 import { closeDaySuccess } from "../pvChallenge/actions";
 import store from "../store.js";
 import {
+    dayGetDetailFailed,
+    dayGetDetailSuccess,
     validDaySuccess
 } from "./actions";
-import { closeDayService, saveDecisionsService, saveDetailsService } from "./service";
+import { closeDayService, getDetailsService, saveDecisionsService, saveDetailsService } from "./service";
 import _ from "lodash";
 
 
@@ -92,20 +95,46 @@ function* validationSaga({ payload: { missionId, day, callback, option } }) {
             default:
                 message = error;
         }
-        yield put(levelValidationsFailed(message));
+        // yield put(levelValidationsFailed(message));
     }
 }
 
 
+function* dayGetDetailSaga({ payload: { dayId, missionId } }) {
+    try {
+
+        const responseDetail = yield call(getDetailsService, dayId, missionId);
+
+        yield put(dayGetDetailSuccess(dayId, responseDetail.details));
+
+    } catch (error) {
+        let message;
+        switch (error.status) {
+            case 500:
+                message = "Internal Server Error";
+                break;
+            case 401:
+                message = "Invalid credentials";
+                break;
+            default:
+                message = error;
+        }
+        yield put(dayGetDetailFailed(message));
+    }
+}
 
 export function* watchValidation() {
     yield takeEvery(VALIDATION_DAY, validationSaga);
 }
 
+export function* watchDayGetDetails() {
+    yield takeEvery(DAY_GET_DETAIL, dayGetDetailSaga);
+}
+
 function* DaysChSaga() {
     yield all([
-
         fork(watchValidation),
+        fork(watchDayGetDetails),
     ]);
 }
 

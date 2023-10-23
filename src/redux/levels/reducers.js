@@ -1,6 +1,6 @@
 import { REHYDRATE } from "redux-persist";
 import {
-    DAY4_PART2_PV_CH_CHANGE_IS_SELECTED_RADIO, VALIDATE_ACTIVITY
+    DAY4_PART2_PV_CH_CHANGE_IS_SELECTED_RADIO, MOVE_MATRIX_DRD, VALIDATE_ACTIVITY, SET_MATRIX_STEP, SET_CURRENT_AVATAR, DAY_GET_DETAIL, DAY_GET_DETAIL_SUCCESS, DAY_GET_DETAIL_FAILED, CLEAR_DAY
 } from "../../constants/actionTypes";
 
 const INIT_STATE = {
@@ -57,27 +57,101 @@ const INIT_STATE = {
             ],
         },
         part2: {
-            decisions:[
-                {id:6,correct:false},
-                {id:7,correct:false},
-                {id:8,correct:false},
-                {id:9,correct:false},
-                {id:10,correct:false},
+            lastUpdate: +new Date(),
+            isValid: false,
+            decisions: [
+                {
+                    id: 6,
+                    idCell: -1,
+                    correctCellId: 4,
+                    isCorrect: false
+                },
+                {
+                    id: 7,
+                    idCell: -1,
+                    correctCellId: 11,
+                    isCorrect: false
+                },
+                {
+                    id: 8,
+                    idCell: -1,
+                    correctCellId: 21,
+                    isCorrect: false
+                },
+                {
+                    id: 9,
+                    idCell: -1,
+                    correctCellId: 27,
+                    isCorrect: false
+                },
+                {
+                    id: 10,
+                    idCell: -1,
+                    correctCellId: 36,
+                    isCorrect: false
+                }
             ]
-        }
+        },
+        currentAvatar: {
+            activeitem: 1,
+            isUpdate: false
+        },
+        config_matrix: {
+            activeItem: 1,
+            step: 0
+        },
+
+
     },
     loading: false,
 };
 
 const Levels = (state = INIT_STATE, action) => {
     switch (action.type) {
-        case VALIDATE_ACTIVITY:
-            const {day,part,decisions} = action.payload;
-            return  {
+        case CLEAR_DAY:
+            return {
+                ...INIT_STATE,
+            }
+        case SET_CURRENT_AVATAR:
+            return {
                 ...state,
-                [day]:{
+                day1: {
+                    ...state.day1,
+                    currentAvatar: {
+                        activeitem: action.payload.activeitem ?? state.day1.currentAvatar.activeitem,
+                        isUpdate: action.payload.isUpdate ?? state.day1.currentAvatar.isUpdate,
+                    }
+                }
+            }
+        case SET_MATRIX_STEP:
+            return {
+                ...state,
+                day1: {
+                    ...state.day1,
+                    config_matrix: { ...state.day1.config_matrix, [action.payload.name]: action.payload.value }
+                }
+            }
+        case MOVE_MATRIX_DRD:
+            const { id, idCell } = action.payload;
+            return {
+                ...state,
+                day1: {
+                    ...state.day1,
+                    part2: { ...state.day1.part2, lastUpdate: +new Date(), decisions: state.day1.part2.decisions.map(item => item.id === id ? { ...item, idCell } : item) }
+                }
+            }
+        case VALIDATE_ACTIVITY:
+            const { day, part, decisions } = action.payload;
+            return {
+                ...state,
+                [day]: {
                     ...state[day],
-                    [part]: {...state[day][part],decisions}
+                    [part]:
+                    {
+                        ...state[day][part],
+                        decisions: state[day][part].decisions.map((item, index) => ({ ...item, ...decisions[index] })),
+                        isValid: true
+                    }
                 }
             }
         case DAY4_PART2_PV_CH_CHANGE_IS_SELECTED_RADIO:
@@ -86,6 +160,21 @@ const Levels = (state = INIT_STATE, action) => {
                 day4: { ...state.day4, part2: { ...state.day4.part2, decisions: action.payload } },
                 loading: false,
             };
+        case DAY_GET_DETAIL:
+            return {
+                ...state,
+                loading: true,
+            };
+        case DAY_GET_DETAIL_SUCCESS:
+
+            console.log("---action.payload.data--->>>", action.payload.data);
+            return {
+                ...state,
+                loading: false,
+                [`day${action.payload.dayId}`]: action.payload.data,
+            };
+        case DAY_GET_DETAIL_FAILED:
+            return { ...state, error: action.payload.error, loading: false };
         case REHYDRATE:
             return action.payload
                 ? {

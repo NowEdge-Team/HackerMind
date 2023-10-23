@@ -15,14 +15,11 @@ import { StepperProvider } from "@/components/pvCh/Stepper/context/index.jsx";
 import { useStepper } from "@/components/pvCh/Stepper/hook.js";
 import ConfirmationModal from "@/components/pvCh/day1/ConfirmationModal/ConfirmationModal.jsx";
 import ScoreModal from "@/components/pvCh/day1/ScoreModal/StepModal.jsx";
-import Profile from "@/components/pvCh/profile/profile.jsx";
 import ShowTuto from "@/components/pvCh/showTuto/ShowTuto.jsx";
 import {
-    // ChangeSelectedRadio,
     clearDayData,
-    // day1getDetail,
-    // day1Part3Change,
-    dragDropUpdateDecisions, validDay
+    dayGetDetail,
+    dragDropUpdateDecisions, setCurrentAvatar, validDay
 } from "../../../redux/levels/actions.js";
 import "./style.scss";
 import img3 from "@/assets/Ingénieur social.png";
@@ -39,9 +36,7 @@ import burpsuite from "../../../assets/burpsuitelogo.png"
 
 
 import BackButton from "@/components/pvCh/BackButton/index.jsx";
-import { mModalConfirmSteps } from "@/components/ConfirmationModalSteps/ConfirmationModal.jsx";
 import { mScoreLevel } from "@/components/ScoreLevel/index.jsx";
-import { mFieldLevel } from "@/components/FieldModal/index.jsx";
 import HeaderProfile from "@/components/HeaderPrfile/index.jsx";
 import { updateAvatar } from "@/redux/levels/service.js";
 
@@ -91,6 +86,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
     const { part1, part2 } = useSelector((state) => state.Levels.day1);
 
     const [showScoreModal, setShowScoreModal] = useState(false);
+    const closeDay = useSelector(state => state.PvChallenge?.closeDay);
 
     const ref = useRef({ day1 });
 
@@ -138,10 +134,11 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                 textBtnNotValid: t("pasEncore"),
                 audio: Level1Audio.felicitation,
                 valid: async () => {
-                    await mScoreLevel();
+                    if (closeDay !== null)
+                        await mScoreLevel();
                     history.push({
                         pathname: '/',
-                        state: { badgeIndex: 1 },
+                        state: { showBadge: true },
                     })
 
                 }
@@ -168,10 +165,13 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                     }
                 },
             }
+
+            dispatch(setCurrentAvatar(null, true));
+
             dispatch(validDay(center.mission_id, 1, option, (success) => {
-                if (!success) return history.push("/");
+                updateAvatar(center.game_session_id, config.current.avatarId);
+                if (!success) return history.push("/", { showBadge: true });
                 setShowConfirm(true);
-                dispatch(updateAvatar(center.game_session_id, config.current.avatarId))
             }));
 
         } else {
@@ -309,7 +309,7 @@ const Day1PvPharma = (props) => {
 
 
     useEffect(() => {
-        const currentDay = center.days?.find((d) => d.day_id === 1);
+        const currentDay = center.days?.find((d) => d.dayId === 1);
 
         if (currentDay?.status === -1) {
             history.push("/parcours");
@@ -318,7 +318,7 @@ const Day1PvPharma = (props) => {
         if (currentDay?.status === 1) {
             setModeEdit(false);
             setValidTask(true);
-            // dispatch(day1getDetail(center.mission_id));
+            dispatch(dayGetDetail(1, center.mission_id));
         } else {
             dispatch(clearDayData(1));
         }
@@ -330,27 +330,6 @@ const Day1PvPharma = (props) => {
             text: t("day1.listMsg.text1"),
             audio: Level1Audio.audio1,
         }
-        // ,
-        // {
-        //     title: t("day1.listMsg.title"),
-        //     text: t("day1.listMsg.text2"),
-        //     audio: Level1Audio.audio2,
-        //
-        //
-        //     title: t("day1.listMsg.title"),
-        //     text: t("day1.listMsg.text3"),
-        //     audio: Level1Audio.audio3,
-        // },
-        // {
-        //     title: t("day1.listMsg.title"),
-        //     text: t("day1.listMsg.text4"),
-        //     audio: Level1Audio.audio4,
-        // },
-        // {
-        //     title: t("day1.listMsg.title"),
-        //     text: t("day1.listMsg.text5"),
-        //     audio: Level1Audio.audio5,
-        // }
     ]
 
 
@@ -358,7 +337,6 @@ const Day1PvPharma = (props) => {
         <div className="container-day-4-pv5">
             {loading && <PreLoaderWidget />}
             <ModalTutorial
-                // pictureClass={"personne"}
                 personnageImage={img1}
                 listMsg={listMsg}
                 title="My Modal"
@@ -369,25 +347,14 @@ const Day1PvPharma = (props) => {
                 }}
                 onClose={() => {
                     setShowTuto(false);
-                    if (!config.current.is_first_time) {
-                        config.current.is_first_time = true;
-                        setShowM(true);
-                    }
+
                 }}
             />
-            {/* <ConfirmationModal
-                    show={showM}
-                    close={() => setShowM(false)}
-                    valid={() => setShowM(false)}
-                    rotateImage={true}
-                    {...config.current.messages[config.current.currentIndex]}
-                /> */}
 
             <Modal1
                 show={showM3}
                 close={() => {
                     setShowM3(false);
-                    // props.history.push("/pv-pharma-5-game");
                 }}
                 text={t("modals.day1.expert.body")}
                 title={t("modals.day1.expert.title")}
@@ -405,7 +372,6 @@ const Day1PvPharma = (props) => {
                     </div>
                     <div className="perso_image">
                         <img src={img3} className="imgPrs3" />
-                        {/* <img src={img4} className="imgPrs4"/> */}
                     </div>
 
                 </div>

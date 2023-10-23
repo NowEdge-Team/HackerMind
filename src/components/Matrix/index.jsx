@@ -18,6 +18,8 @@ import article4 from "@/assets/images/doc4.png";
 import article5 from "@/assets/images/doc5.png";
 
 import style from "./style.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { setMatrixStep } from "@/redux/actions.js";
 
 
 const HeaderBlock = ({ item, index, activeItem, nextItem, isRow }) => {
@@ -212,12 +214,16 @@ const dataRadar = [
 function Matrix({ nextStep, onBack }) {
     const { t } = useTranslation();
     let history = useHistory();
+    const dispatch = useDispatch();
     const [radar, setRadar] = useState()
     const [showTuto, setShowTuto] = useState(false);
-    const [step, setStep] = useState(0);
+    // const [step, setStep] = useState(0);
     // const [step, setStep] = useState(2);
-    const [activeItem, setActiveItem] = useState(1);
+    // const [activeItem, setActiveItem] = useState(1);
     // const [activeItem, setActiveItem] = useState(20);
+
+    const { activeItem, step } = useSelector(state => state.Levels.day1.config_matrix)
+
     const [currentMessage, setCurrentMessage] = useState({});
     const config = useRef({
         currentItem: null
@@ -615,7 +621,8 @@ function Matrix({ nextStep, onBack }) {
                     text: "Maintenant que tu as pu découvrir les différents profils des hackers, passons à découvrir leurs différentes motivations.",
                     audio: Level1Audio.audio4,
                     onClose: () => {
-                        setStep(1);
+                        // setStep(1);
+                        dispatch(setMatrixStep("step", 1))
                         setShowTuto(item => false);
                     }
                 }));
@@ -653,7 +660,9 @@ function Matrix({ nextStep, onBack }) {
             }, 500);
 
 
-            setStep(() => 2)
+            // setStep(() => 2)
+            dispatch(setMatrixStep("step", 2))
+
         }
 
     }, [activeItem, step]);
@@ -661,7 +670,7 @@ function Matrix({ nextStep, onBack }) {
 
 
     const closeModale = () => {
-        if (config.current.currentItem.id === activeItem) { setActiveItem(index => index + 1); }
+        if (config.current.currentItem.id === activeItem) { dispatch(setMatrixStep("activeItem", activeItem + 1)) }
         setShowTuto(item => false);
         setRadar(null)
     }
@@ -680,7 +689,7 @@ function Matrix({ nextStep, onBack }) {
 
     const clickRoundedBlock = async (currentItem) => {
         await mModalArticel(currentItem);
-        if (currentItem.id === activeItem) setActiveItem(index => index + 1);
+        if (currentItem.id === activeItem) dispatch(setMatrixStep("activeItem", activeItem + 1));
     }
 
     return (

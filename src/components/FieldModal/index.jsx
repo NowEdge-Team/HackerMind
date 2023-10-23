@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import start1 from "./group_7844.svg";
 import style from "./style.module.scss";
 import { faUndo } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch } from "react-redux";
+import { closeDaySuccess } from "@/redux/actions";
 
 
 const confirmAction = {
@@ -24,6 +26,7 @@ const FieldLevel = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const resolveRef = useRef(() => null);
+    const dispatch = useDispatch();
 
 
     confirmAction.current = (props) => new Promise(() => {
@@ -33,6 +36,7 @@ const FieldLevel = () => {
     });
 
     const closeModal = (resolve = true) => {
+        dispatch(closeDaySuccess(null));
         resolveRef?.current(resolve);
         setIsOpen(false);
 

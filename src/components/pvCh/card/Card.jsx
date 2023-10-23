@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import avatar from "../../../assets/images/pv-challenge/avatars/profile1.png"
 import avatar2 from "../../../assets/images/pv-challenge/avatars/profile2.png"
 import avatar3 from "../../../assets/images/pv-challenge/avatars/profile3.png"
@@ -14,9 +14,68 @@ import img1 from "@/assets/images/pv-challenge/character/character_1_11.png";
 import { useTranslation } from "react-i18next"
 import Level1Audio from "@/assets/audio/Niv1/index.js";
 import { twMerge } from "tailwind-merge"
+import { useDispatch, useSelector } from "react-redux"
+import { setCurrentAvatar } from "@/redux/actions"
 
 
-
+const data = [
+    {
+        id: 1,
+        title: "ÉTATIQUE",
+        text: "États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.",
+        color: 'white',
+        avatar: avatar
+    },
+    {
+        id: 2,
+        title: "CRIME ORGANISÉ",
+        text: "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel, exploitation de réseaux de « machines robots » (botnet), etc.",
+        color: 'white',
+        avatar: avatar2
+    },
+    {
+        id: 3,
+        title: "TERRORISTE",
+        text: "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration",
+        color: 'white',
+        avatar: avatar3
+    },
+    {
+        id: 4,
+        title: "ACTIVISTE IDÉOLOGIQUE",
+        text: "Cyber-hacktivistes, groupements d’intérêt, sectes.",
+        color: 'white',
+        avatar: avatar4
+    },
+    {
+        id: 5,
+        title: "OFFICINE SPÉCIALISÉE",
+        text: "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »",
+        color: 'white',
+        avatar: avatar5
+    },
+    {
+        id: 6,
+        title: "AMATEUR",
+        text: "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi",
+        color: 'white',
+        avatar: avatar6
+    },
+    {
+        id: 7,
+        title: "VENGEUR",
+        text: "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels",
+        color: 'white',
+        avatar: avatar7
+    },
+    {
+        id: 8,
+        title: "MALVEILLANT PATHOLOGIQUE",
+        text: "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)",
+        color: 'white',
+        avatar: avatar8
+    }
+]
 
 function Card({ onSelectAvatar }) {
     const { t } = useTranslation();
@@ -25,8 +84,14 @@ function Card({ onSelectAvatar }) {
     const [title, setTitle] = useState("ÉTATIQUE")
     const [text, setText] = useState('États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.')
     const [color, setColor] = useState('')
-    const [activeitem, setActiveItem] = useState(1)
+    const { activeitem } = useSelector(state => state.Levels.day1.currentAvatar);
 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (activeitem !== -1)
+            handlechange(data[activeitem - 1])
+    }, [activeitem]);
 
     const [radar, setRadar] = useState({
         color: 'green',
@@ -35,10 +100,9 @@ function Card({ onSelectAvatar }) {
     })
 
 
-    const handlechange = (id, title, text, color) => {
+    const handlechange = ({ id, title, text, color }) => {
         onSelectAvatar(id);
-        setActiveItem(id)
-        // setImgsrc(imgSrc) ;
+        dispatch(setCurrentAvatar(id, false))
         setText(text)
         setTitle(title)
         setColor(color)
@@ -125,15 +189,23 @@ function Card({ onSelectAvatar }) {
 
                 }}
             />
-            <div className="flex flex-row justify-center gap-5" >
-                <img src={avatar} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 1 ? styles.active : ""}`} onClick={() => handlechange(1, "ÉTATIQUE", "États, agences de renseignement. Ce profil d’attaquant se caractérise par sa capacité à réaliser une opération offensive sur un temps long (ressources stables, procédures) et à adapter ses outils et méthodes à la topologie de la cible.", 'white')} />
-                <img src={avatar2} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 2 ? styles.active : ""}`} onClick={() => handlechange(2, "CRIME ORGANISÉ", "Mafias, gangs, officines. Arnaque en ligne ou au président, demande de rançon ou attaque par rançongiciel, exploitation de réseaux de « machines robots » (botnet), etc.", 'white')} />
-                <img src={avatar3} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 3 ? styles.active : ""}`} onClick={() => handlechange(3, "TERRORISTE", "Cyberterroristes, cybermilices. Attaques habituellement peu sophistiquées, déni de service et défiguration", 'white')} />
-                <img src={avatar4} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 4 ? styles.active : ""}`} onClick={() => handlechange(4, "ACTIVISTE IDÉOLOGIQUE", "Cyber-hacktivistes, groupements d’intérêt, sectes.", 'white')} />
-                <img src={avatar5} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 5 ? styles.active : ""}`} onClick={() => handlechange(5, "OFFICINE SPÉCIALISÉE", "Ce type de hacker chevronné est souvent à l’origine de la conception et de la création d’outils et kits d’attaques accessibles en ligne (éventuellement monnayés) qui sont ensuite utilisables « clés en main »", 'white')} />
-                <img src={avatar6} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 6 ? styles.active : ""}`} onClick={() => handlechange(6, "AMATEUR", "Profil du hacker « script-kiddies » ou doté de bonnes connaissances informatiques, et motivé par une quête de reconnaissance sociale, d’amusement, de défi", 'white')} />
-                <img src={avatar7} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 7 ? styles.active : ""}`} onClick={() => handlechange(7, "VENGEUR", "Ce profil d’attaquant se caractérise par sa détermination et sa connaissance interne des systèmes et processus organisationnels", 'white')} />
-                <img src={avatar8} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 8 ? styles.active : ""}`} onClick={() => handlechange(8, "MALVEILLANT PATHOLOGIQUE", "Les motivations de ce profil d’attaquant sont d’ordre pathologique ou opportuniste et parfois guidées par l’appât du gain (exemples: concurrent déloyal, client malhonnête, escroc, fraudeur)", 'white')} />
+            <div className="flex flex-row justify-center gap-5 flex-wrap" >
+                {data.map((item, index) => <img
+                    key={index}
+                    src={item.avatar}
+                    alt=""
+                    className={`w-[70px] h-[70px] rounded-full  ${activeitem === index + 1 ? styles.active : ""}`}
+                    onClick={() => handlechange(item)} />)
+
+                }
+
+                {/* <img src={avatar2} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 2 ? styles.active : ""}`} onClick={() => handlechange()} />
+                <img src={avatar3} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 3 ? styles.active : ""}`} onClick={() => handlechange()} />
+                <img src={avatar4} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 4 ? styles.active : ""}`} onClick={() => handlechange()} />
+                <img src={avatar5} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 5 ? styles.active : ""}`} onClick={() => handlechange()} />
+                <img src={avatar6} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 6 ? styles.active : ""}`} onClick={() => handlechange()} />
+                <img src={avatar7} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 7 ? styles.active : ""}`} onClick={() => handlechange()} />
+                <img src={avatar8} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 8 ? styles.active : ""}`} onClick={() => handlechange()} /> */}
             </div>
             <div className="flex flex-row mt-[10%]">
                 <div className={twMerge(styles.desc, 'w-1/2')}>

@@ -20,7 +20,7 @@ function LevelCard({ title, icon, index, state = -1, numberOfStart = 1, directio
     const { t } = useTranslation();
     return (
         <div className={twMerge(style.container, 'group z-0 hover:z-20 cursor-pointer')}>
-            <StartBlock numberOfStart={0} className={`group-hover:opacity-0 ml-[16px] mb-2`} />
+            <StartBlock numberOfStart={numberOfStart} className={`group-hover:opacity-0 ml-[16px] mb-2`} />
             <div className={twMerge(style.card, directions === "left" ? 'float-left' : 'float-right')}>
                 <div className={style.image}>
                     <img className={state === -1 ? 'grayscale' : ''} href="#" src={icon} />
