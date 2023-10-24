@@ -17,7 +17,7 @@ import pdfSvgrepo from "../../assets/images/pv-challenge/images/pdf-svgrepo-co.s
 import playIcon from "../../assets/images/pv-challenge/images/rectangle552131.png";
 import mySvg1 from "../../assets/images/pv-challenge/logo.png";
 import badg3 from "../../assets/images/pv-challenge/travel-itinerary.svg";
-import FieldModal from "../../components/FieldModal/index.jsx";
+import FieldModal, { mFieldLevel } from "../../components/FieldModal/index.jsx";
 import Loader from "../../components/Loader.jsx";
 import PvChModalBadge, { mBadgePopup } from "../../components/modal/PvChModalBadge/index.jsx";
 import ModalFinalGame from "../../components/modal/modalFinalGame/index.jsx";
@@ -25,7 +25,7 @@ import ModalTutorial from "../../components/pvCh/ModalTutorial/ModalTutorial.jsx
 import { httpClient_get } from "../../helpers/api.js";
 import { getLoggedInUser } from "../../helpers/authUtils.js";
 import { avatars, getLogoById } from "../../helpers/missionDataPvC.js";
-import { closeDayPvChClear, getCenterInfoPvCh, updateCenterPvChInfo } from "../../redux/pvChallenge/actions.js";
+import { closeDayPvChClear, closeDaySuccess, getCenterInfoPvCh, updateCenterPvChInfo } from "../../redux/pvChallenge/actions.js";
 import mstyles from "./style.module.scss";
 
 
@@ -306,11 +306,8 @@ export default function Menu() {
     const [regleJeu, setRegleJeu] = useState(false);
     const [showConfig, setShowConfig] = useState(false);
     const [showBadge, setShowBadge] = useState(false);
-    const [showScore, setShowScore] = useState(false);
-    const [showFailedScore, setShowFailedScore] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [showFinalGame, setShowFinalGame] = useState(false);
-    const [score, setScore] = useState({});
     const [badges, setBadges] = useState([]);
 
     const { closeDay } = useSelector((state) => state.PvChallenge);
@@ -321,13 +318,13 @@ export default function Menu() {
     const { days, challengeId, mission_id } = useSelector((state) => state.PvChallenge.center);
 
     useEffect(() => {
-        // mBadgePopup({ badgeIndex: 1 })
-        if (location.pathname === "/" && location.state) {
+        if (location.pathname === "/" && location.state?.showBadge) {
 
             const loopBadge = async _ => {
                 for (let index = 0; index < closeDay.badges.length; index++) {
-                    await mBadgePopup({ badgeIndex: closeDay.badges[index] })
+                    await mBadgePopup({ badgeIndex: closeDay.badges[index], clearCloseDay: index === closeDay.badges.length - 1 })
                 }
+
             }
             loopBadge();
         }
@@ -335,23 +332,9 @@ export default function Menu() {
 
     useEffect(() => {
         if (closeDay !== null) {
-            setScore({
-                stars: closeDay.stars,
-                score1: closeDay.score1,
-                score2: closeDay.score2,
-                // score3: closeDay.score3,
-            });
-            setBadges(closeDay.badges);
-            setTimeout(() => {
-                if (closeDay.success) {
-                    setShowScore(true);
-                } else {
-                    setShowFailedScore(true)
-                }
-
-                // dispatch(closeDayPvChClear());
-            }, 100);
-
+            if (!closeDay.success) {
+                mFieldLevel();
+            }
         }
     }, [closeDay]);
 
@@ -427,7 +410,7 @@ export default function Menu() {
         <div className="sg-menu-contant">
             {loading || isLoading && <Loader />}
 
-            <PvChModalBadge
+            {/* <PvChModalBadge
                 badges={badges}
                 show={true}
                 close={() => {
@@ -437,7 +420,7 @@ export default function Menu() {
                     }, 1000);
 
                 }}
-            />
+            /> */}
             <ModalFinalGame
                 badges={badges}
                 show={showFinalGame}
@@ -458,14 +441,12 @@ export default function Menu() {
 
                 }}
             /> */}
-
-            
-            <FieldModal
+            {/* <FieldModal
                 show={showFailedScore}
                 close={() => {
                     setShowFailedScore(false);
                 }}
-            />
+            /> */}
             <ConfigModal
                 t={t}
                 show={showConfig}

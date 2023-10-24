@@ -3,17 +3,17 @@ import CardDrd from "../Card"
 
 
 
-export default function Dustbin({ item, onDrop }) {
+export default function Dustbin({ item, onDrop, locked = false }) {
 
     const { droppedItem } = item;
 
 
     const [{ canDrop, isOver }, drop] = useDrop(() => ({
         accept: "CARD",
-        drop: (elem) => onDrop(elem, item),
+        drop: !locked ? (elem) => onDrop(elem, item) : null,
         collect: (monitor) => ({
             isOver: monitor.isOver(),
-            canDrop: false //monitor.canDrop(),
+            canDrop: monitor.canDrop(),
         }),
     }))
     const isActive = canDrop && isOver

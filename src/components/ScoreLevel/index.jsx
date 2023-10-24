@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import start2 from "./group_7843.svg";
 import start1 from "./group_7844.svg";
 import style from "./style.module.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { closeDaySuccess } from "@/redux/actions";
 
 const ChartLine = ({ fill = "#ff5b5b" }) => (
     <svg
@@ -91,7 +92,10 @@ const ScoreLevel = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const dispatch = useDispatch();
+
     const resolveRef = useRef(() => null);
+    const closeDay = useSelector(state => state.PvChallenge?.closeDay);
 
     const { score1 = 0, score2 = 0, stars = 0 } = useSelector(state => state.PvChallenge?.closeDay ?? {});
 
@@ -114,6 +118,9 @@ const ScoreLevel = () => {
         });
 
     const closeModal = (resolve = true) => {
+        if (closeDay.badges.length === 0) {
+            dispatch(closeDaySuccess(null));
+        }
         resolveRef?.current(resolve);
         setIsOpen(false);
 

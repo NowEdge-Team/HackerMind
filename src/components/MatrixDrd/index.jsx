@@ -28,8 +28,8 @@ import article4 from "@/assets/images/doc14.png";
 import article5 from "@/assets/images/doc15.png";
 
 import HeaderProfile from "../HeaderPrfile";
-import { useDispatch } from "react-redux";
-import { validateActivity } from "@/redux/levels/actions.js";
+import { useDispatch, useSelector } from "react-redux";
+import { day1MoveMatrixDrd, validateActivity } from "@/redux/levels/actions.js";
 
 const data = [
     {
@@ -205,11 +205,58 @@ function MatrixDrd({ nextStep, onBack }) {
     const [step, setStep] = useState(0);
     const [activeItem, setActiveItem] = useState(1);
     const [currentMessage, setCurrentMessage] = useState({});
+    const { part2 } = useSelector(state => state.Levels.day1);
+
     const list = useMemo(() => [...Array(48).keys()].map((item) => ({ id: item + 1, droppedItem: null })), []);
-    let [dustbins, setDustbins] = useState(list) // id : 1 -> 48
+    let [dustbins, setDustbins] = useState(list);
 
-    let [listArticle, setListArticle] = useState(articleData);
+    let [listArticle, setListArticle] = useState(() => articleData.map((item, index) => ({ ...item, ...part2.decisions[index] })));
 
+    useEffect(() => {
+
+        let list = articleData.map((item, index) => ({ ...item, ...part2.decisions[index] }));
+        let listCell = dustbins;
+
+        list = list.map(elm => {
+            listCell = listCell.map(item => {
+
+                if (item?.id === elm.idCell) {
+                    return { ...item, droppedItem: { ...elm, className: part2.isValid === false ? "" : elm.isCorrect ? "bg-[#31a547]" : "bg-red-500" } }
+                }
+                return { ...item, droppedItem: item.droppedItem?.id === elm.id ? null : item.droppedItem }
+            });
+            return elm;
+        }).slice();
+
+        console.log("----list--->>>", list);
+
+
+
+        // setListArticle(_ => list.map(elem => {
+        //     if (elem.idCell !== elem.correctCellId) {
+        //         listCorrectIds.push({ id: elem.id, isCorrect: false });
+        //         return { ...elem, className: "bg-red-500" }
+        //     }
+
+        //     else {
+        //         listCorrectIds.push({ id: elem.id, isCorrect: true });
+        //         return { ...elem, className: "bg-[#31a547]" };
+
+        //     }
+        // }))
+
+        // setDustbins([...dustbins.map(elem => {
+        //     if (elem.droppedItem === null) return elem;
+        //     else if (elem?.id !== elem.droppedItem?.correctCellId) return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-red-500" } }
+        //     else return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-[#31a547]" } }
+        // })]);
+
+
+        setDustbins(_ => listCell)
+        setListArticle(_ => list);
+        // setTimeout(() => validAllList(), 5000)
+
+    }, [part2.lastUpdate]);
 
     useEffect(() => {
         setCurrentMessage(() => ({
@@ -373,48 +420,11 @@ function MatrixDrd({ nextStep, onBack }) {
     }
 
     const onDrop = useCallback((item, rowItem) => {
-
-        const findItem = dustbins.find(elm => elm.id === rowItem.id);
-
-        if (findItem.droppedItem !== null) return;
-
-        dustbins = dustbins.map(elm => {
-            if (elm.id !== rowItem.id && elm?.droppedItem?.id === item?.id) {
-                return { ...elm, droppedItem: null }
-            }
-            if (elm.id === rowItem.id) return { ...elm, droppedItem: item }
-
-            return elm;
-        }).slice();
-
-        listArticle = listArticle.map(elm => {
-            if (elm.id === item.id) return { ...elm, idCell: rowItem.id }
-            return elm;
-        }).slice();
-
-        setListArticle(_ => listArticle)
-        setDustbins(_ => dustbins)
+        dispatch(day1MoveMatrixDrd(item.id, rowItem.id))
     }, [listArticle, dustbins])
 
     const onDropListArticle = (item) => {
-
-        dustbins = dustbins.map(elm => {
-            if (elm.droppedItem?.id === item.id) return { ...elm, droppedItem: null };
-            return elm;
-        }).slice();
-
-
-
-        setListArticle(list => {
-            const index = list.findIndex(elm => elm.id === item.id);
-            list[index].idCell = -1;
-            return [...list]
-        })
-
-        setDustbins(_ => dustbins)
-
-
-
+        dispatch(day1MoveMatrixDrd(item.id, -1))
     }
 
     const onValidate = async () => {
@@ -436,9 +446,16 @@ function MatrixDrd({ nextStep, onBack }) {
 
         config.current.isValid = true;
 
-        const listCorrectIds = [];
+        const listCorrectIds = validAllList();
 
-        setListArticle(listArticle.map(elem => {
+        dispatch(validateActivity("day1", "part2", listCorrectIds));
+    }
+
+    const validAllList = () => {
+        const listCorrectIds = [];
+        let list = articleData.map((item, index) => ({ ...item, ...part2.decisions[index] }));
+
+        setListArticle(list.map(elem => {
             if (elem.idCell !== elem.correctCellId) {
                 listCorrectIds.push({ id: elem.id, isCorrect: false });
                 return { ...elem, className: "bg-red-500" }
@@ -457,7 +474,8 @@ function MatrixDrd({ nextStep, onBack }) {
             else return { ...elem, droppedItem: { ...elem.droppedItem, className: "bg-[#31a547]" } }
         })]);
 
-        dispatch(validateActivity("day1", "part2", listCorrectIds));
+        return listCorrectIds;
+
     }
 
     const listProfil = useMemo(() => data.filter(item => item.type === "profil"), [])
@@ -487,7 +505,7 @@ function MatrixDrd({ nextStep, onBack }) {
                 <div className="flex flex-row h-3/5" >
 
 
-                    <ListArticle onDrop={onDropListArticle} listArticle={listArticle} />
+                    <ListArticle locked={part2.isValid} onDrop={onDropListArticle} listArticle={listArticle} />
 
 
                     <div className={`${style.mtx_container} border p-2 h-full`}>
@@ -507,7 +525,7 @@ function MatrixDrd({ nextStep, onBack }) {
                         <>
                             <div></div>
                             {dustbins.map((item, index) => <div key={item.id} className=" border-dashed border-2 border-[#CED3D9] bg-[#f5f5f5]" >
-                                <Dustbin item={item} onDrop={onDrop} />
+                                <Dustbin locked={part2.isValid} item={item} onDrop={onDrop} />
                             </div>)}
                         </>
 
@@ -525,8 +543,8 @@ function MatrixDrd({ nextStep, onBack }) {
                         <BackButton className={"step_quiz_btn_next2"}
                             onClick={onBack}
                         />
-                        <NextButton title={config.current.isValid ? undefined : "Validate"} className={!listArticle.every(elm => elm.idCell !== -1) ? 'bg-slate-500' : ''}
-                            onClick={config.current.isValid ? nextStep : onValidate}
+                        <NextButton title={part2.isValid ? undefined : "Validate"} className={!listArticle.every(elm => elm.idCell !== -1) ? 'bg-slate-500' : ''}
+                            onClick={part2.isValid ? nextStep : onValidate}
                         />
 
 

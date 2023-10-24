@@ -3,11 +3,11 @@ import CardDrd from "../Card"
 
 
 
-export default function ListArticle({ listArticle, onDrop }) {
+export default function ListArticle({ listArticle, onDrop, locked = false }) {
 
     const [{ canDrop, isOver }, drop] = useDrop(() => ({
         accept: "CARD",
-        drop: (elem) => onDrop(elem),
+        drop: !locked ? (elem) => onDrop(elem) : null,
         collect: (monitor) => ({
             isOver: monitor.isOver(),
             canDrop: monitor.canDrop(),

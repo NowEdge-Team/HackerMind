@@ -54,7 +54,7 @@ const PlayButton = () => {
             }}
             onClick={click_}
         >
-            <img src={paused ? soundOff : soundLoud}  alt={""} />
+            <img src={paused ? soundOff : soundLoud} alt={""} />
             <audio autoPlay className="audio-element" onEnded={onEnded_}>
                 <source src={music}></source>
             </audio>
@@ -79,15 +79,19 @@ export default function Parcours() {
 
     const score = useSelector((state) => state.PvChallenge.score);
     const [listLevles, setListLevels] = useState([
-        { left: "left-[9%]", top: "top-[56%] xl:top-[60%]", urlId: '1', title: t(`parcours.day1title`), img: img1, statue: 0, numberOfStart: 0, },
-        { left: "left-[19%] xl:left-[20%]", top: "top-[1%] xl:top-[-5%]", urlId: '2', title: t(`parcours.day2title`), img: img2, statue: -1, numberOfStart: 0, },
-        { left: "lg:left-[31%] xl:left-[33%]", top: "lg:top-[67%] md:top-[66%]", urlId: '3', title: t(`parcours.day3title`), img: img3, statue: -1, numberOfStart: 0, },
-        { left: "left-[46%]", top: "top-[18%]  ", urlId: '4', title: t(`parcours.day4title`), img: img4, statue: -1, numberOfStart: 0, },
-        { left: "right-[28%]", top: "top-[59%]", urlId: '5', title: t(`parcours.day5title`), img: img5, statue: -1, numberOfStart: 0, },
-        { left: "right-[24%]", top: "top-[-1%] min-[1151px]:top-[-8%] ", urlId: '6', title: t(`parcours.day6title`), img: img6, statue: -1, numberOfStart: 0, },
-        { left: "right-[6%]", top: "top-[57%] min-[1151px]:top-[63%]", urlId: '7', title: t(`parcours.day7title`), img: img7, statue: -1, numberOfStart: 0, directions: "right" },
+        { id: 1, left: "left-[9%]", top: "top-[56%] xl:top-[60%]", urlId: '1', title: t(`parcours.day1title`), img: img1, statue: 0, numberOfStart: 0, },
+        { id: 2, left: "left-[19%] xl:left-[20%]", top: "top-[1%] xl:top-[-5%]", urlId: '2', title: t(`parcours.day2title`), img: img2, statue: -1, numberOfStart: 0, },
+        { id: 3, left: "lg:left-[31%] xl:left-[33%]", top: "lg:top-[67%] md:top-[66%]", urlId: '3', title: t(`parcours.day3title`), img: img3, statue: -1, numberOfStart: 0, },
+        { id: 4, left: "left-[46%]", top: "top-[18%]  ", urlId: '4', title: t(`parcours.day4title`), img: img4, statue: -1, numberOfStart: 0, },
+        { id: 5, left: "right-[28%]", top: "top-[59%]", urlId: '5', title: t(`parcours.day5title`), img: img5, statue: -1, numberOfStart: 0, },
+        { id: 6, left: "right-[24%]", top: "top-[-1%] min-[1151px]:top-[-8%] ", urlId: '6', title: t(`parcours.day6title`), img: img6, statue: -1, numberOfStart: 0, },
+        { id: 7, left: "right-[6%]", top: "top-[57%] min-[1151px]:top-[63%]", urlId: '7', title: t(`parcours.day7title`), img: img7, statue: -1, numberOfStart: 0, directions: "right" },
+    ].map(elm => {
+        const res = days.find(item => item.dayId === elm.id);
 
-    ]);
+        if (res) return { ...elm, statue: res.status, numberOfStart: res.stars }
+        return elm;
+    }));
 
     const dispatch = useDispatch();
 
@@ -103,8 +107,8 @@ export default function Parcours() {
 
 
     const navTo = (urlId) => (e) => {
-        if (urlId==='1')
-        to(`/day/${urlId}`)
+        if (urlId === '1')
+            to(`/day/${urlId}`)
     }
 
 

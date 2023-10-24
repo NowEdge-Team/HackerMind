@@ -3,6 +3,8 @@ import { Modal } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import style from "./style.module.scss";
 import AVATARS from "@/assets/images/pv-challenge/Badges";
+import { useDispatch } from "react-redux";
+import { closeDaySuccess } from "@/redux/actions";
 
 
 
@@ -22,6 +24,7 @@ const BadgePopup = ({ }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [props, setProps] = useState({});
     const resolveRef = useRef(() => null);
+    const dispatch = useDispatch();
 
     confirmAction.current = (props) =>
         new Promise((resolve) => {
@@ -36,6 +39,9 @@ const BadgePopup = ({ }) => {
         });
 
     const closeModal = (resolve = true) => {
+        if (props.clearCloseDay) {
+            dispatch(closeDaySuccess(null));
+        }
         resolveRef?.current(resolve);
         setIsOpen(false);
     };

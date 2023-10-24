@@ -73,10 +73,32 @@ const updateAvatar = (game_session_id, avatar_id) => {
     });
 }
 
+const getDetailsService = (dayId, missionId, parse = true) => {
+  return httpClient_get(
+    `/participant/${path}/getdecisiondetails?mission_id=${missionId}&day_id=${dayId}`
+  )
+    .then((response) => {
+      if (!parse) {
+        return response.data[0];
+      }
+      if (response.data.length > 0) {
+        const data = response.data[0];
+        data.details = JSON.parse(data.details);
+        return data;
+      } else {
+        return {};
+      }
+    })
+    .catch((error) => {
+      throw error;
+    });
+};
+
 export {
   updateAvatar,
   saveDetailsService,
   saveDecisionsService,
   closeDayService,
   getHistoricScoresPvCh,
+  getDetailsService
 };

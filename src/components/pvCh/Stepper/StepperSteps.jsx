@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {useStepper} from "./hook";
+import React, { useEffect } from 'react';
+import { useStepper } from "./hook";
 import PropTypes from "prop-types";
 
-export const StepperSteps = function({ children ,style , className  }) {
+export const StepperSteps = function ({ children, style, className }) {
     const { currentStep, steps, setSteps } = useStepper();
 
     useEffect(() => {
@@ -28,9 +28,8 @@ export const StepperSteps = function({ children ,style , className  }) {
     );
 };
 
-export const StepperStep = function({ children , classContainer }) {
-    console.log("---classContainer---",classContainer)
-        return <div className={`${classContainer} bg-red `} >{children}</div>;
+export const StepperStep = function ({ children, classContainer }) {
+    return <div className={`${classContainer} bg-red `} >{children}</div>;
 };
 
 StepperStep.propTypes = {

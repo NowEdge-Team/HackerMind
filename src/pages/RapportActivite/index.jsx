@@ -5,11 +5,10 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import img12 from "../../assets/images/pv-challenge/cogs-solid.svg";
 import img11 from "../../assets/images/pv-challenge/cubes-solid.svg";
-import img14 from "../../assets/images/pv-challenge/avatars/profile1.png";
+import img14 from "../../assets/leader.png";
 import { getCenterInfoPvCh, getscorePVCh } from "../../redux/actions.js";
 import data_history from "./data.json";
 import styles from "./style.module.scss";
-import Header from "../Header/Header.jsx";
 import { getHistoricScoresPvCh } from "../../redux/levels/service.js";
 import { useCookies } from "react-cookie";
 // import imagePers2 from "../../assets/images/pv-challenge/character/expert.png";
@@ -54,6 +53,7 @@ const loadImg = (key) => {
 
 // status,day_id,text
 const Item = ({ item, title, text, onClick, index, activeIndex }) => {
+    console.log("🚀 ~ file: index.jsx:57 ~ Item ~ item:", item)
 
     const { img } = loadImg(index)
     return (
@@ -79,6 +79,8 @@ const List = ({ days = [], clickDay, t }) => {
     const [activeIndex, setActiveIndex] = useState(0)
 
     const onClickItem = (index) => {
+        console.log("🚀 ~ file: index.jsx:160 ~ Container ~ state:", index)
+
         clickDay(index)
         setActiveIndex(index)
     }
@@ -134,7 +136,7 @@ const Messg = ({ item }) => {
                 }}
             >
                 <h3 style={{ font: " normal normal bold 16px/17px Karla" }}>
-                    LE PRESIDENT
+                    LE LEADER
                 </h3>
                 <p
                     style={{
@@ -205,7 +207,7 @@ function RapportActivite(props) {
     const game_session_id = cookies.game_session_id;
     const [data, setData] = useState([]);
     const [days_, setDays] = useState([
-        { status: 0, day_id: 1, text: t(`parcours.day1title`) },
+        { status: 1, day_id: 1, text: t(`parcours.day1title`) },
         { status: 0, day_id: 2, text: t(`parcours.day2title`) },
         { status: 0, day_id: 3, text: t(`parcours.day3title`) },
         { status: 0, day_id: 4, text: t(`parcours.day4title`) },
@@ -235,7 +237,7 @@ function RapportActivite(props) {
             setData(res);
 
             const data_history_ = data_history[i18n.language]?.map((elem, index) => {
-                const res_ = res.find(item => item.storyId === elem.id)
+                const res_ = res.find(item => item.story_id === elem.id)
                 let desc = elem.description.replace(/##/gi, res_ ? res_.X : 0).replace(/@@/gi, res_ ? res_.Y : 0);
                 return { ...elem, description: desc }
             })
