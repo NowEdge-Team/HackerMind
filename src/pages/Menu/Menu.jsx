@@ -321,6 +321,7 @@ export default function Menu() {
     const { days, challengeId, mission_id } = useSelector((state) => state.PvChallenge.center);
 
     useEffect(() => {
+        // mBadgePopup({ badgeIndex: 1 })
         if (location.pathname === "/" && location.state) {
 
             const loopBadge = async _ => {
@@ -457,6 +458,8 @@ export default function Menu() {
 
                 }}
             /> */}
+
+            
             <FieldModal
                 show={showFailedScore}
                 close={() => {

@@ -254,6 +254,8 @@ function RapportActivite(props) {
             t("parcours.day3title"),
             t("parcours.day4title"),
             t("parcours.day5title"),
+            t("parcours.day6title"),
+            t("parcours.day7title")
         ]
 
         if (days !== null) {

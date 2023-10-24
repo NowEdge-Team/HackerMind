@@ -399,7 +399,7 @@ const Day1PvPharma = (props) => {
                     <div className="pup">
                         <h3>{t("day1.l_title")}</h3>
                         <p>
-                            {t(`day1.part${stp_ + 1}.description`)}
+                            {t(`day1.part${stp_}.description`)}
                             <br />
                         </p>
                     </div>
@@ -425,7 +425,7 @@ const Day1PvPharma = (props) => {
                                 {t("day1.level")}
                             </h3>
                             <p>
-                                {t(`day1.part${stp_ + 1}.g_title`)}
+                                {t(`day1.part${stp_}.g_title`)}
                             </p>
                         </div>
                     </>
