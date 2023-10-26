@@ -14,8 +14,19 @@ import { getscorePVCh, getscorePvChSuccess } from "../../redux/actions.js";
 import Badge from "../../components/pvCh/badge/badge.jsx";
 import styles from "./style.module.scss"
 import HeaderProfile from "@/components/HeaderPrfile";
+
+
+const listBadges = [
+    badge1,
+    badge2,
+    badge3,
+    badge4,
+    badge5,
+    badge6,
+    badge7
+]
 export default function Bradges() {
-    const [Badges, setBadges] = useState([]);
+    const [badges, setBadges] = useState([]);
     const center = useSelector((state) => state.PvChallenge.center);
     const { mission_id } = useSelector((state) => state.PvChallenge.center);
     const score = useSelector((state) => state.PvChallenge.score);
@@ -51,48 +62,14 @@ export default function Bradges() {
             </div>
             <div className={styles.bdg_row1}>
                 <div className={styles.bloc2} >
-                    <Badge
-                        isActive={Badges.find(b => b?.badgeId === 1)?.status === 1}
-                        icon={badge1}
-                        title={t(`badges.badge1.title`)}
-                        description={t(`badges.badge1.description`)}
-                    />
-                    <Badge
-                        isActive={Badges.find(b => b?.badgeId === 2)?.status === 1}
-                        icon={badge2}
-                        title={t(`badges.badge2.title`)}
-                        description={t(`badges.badge2.description`)}
-                    />
-                    <Badge
-                        isActive={Badges.find(b => b?.badgeId === 3)?.status === 1}
-                        icon={badge3}
-                        title={t(`badges.badge3.title`)}
-                        description={t(`badges.badge3.description`)}
-                    />
-                    <Badge
-                        isActive={Badges.find(b => b?.badgeId === 4)?.status === 1}
-                        icon={badge4}
-                        title={t(`badges.badge4.title`)}
-                        description={t(`badges.badge4.description`)}
-                    />
-                    <Badge
-                        isActive={Badges.find(b => b?.badgeId === 5)?.status === 1}
-                        icon={badge5}
-                        title={t(`badges.badge5.title`)}
-                        description={t(`badges.badge5.description`)}
-                    />
-                    <Badge
-                        isActive={Badges.find(b => b?.badgeId === 6)?.status === 1}
-                        icon={badge6}
-                        title={t(`badges.badge6.title`)}
-                        description={t(`badges.badge6.description`)}
-                    />
-                    <Badge
-                        isActive={Badges.find(b => b?.badgeId === 7)?.status === 1}
-                        icon={badge7}
-                        title={t(`badges.badge7.title`)}
-                        description={t(`badges.badge7.description`)}
-                    />
+                    {badges.map((item, index) => index < 7 && <Badge
+                        isActive={item.status === 1}
+                        icon={listBadges[index]}
+                        title={t(`badges.badge${index + 1}.title`)}
+                        description={t(`badges.badge${index + 1}.description`)}
+                    />)
+                    }
+
                 </div>
             </div>
         </div>

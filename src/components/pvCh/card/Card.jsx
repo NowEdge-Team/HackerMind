@@ -77,7 +77,8 @@ const data = [
     }
 ]
 
-function Card({ onSelectAvatar }) {
+function Card({ onSelectAvatar, modeEdit }) {
+    console.log("🚀 ~ file: Card.jsx:81 ~ Card ~ modeEdit:", modeEdit)
     const { t } = useTranslation();
     const [showTuto, setShowTuto] = useState(true);
 
@@ -195,17 +196,9 @@ function Card({ onSelectAvatar }) {
                     src={item.avatar}
                     alt=""
                     className={`w-[70px] h-[70px] rounded-full  ${activeitem === index + 1 ? styles.active : ""}`}
-                    onClick={() => handlechange(item)} />)
+                    onClick={() => modeEdit ? handlechange(item) : null} />)
 
                 }
-
-                {/* <img src={avatar2} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 2 ? styles.active : ""}`} onClick={() => handlechange()} />
-                <img src={avatar3} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 3 ? styles.active : ""}`} onClick={() => handlechange()} />
-                <img src={avatar4} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 4 ? styles.active : ""}`} onClick={() => handlechange()} />
-                <img src={avatar5} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 5 ? styles.active : ""}`} onClick={() => handlechange()} />
-                <img src={avatar6} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 6 ? styles.active : ""}`} onClick={() => handlechange()} />
-                <img src={avatar7} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 7 ? styles.active : ""}`} onClick={() => handlechange()} />
-                <img src={avatar8} alt="" className={`w-[70px] h-[70px] rounded-full  ${activeitem === 8 ? styles.active : ""}`} onClick={() => handlechange()} /> */}
             </div>
             <div className="flex flex-row mt-[10%]">
                 <div className={twMerge(styles.desc, 'w-1/2')}>

@@ -259,7 +259,7 @@ const DaySteper = ({ t, modeEdit, ValidTask, dispatch, day1, center, history, se
                         </Stepper.Step>
                         <Stepper.Step id="5" name="Step 5">
                             <div>
-                                <Card onSelectAvatar={onSelectAvatar} />
+                                <Card onSelectAvatar={onSelectAvatar} modeEdit={modeEdit} />
                             </div>
                         </Stepper.Step>
                     </Stepper.Steps>
