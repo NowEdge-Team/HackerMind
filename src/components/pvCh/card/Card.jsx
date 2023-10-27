@@ -190,7 +190,7 @@ function Card({ onSelectAvatar, modeEdit }) {
 
                 }}
             />
-            <div className="flex flex-row justify-center gap-5 flex-wrap" >
+            <div className="flex flex-row justify-center gap-5 min-h-[77px] overflow-x-scroll" >
                 {data.map((item, index) => <img
                     key={index}
                     src={item.avatar}

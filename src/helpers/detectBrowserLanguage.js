@@ -1,12 +1,14 @@
 import detectBrowserLanguage from "detect-browser-language";
 
-export default function(){
+export default function () {
 
-    let userLanguage = detectBrowserLanguage().split("-")[0];
+    // let userLanguage = detectBrowserLanguage().split("-")[0];
 
-    if (!["fr", "en"].includes(userLanguage)) {
-        userLanguage = "fr"
-    }
+    // if (!["fr", "en"].includes(userLanguage)) {
+    // userLanguage = "fr"
+    // }
 
-    return userLanguage;
+    // return userLanguage;
+
+    return "fr";
 }
