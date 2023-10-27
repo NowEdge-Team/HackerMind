@@ -217,13 +217,7 @@ function Matrix({ nextStep, onBack }) {
     const dispatch = useDispatch();
     const [radar, setRadar] = useState()
     const [showTuto, setShowTuto] = useState(false);
-    // const [step, setStep] = useState(0);
-    // const [step, setStep] = useState(2);
-    // const [activeItem, setActiveItem] = useState(1);
-    // const [activeItem, setActiveItem] = useState(20);
-
     const { activeItem, step } = useSelector(state => state.Levels.day1.config_matrix)
-
     const [currentMessage, setCurrentMessage] = useState({});
     const config = useRef({
         currentItem: null
